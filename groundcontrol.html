@@ -39,9 +39,101 @@
             }
         }
     </style>
+
 </head>
 
 <body>
+        <!-- Chatbot -->
+        <div class="botIcon ">
+            <div class="botIconContainer d-flex pulsating-circle justify-content-end">
+                <div class="iconInner d-flex justify-content-center align-items-center">
+                    <img class="pulsating-circle rounded-circle right-0" height="50px" width="50px" src="./assets/images/employer-ease-pics/popup_avatar.svg" alt="">
+                </div>
+            </div>
+            <div class="Layout Layout-open Layout-expand Layout-right mt-5">
+                <div class="Messenger_messenger p-0 m-0">
+                    <div class="Messenger_header w-auto d-flex gap-2 items-center py-3">
+                        <div class="d-flex items-start gap-3">
+    
+                            <div class="d-flex flex-column gap-2">
+                                <div class="d-flex gap-2 items-center">
+                                    <img width="40px" height="40px" class=""
+                                        src="./assets/images/employer-ease-pics/avatar.svg" alt="">
+                                    <div class="d-flex flex-column gap-2">
+                                        <h4 style="max-width: 287px;" class="chatHeading text-white">Hello, my name is Bizzy
+                                            the CoachBot.
+                                            How can I assist you?</h4>
+                                        <h3 class="chatSubHeading">We respond immediately</h3>
+                                    </div>
+                                </div>
+    
+                            </div>
+                            <span class="chat_close_icon"><img src="./assets/images/employer-ease-pics/crosschat.svg"
+                                    alt="cross icon" area-hidden="true"></span>
+                        </div>
+    
+                    </div>
+    
+                    <ul class="nav nav-pills mb-3 d-flex flex-wrap flex-md-nowrap w-100 justify-content-center bg-transparent mt-4" id="pills-tab"
+                        role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active w-100" id="pills-home-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                                aria-selected="true">Recent</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link w-100" id="pills-profile-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                                aria-selected="false">History</button>
+                        </li>
+                    </ul>
+                    <div class="d-flex justify-content-center align-items-center gap-2 px-4">
+                        <div class="bordering">
+                        </div>
+                        <div class="todayDiv">Today</div>
+                        <div class="bordering"></div>
+                    </div>
+                    <div class="tab-content bg-transparent" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                            aria-labelledby="pills-home-tab" tabindex="0">
+    
+                        </div>
+                        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+                            tabindex="0">
+                            
+                        </div>
+                    </div>
+                    <div class="Messenger_content">
+                        <div class="Messages">
+                            <div class="Messages_list"></div>
+                        </div>
+                        <form id="messenger">
+                            <div class="Input Input-blank px-0">
+                                <!-- 							<textarea name="msg" class="Input_field" placeholder="Send a message..."></textarea> -->
+                                <div class="d-flex items-center gap-1 px-4">
+                                    <div class="position-relative w-100">
+                                        <input name="msg" class="Input_field w-100 bg-transparent inputMsg"
+                                            placeholder="Type here...">
+                                        <div style="position: absolute; top: 9px;right:10px">
+                                            <img src="assets/images/employer-ease-pics/stop-circle.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="Input_button Input_button-send SendButton">
+                                        <div class="Icon">
+                                            <img src="./assets/images/employer-ease-pics/Button.svg" alt="">
+                                        </div>
+                                    </button>
+                                </div>
+    
+                            </div>
+                        </form>
+                    </div>
+    
+    
+    
+                </div>
+            </div>
+        </div>
     <section class="hero-section">
         <div class="main-dashbord">
             <aside class="dashbord-1">
@@ -2010,6 +2102,145 @@
         }
         updateProgress(14);
     </script>
+        <!-- Chatbot -->
+        <script>
+            jQuery(document).ready(function ($) {
+                jQuery(document).on('click', '.iconInner', function (e) {
+                    jQuery(this).parents('.botIcon').addClass('showBotSubject');
+                    $("[name='msg']").focus();
+                });
+    
+                jQuery(document).on('click', '.closeBtn, .chat_close_icon', function (e) {
+                    jQuery(this).parents('.botIcon').removeClass('showBotSubject');
+                    jQuery(this).parents('.botIcon').removeClass('showMessenger');
+                });
+    
+                jQuery(document).on('submit', '#botSubject', function (e) {
+                    e.preventDefault();
+    
+                    jQuery(this).parents('.botIcon').removeClass('showBotSubject');
+                    jQuery(this).parents('.botIcon').addClass('showMessenger');
+                });
+    
+                /* Chatboat Code */
+                $(document).on("submit", "#messenger", function (e) {
+                    e.preventDefault();
+                    $(".Input_button").addClass("disabled")
+                    console.log($(".Input_button"))
+    
+                    var val = $("[name=msg]").val().toLowerCase();
+                    var mainval = $("[name=msg]").val();
+                    name = '';
+                    nowtime = new Date();
+                    nowhoue = nowtime.getHours();
+    
+                    function userMsg(msg) {
+                        $('.Messages_list').append('<div class="msg user d-flex gap-1"><span class="avtr"><figure style="height:40px; width:40px;background-image: url(./assets/images/employer-ease-pics/special-profile.jpg)"></figure></span><span style="background-color:#EAECF0; padding:10px 14px; border-radius:8px; border-top-right-radius:0px; color:#101828" class="responsText j_family ">' + mainval + '</span></div>');
+                    };
+                    function appendMsg(msg) {
+                        $('.Messages_list').append('<div class="msg d-flex gap-1"><span class="avtr"><figure style="height:40px; width:40px;background-image: url(./assets/images/employer-ease-pics/popup_avatar.svg)"></figure></span><span style="background-color:#3684A4; padding:10px 14px; border-radius:8px; border-top-left-radius:0px; color:white" class="responsText j_family ">' + msg + '</span></div>');
+                        $("[name='msg']").val("");
+                    };
+    
+    
+                    userMsg(mainval);
+                    if (val.indexOf("hello") > -1 || val.indexOf("hi") > -1 || val.indexOf("good morning") > -1 || val.indexOf("good afternoon") > -1 || val.indexOf("good evening") > -1 || val.indexOf("good night") > -1) {
+                        if (nowhoue >= 12 && nowhoue <= 16) {
+                            appendMsg('good afternoon');
+                        } else if (nowhoue >= 10 && nowhoue <= 12) {
+                            appendMsg('hi');
+                        } else if (nowhoue >= 0 && nowhoue <= 10) {
+                            appendMsg('good morning');
+                        } else {
+                            appendMsg('good evening');
+                        }
+    
+                        appendMsg("what's you name?");
+    
+                    } else if (val.indexOf("i have problem with") > -1) {
+                        if (val.indexOf("girlfriend") > -1 || val.indexOf("gf") > -1) {
+    
+                            appendMsg("take out your girlfriend, for dinner or movie.");
+                            appendMsg("is it helpful? (yes/no)");
+    
+                        } else if (val.indexOf("boyfriend") > -1 || val.indexOf("bf") > -1) {
+                            appendMsg("bye something for him.");
+                            appendMsg("is it helpful? (yes/no)");
+                        } else {
+                            appendMsg("sorry, i'm not able to get you point, please ask something else.");
+                        }
+                    } else if (val.indexOf("yes") > -1) {
+    
+                        var nowtime = new Date();
+                        var nowhoue = nowtime.getHours();
+                        appendMsg("it's my pleaser that i can help you");
+    
+                        saybye();
+                    } else if (val.indexOf("no") > -1) {
+    
+                        var nowtime = new Date();
+                        var nowhoue = nowtime.getHours();
+                        appendMsg("it's my bad that i can't able to help you. please try letter");
+    
+                        saybye();
+                    } else if (val.indexOf("my name is ") > -1 || val.indexOf("i am ") > -1 || val.indexOf("i'm ") > -1 || val.split(" ").length < 2) {/*|| mainval != ""*/
+                        // var name = "";
+                        if (val.indexOf("my name is") > -1) {
+                            name = val.replace("my name is", "");
+                        }
+    
+                        else if (val.indexOf("i am") > -1) {
+                            name = val.replace("i am", "");
+                        }
+    
+                        else if (val.indexOf("i'm") > -1) {
+                            name = val.replace("i'm", "");
+                        }
+    
+                        else {
+                            name = mainval;
+                        }
+    
+                        // appendMsg("hi " + name + ", how can i help you?");
+                        appendMsg("Hey there! How can I assist you today? Are you interested in learning about our services at EmployerEase, LLC? 😊");
+                    } else {
+                        appendMsg("sorry i'm not able to understand what do you want to say");
+                    }
+    
+                    function saybye() {
+                        if (nowhoue <= 10) {
+                            appendMsg(" have nice day! :)");
+                        } else if (nowhoue >= 11 || nowhoue <= 20) {
+                            appendMsg(" bye!");
+                        } else {
+                            appendMsg(" good night!");
+                        }
+                    }
+    
+                    var lastMsg = $('.Messages_list').find('.msg').last().offset().top;
+                    $('.Messages').animate({ scrollTop: lastMsg }, 'slow');
+                });
+                /* Chatboat Code */
+            })
+        </script>
+        <script>
+            const handleChange = document.querySelector('.inputMsg');
+    
+            function disableButton() {
+                const handleSubmit = document.querySelector('.SendButton');
+                if (handleChange.value === "") {
+                    handleSubmit.classList.add("disabled")
+                }
+                else {
+                    handleSubmit.classList.remove("disabled")
+                }
+            }
+            disableButton()
+            handleChange.addEventListener("input", function () {
+                disableButton()
+            })
+        </script>
+    </body>
 </body>
 
 </html>
