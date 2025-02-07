@@ -217,9 +217,6 @@ ul {
 
 .light-black {
     color: #292F38 !important;
-}
-
-.light_green {
     color: #00B69B;
 }
 
@@ -2246,7 +2243,7 @@ li {
         margin-left: -100%;
         margin-top: -100%;
         border-radius: 335px;
-        background-color: #01a4e9;
+        background-color: #3684A4;
         animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
         z-index: -5;
     }
@@ -2262,7 +2259,7 @@ li {
       z-index: -1;
       background-color: white;
       border-radius: 100%;
-      box-shadow: 0 0 8px rgba(0,0,0,.3);
+      box-shadow: 0 0 8px #3684A4;
       animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -.4s infinite;
     }
 }
@@ -2280,15 +2277,15 @@ li {
 
 @keyframes pulse-dot {
     0% {
-        transform: scale(.8);
+        transform: scale(.75);
     }
 
     50% {
-        transform: scale(1);
+        transform: scale(.75);
     }
 
     100% {
-        transform: scale(.8);
+        transform: scale(.75);
     }
 }
 
