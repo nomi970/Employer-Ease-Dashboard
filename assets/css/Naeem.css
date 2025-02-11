@@ -324,6 +324,10 @@ ul {
     border: 1px solid#C1D9E3 !important;
 
 }
+.border-bottom-r-12{
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
 
 .gap_12 {
     gap: 12px
@@ -2297,7 +2301,18 @@ li {
     /* border:1px  solid #D0D5DD; */
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
-
+.border-b-r-0{
+    border-bottom-right-radius: 0px!important;
+    border-bottom-left-radius: 0px!important;
+}
+.headquarteractive{
+    background-color:#3684A4!important;
+    color:white!important;
+}
+.headquarteractive.accordion-button::after{
+    content:'';
+    background-image:url('../images/employer-ease-pics/chevron-up-white.svg')!important;
+}
 
 @media(max-width:991px) {
     .chart-datepicker-main {
