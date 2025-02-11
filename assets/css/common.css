@@ -456,7 +456,8 @@ input[type="radio"]:checked {
 #company-operate-error,
 #annual-payroll-error,
 #crm-email-software-error,
-#gross-revenue-error {
+#gross-revenue-error,
+#business_name-error {
     color: red !important;
     font-size: 14px;
 }
@@ -563,4 +564,21 @@ input[type="radio"]:checked {
     .global-check[type="checkbox"]:checked {
         width: 37px;
     }
+}
+
+
+.plan{
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+
+.plan:has(.global-check:checked) {
+    border-color:#3684A4;
 }
