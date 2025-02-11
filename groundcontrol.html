@@ -148,8 +148,25 @@
                     </div>
                     <div class="dashbord-menu">
                         <div
-                            class="border border-top-0 border-end-0 py-2 px-3 border-r-8 border-start-0 special-tab-bg ">
-                            <p class="ps-3 text-white j_family fs_16 fw_600">Ground Control Plan</p>
+                            class="border border-top-0 border-end-0 py-2 px-3 border-r-8 border-start-0 special-tab-bg d-flex align-items-center">
+
+                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_9301_6654)">
+                                    <path
+                                        d="M13.4999 13.5704L10.4999 13.5704M13.4999 13.5704C13.9327 12.6064 14.2677 11.6014 14.4999 10.5704M13.4999 13.5704L15.9999 16.0704C15.9999 16.0704 17.2399 14.2804 16.9999 13.0704C16.7299 11.7204 14.4999 10.5704 14.4999 10.5704M10.4999 13.5704C10.0757 12.6141 9.74901 11.6174 9.52488 10.5954C9.17596 9.08134 9.22022 7.50315 9.65343 6.01098C10.0866 4.51881 10.8944 3.16229 11.9999 2.07044C13.3599 3.43044 15.3599 6.21044 14.4999 10.5704M10.4999 13.5704L7.99988 16.0704C7.99988 16.0704 6.75988 14.2804 6.99988 13.0704C7.26988 11.7204 9.49988 10.5704 9.49988 10.5704M10.4999 18.0704C10.3799 19.4504 11.9999 21.5704 11.9999 21.5704C11.9999 21.5704 13.6199 19.4504 13.4999 18.0704C13.4349 17.2954 12.7849 16.6554 11.9999 16.6604C11.62 16.6693 11.2568 16.8181 10.98 17.0783C10.7032 17.3386 10.5322 17.6919 10.4999 18.0704Z"
+                                        stroke="white" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_9301_6654">
+                                        <rect width="16.9706" height="16.9706" fill="white"
+                                            transform="translate(0 12.0703) rotate(-45)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                            <p class="ps- text-white j_family fs_16 fw_600">Ground Control Plan</p>
                         </div>
                         <a class="nav-item custom-nav-item  align-items-center " href="index.html">
                             <span>
@@ -193,8 +210,8 @@
                                                     class="dropdown-item text-decoration-none text-start side-bar-drop-down pt-3 p-2">Logo
                                                     + Branding Kits</a>
                                                 <a href="LandingPage.html"
-                                                    class="dropdown-item text-decoration-none text-start side-bar-drop-down pt-3  p-2">Website
-                                                    + Landing Pages</a>
+                                                    class="dropdown-item text-decoration-none text-start side-bar-drop-down pt-3  p-2">Design
+                                                    & Development</a>
                                                 <a href="PrintShop.html"
                                                     class="dropdown-item text-decoration-none text-start side-bar-drop-down pt-3 p-2">Print
                                                     Shop</a>
@@ -548,6 +565,13 @@
                         <!-- --------------------------------content show on tab and hide on mobile-------------------------------- -->
                         <div class="d-flex align-items-center gap-1 d-none d-md-block">
                             <div class="d-flex align-items-center" style="gap: 16px">
+                                <div style="height: 40px;width: 40px;"
+                                    class="header_avatar rounded d-flex justify-content-center align-items-center">
+                                    <a href="#">
+                                        <img height="20px" width="20px"
+                                            src="./assets/images/employer-ease-pics/popup_avatar.svg" alt="">
+                                    </a>
+                                </div>
                                 <div class="dropdown">
                                     <button class="d-block border-0 bg-transparent" data-bs-toggle="dropdown"
                                         aria-expanded="false" type="button">
@@ -765,20 +789,24 @@
                                             class="d-flex flex-wrap flex-md-nowrap align-items-center w-100 justify-content-between gap-2">
                                             <h2 class="fs_18 fw_600 lh_28 j_family text-black">The Steps to Start Your
                                                 Business</h2>
-                                            <button
+                                            <a href="progressTracker.html"
                                                 class="whole_button bg-transparent border1 tertiary-black d-flex align-items-center gap-1">
-                                                <img src="assets/images/employer-ease-pics/cloud-download.svg" alt="">
-                                                Download Resources
+                                                <!-- <img src="assets/images/employer-ease-pics/cloud-download.svg" alt=""> -->
+                                                Progress Tracker
                                                 <img height="20px" width="20px"
-                                                    src="assets/images/employer-ease-pics/pdf.svg" alt="">
-                                            </button>
+                                                    src="assets/images/employer-ease-pics/popup_avatar.svg" alt="">
+                                            </a>
                                         </div>
                                         <p class="fs_16 j_family tertiary-black j_family pt-3">Each step is designed to
                                             help you build momentum and confidence, ensuring you move forward at your
                                             own pace without unnecessary pressure</p>
                                         <div class="mt-4 p-3 border1 border-r-8">
-                                            <div class="">
+                                            <div class="d-flex position-relative justify-content-center">
                                                 <div id="circularProgress"></div>
+                                                <div class="position-absolute bg-white" style="top:32%">
+                                                    <img src="./assets/images/employer-ease-pics/blue-rocket.svg"
+                                                        alt="">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -790,7 +818,7 @@
                                                     <div class="d-flex flex-column justify-content-between h-100 gap-3">
                                                         <div>
                                                             <p class="text-center fs_20 fw_600 j_family tertiary-black">
-                                                                Step:1</p>
+                                                                Step1:Onboarding</p>
                                                             <div class="d-flex gap_12 mt-3 align-items-center">
                                                                 <input id="check1" class="global-check" type="checkbox"
                                                                     name="">
@@ -818,7 +846,7 @@
                                                     <div class="d-flex flex-column justify-content-between h-100 gap-3">
                                                         <div>
                                                             <p class="text-center fs_20 fw_600 j_family tertiary-black">
-                                                                Step:2</p>
+                                                                Step2: Business Planning</p>
                                                             <div class="d-flex gap_12 mt-3 align-items-center">
                                                                 <input id="check3" class="global-check" type="checkbox"
                                                                     name="">
@@ -846,7 +874,7 @@
                                                     <div class="d-flex flex-column justify-content-between h-100 gap-3">
                                                         <div>
                                                             <p class="text-center fs_20 fw_600 j_family tertiary-black">
-                                                                Step:3</p>
+                                                                Step :Formation</p>
                                                             <div class="d-flex gap_12 mt-3 align-items-center">
                                                                 <input id="check5" class="global-check" type="checkbox"
                                                                     name="">
@@ -887,7 +915,7 @@
                                                     <div class="d-flex flex-column justify-content-between h-100 gap-3">
                                                         <div>
                                                             <p class="text-center fs_20 fw_600 j_family tertiary-black">
-                                                                Step:4</p>
+                                                                Step 4:Digital Presence</p>
                                                             <div class="d-flex gap_12 mt-3 align-items-center">
                                                                 <input id="check8" class="global-check" type="checkbox"
                                                                     name="">
@@ -928,7 +956,7 @@
                                                     <div class="d-flex flex-column justify-content-between h-100 gap-3">
                                                         <div>
                                                             <p class="text-center fs_20 fw_600 j_family tertiary-black">
-                                                                Step:5</p>
+                                                                Step 5:Communication</p>
                                                             <div class="d-flex gap_12 mt-3 ">
                                                                 <div class="mt-1">
                                                                     <input id="check10" class="global-check h-100 w-100"
@@ -952,7 +980,7 @@
                                                     <div class="d-flex flex-column justify-content-between h-100 gap-3">
                                                         <div>
                                                             <p class="text-center fs_20 fw_600 j_family tertiary-black">
-                                                                Step:6</p>
+                                                                Step 6:Cloud & Storage</p>
                                                             <div class="d-flex gap_12 mt-3 align-items-start">
                                                                 <div class="d-block mt-1">
                                                                     <input id="check13" class="global-check"
@@ -992,32 +1020,40 @@
                                                     <div class="d-flex flex-column justify-content-between h-100 gap-3">
                                                         <div>
                                                             <p class="text-center fs_20 fw_600 j_family tertiary-black">
-                                                                Step:4</p>
+                                                                Step 7:Finance & Insurance</p>
                                                             <div class="d-flex gap_12 mt-3 align-items-center">
-                                                                <input id="check100" class="global-check"
-                                                                    type="checkbox" name="">
+                                                                <div>
+                                                                    <input id="check100" class="global-check"
+                                                                        type="checkbox" name="">
+                                                                </div>
                                                                 <label for="check100"
                                                                     class="fs_16 j_family tertiary-black lh_26">Setup &
                                                                     Connect Bank Accounts </label>
                                                             </div>
                                                             <div class="d-flex gap_12 mt-3 align-items-center">
-                                                                <input id="check15" class="global-check" type="checkbox"
-                                                                    name="">
+                                                                <div class="">
+                                                                    <input id="check15" class="global-check"
+                                                                        type="checkbox" name="">
+                                                                </div>
                                                                 <label for="check15"
                                                                     class="fs_16 j_family tertiary-black lh_26">Review
                                                                     Business Funding
                                                                 </label>
                                                             </div>
                                                             <div class="d-flex gap_12 mt-3 align-items-center">
-                                                                <input id="check22" class="global-check" type="checkbox"
-                                                                    name="">
+                                                                <div>
+                                                                    <input id="check22" class="global-check"
+                                                                        type="checkbox" name="">
+                                                                </div>
                                                                 <label for="check22"
                                                                     class="fs_16 j_family tertiary-black lh_26">Setup
                                                                     Business Insurance Protection</label>
                                                             </div>
                                                             <div class="d-flex gap_12 mt-3">
-                                                                <input id="check23" class="global-check mt-1"
-                                                                    type="checkbox" name="">
+                                                                <div>
+                                                                    <input id="check23" class="global-check mt-1"
+                                                                        type="checkbox" name="">
+                                                                </div>
                                                                 <label for="check23"
                                                                     class="fs_16 j_family tertiary-black lh_26">Setup
                                                                     Digital Payments and Merchant Accounts
@@ -1032,8 +1068,10 @@
                                                                 </label>
                                                             </div>
                                                             <div class="d-flex gap_12 mt-3">
-                                                                <input id="check26" class="global-check mt-1"
-                                                                    type="checkbox" name="">
+                                                                <div>
+                                                                    <input id="check26" class="global-check mt-1"
+                                                                        type="checkbox" name="">
+                                                                </div>
                                                                 <label for="check26"
                                                                     class="fs_16 j_family tertiary-black lh_26">Review
                                                                     and Setup Health & Retirement Benefits
@@ -1051,7 +1089,7 @@
                                                     <div class="d-flex flex-column justify-content-between h-100 gap-3">
                                                         <div>
                                                             <p class="text-center fs_20 fw_600 j_family tertiary-black">
-                                                                Step:5</p>
+                                                                Step 8:Accounting Services</p>
                                                             <div class="d-flex gap_12 mt-3 ">
                                                                 <div class="mt-1">
                                                                     <input id="check27" class="global-check h-100 w-100"
@@ -1075,7 +1113,7 @@
                                                     <div class="d-flex flex-column justify-content-between h-100 gap-3">
                                                         <div>
                                                             <p class="text-center fs_20 fw_600 j_family tertiary-black">
-                                                                Step:6</p>
+                                                                Step 9:HR & Payroll</p>
                                                             <div class="d-flex gap_12 mt-3 align-items-start">
                                                                 <div class="d-block mt-1">
                                                                     <input id="check28" class="global-check"
@@ -2036,6 +2074,7 @@
 
 
 
+
                                                     <div class="d-flex justify-content-end align-items-center gap-3">
                                                         <button onclick="clearForm()"
                                                             class="whole_button button_bg main_color border-0">Cancel</button>
@@ -2044,6 +2083,91 @@
                                                     </div>
                                                 </div>
                                             </form>
+                                        </div>
+                                    </div>
+                                    <div class="p-3 border-r-12 bg-white mt-4">
+                                        <h4 class="fs_18 fw_600 j_family lh_28">Reasearching Your Business Name</h4>
+                                        <ul class="mt-3" style="list-style: disc!important;">
+                                            <li class="d-flex align-items-center">
+                                                <img class="me-2" height="7px" width="7px" src="./assets/images/employer-ease-pics/doticon.png" alt="">
+                                                <p class="fs_16 fw_500 lh_26 j_family">
+                                                    Start with a Google Search:
+                                                </p>
+                                                <p class="fs_16 j_family lh_28 fw_400">
+                                                    Look for existing businesses using the name to ensure uniqueness and avoid confusion.
+
+                                                </p>
+                                            </li>
+                                            <li class="d-flex align-items-center">
+                                                <img class="me-2" height="7px" width="7px" src="./assets/images/employer-ease-pics/doticon.png" alt="">
+                                                <p class="fs_16 fw_500 lh_26 j_family">
+                                                    Check Domain Availability:
+                                                </p>
+                                                <p class="fs_16 j_family lh_28 fw_400">
+                                                    Use tools like Namecheap or GoDaddy to confirm the availability of a matching website domain.
+
+                                                </p>
+                                            </li>
+                                            <li class="d-flex align-items-center">
+                                                <img class="me-2" height="7px" width="7px" src="./assets/images/employer-ease-pics/doticon.png" alt="">
+                                                <p class="fs_16 fw_500 lh_26 j_family">
+                                                    Search State Business Registrations: 
+                                                </p>
+                                                <p class="fs_16 j_family lh_28 fw_400">
+                                                    Visit your Secretary of State's website to ensure the name isn’t already registered
+                                                </p>
+                                            </li>
+                                            <li class="d-flex align-items-center">
+                                                <img class="me-2" height="7px" width="7px" src="./assets/images/employer-ease-pics/doticon.png" alt="">
+                                                <p class="fs_16 fw_500 lh_26 j_family">
+                                                    Verify Trademarks: 
+                                                </p>
+                                                <p class="fs_16 j_family lh_28 fw_400">
+                                                    Use the USPTO Trademark Database to ensure the name isn’t trademarked.
+                                                </p>
+                                            </li>
+                                            <li class="d-flex align-items-center">
+                                                <img class="me-2" height="7px" width="7px" src="./assets/images/employer-ease-pics/doticon.png" alt="">
+                                                <p class="fs_16 fw_500 lh_26 j_family">
+                                                    Social Media Handles: 
+                                                </p>
+                                                <p class="fs_16 j_family lh_28 fw_400">
+                                                    Check platforms like Instagram, Twitter, and LinkedIn for available handles.
+
+                                                </p>
+                                            </li>
+                                            <li class="d-flex align-items-center">
+                                                <img class="me-2" height="7px" width="7px" src="./assets/images/employer-ease-pics/doticon.png" alt="">
+                                                <p class="fs_16 fw_500 lh_26 j_family">
+                                                    Consider Industry Specifics: 
+                                                </p>
+                                                <p class="fs_16 j_family lh_28 fw_400">
+                                                    Avoid names that are too generic or commonly used in your industry.
+                                                </p>
+                                            </li>
+                                            <li class="d-flex align-items-center">
+                                                <img class="me-2" height="7px" width="7px" src="./assets/images/employer-ease-pics/doticon.png" alt="">
+                                                <p class="fs_16 fw_500 lh_26 j_family">
+                                                    Conduct a Survey: 
+                                                </p>
+                                                <p class="fs_16 j_family lh_28 fw_400">
+                                                    Ask friends, family, or potential customers for feedback on the name’s appeal and clarity.
+
+                                                </p>
+                                            </li>
+                                            <li class="d-flex align-items-center">
+                                                <img class="me-2" height="7px" width="7px" src="./assets/images/employer-ease-pics/doticon.png" alt="">
+                                                <p class="fs_16 fw_500 lh_26 j_family">
+                                                    Think Long-Term:
+                                                </p>
+                                                <p class="fs_16 j_family lh_28 fw_400">
+                                                    Ensure the name reflects your brand vision and can grow with your business.
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <input class="global-check" type="checkbox">
+                                            <p class="fs_16 fw_400 lh_26 j_family">Check this box <span class="fs_16 fw_500 lh_26 j_family">Complete</span> once you have completed these <span class="fs_16 fw_500 lh_26 j_family">Steps</span>.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -2173,27 +2297,44 @@
         });
     </script>
     <script>
-        const bar = new ProgressBar.Circle('#circularProgress', {
-            color: '#407d9e',
-            strokeWidth: 12,
-            trailColor: '#e6e6e6',
-            trailWidth: 12,
-            easing: 'easeInOut',
-            duration: 1400,
-            text: {
-                value: '',
-                className: 'progress-text',
-            },
-            svgStyle: {
-                strokeLinecap: 'round',
-            },
+        // Ensure the script runs after the DOM is fully loaded
+        document.addEventListener("DOMContentLoaded", function () {
+            const progressElement = document.getElementById("circularProgress");
+
+            // Check if the element exists
+            if (!progressElement) {
+                console.error("Progress bar container not found!");
+                return;
+            }
+
+            // Initialize ProgressBar.js
+            const bar = new ProgressBar.Circle(progressElement, {
+                color: '#407d9e',
+                strokeWidth: 12,
+                trailColor: '#e6e6e6',
+                trailWidth: 12,
+                easing: 'easeInOut',
+                duration: 1400,
+                text: {
+                    value: '',
+                    className: 'progress-text',
+                },
+                svgStyle: {
+                    strokeLinecap: 'round',
+                    width: '100%',  // Ensure SVG takes full width
+                    height: '100%',
+                },
+            });
+
+            function updateProgress(value) {
+                const progressDecimal = value / 100;
+                bar.animate(progressDecimal);
+                document.querySelector('.progress-text').textContent = `${value}`;
+            }
+
+            // Update Progress Value
+            updateProgress(14);
         });
-        function updateProgress(value) {
-            const progressDecimal = value / 100;
-            bar.animate(progressDecimal);
-            document.querySelector('.progress-text').textContent = `${value}%`;
-        }
-        updateProgress(14);
     </script>
     <!-- Chatbot -->
     <script>
