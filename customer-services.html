@@ -671,25 +671,244 @@
                     <div class="position-relative">
                         <!-- -------------------------------Customer Services---------------------------- -->
                         <div class="bg-white border-r-12 p_16">
+                            <ul class="nav nav-tabs crm-tabs bg-white border-r-8 rounded-bottom-0" id="myTab" role="tablist" style="padding-left: 0 !important;padding-right: 0 !important;">
+                                <li class="nav-item" role="presentation">
+                                  <button class="nav-link active border-0" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Customer Service</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                  <button class="nav-link border-0" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Customer Setup Service</button>
+                                </li>
+                               
+                              </ul>
+                              <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                                    <div class="p-3 bg-white formation-header">
+                                        <div>
+                                           
+                                            <div class="d-flex align-items-center gap-3 justify-content-between"> 
+                                                <h2 class="fs_18 fw_600 j_family">Services</h2>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <a href="customer-service-course-card.html" class="whole_button bg-transparent border1 tertiary-black d-flex align-items-center gap-1">
+                                                        <!-- <img src="assets/images/employer-ease-pics/cloud-download.svg" alt=""> -->
+                                                        Customer Service
+                                                        <img height="20px" width="20px" src="assets/images/employer-ease-pics/popup_avatar.svg" alt="">
+                                                    </a>
+                                                    <button type="button" class="whole_button text-white" data-bs-toggle="modal"
+                                                    data-bs-target="#exampleModal">
+                                                    <i class="fa fa-plus text-white me-2"></i>
+                                                    Create Ticket
+                                                </button>
+                                                </div>
+                                               
+                                            </div>
+                                            <p class="fs_16 fw_400 Nunito_family color_gray pt-2">You can see support tickets
+                                                here</p>
+                                        </div>
+                                        <div class="table-responsive bg-transparent  mt-4 user-profile-table-main">
+                                            <table class="table bg-transparent mb-0">
+                                                <thead class="th-bg">
+                                                    <tr class="border-table border-top-0">
+                                                        <th><input class="global-check" type="checkbox"></th>
+                                                        <th>Ticket ID <i class="fa fa-arrow-down ms-1  tertiary-gray"></i></th>
+                                                        <th>Username</th>
+                                                        <th>Email</th>
+                                                        <th>Status</th>
+                                                        <th></th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="border-table">
+                                                        <td><input class="global-check" type="checkbox"></td>
+                                                        <td class="number-style">4600</td>
+                                                        <td>Bill Sullivan</td>
+                                                        <td>Bill@employerease.com</td>
+                                                        <td><span class="status-resolved">✔ Resolved</span></td>
+                                                        <td><img src="assets/images/employer-ease-pics/double-inbox.svg" alt="">
+                                                        </td>
+                                                        <td><a href="customer-service-details.html"><img
+                                                                    src="assets/images/employer-ease-pics/eye-view.svg" alt=""></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="border-table">
+                                                        <td><input class="global-check" type="checkbox"></td>
+                                                        <td class="number-style">4600</td>
+                                                        <td>Bill Sullivan</td>
+                                                        <td>Bill@employerease.com</td>
+                                                        <td><span class="status-closed">✖ Closed</span></td>
+                                                        <td><img src="assets/images/employer-ease-pics/double-inbox.svg" alt="">
+                                                        </td>
+                                                        <td><a href="customer-service-details.html"><img
+                                                                    src="assets/images/employer-ease-pics/eye-view.svg" alt=""></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="border-table">
+                                                        <td><input class="global-check" type="checkbox"></td>
+                                                        <td class="number-style">4600</td>
+                                                        <td>Bill Sullivan</td>
+                                                        <td>Bill@employerease.com</td>
+                                                        <td><span class="status-open"><i
+                                                                    class="fa-regular fa-circle text-warning"></i>
+                                                                Open</span></td>
+                                                        <td><img src="assets/images/employer-ease-pics/double-inbox.svg" alt="">
+                                                        </td>
+                                                        <td><a href="customer-service-details.html"><img
+                                                                    src="assets/images/employer-ease-pics/eye-view.svg" alt=""></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="border-table">
+                                                        <td><input class="global-check" type="checkbox"></td>
+                                                        <td class="number-style">4600</td>
+                                                        <td>Bill Sullivan</td>
+                                                        <td>Bill@employerease.com</td>
+                                                        <td><span class="status-closed">✖ Closed</span></td>
+                                                        <td><img src="assets/images/employer-ease-pics/double-inbox.svg" alt="">
+                                                        </td>
+                                                        <td><a href="customer-service-details.html"><img
+                                                                    src="assets/images/employer-ease-pics/eye-view.svg" alt=""></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="">
+                                                        <td><input class="global-check" type="checkbox"></td>
+                                                        <td class="number-style">4600</td>
+                                                        <td>Bill Sullivan</td>
+                                                        <td>Bill@employerease.com</td>
+                                                        <td><span class="status-resolved">✔ Resolved</span></td>
+                                                        <td><img src="assets/images/employer-ease-pics/double-inbox.svg" alt="">
+                                                        </td>
+                                                        <td><a href="customer-service-details.html"><img
+                                                                    src="assets/images/employer-ease-pics/eye-view.svg" alt=""></a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                                    <div class="p-3 bg-white formation-header rounded-top-0">
+                                        <div class="d-flex align-items-center gap-3 justify-content-between"> 
+                                            <h2 class="fs_18 fw_600 j_family">Customer Setup Service</h2>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <a href="customer-service-course-card.html" class="whole_button bg-transparent border1 tertiary-black d-flex align-items-center gap-1">
+                                                    <!-- <img src="assets/images/employer-ease-pics/cloud-download.svg" alt=""> -->
+                                                    Customer Setup Service
+                                                    <img height="20px" width="20px" src="assets/images/employer-ease-pics/popup_avatar.svg" alt="">
+                                                </a>
+                                                
+                                            </div>
+                                           
+                                        </div>
+                                        <p class="fs_16 fw_400 j_family color_gray">Have employees or getting ready to hire?
+                                            We have you covered through our partners.</p>
+                                    </div>
+                                    <div class="bg-white formation-header">
+                                        <div class="compliance-card1 border-r-12 p-3 border h-100 d-flex flex-column justify-content-between">
+                                            <div>
+                                                <div class="d-flex align-items-center justify-content-between flex-wrap flex-md-nowrap gap-3">
+                                                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="48" height="48" rx="12" fill="#EAECF0"/>
+                                                        <g clip-path="url(#clip0_9454_26839)">
+                                                        <path d="M22.7066 17.9187V36.8835H7L22.7066 17.9187ZM22.7066 11.1152C22.7066 15.4493 19.1958 18.9601 14.8617 18.9601C10.5277 18.9601 7 15.4493 7 11.1152H22.7066ZM25.2939 36.8842C25.2939 32.5501 28.8047 29.0393 33.1388 29.0393C37.4728 29.0393 40.9836 32.5501 40.9836 36.8842H25.2939ZM25.2939 30.0808V11.1152H41L25.2939 30.0808Z" fill="#03363D"/>
+                                                        </g>
+                                                        <defs>
+                                                        <clipPath id="clip0_9454_26839">
+                                                        <rect width="34" height="25.772" fill="white" transform="translate(7 11.1133)"/>
+                                                        </clipPath>
+                                                        </defs>
+                                                        </svg>                                                        
+                                                    <div class="d-flex gap-3 align-items-center">
+                                                        <button class="whole_button border1 bg-transparent tertiary-black px-3">Setup Account</button>
+                                                        <button class="whole_button light-main-bg main_color px-3">Connect Account</button>
+                                                    </div>
+                                                </div>
+                                                <h3 class="fs_20 fw_600 lh_28 j_family pt-3">Zendesk</h3>
+                                                <p class="fs_16 fw_400 lh_26 j_family tertiary-black pt-2">
+                                                    Zendesk is a leading customer service and engagement platform that empowers businesses to create seamless, personalized, and efficient customer experiences. Designed for companies of all sizes, Zendesk offers tools that centralize customer support operations, enhance team collaboration, and provide insightful analytics. 
+                                                </p>
+                                                <div class="hidden_txt d-none">
+                                                    <h3 class="fs_18 fw_600 lh_28 j_family pt-3 pb-2">Target Customers</h3>   
+                                                    <ul class="ps-4">
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black" style="list-style: disc;">Startups and Small BusinessesNeed scalable, easy-to-implement customer service solutions to support their growth.
+                                                        </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black" style="list-style: disc;">Benefit from Zendesk's intuitive setup and flexible pricing options.
+                                                        </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black" style="list-style: disc;">E-commerce BusinessesRequire omnichannel support to handle inquiries across email, live chat, social media, and phone.
+                                                        </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black" style="list-style: disc;">Utilize Zendesk to resolve issues quickly, reducing cart abandonment and increasing customer loyalty.
+                                                        </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black" style="list-style: disc;">SaaS CompaniesLeverage Zendesk to offer responsive customer support, ensuring high customer retention and satisfaction.
+                                                        </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black" style="list-style: disc;">Benefit from integrations with other software tools to streamline operations.</li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black" style="list-style: disc;">Enterprise OrganizationsDemand robust, customizable solutions for managing high volumes of customer interactions.
+                                                        </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black" style="list-style: disc;">Utilize advanced features like workflow automation, AI-powered bots, and detailed analytics.
+                                                        </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black" style="list-style: disc;">Healthcare, Finance, and Education SectorsRequire secure and compliant solutions to manage sensitive customer data and interactions.
+                                                        </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black" style="list-style: disc;">Zendesk's robust security features and compliance certifications make it a trusted choice.</li>
+                                                    </ul>      
+                                                    <h3 class="fs_18 fw_600 lh_28 j_family pt-2 pb-2">Features</h3>   
+                                                    <ul class="ps-4">
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black" style="list-style: disc;">Omnichannel SupportConsolidates interactions from email, chat, phone, social media, and more into a unified interface.
+                                                        </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black" style="list-style: disc;">Ensures consistent and seamless customer experiences across all channels.
+                                                        </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black" style="list-style: disc;">Automates repetitive tasks with workflows to save time and improve accuracy.
+                                                        </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black" style="list-style: disc;">AI-Powered ToolsChatbots and virtual agents handle routine inquiries and provide instant responses.
+                                                        </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black" style="list-style: disc;">Predictive analytics help identify potential customer issues before they escalate.
+                                                        </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black" style="list-style: disc;">Self-Service OptionsAllows businesses to create a comprehensive knowledge base with FAQs, tutorials, and guides.
+                                                        </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black" style="list-style: disc;">Empowers customers to resolve common issues independently, reducing ticket volume.
+                                                        </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black" style="list-style: disc;">Advanced Analytics and ReportingProvides insights into customer support performance through dashboards and detailed reports.
+                                                        </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black" style="list-style: disc;">Tracks metrics such as resolution time, customer satisfaction, and agent productivity.
+                                                        </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black" style="list-style: disc;">Customization and IntegrationOffers customizable workflows, ticket forms, and support portals to match business needs.
+                                                        </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black" style="list-style: disc;">Integrates with hundreds of third-party apps and tools for a seamless ecosystem.
+                                                        </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black" style="list-style: disc;">Scalability and FlexibilityAccommodates businesses at any stage of growth with plans tailored to varying needs.
+                                                        </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black" style="list-style: disc;">Supports team collaboration with features like internal notes and real-time updates.
+                                                        </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black" style="list-style: disc;">Security and ComplianceAdheres to global security standards and regulations, ensuring data protection and compliance.
+                                                        </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black" style="list-style: disc;">Features include role-based access control, audit logs, and encryption.
+                                                        </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black" style="list-style: disc;">Zendesk is a versatile platform designed to elevate customer service and engagement, making it an ideal choice for businesses aiming to enhance their customer experience, streamline operations, and achieve scalability.</li>
+                                                        
+                                                    </ul> 
+                                                    <h3 class="fs_18 fw_600 lh_28 j_family pt-2 pb-2">Why Consider Zendesk</h3>
+                                                    <ul class="ps-4">
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black" style="list-style: disc;">Zendesk is a versatile platform designed to elevate customer service and engagement, making it an ideal choice for businesses aiming to enhance their customer experience, streamline operations, and achieve scalability.
+                                                        </li>
+                                                    </ul>                                
+                                                </div>
+                                                
+                                               
+                                                <button class="whole_button border bg-transparent fw_600 mt_12 view-more-btn">View More</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                               
+                              </div>
                             <div
                                 class="d-flex flex-wrap flex-md-nowrap gap-3 justify-content-between align-items-center">
-                                <div>
-                                    <h2 class="fs_18 fw_600 j_family">Services</h2>
-                                    <p class="fs_16 fw_400 Nunito_family color_gray pt-2">You can see support tickets
-                                        here</p>
-                                </div>
+                               
                                 <div>
                                 </div>
-                                <!-- Button trigger modal -->
-                                <button type="button" class="whole_button text-white" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal">
-                                    <i class="fa fa-plus text-white me-2"></i>
-                                    Create Ticket
-                                </button>
+                               
                                 <!-- Modal -->
                                 <div class="modal fade w-100" id="exampleModal" tabindex="-1"
                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
+                                    <div class="modal-dialog" style="max-width: 1100px;">
                                         <div class="modal-content w-100 p_16">
                                             <div class="flex-column d-flex gap-2">
                                                 <h1 class="fs_18 fw_600 j_family">Create Ticket</h1>
@@ -770,86 +989,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="table-responsive bg-transparent  mt-4 user-profile-table-main">
-                                <table class="table bg-transparent mb-0">
-                                    <thead class="th-bg">
-                                        <tr class="border-table border-top-0">
-                                            <th><input class="global-check" type="checkbox"></th>
-                                            <th>Ticket ID <i class="fa fa-arrow-down ms-1  tertiary-gray"></i></th>
-                                            <th>Username</th>
-                                            <th>Email</th>
-                                            <th>Status</th>
-                                            <th></th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="border-table">
-                                            <td><input class="global-check" type="checkbox"></td>
-                                            <td class="number-style">4600</td>
-                                            <td>Bill Sullivan</td>
-                                            <td>Bill@employerease.com</td>
-                                            <td><span class="status-resolved">✔ Resolved</span></td>
-                                            <td><img src="assets/images/employer-ease-pics/double-inbox.svg" alt="">
-                                            </td>
-                                            <td><a href="customer-service-details.html"><img
-                                                        src="assets/images/employer-ease-pics/eye-view.svg" alt=""></a>
-                                            </td>
-                                        </tr>
-                                        <tr class="border-table">
-                                            <td><input class="global-check" type="checkbox"></td>
-                                            <td class="number-style">4600</td>
-                                            <td>Bill Sullivan</td>
-                                            <td>Bill@employerease.com</td>
-                                            <td><span class="status-closed">✖ Closed</span></td>
-                                            <td><img src="assets/images/employer-ease-pics/double-inbox.svg" alt="">
-                                            </td>
-                                            <td><a href="customer-service-details.html"><img
-                                                        src="assets/images/employer-ease-pics/eye-view.svg" alt=""></a>
-                                            </td>
-                                        </tr>
-                                        <tr class="border-table">
-                                            <td><input class="global-check" type="checkbox"></td>
-                                            <td class="number-style">4600</td>
-                                            <td>Bill Sullivan</td>
-                                            <td>Bill@employerease.com</td>
-                                            <td><span class="status-open"><i
-                                                        class="fa-regular fa-circle text-warning"></i>
-                                                    Open</span></td>
-                                            <td><img src="assets/images/employer-ease-pics/double-inbox.svg" alt="">
-                                            </td>
-                                            <td><a href="customer-service-details.html"><img
-                                                        src="assets/images/employer-ease-pics/eye-view.svg" alt=""></a>
-                                            </td>
-                                        </tr>
-                                        <tr class="border-table">
-                                            <td><input class="global-check" type="checkbox"></td>
-                                            <td class="number-style">4600</td>
-                                            <td>Bill Sullivan</td>
-                                            <td>Bill@employerease.com</td>
-                                            <td><span class="status-closed">✖ Closed</span></td>
-                                            <td><img src="assets/images/employer-ease-pics/double-inbox.svg" alt="">
-                                            </td>
-                                            <td><a href="customer-service-details.html"><img
-                                                        src="assets/images/employer-ease-pics/eye-view.svg" alt=""></a>
-                                            </td>
-                                        </tr>
-                                        <tr class="">
-                                            <td><input class="global-check" type="checkbox"></td>
-                                            <td class="number-style">4600</td>
-                                            <td>Bill Sullivan</td>
-                                            <td>Bill@employerease.com</td>
-                                            <td><span class="status-resolved">✔ Resolved</span></td>
-                                            <td><img src="assets/images/employer-ease-pics/double-inbox.svg" alt="">
-                                            </td>
-                                            <td><a href="customer-service-details.html"><img
-                                                        src="assets/images/employer-ease-pics/eye-view.svg" alt=""></a>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                           
                         </div>
+                    </div>
     </section>
     <!-- ************************Scripts Start Here*********************************-->
     <!--------------------------------- Jquery --------------------------->
@@ -883,6 +1025,31 @@
                     });
                 });
             }
+        });
+    </script>
+    <script>
+        // Reusable function to handle toggle
+        function setupViewMoreToggle(buttonSelector, hiddenTextSelector) {
+            const buttons = document.querySelectorAll(buttonSelector);
+            buttons.forEach(button => {
+                const hiddenText = button.closest(".compliance-card1").querySelector(hiddenTextSelector);
+    
+                button.addEventListener("click", function () {
+                    hiddenText.classList.toggle("d-none");
+    
+                    // Toggle button text
+                    if (hiddenText.classList.contains("d-none")) {
+                        button.textContent = "View More";
+                    } else {
+                        button.textContent = "View Less";
+                    }
+                });
+            });
+        }
+    
+        // Initialize on DOMContentLoaded
+        document.addEventListener("DOMContentLoaded", function () {
+            setupViewMoreToggle(".view-more-btn", ".hidden_txt");
         });
     </script>
 </body>
