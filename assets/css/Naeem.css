@@ -1447,6 +1447,28 @@ input[type="text"] {
     color: #344054;
     background-color: #FCFCFD !important;
 }
+input[type="password"] {
+    font-family: Plus Jakarta Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #344054;
+    background-color: #FCFCFD !important;
+}
+textarea{
+    font-family: Plus Jakarta Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #344054;
+    background-color: #FCFCFD !important;
+}
 
 input[type="text"]::placeholder {
     font-family: Plus Jakarta Sans;
@@ -2294,6 +2316,9 @@ li {
     100% {
         transform: scale(.75);
     }
+}
+.borderside{
+    border:2px solid #3d97fe1a;
 }
 
 
