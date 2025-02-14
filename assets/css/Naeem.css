@@ -2317,6 +2317,9 @@ li {
         transform: scale(.75);
     }
 }
+.borderside{
+    border:2px solid #3d97fe1a;
+}
 
 
 /* =========================---------------Chat box CSS End----------------======================= */
