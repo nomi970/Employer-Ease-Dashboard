@@ -324,7 +324,8 @@ ul {
     border: 1px solid#C1D9E3 !important;
 
 }
-.border-bottom-r-12{
+
+.border-bottom-r-12 {
     border-bottom-right-radius: 12px;
     border-bottom-left-radius: 12px;
 }
@@ -922,7 +923,7 @@ span.flatpickr-weekday {
     border-radius: 8px;
     border: 1px solid #3684A4;
     width: fit-content;
-    text-decoration: none!important;
+    text-decoration: none !important;
 }
 
 .formation-header {
@@ -1447,6 +1448,7 @@ input[type="text"] {
     color: #344054;
     background-color: #FCFCFD !important;
 }
+
 input[type="password"] {
     font-family: Plus Jakarta Sans;
     font-size: 16px;
@@ -1458,7 +1460,8 @@ input[type="password"] {
     color: #344054;
     background-color: #FCFCFD !important;
 }
-textarea{
+
+textarea {
     font-family: Plus Jakarta Sans;
     font-size: 16px;
     font-weight: 400;
@@ -2265,7 +2268,7 @@ li {
         content: '';
         position: relative;
         display: block;
-        left:55%;
+        left: 55%;
         width: 300%;
         height: 300%;
         box-sizing: border-box;
@@ -2278,18 +2281,18 @@ li {
     }
 
     &:after {
-      content: '';
-      position: absolute;
-      left: -10px; 
-      top: -121%;
-      display: block;
-      width: 100%;
-      height: 180%;
-      z-index: -1;
-      background-color: white;
-      border-radius: 100%;
-      box-shadow: 0 0 8px #3684A4;
-      animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -.4s infinite;
+        content: '';
+        position: absolute;
+        left: -10px;
+        top: -121%;
+        display: block;
+        width: 100%;
+        height: 180%;
+        z-index: -1;
+        background-color: white;
+        border-radius: 100%;
+        box-shadow: 0 0 8px #3684A4;
+        animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -.4s infinite;
     }
 }
 
@@ -2317,27 +2320,105 @@ li {
         transform: scale(.75);
     }
 }
-.borderside{
-    border:2px solid #3d97fe1a;
+
+.borderside {
+    border: 2px solid #3d97fe1a;
+}
+
+
+/* =========================---------------Card Flip Animation----------------======================= */
+.myCard {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.rotate {
+    transform: scaleX(-1);
+}
+
+.cardText {
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+}
+
+.cardText.completed {
+    opacity: 0;
+}
+
+.completedText {
+    font-size: 16px;
+    font-weight: 600;
+    color: gray;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.rotate .completedText {
+    opacity: 1;
+}
+
+.rotate .cardText {
+    opacity: 0;
+}
+
+.myButton {
+    cursor: pointer;
+}
+
+.whole_button {
+    transition: background-color 0.3s ease;
+}
+
+.SecondText {
+    transform: rotateY(180deg);
+}
+
+.cutsomSelect {
+    appearance: none;
+    border: 1.5px solid #D0D5DD;
+    background-color: transparent !important;
+    font-family: Plus Jakarta Sans;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0%;
+    padding-right: 34px;
+    width: fit-content;
+}
+
+.communityCard {
+    box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+    
+border:1px solid #EDEEF2;
 }
 
 
 /* =========================---------------Chat box CSS End----------------======================= */
-.header_avatar{
+.header_avatar {
     /* border:1px  solid #D0D5DD; */
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
-.border-b-r-0{
-    border-bottom-right-radius: 0px!important;
-    border-bottom-left-radius: 0px!important;
+
+.border-b-r-0 {
+    border-bottom-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
 }
-.headquarteractive{
-    background-color:#3684A4!important;
-    color:white!important;
+
+.headquarteractive {
+    background-color: #3684A4 !important;
+    color: white !important;
 }
-.headquarteractive.accordion-button::after{
-    content:'';
-    background-image:url('../images/employer-ease-pics/chevron-up-white.svg')!important;
+
+.headquarteractive.accordion-button::after {
+    content: '';
+    background-image: url('../images/employer-ease-pics/chevron-up-white.svg') !important;
 }
 
 @media(max-width:991px) {
