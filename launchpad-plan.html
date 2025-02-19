@@ -682,13 +682,13 @@
                                     aria-labelledby="home-tab" tabindex="0">
                                     <div class="p-3 bg-white border-r-8 rounded-top-0">
                                         <div
-                                            class="d-flex flex-wrap flex-md-nowrap align-items-center w-100 justify-content-between">
+                                            class="d-flex flex-wrap flex-md-nowrap align-items-center w-100 justify-content-between gap-2">
                                             <h2 class="fs_18 fw_600 lh_28 j_family text-black">The Steps to Start Your
                                                 Business</h2>
-                                            <a href="progressTrackerCourseCard.html"
+                                            <a href="progressTracker.html"
                                                 class="whole_button bg-transparent border1 tertiary-black d-flex align-items-center gap-1">
-                                                <!-- <img src="assets/images/employer-ease-pics/cloud-download.svg" alt=""> -->
-                                                The Steps to Start Your Business
+
+                                                Progress Tracker
                                                 <img height="20px" width="20px"
                                                     src="assets/images/employer-ease-pics/popup_avatar.svg" alt="">
                                             </a>
@@ -696,41 +696,793 @@
                                         <p class="fs_16 j_family tertiary-black j_family pt-3">Each step is designed to
                                             help you build momentum and confidence, ensuring you move forward at your
                                             own pace without unnecessary pressure</p>
-                                        <div class="mt-4 p-3 border1 border-r-8 d-flex justify-content-center">
+                                        <div class="mt-4 p-3 border1 border-r-8">
                                             <div class="d-flex position-relative justify-content-center">
                                                 <div id="circularProgress"></div>
-                                                <div class="position-absolute bg-white" style="top:32%">
-                                                    <img src="./assets/images/employer-ease-pics/blue-rocket.svg"
-                                                        alt="">
+                                                <div class="position-absolute bg-white rounded-circle" style="top:30%">
+                                                    <img class="rounded-circle" height="46px" width="46px"
+                                                        src="./assets/images/employer-ease-pics/greenrocker.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="stepper-container">
+                                                <div class="stepper-line"></div>
+                                                <div class="stepper-progress"></div>
+                                                <div class="step active"><img class="bg-white"
+                                                        src="./assets/images/employer-ease-pics/progress1.svg" alt="">
+                                                </div>
+                                                <div class="step"><img class=""
+                                                        src="./assets/images/employer-ease-pics/featured2.svg" alt="">
+                                                </div>
+                                                <div class="step"><img class="bg-"
+                                                        src="./assets/images/employer-ease-pics/featured3.svg" alt="">
+                                                </div>
+                                                <div class="step"><img
+                                                        src="./assets/images/employer-ease-pics/progress1.svg" alt="">
+                                                </div>
+                                                <div class="step"><img
+                                                        src="./assets/images/employer-ease-pics/progress1.svg" alt="">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
 
+
+                                    <div class="step-display d-none">Step: 0 / 9</div>
                                     <div class="bg-white border-r-8 border1 p-3 mt-4">
                                         <div class="row g-4">
                                             <div class="col-12 col-md-6 col-lg-4">
                                                 <div class="p-4 border1 border-r-8 h-100 myCard">
-                                                    <div class="d-flex flex-column justify-content-between h-100 gap-3  FirstText">
+                                                    <div
+                                                        class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
+                                                        <div
+                                                            class="d-flex justify-content-center align-items-center flex-column gap-3">
+                                                            <div class="Round-No">
+                                                                <p class="fs_32 fw_600 lh_38 j_family">1</p>
+                                                                <p class="fs_12 fw_500 j_family tertiary-black">step</p>
+                                                            </div>
+                                                            <h3
+                                                                class="fs_20 fw_600 j_family lh_30 tertiary-black text-center">
+                                                                Define your Growth</h3>
+                                                            <ul
+                                                                class="d-flex justify-content-center align-items-center flex-column gap-2">
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    Complete & Develop your Marketing Strategy and identify your business goals.
+                                                                </li>
+                                                                
+                                                            </ul>
+
+                                                        </div>
+                                                        <button
+                                                            class="whole_button main_color bg_light_main border_light w-100 d-flex justify-content-center myButton">Begin</button>
+                                                    </div>
+                                                    <div class="SecondText d-none h-100">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between h-100 flex-column gap-2">
+                                                            <!-- <img width="88px" height="88px"
+                                                                src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                                alt=""> -->
+                                                            <div class="d-flex gap-3 flex-column">
+                                                                <img class="mx-auto" height="88px" width="88px"
+                                                                    src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                                    alt="">
+                                                                <h3
+                                                                    class="fs_18 fw_600 j_family lh_28 tertiary-black text-center">
+                                                                   Step1: Define your Growth </h3>
+                                                                <div class="d-flex align-items-centr gap-2">
+                                                                    <div>
+                                                                        <input class="global-check mt-1" type="checkbox">
+                                                                    </div>
+                                                                    <label class="fs_16 fw_400 j_family tertiary-black"
+                                                                        for="">Complete & Develop your Marketing Strategy and identify your business goals.</label>
+                                                                </div>
+                                                                <!-- <div class="d-flex align-items-center gap-2">
+                                                                    <input class="global-check" type="checkbox">
+                                                                    <label class="fs_16 fw_400 j_family tertiary-black"
+                                                                        for="">Complete Walkthrough</label>
+                                                                </div> -->
+                                                            </div>
+                                                            <button
+                                                                class="whole_button w-100 d-flex justify-content-center bg_light_main border1 main_color completeButton">
+                                                                Complete
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex gap-3 flex-column align-items-center lastText d-none">
+                                                        <img class="mx-auto" height="88px" width="88px"
+                                                            src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                            alt="">
+                                                        <h3
+                                                            class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                            Define your Growth</h3>
+                                                        <div class="d-flex align-items-center gap-2">
+                                                           <p class="main_color fs_16 lh_22 j_family text-center">Completed</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12 col-md-6 col-lg-4">
+                                                <div class="p-4 border1 border-r-8 h-100 myCard">
+                                                    <div
+                                                        class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
+                                                        <div
+                                                            class="d-flex justify-content-center align-items-center flex-column gap-3">
+                                                            <div class="Round-No">
+                                                                <p class="fs_32 fw_600 lh_38 j_family">2</p>
+                                                                <p class="fs_12 fw_500 j_family tertiary-black">step</p>
+                                                            </div>
+                                                            <h3 class="fs_20 fw_600 j_family lh_30 tertiary-black">
+                                                                CRM</h3>
+                                                            <ul
+                                                                class="d-flex justify-content-center align-items-center flex-column gap-2">
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    Setup your CRM
+                                                                </li>
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    Import contacts
+                                                                </li>
+                                                            </ul>
+
+                                                        </div>
+                                                        <button
+                                                            class="whole_button main_color bg_light_main border_light w-100 d-flex justify-content-center myButton">Begin</button>
+                                                    </div>
+                                                    <div class="SecondText d-none h-100">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between h-100 flex-column gap-2">
+                                                            <!-- <img width="88px" height="88px"
+                                                                src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                                alt=""> -->
+                                                            <div class="d-flex gap-3 flex-column">
+                                                                <img class="mx-auto" height="88px" width="88px"
+                                                                    src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                                    alt="">
+                                                                <h3
+                                                                    class="fs_18 fw_600 j_family lh_28 tertiary-black text-center">
+                                                                    Step2: CRM </h3>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <input class="global-check" type="checkbox">
+                                                                    <label class="fs_16 fw_400 j_family tertiary-black"
+                                                                        for="">Setup your CRM </label>
+                                                                </div>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <input class="global-check" type="checkbox">
+                                                                    <label class="fs_16 fw_400 j_family tertiary-black"
+                                                                        for="">Import contacts</label>
+                                                                </div>
+                                                            </div>
+                                                            <button
+                                                                class="whole_button w-100 d-flex justify-content-center bg_light_main border1 main_color completeButton">
+                                                                Complete
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex gap-3 flex-column align-items-center lastText d-none">
+                                                        <img class="mx-auto" height="88px" width="88px"
+                                                            src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                            alt="">
+                                                        <h3
+                                                            class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                            CRM</h3>
+                                                        <div class="d-flex align-items-center gap-2">
+                                                           <p class="main_color fs_16 lh_22 j_family text-center">Completed</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6 col-lg-4">
+                                                <div class="p-4 border1 border-r-8 h-100 myCard">
+                                                    <div
+                                                        class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
+                                                        <div
+                                                            class="d-flex justify-content-center align-items-center flex-column gap-3">
+                                                            <div class="Round-No">
+                                                                <p class="fs_32 fw_600 lh_38 j_family">3</p>
+                                                                <p class="fs_12 fw_500 j_family tertiary-black">step</p>
+                                                            </div>
+                                                            <h3 class="fs_20 fw_600 j_family lh_30 tertiary-black">
+                                                                Automation</h3>
+                                                            <ul class="d-flex justify-content-center flex-column gap-2">
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    Identify Repetitive Tasks
+                                                                </li>
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    Setup Automation Triggers
+                                                                </li>
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    Test
+                                                                </li>
+                                                            </ul>
+
+                                                        </div>
+                                                        <button
+                                                            class="whole_button main_color bg_light_main border_light w-100 d-flex justify-content-center myButton">Begin</button>
+                                                    </div>
+                                                    <div class="SecondText d-none h-100">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between h-100 flex-column gap-2">
+                                                            <!-- <img width="88px" height="88px"
+                                                                src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                                alt=""> -->
+                                                            <div class="d-flex gap-3 flex-column">
+                                                                <img class="mx-auto" height="88px" width="88px"
+                                                                    src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                                    alt="">
+                                                                <h3
+                                                                    class="fs_18 fw_600 j_family lh_28 tertiary-black text-center">
+                                                                    Step3: Automation </h3>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <input class="global-check" type="checkbox">
+                                                                    <label class="fs_16 fw_400 j_family tertiary-black"
+                                                                        for="">LLC Filing</label>
+                                                                </div>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <input class="global-check" type="checkbox">
+                                                                    <label class="fs_16 fw_400 j_family tertiary-black"
+                                                                        for="">Registered Agent</label>
+                                                                </div>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <input class="global-check" type="checkbox">
+                                                                    <label class="fs_16 fw_400 j_family tertiary-black"
+                                                                        for="">EIN </label>
+                                                                </div>
+                                                            </div>
+                                                            <button
+                                                                class="whole_button w-100 d-flex justify-content-center bg_light_main border1 main_color completeButton">
+                                                                Complete
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex gap-3 flex-column align-items-center lastText d-none">
+                                                        <img class="mx-auto" height="88px" width="88px"
+                                                            src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                            alt="">
+                                                        <h3
+                                                            class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                            Automation</h3>
+                                                        <div class="d-flex align-items-center gap-2">
+                                                           <p class="main_color fs_16 lh_22 j_family text-center">Completed</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6 col-lg-4">
+                                                <div class="p-4 border1 border-r-8 h-100 myCard">
+                                                    <div
+                                                        class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
+                                                        <div
+                                                            class="d-flex justify-content-center align-items-center flex-column gap-3">
+                                                            <div class="Round-No">
+                                                                <p class="fs_32 fw_600 lh_38 j_family">4</p>
+                                                                <p class="fs_12 fw_500 j_family tertiary-black">step</p>
+                                                            </div>
+                                                            <h3 class="fs_20 fw_600 j_family lh_30 tertiary-black">
+                                                                Project Management</h3>
+                                                            <ul class="d-flex justify-content-center flex-column gap-2">
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    Select your Project Management Tools
+                                                                </li>
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    Setup Boards
+                                                                </li>
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    Assign Tasks, Deadlines and workflows
+                                                                </li>
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    Connect your Team
+                                                                </li>
+                                                            </ul>
+
+                                                        </div>
+                                                        <button
+                                                            class="whole_button main_color bg_light_main border_light w-100 d-flex justify-content-center myButton">Begin</button>
+                                                    </div>
+                                                    <div class="SecondText d-none h-100">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between h-100 flex-column gap-2">
+                                                            <!-- <img width="88px" height="88px"
+                                                                src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                                alt=""> -->
+                                                            <div class="d-flex gap-3 flex-column">
+                                                                <img class="mx-auto" height="88px" width="88px"
+                                                                    src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                                    alt="">
+                                                                <h3
+                                                                    class="fs_18 fw_600 j_family lh_28 tertiary-black text-center">
+                                                                    Step 4: Project Management</h3>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <input class="global-check" type="checkbox">
+                                                                    <label class="fs_16 fw_400 j_family tertiary-black"
+                                                                        for="">Select your Project Management Tools</label>
+                                                                </div>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <input class="global-check" type="checkbox">
+                                                                    <label class="fs_16 fw_400 j_family tertiary-black"
+                                                                        for="">Setup Boards</label>
+                                                                </div>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <input class="global-check" type="checkbox">
+                                                                    <label class="fs_16 fw_400 j_family tertiary-black"
+                                                                        for="">Assign Tasks, Deadlines and workflows</label>
+                                                                </div>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <input class="global-check" type="checkbox">
+                                                                    <label class="fs_16 fw_400 j_family tertiary-black"
+                                                                        for="">Connect your Team</label>
+                                                                </div>
+                                                            </div>
+                                                            <button
+                                                                class="whole_button w-100 d-flex justify-content-center bg_light_main border1 main_color completeButton">
+                                                                Complete
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex gap-3 flex-column align-items-center lastText d-none">
+                                                        <img class="mx-auto" height="88px" width="88px"
+                                                            src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                            alt="">
+                                                        <h3
+                                                            class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                            Project Management</h3>
+                                                        <div class="d-flex align-items-center gap-2">
+                                                           <p class="main_color fs_16 lh_22 j_family text-center">Completed</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6 col-lg-4">
+                                                <div class="p-4 border1 border-r-8 h-100 myCard">
+                                                    <div
+                                                        class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
+                                                        <div
+                                                            class="d-flex justify-content-center align-items-center flex-column gap-3">
+                                                            <div class="Round-No">
+                                                                <p class="fs_32 fw_600 lh_38 j_family">5</p>
+                                                                <p class="fs_12 fw_500 j_family tertiary-black">step</p>
+                                                            </div>
+                                                            <h3 class="fs_20 fw_600 j_family lh_30 tertiary-black">
+                                                               
+Email Campaigns</h3>
+                                                            <ul
+                                                                class="d-flex justify-content-center align-items-center flex-column gap-2">
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    Define email marketing goals (newsletters, promotions, drip campaigns)
+                                                                </li>
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    Design and schedule email campaigns
+                                                                </li>
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    Test
+                                                                </li>
+
+                                                            </ul>
+
+                                                        </div>
+                                                        <button
+                                                            class="whole_button main_color bg_light_main border_light w-100 d-flex justify-content-center myButton">Begin</button>
+                                                    </div>
+                                                    <div class="SecondText d-none h-100">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between h-100 flex-column gap-2">
+                                                            <!-- <img width="88px" height="88px"
+                                                                src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                                alt=""> -->
+                                                            <div class="d-flex gap-3 flex-column">
+                                                                <img class="mx-auto" height="88px" width="88px"
+                                                                    src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                                    alt="">
+                                                                <h3
+                                                                    class="fs_18 fw_600 j_family lh_28 tertiary-black text-center">
+                                                                    
+Email Campaigns</h3>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <input class="global-check" type="checkbox">
+                                                                    <label class="fs_16 fw_400 j_family tertiary-black"
+                                                                        for="">Define email marketing goals (newsletters, promotions, drip campaigns)</label>
+                                                                </div>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <input class="global-check" type="checkbox">
+                                                                    <label class="fs_16 fw_400 j_family tertiary-black"
+                                                                        for="">Design and schedule email campaigns</label>
+                                                                </div>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <input class="global-check" type="checkbox">
+                                                                    <label class="fs_16 fw_400 j_family tertiary-black"
+                                                                        for="">Test</label>
+                                                                </div>
+                                                            </div>
+                                                            <button
+                                                                class="whole_button w-100 d-flex justify-content-center bg_light_main border1 main_color completeButton">
+                                                                Complete
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex gap-3 flex-column align-items-center lastText d-none">
+                                                        <img class="mx-auto" height="88px" width="88px"
+                                                            src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                            alt="">
+                                                        <h3
+                                                            class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                            Email Campaigns</h3>
+                                                        <div class="d-flex align-items-center gap-2">
+                                                           <p class="main_color fs_16 lh_22 j_family text-center">Completed</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6 col-lg-4">
+                                                <div class="p-4 border1 border-r-8 h-100 myCard">
+                                                    <div
+                                                        class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
+                                                        <div
+                                                            class="d-flex justify-content-center align-items-center flex-column gap-3">
+                                                            <div class="Round-No">
+                                                                <p class="fs_32 fw_600 lh_38 j_family">6</p>
+                                                                <p class="fs_12 fw_500 j_family tertiary-black">step</p>
+                                                            </div>
+                                                            <h3 class="fs_20 fw_600 j_family lh_30 tertiary-black">Digital Marketing Campaigns</h3>
+                                                            <ul
+                                                                class="d-flex justify-content-center align-items-center flex-column gap-2">
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    Complete & Develop your Marketing Campaign profile
+                                                                </li>
+
+                                                            </ul>
+
+                                                        </div>
+                                                        <button
+                                                            class="whole_button main_color bg_light_main border_light w-100 d-flex justify-content-center myButton">Begin</button>
+                                                    </div>
+                                                    <div class="SecondText d-none h-100">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between h-100 flex-column gap-2">
+                                                            <!-- <img width="88px" height="88px"
+                                                                src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                                alt=""> -->
+                                                            <div class="d-flex gap-3 flex-column">
+                                                                <img class="mx-auto" height="88px" width="88px"
+                                                                    src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                                    alt="">
+                                                                <h3
+                                                                    class="fs_18 fw_600 j_family lh_28 tertiary-black text-center">
+                                                                    Digital Marketing Campaigns</h3>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <div>
+                                                                        <input class="global-check" type="checkbox">
+                                                                    </div>
+                                                                    <label class="fs_16 fw_400 j_family tertiary-black"
+                                                                        for="">Complete & Develop your Marketing Campaign profile</label>
+                                                                </div>
+                                                                <!-- <div class="d-flex align-items-center gap-2">
+                                                                    <input class="global-check" type="checkbox">
+                                                                    <label class="fs_16 fw_400 j_family tertiary-black"
+                                                                        for="">Complete Walkthrough</label>
+                                                                </div> -->
+                                                            </div>
+                                                            <button
+                                                                class="whole_button w-100 d-flex justify-content-center bg_light_main border1 main_color completeButton">
+                                                                Complete
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex gap-3 flex-column align-items-center lastText d-none">
+                                                        <img class="mx-auto" height="88px" width="88px"
+                                                            src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                            alt="">
+                                                        <h3
+                                                            class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                            Digital Marketing Campaigns </h3>
+                                                        <div class="d-flex align-items-center gap-2">
+                                                           <p class="main_color fs_16 lh_22 j_family text-center">Completed</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6 col-lg-4">
+                                                <div class="p-4 border1 border-r-8 h-100 myCard">
+                                                    <div
+                                                        class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
+                                                        <div
+                                                            class="d-flex justify-content-center align-items-center flex-column gap-3">
+                                                            <div class="Round-No">
+                                                                <p class="fs_32 fw_600 lh_38 j_family">7</p>
+                                                                <p class="fs_12 fw_500 j_family tertiary-black">step</p>
+                                                            </div>
+                                                            <h3 class="fs_20 fw_600 j_family lh_30 tertiary-black">
+                                                                
+SEO & Social Media Management</h3>
+                                                            <ul
+                                                                class="d-flex justify-content-center  flex-column gap-2">
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    Setup & Connect Bank Accounts
+                                                                </li>
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    SEO Strategy, Keywords, phrases, setup blogs
+                                                                </li>
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    Social Media Plan: Content & Scheduling
+                                                                </li>
+                                                                <!-- <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    Setup Digital Payments and Merchant Accounts
+                                                                </li>
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    Setup Legal Protection
+                                                                </li>
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    Review and Setup Health & Retirement Benefits
+                                                                </li> -->
+
+                                                            </ul>
+
+                                                        </div>
+                                                        <button
+                                                            class="whole_button main_color bg_light_main border_light w-100 d-flex justify-content-center myButton">Begin</button>
+                                                    </div>
+                                                    <div class="SecondText d-none h-100">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between h-100 flex-column gap-2">
+                                                            <!-- <img width="88px" height="88px"
+                                                                src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                                alt=""> -->
+                                                            <div class="d-flex gap-3 flex-column">
+                                                                <img class="mx-auto" height="88px" width="88px"
+                                                                    src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                                    alt="">
+                                                                <h3
+                                                                    class="fs_18 fw_600 j_family lh_28 tertiary-black text-center">
+Step 7: SEO & Social Media Management </h3>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <input class="global-check" type="checkbox">
+                                                                    <label class="fs_16 fw_400 j_family tertiary-black"
+                                                                        for="">SEO Strategy, Keywords, phrases, setup blogs</label>
+                                                                </div>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <input class="global-check" type="checkbox">
+                                                                    <label class="fs_16 fw_400 j_family tertiary-black"
+                                                                        for="">Social Media Plan: Content & Scheduling</label>
+                                                                </div>
+                                                                <!-- <div class="d-flex align-items-center gap-2">
+                                                                    <input class="global-check" type="checkbox">
+                                                                    <label class="fs_16 fw_400 j_family tertiary-black"
+                                                                        for="">Setup Business Insurance
+                                                                        Protection</label>
+                                                                </div>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <input class="global-check" type="checkbox">
+                                                                    <label class="fs_16 fw_400 j_family tertiary-black"
+                                                                        for="">Setup Digital Payments and Merchant
+                                                                        Accounts</label>
+                                                                </div>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <input class="global-check" type="checkbox">
+                                                                    <label class="fs_16 fw_400 j_family tertiary-black"
+                                                                        for="">Setup Legal Protection</label>
+                                                                </div>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <input class="global-check" type="checkbox">
+                                                                    <label class="fs_16 fw_400 j_family tertiary-black"
+                                                                        for="">Review and Setup Health & Retirement
+                                                                        Benefits</label>
+                                                                </div> -->
+                                                            </div>
+                                                            <button
+                                                                class="whole_button w-100 d-flex justify-content-center bg_light_main border1 main_color completeButton">
+                                                                Complete
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex gap-3 flex-column align-items-center lastText d-none">
+                                                        <img class="mx-auto" height="88px" width="88px"
+                                                            src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                            alt="">
+                                                        <h3
+                                                            class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                            
+SEO & Social Media Management </h3>
+                                                        <div class="d-flex align-items-center gap-2">
+                                                           <p class="main_color fs_16 lh_22 j_family text-center">Completed</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6 col-lg-4">
+                                                <div class="p-4 border1 border-r-8 h-100 myCard">
+                                                    <div
+                                                        class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
+                                                        <div
+                                                            class="d-flex justify-content-center align-items-center flex-column gap-3">
+                                                            <div class="Round-No">
+                                                                <p class="fs_32 fw_600 lh_38 j_family">8</p>
+                                                                <p class="fs_12 fw_500 j_family tertiary-black">step</p>
+                                                            </div>
+                                                            <h3 class="fs_20 fw_600 j_family lh_30 tertiary-black">
+                                                                KPIs Key Performance Indicators
+                                                            </h3>
+                                                            <ul
+                                                                class="d-flex justify-content-center align-items-center flex-column gap-2">
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    Identify the KPIs you want to track
+                                                                </li>
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    Connect & Setup your KPI Board
+                                                                </li>
+                                                            </ul>
+
+                                                        </div>
+                                                        <button
+                                                            class="whole_button main_color bg_light_main border_light w-100 d-flex justify-content-center myButton">Begin</button>
+                                                    </div>
+                                                    <div class="SecondText d-none h-100">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between h-100 flex-column gap-2">
+                                                            <!-- <img width="88px" height="88px"
+                                                                src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                                alt=""> -->
+                                                            <div class="d-flex gap-3 flex-column">
+                                                                <img class="mx-auto" height="88px" width="88px"
+                                                                    src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                                    alt="">
+                                                                <h3
+                                                                    class="fs_18 fw_600 j_family lh_28 tertiary-black text-center">
+                                                                    Step 8:KPIs Key Performance Indicators </h3>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <input class="global-check" type="checkbox">
+                                                                    <label class="fs_16 fw_400 j_family tertiary-black"
+                                                                        for="">Identify the KPIs you want to track</label>
+                                                                </div>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <input class="global-check" type="checkbox">
+                                                                    <label class="fs_16 fw_400 j_family tertiary-black"
+                                                                        for="">Connect & Setup your KPI Board</label>
+                                                                </div>
+                                                            </div>
+                                                            <button
+                                                                class="whole_button w-100 d-flex justify-content-center bg_light_main border1 main_color completeButton">
+                                                                Complete
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex gap-3 flex-column align-items-center lastText d-none">
+                                                        <img class="mx-auto" height="88px" width="88px"
+                                                            src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                            alt="">
+                                                        <h3
+                                                            class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                            KPIs Key Performance Indicators</h3>
+                                                        <div class="d-flex align-items-center gap-2">
+                                                           <p class="main_color fs_16 lh_22 j_family text-center">Completed</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6 col-lg-4">
+                                                <div class="p-4 border1 border-r-8 h-100 myCard">
+                                                    <div
+                                                        class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
+                                                        <div
+                                                            class="d-flex justify-content-center align-items-center flex-column gap-3">
+                                                            <div class="Round-No">
+                                                                <p class="fs_32 fw_600 lh_38 j_family">9</p>
+                                                                <p class="fs_12 fw_500 j_family tertiary-black">step</p>
+                                                            </div>
+                                                            <h3 class="fs_20 fw_600 j_family lh_30 tertiary-black">Launch</h3>
+                                                            <ul
+                                                                class="d-flex justify-content-center align-items-center flex-column gap-2">
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    Set a Budget
+                                                                </li>
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    Launch your Email Campaigns
+                                                                </li>
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    Launch your Digital Marketing Campaigns
+                                                                </li>
+                                                                
+                                                            </ul>
+
+                                                        </div>
+                                                        <button
+                                                            class="whole_button main_color bg_light_main border_light w-100 d-flex justify-content-center myButton">Begin</button>
+                                                    </div>
+                                                    <div class="SecondText d-none h-100">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between h-100 flex-column gap-2">
+                                                            <!-- <img width="88px" height="88px"
+                                                                src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                                alt=""> -->
+                                                            <div class="d-flex gap-3 flex-column">
+                                                                <img class="mx-auto" height="88px" width="88px"
+                                                                    src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                                    alt="">
+                                                                <h3
+                                                                    class="fs_18 fw_600 j_family lh_28 tertiary-black text-center">
+                                                                    Step 9: Launch </h3>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <input class="global-check" type="checkbox">
+                                                                    <label class="fs_16 fw_400 j_family tertiary-black"
+                                                                        for="">Set a Budget</label>
+                                                                </div>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <input class="global-check" type="checkbox">
+                                                                    <label class="fs_16 fw_400 j_family tertiary-black"
+                                                                        for="">Launch your Email Campaigns</label>
+                                                                </div>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <input class="global-check" type="checkbox">
+                                                                    <label class="fs_16 fw_400 j_family tertiary-black"
+                                                                        for="">Launch your Digital Marketing Campaigns</label>
+                                                                </div>
+                                                            </div>
+                                                            <button
+                                                                class="whole_button w-100 d-flex justify-content-center bg_light_main border1 main_color completeButton">
+                                                                Complete
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex gap-3 flex-column align-items-center lastText d-none">
+                                                        <img class="mx-auto" height="88px" width="88px"
+                                                            src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                            alt="">
+                                                        <h3
+                                                            class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                            Launch </h3>
+                                                        <div class="d-flex align-items-center gap-2">
+                                                           <p class="main_color fs_16 lh_22 j_family text-center">Completed</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="bg-white border-r-8 border1 p-3 mt-4">
+                                        <div class="row g-4">
+                                            <div class="col-12 col-md-6 col-lg-4">
+                                                <div class="p-4 border1 border-r-8 h-100 myCard">
+                                                    <div
+                                                        class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
                                                         <div>
-                                                            <p class="text-center fs_20 fw_600 j_family tertiary-black ">
-                                                                Step 1: Define your Growth</p>
-                                                            <div class="d-flex gap_12 mt-3 align-items-start">
-                                                                <div><input id="check1" class="global-check mt-1"
-                                                                        type="checkbox" name=""></div>
+                                                            <p class="text-center fs_20 fw_600 j_family tertiary-black">
+                                                                Step1:Onboarding</p>
+                                                            <div class="d-flex gap_12 mt-3 align-items-center">
+                                                                <input required id="check1" class="global-check"
+                                                                    type="checkbox" name="">
                                                                 <label for="check1"
                                                                     class="fs_16 j_family tertiary-black lh_26">Complete
-                                                                    & Develop your Marketing Strategy and identify your
-                                                                    business goals.</label>
+                                                                    Onboarding</label>
                                                             </div>
-                                                            <!-- <div class="d-flex gap_12 mt-3 align-items-center">
-                                                                <input id="check2" class="global-check" type="checkbox"
-                                                                    name="">
+                                                            <div class="d-flex gap_12 mt-3 align-items-center">
+                                                                <input required id="check2" class="global-check"
+                                                                    type="checkbox" name="">
                                                                 <label for="check2"
                                                                     class="fs_16 j_family tertiary-black lh_26">Complete
                                                                     Walkthrough
                                                                 </label>
-                                                            </div> -->
+                                                            </div>
                                                         </div>
                                                         <button
                                                             class="whole_button main_color bg_light_main border_light w-100 d-flex justify-content-center myButton">Complete</button>
@@ -741,8 +1493,9 @@
                                                             <img width="88px" height="88px"
                                                                 src="./assets/images/employer-ease-pics/circleRocket.svg"
                                                                 alt="">
-                                                            <h3 class="fs_18 fw_600 j_family lh_28 main_color text-center">
-                                                                Define your Growth</h3>
+                                                            <h3
+                                                                class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                                Onboarding and Walkthrough </h3>
                                                             <div>
                                                                 <p class="fw_500 fs_16 main_color lh_26 j_family">
                                                                     Completed!</p>
@@ -754,24 +1507,24 @@
 
                                             <div class="col-12 col-md-6 col-lg-4">
                                                 <div class="p-4 border1 border-r-8 h-100 myCard">
-                                                    <div class="d-flex flex-column justify-content-between h-100 gap-3  FirstText">
+                                                    <div
+                                                        class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
                                                         <div>
-                                                            <p class="text-center fs_20 fw_600 j_family tertiary-black ">
-                                                                Step 2: CRM</p>
+                                                            <p class="text-center fs_20 fw_600 j_family tertiary-black">
+                                                                Step2: Business Planning</p>
                                                             <div class="d-flex gap_12 mt-3 align-items-center">
-                                                                <input id="check3" class="global-check" type="checkbox"
-                                                                    name="">
+                                                                <input required id="check3" class="global-check"
+                                                                    type="checkbox" name="">
                                                                 <label for="check3"
-                                                                    class="fs_16 j_family tertiary-black lh_26">Setup
-                                                                    your CRM</label>
+                                                                    class="fs_16 j_family tertiary-black lh_26">Business
+                                                                    Planning </label>
                                                             </div>
                                                             <div class="d-flex gap_12 mt-3 align-items-center">
-                                                                <input id="check4" class="global-check" type="checkbox"
-                                                                    name="">
+                                                                <input required id="check4" class="global-check"
+                                                                    type="checkbox" name="">
                                                                 <label for="check4"
-                                                                    class="fs_16 j_family tertiary-black lh_26">Import
-                                                                    Contacts
-
+                                                                    class="fs_16 j_family tertiary-black lh_26">Business
+                                                                    Name Research
                                                                 </label>
                                                             </div>
                                                         </div>
@@ -784,45 +1537,45 @@
                                                             <img width="88px" height="88px"
                                                                 src="./assets/images/employer-ease-pics/circleRocket.svg"
                                                                 alt="">
-                                                            <h3 class="fs_18 fw_600 j_family lh_28 main_color text-center">
-                                                                CRM</h3>
+                                                            <h3
+                                                                class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                                Business Planning</h3>
                                                             <div>
                                                                 <p class="fw_500 fs_16 main_color lh_26 j_family">
                                                                     Completed!</p>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    
                                                 </div>
                                             </div>
 
                                             <div class="col-12 col-md-6 col-lg-4">
                                                 <div class="p-4 border1 border-r-8 h-100 myCard">
-                                                    <div class="d-flex flex-column justify-content-between h-100 gap-3  FirstText">
+                                                    <div
+                                                        class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
                                                         <div>
-                                                            <p class="text-center fs_20 fw_600 j_family tertiary-black firstTexts">
-                                                                Step 3: Automation</p>
+                                                            <p class="text-center fs_20 fw_600 j_family tertiary-black">
+                                                                Step3 :Formation</p>
                                                             <div class="d-flex gap_12 mt-3 align-items-center">
-                                                                <input id="check5" class="global-check" type="checkbox"
-                                                                    name="">
+                                                                <input required id="check5" class="global-check"
+                                                                    type="checkbox" name="">
                                                                 <label for="check5"
-                                                                    class="fs_16 j_family tertiary-black lh_26">Identify
-                                                                    Repetitive Tasks</label>
+                                                                    class="fs_16 j_family tertiary-black lh_26">LLC
+                                                                    Filling</label>
                                                             </div>
                                                             <div class="d-flex gap_12 mt-3 align-items-center">
-                                                                <input id="check6" class="global-check" type="checkbox"
-                                                                    name="">
+                                                                <input required id="check6" class="global-check"
+                                                                    type="checkbox" name="">
                                                                 <label for="check6"
-                                                                    class="fs_16 j_family tertiary-black lh_26">Setup
-                                                                    Automation Triggers
-
+                                                                    class="fs_16 j_family tertiary-black lh_26">Registered
+                                                                    Agents
                                                                 </label>
                                                             </div>
                                                             <div class="d-flex gap_12 mt-3 align-items-center">
-                                                                <input id="check7" class="global-check" type="checkbox"
-                                                                    name="">
+                                                                <input required id="check7" class="global-check"
+                                                                    type="checkbox" name="">
                                                                 <label for="check7"
-                                                                    class="fs_16 j_family tertiary-black lh_26">Test
+                                                                    class="fs_16 j_family tertiary-black lh_26">EIN
                                                                 </label>
                                                             </div>
                                                         </div>
@@ -835,8 +1588,9 @@
                                                             <img width="88px" height="88px"
                                                                 src="./assets/images/employer-ease-pics/circleRocket.svg"
                                                                 alt="">
-                                                            <h3 class="fs_18 fw_600 j_family lh_28 main_color text-center">
-                                                                Automation</h3>
+                                                            <h3
+                                                                class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                                Formation</h3>
                                                             <div>
                                                                 <p class="fw_500 fs_16 main_color lh_26 j_family">
                                                                     Completed!</p>
@@ -848,46 +1602,45 @@
                                         </div>
 
 
-                                    </div>
+                                    </div> -->
 
-                                    <div class="bg-white border-r-8 border1 p-3 mt-4">
+                                    <!-- <div class="bg-white border-r-8 border1 p-3 mt-4">
                                         <div class="row g-4">
                                             <div class="col-12 col-md-6 col-lg-4">
                                                 <div class="p-4 border1 border-r-8 h-100 myCard">
-                                                    <div class="d-flex flex-column justify-content-between h-100 gap-3  FirstText">
+                                                    <div
+                                                        class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
                                                         <div>
-                                                            <p class="text-center fs_20 fw_600 j_family tertiary-black firstTexts">
-                                                                Step 4: Project Management</p>
+                                                            <p class="text-center fs_20 fw_600 j_family tertiary-black">
+                                                                Step 4:Digital Presence</p>
                                                             <div class="d-flex gap_12 mt-3 align-items-center">
-                                                                <div> <input id="check8" class="global-check"
-                                                                        type="checkbox" name=""> </div>
+                                                                <input required id="check8" class="global-check"
+                                                                    type="checkbox" name="">
                                                                 <label for="check8"
-                                                                    class="fs_16 j_family tertiary-black lh_26">Select
-                                                                    Your Project Managemnt Tools</label>
+                                                                    class="fs_16 j_family tertiary-black lh_26">Domain</label>
                                                             </div>
                                                             <div class="d-flex gap_12 mt-3 align-items-center">
-                                                                <input id="check9" class="global-check" type="checkbox"
-                                                                    name="">
+                                                                <input required id="check9" class="global-check"
+                                                                    type="checkbox" name="">
                                                                 <label for="check9"
-                                                                    class="fs_16 j_family tertiary-black lh_26">Setup
-                                                                    Boards
+                                                                    class="fs_16 j_family tertiary-black lh_26">Logo &
+                                                                    Branding Kit
                                                                 </label>
                                                             </div>
                                                             <div class="d-flex gap_12 mt-3 align-items-center">
-                                                                <div><input id="check16" class="global-check"
-                                                                        type="checkbox" name=""></div>
+                                                                <input required id="check16" class="global-check"
+                                                                    type="checkbox" name="">
                                                                 <label for="check16"
-                                                                    class="fs_16 j_family tertiary-black lh_26">Assign
-                                                                    Tasks Deadlines and Workflows</label>
+                                                                    class="fs_16 j_family tertiary-black lh_26">Domain</label>
                                                             </div>
-                                                            <!-- <div class="d-flex gap_12 mt-3 align-items-center">
-                                                                <input id="check17" class="global-check" type="checkbox"
-                                                                    name="">
+                                                            <div class="d-flex gap_12 mt-3 align-items-center">
+                                                                <input required id="check17" class="global-check"
+                                                                    type="checkbox" name="">
                                                                 <label for="check17"
                                                                     class="fs_16 j_family tertiary-black lh_26">Logo &
                                                                     Branding Kit
                                                                 </label>
-                                                            </div> -->
+                                                            </div>
                                                         </div>
                                                         <button
                                                             class="whole_button main_color bg_light_main border_light w-100 d-flex justify-content-center myButton">Complete</button>
@@ -898,8 +1651,9 @@
                                                             <img width="88px" height="88px"
                                                                 src="./assets/images/employer-ease-pics/circleRocket.svg"
                                                                 alt="">
-                                                            <h3 class="fs_18 fw_600 j_family lh_28 main_color text-center">
-                                                                Project Management</h3>
+                                                            <h3
+                                                                class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                                Digital Presence</h3>
                                                             <div>
                                                                 <p class="fw_500 fs_16 main_color lh_26 j_family">
                                                                     Completed!</p>
@@ -911,36 +1665,21 @@
 
                                             <div class="col-12 col-md-6 col-lg-4">
                                                 <div class="p-4 border1 border-r-8 h-100 myCard">
-                                                    <div class="d-flex flex-column justify-content-between h-100 gap-3  FirstText">
+                                                    <div
+                                                        class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
                                                         <div>
-                                                            <p class="text-center fs_20 fw_600 j_family tertiary-black firstTexts">
-                                                                Step 5: Email Campaigns</p>
+                                                            <p class="text-center fs_20 fw_600 j_family tertiary-black">
+                                                                Step 5:Communication</p>
                                                             <div class="d-flex gap_12 mt-3 ">
                                                                 <div class="mt-1">
-                                                                    <input id="check10" class="global-check h-100 w-100"
-                                                                        type="checkbox" name="">
+                                                                    <input required id="check10"
+                                                                        class="global-check h-100 w-100" type="checkbox"
+                                                                        name="">
                                                                 </div>
                                                                 <label for="check10"
-                                                                    class="fs_16 j_family tertiary-black lh_26">Define
-                                                                    email marketing goals (newsletters, promotions, drip
-                                                                    campaigns)</label>
-                                                            </div>
-                                                            <div class="d-flex gap_12 mt-3 ">
-                                                                <div class="mt-1">
-                                                                    <input id="check10" class="global-check h-100 w-100"
-                                                                        type="checkbox" name="">
-                                                                </div>
-                                                                <label for="check10"
-                                                                    class="fs_16 j_family tertiary-black lh_26">Design
-                                                                    and Schedule Emails</label>
-                                                            </div>
-                                                            <div class="d-flex gap_12 mt-3 ">
-                                                                <div class="mt-1">
-                                                                    <input id="check10" class="global-check h-100 w-100"
-                                                                        type="checkbox" name="">
-                                                                </div>
-                                                                <label for="check10"
-                                                                    class="fs_16 j_family tertiary-black lh_26">Tests</label>
+                                                                    class="fs_16 j_family tertiary-black lh_26">Setup
+                                                                    and Connect your Business Communication Channels to
+                                                                    the platform</label>
                                                             </div>
 
                                                         </div>
@@ -953,8 +1692,9 @@
                                                             <img width="88px" height="88px"
                                                                 src="./assets/images/employer-ease-pics/circleRocket.svg"
                                                                 alt="">
-                                                            <h3 class="fs_18 fw_600 j_family lh_28 main_color text-center">
-                                                                Email Campaigns</h3>
+                                                            <h3
+                                                                class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                                Communication</h3>
                                                             <div>
                                                                 <p class="fw_500 fs_16 main_color lh_26 j_family">
                                                                     Completed!</p>
@@ -966,30 +1706,23 @@
 
                                             <div class="col-12 col-md-6 col-lg-4">
                                                 <div class="p-4 border1 border-r-8 h-100 myCard">
-                                                    <div class="d-flex flex-column justify-content-between h-100 gap-3  FirstText">
+                                                    <div
+                                                        class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
                                                         <div>
-                                                            <p class="text-center fs_20 fw_600 j_family tertiary-black firstTexts">
-                                                                Step 6:
-                                                                Digital Marketing Campaigns</p>
+                                                            <p class="text-center fs_20 fw_600 j_family tertiary-black">
+                                                                Step 6:Cloud & Storage</p>
                                                             <div class="d-flex gap_12 mt-3 align-items-start">
                                                                 <div class="d-block mt-1">
-                                                                    <input id="check13" class="global-check"
+                                                                    <input required id="check13" class="global-check"
                                                                         type="checkbox" name="">
                                                                 </div>
                                                                 <label for="check13"
-                                                                    class="py-0 my-0 fs_16 j_family tertiary-black lh_26">Complete
-                                                                    & Develop your Marketing Campaign profile</label>
+                                                                    class="py-0 my-0 fs_16 j_family tertiary-black lh_26">Setup
+                                                                    and connect the your business clouds for storage and
+                                                                    to organize and manage your documents, images, and
+                                                                    files</label>
                                                             </div>
-                                                            <!-- <div class="d-flex gap_12 mt-3 align-items-center">
-                                                                <input id="check14" class="global-check" type="checkbox" name="">
-                                                                <label for="check14" class="fs_16 j_family tertiary-black lh_26">Registered Agents
-                                                                </label>
-                                                            </div>
-                                                            <div class="d-flex gap_12 mt-3 align-items-center">
-                                                                <input id="check15" class="global-check" type="checkbox" name="">
-                                                                <label for="check15" class="fs_16 j_family tertiary-black lh_26">EIN
-                                                                </label>
-                                                            </div> -->
+                                                           
                                                         </div>
                                                         <button
                                                             class="whole_button main_color bg_light_main border_light w-100 d-flex justify-content-center myButton">Complete</button>
@@ -1000,8 +1733,9 @@
                                                             <img width="88px" height="88px"
                                                                 src="./assets/images/employer-ease-pics/circleRocket.svg"
                                                                 alt="">
-                                                            <h3 class="fs_18 fw_600 j_family lh_28 main_color text-center">
-                                                                Digital Marketing Campaigns</h3>
+                                                            <h3
+                                                                class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                                Cloud Storage</h3>
                                                             <div>
                                                                 <p class="fw_500 fs_16 main_color lh_26 j_family">
                                                                     Completed!</p>
@@ -1013,49 +1747,58 @@
                                         </div>
 
 
-                                    </div>
+                                    </div> -->
 
-                                    <div class="bg-white border-r-8 border1 p-3 mt-4">
+                                    <!-- <div class="bg-white border-r-8 border1 p-3 mt-4">
                                         <div class="row g-4">
                                             <div class="col-12 col-md-6 col-lg-4">
                                                 <div class="p-4 border1 border-r-8 h-100 myCard">
-                                                    <div class="d-flex flex-column justify-content-between h-100 gap-3  FirstText">
+                                                    <div
+                                                        class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
                                                         <div>
-                                                            <p class="text-center fs_20 fw_600 j_family tertiary-black firstTexts">
-                                                                Step 7:
-                                                                SEO & Social Media Management</p>
+                                                            <p class="text-center fs_20 fw_600 j_family tertiary-black">
+                                                                Step 7:Finance & Insurance</p>
                                                             <div class="d-flex gap_12 mt-3 align-items-center">
-                                                                <div> <input id="check100" class="global-check"
-                                                                        type="checkbox" name=""></div>
+                                                                <div>
+                                                                    <input required id="check100" class="global-check"
+                                                                        type="checkbox" name="">
+                                                                </div>
                                                                 <label for="check100"
-                                                                    class="fs_16 j_family tertiary-black lh_26">SEO
-                                                                    Strategy, Keywords, phrases, setup blogs</label>
+                                                                    class="fs_16 j_family tertiary-black lh_26">Setup &
+                                                                    Connect Bank Accounts </label>
                                                             </div>
                                                             <div class="d-flex gap_12 mt-3 align-items-center">
-                                                                <div> <input id="check15" class="global-check"
-                                                                        type="checkbox" name=""></div>
+                                                                <div class="">
+                                                                    <input required id="check15" class="global-check"
+                                                                        type="checkbox" name="">
+                                                                </div>
                                                                 <label for="check15"
-                                                                    class="fs_16 j_family tertiary-black lh_26">Social
-                                                                    Media Plan: Content & Scheduling
+                                                                    class="fs_16 j_family tertiary-black lh_26">Review
+                                                                    Business Funding
                                                                 </label>
                                                             </div>
-                                                            <!-- <div class="d-flex gap_12 mt-3 align-items-center">
-                                                                <input id="check22" class="global-check" type="checkbox"
-                                                                    name="">
+                                                            <div class="d-flex gap_12 mt-3 align-items-center">
+                                                                <div>
+                                                                    <input required id="check22" class="global-check"
+                                                                        type="checkbox" name="">
+                                                                </div>
                                                                 <label for="check22"
                                                                     class="fs_16 j_family tertiary-black lh_26">Setup
                                                                     Business Insurance Protection</label>
                                                             </div>
                                                             <div class="d-flex gap_12 mt-3">
-                                                                <input id="check23" class="global-check mt-1"
-                                                                    type="checkbox" name="">
+                                                                <div>
+                                                                    <input required id="check23"
+                                                                        class="global-check mt-1" type="checkbox"
+                                                                        name="">
+                                                                </div>
                                                                 <label for="check23"
                                                                     class="fs_16 j_family tertiary-black lh_26">Setup
                                                                     Digital Payments and Merchant Accounts
                                                                 </label>
                                                             </div>
                                                             <div class="d-flex gap_12 mt-3">
-                                                                <input id="check25" class="global-check mt-1"
+                                                                <input required id="check25" class="global-check mt-1"
                                                                     type="checkbox" name="">
                                                                 <label for="check25"
                                                                     class="fs_16 j_family tertiary-black lh_26">Setup
@@ -1063,13 +1806,16 @@
                                                                 </label>
                                                             </div>
                                                             <div class="d-flex gap_12 mt-3">
-                                                                <input id="check26" class="global-check mt-1"
-                                                                    type="checkbox" name="">
+                                                                <div>
+                                                                    <input required id="check26"
+                                                                        class="global-check mt-1" type="checkbox"
+                                                                        name="">
+                                                                </div>
                                                                 <label for="check26"
                                                                     class="fs_16 j_family tertiary-black lh_26">Review
                                                                     and Setup Health & Retirement Benefits
                                                                 </label>
-                                                            </div> -->
+                                                            </div>
                                                         </div>
                                                         <button
                                                             class="whole_button main_color bg_light_main border_light w-100 d-flex justify-content-center myButton">Complete</button>
@@ -1080,8 +1826,9 @@
                                                             <img width="88px" height="88px"
                                                                 src="./assets/images/employer-ease-pics/circleRocket.svg"
                                                                 alt="">
-                                                            <h3 class="fs_18 fw_600 j_family lh_28 main_color text-center">
-                                                                SEO & Social Media Managemen</h3>
+                                                            <h3
+                                                                class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                                Finance & Insurance</h3>
                                                             <div>
                                                                 <p class="fw_500 fs_16 main_color lh_26 j_family">
                                                                     Completed!</p>
@@ -1093,28 +1840,21 @@
 
                                             <div class="col-12 col-md-6 col-lg-4">
                                                 <div class="p-4 border1 border-r-8 h-100 myCard">
-                                                    <div class="d-flex flex-column justify-content-between h-100 gap-3  FirstText">
+                                                    <div
+                                                        class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
                                                         <div>
-                                                            <p class="text-center fs_20 fw_600 j_family tertiary-black firstTexts">
-                                                                Step 8:
-                                                                KPIs Key Performance Indicators</p>
+                                                            <p class="text-center fs_20 fw_600 j_family tertiary-black">
+                                                                Step 8: Accounting Services</p>
                                                             <div class="d-flex gap_12 mt-3 ">
                                                                 <div class="mt-1">
-                                                                    <input id="check27" class="global-check h-100 w-100"
-                                                                        type="checkbox" name="">
+                                                                    <input required id="check10"
+                                                                        class="global-check h-100 w-100" type="checkbox"
+                                                                        name="">
                                                                 </div>
-                                                                <label for="check27"
-                                                                    class="fs_16 j_family tertiary-black lh_26">Identify
-                                                                    the KPIs you want to track</label>
-                                                            </div>
-                                                            <div class="d-flex gap_12 mt-3 ">
-                                                                <div class="mt-1">
-                                                                    <input id="check27" class="global-check h-100 w-100"
-                                                                        type="checkbox" name="">
-                                                                </div>
-                                                                <label for="check27"
-                                                                    class="fs_16 j_family tertiary-black lh_26">Connect
-                                                                    & Setup your KPI Board</label>
+                                                                <label for="check10"
+                                                                    class="fs_16 j_family tertiary-black lh_26">Review
+                                                                    and setup Accounting and Bookkeeping services for
+                                                                    your business</label>
                                                             </div>
 
                                                         </div>
@@ -1127,8 +1867,9 @@
                                                             <img width="88px" height="88px"
                                                                 src="./assets/images/employer-ease-pics/circleRocket.svg"
                                                                 alt="">
-                                                            <h3 class="fs_18 fw_600 j_family lh_28 main_color text-center">
-                                                                KPIs Key Performance Indicators</h3>
+                                                            <h3
+                                                                class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                                Accounting Services </h3>
                                                             <div>
                                                                 <p class="fw_500 fs_16 main_color lh_26 j_family">
                                                                     Completed!</p>
@@ -1140,67 +1881,123 @@
 
                                             <div class="col-12 col-md-6 col-lg-4">
                                                 <div class="p-4 border1 border-r-8 h-100 myCard">
-                                                    <div class="d-flex flex-column justify-content-between h-100 gap-3  FirstText">
+                                                    <div
+                                                        class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
                                                         <div>
-                                                            <p class="text-center fs_20 fw_600 j_family tertiary-black firstTexts">
-                                                                Step 9: Launch</p>
+                                                            <p class="text-center fs_20 fw_600 j_family tertiary-black">
+                                                                Step 9: HR & Payroll</p>
+                                                            <div class="d-flex gap_12 mt-3 ">
+                                                                <div class="mt-1">
+                                                                    <input required id="check10"
+                                                                        class="global-check h-100 w-100" type="checkbox"
+                                                                        name="">
+                                                                </div>
+                                                                <label for="check10"
+                                                                    class="fs_16 j_family tertiary-black lh_26">Review
+                                                                    HR & Payroll Solutions if you have employees or plan
+                                                                    to hire soon</label>
+                                                            </div>
+                                                            <div class="d-flex gap_12 mt-3 ">
+                                                                <div class="mt-1">
+                                                                    <input required id="check10"
+                                                                        class="global-check h-100 w-100" type="checkbox"
+                                                                        name="">
+                                                                </div>
+                                                                <label for="check10"
+                                                                    class="fs_16 j_family tertiary-black lh_26">Review
+                                                                    how to find and hire 3rd parties to complete
+                                                                    specific tasks.</label>
+                                                            </div>
+
+                                                        </div>
+                                                        <button
+                                                            class="whole_button main_color bg_light_main border_light w-100 d-flex justify-content-center myButton">Complete</button>
+                                                    </div>
+                                                    <div class="SecondText d-none ">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between h-100 flex-column gap-2">
+                                                            <img width="88px" height="88px"
+                                                                src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                                alt="">
+                                                            <h3
+                                                                class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                                HR & Payroll </h3>
+                                                            <div>
+                                                                <p class="fw_500 fs_16 main_color lh_26 j_family">
+                                                                    Completed!</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- <div class="col-12 col-md-6 col-lg-4">
+                                                <div class="p-4 border1 border-r-8 h-100 myCard">
+                                                    <div class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
+                                                        <div>
+                                                            <p class="text-center fs_20 fw_600 j_family tertiary-black">
+                                                                Step 8:Accounting Services</p>
+                                                            <div class="d-flex gap_12 mt-3 ">
+                                                                <div class="mt-1">
+                                                                    <input required id="check27" class="global-check h-100 w-100"
+                                                                        type="checkbox" name="">
+                                                                </div>
+                                                                <label for="check27"
+                                                                    class="fs_16 j_family tertiary-black lh_26">Review
+                                                                    and setup Accounting and Bookkeeping services for
+                                                                    your business</label>
+                                                            </div>
+
+                                                        </div>
+                                                        <button
+                                                            class="whole_button submitButton main_color bg_light_main border_light w-100 d-flex justify-content-center">Complete</button>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div> -->
+
+                                    <!-- <div class="col-12 col-md-6 col-lg-4">
+                                                <div class="p-4 border1 border-r-8 h-100 myCard">
+                                                    <div class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
+                                                        <div>
+                                                            <p class="text-center fs_20 fw_600 j_family tertiary-black">
+                                                                Step 9:HR & Payroll</p>
                                                             <div class="d-flex gap_12 mt-3 align-items-start">
                                                                 <div class="d-block mt-1">
-                                                                    <input id="check28" class="global-check"
+                                                                    <input required id="check28" class="global-check"
                                                                         type="checkbox" name="">
                                                                 </div>
                                                                 <label for="check28"
-                                                                    class="py-0 my-0 fs_16 j_family tertiary-black lh_26">Set
-                                                                    a Budget</label>
+                                                                    class="py-0 my-0 fs_16 j_family tertiary-black lh_26">Review
+                                                                    HR & Payroll Solutions if you have employees or plan
+                                                                    to hire soon</label>
                                                             </div>
                                                             <div class="d-flex gap_12 mt-3 align-items-start">
                                                                 <div class="d-block mt-1">
-                                                                    <input id="check29" class="global-check"
+                                                                    <input required id="check29" class="global-check"
                                                                         type="checkbox" name="">
                                                                 </div>
                                                                 <label for="check29"
-                                                                    class="py-0 my-0 fs_16 j_family tertiary-black lh_26">Launch
-                                                                    your Email Campaigns</label>
+                                                                    class="py-0 my-0 fs_16 j_family tertiary-black lh_26">Review
+                                                                    how to find and hire 3rd parties to complete
+                                                                    specific tasks.</label>
                                                             </div>
-                                                            <div class="d-flex gap_12 mt-3 align-items-center">
-                                                                <div><input id="check14" class="global-check"
-                                                                        type="checkbox" name=""></div>
-                                                                <label for="check14"
-                                                                    class="fs_16 j_family tertiary-black lh_26">Launch
-                                                                    your Digital Marketing Campaigns
-                                                                </label>
-                                                            </div>
-                                                            <!-- <div class="d-flex gap_12 mt-3 align-items-center">
-                                                                <input id="check15" class="global-check" type="checkbox" name="">
-                                                                <label for="check15" class="fs_16 j_family tertiary-black lh_26">EIN
-                                                                </label>
-                                                            </div> -->
+                                                           
                                                         </div>
                                                         <button
                                                             class="whole_button main_color bg_light_main border_light w-100 d-flex justify-content-center myButton">Complete</button>
                                                     </div>
-                                                    <div class="SecondText d-none ">
-                                                        <div
-                                                            class="d-flex align-items-center justify-content-between h-100 flex-column gap-2">
-                                                            <img width="88px" height="88px"
-                                                                src="./assets/images/employer-ease-pics/circleRocket.svg"
-                                                                alt="">
-                                                            <h3 class="fs_18 fw_600 j_family lh_28 main_color text-center">
-                                                                Launch</h3>
-                                                            <div>
-                                                                <p class="fw_500 fs_16 main_color lh_26 j_family">
-                                                                    Completed!</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                  
                                                 </div>
+                                            </div> 
                                             </div>
-                                        </div>
 
 
                                     </div>
-                                    <!-- 
-                                    <div class="bg-white border-r-8 border1 p-3 mt-4">
+                                            -->
+
+
+                                    <!-- <div class="bg-white border-r-8 border1 p-3 mt-4">
                                         <h3 class="fs_18 fw_500 j_family">Step 1: Brainstorm and Validate Your Business
                                             Idea</h3>
                                         <ul class="pt-2">
@@ -1369,7 +2166,7 @@
                                         <div class="d-flex justify-content-between align-items-center">
                                             <h3 class="fs_18 fw_500 j_family">Step 7: Find Your WHY and Define Your
                                                 Vision</h3>
-                                            <input id="check1" class="global-check" type="checkbox">
+                                            <input required id="check1" class="global-check" type="checkbox">
                                         </div>
                                         <ul class="pt-3">
                                             <li class="j_family fs_16 tertiary-black ms-3">Purpose: Understand your
@@ -1399,7 +2196,7 @@
                                         <div class="d-flex justify-content-between align-items-center">
                                             <h3 class="fs_18 fw_500 j_family">Step 8: Find Your WHY and Define Your
                                                 Vision</h3>
-                                            <input id="check1" class="global-check" type="checkbox">
+                                            <input required id="check1" class="global-check" type="checkbox">
                                         </div>
                                         <ul class="pt-2">
                                             <li class="j_family fs_16 tertiary-black ms-3">Purpose: Understand your
@@ -1429,7 +2226,7 @@
                                         <div class="d-flex justify-content-between align-items-center">
                                             <h3 class="fs_18 fw_500 j_family">Step 9: Find Your WHY and Define Your
                                                 Vision</h3>
-                                            <input id="check1" class="global-check" type="checkbox">
+                                            <input required id="check1" class="global-check" type="checkbox">
                                         </div>
                                         <ul class="pt-2">
                                             <li class="j_family fs_16 tertiary-black ms-3">Purpose: Understand your
@@ -1459,7 +2256,7 @@
                                         <div class="d-flex justify-content-between align-items-center">
                                             <h3 class="fs_18 fw_500 j_family">Step 10: Find Your WHY and Define Your
                                                 Vision</h3>
-                                            <input id="check1" class="global-check" type="checkbox">
+                                            <input required id="check1" class="global-check" type="checkbox">
                                         </div>
                                         <ul class="pt-2">
                                             <li class="j_family fs_16 tertiary-black ms-3">Purpose: Understand your
@@ -1491,7 +2288,7 @@
                                         <div class="d-flex justify-content-between align-items-center">
                                             <h3 class="fs_18 fw_500 j_family">Step 11: Find Your WHY and Define Your
                                                 Vision</h3>
-                                            <input id="check1" class="global-check" type="checkbox">
+                                            <input required id="check1" class="global-check" type="checkbox">
                                         </div>
                                         <ul class="pt-2">
                                             <li class="j_family fs_16 tertiary-black ms-3">Purpose: Understand your
@@ -1521,7 +2318,7 @@
                                         <div class="d-flex justify-content-between align-items-center">
                                             <h3 class="fs_18 fw_500 j_family">Step 12: Find Your WHY and Define Your
                                                 Vision</h3>
-                                            <input id="check1" class="global-check" type="checkbox">
+                                            <input required id="check1" class="global-check" type="checkbox">
                                         </div>
                                         <ul class="pt-2">
                                             <li class="j_family fs_16 tertiary-black ms-3">Purpose: Understand your
@@ -3229,72 +4026,160 @@
             }
         });
     </script>
-    <script>
-        // Ensure the script runs after the DOM is fully loaded
-        document.addEventListener("DOMContentLoaded", function () {
-            const progressElement = document.getElementById("circularProgress");
+   
+   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+ const buttons = document.querySelectorAll('.myButton'); 
+ const completeButtons = document.querySelectorAll('.completeButton');
+ const myCards = document.querySelectorAll('.myCard'); 
 
-            // Check if the element exists
-            if (!progressElement) {
-                console.error("Progress bar container not found!");
-                return;
-            }
+ buttons.forEach((button, index) => {
+     button.addEventListener('click', () => {
+         const card = button.closest('.myCard');
+         const firstText = card.querySelector('.FirstText');
+         const secondText = card.querySelector('.SecondText');
+         const thirdText = card.querySelector('.ThirdText');
 
-            // Initialize ProgressBar.js
-            const bar = new ProgressBar.Circle(progressElement, {
-                color: '#407d9e',
-                strokeWidth: 12,
-                trailColor: '#e6e6e6',
-                trailWidth: 12,
-                easing: 'easeInOut',
-                duration: 1400,
-                text: {
-                    value: '',
-                    className: 'progress-text',
-                },
-                svgStyle: {
-                    strokeLinecap: 'round',
-                    width: '100%',  // Ensure SVG takes full width
-                    height: '100%',
-                },
-            });
+         card.classList.toggle('rotate');
 
-            function updateProgress(value) {
-                const progressDecimal = value / 100;
-                bar.animate(progressDecimal);
-                document.querySelector('.progress-text').textContent = `${value}`;
-            }
+         if (card.classList.contains('rotate')) {
+             secondText.classList.remove('d-none');
+             firstText.classList.add('d-none');
+             thirdText.classList.add('d-none'); 
+         } else {
+             secondText.classList.add('d-none');
+             firstText.classList.remove('d-none');
+             thirdText.classList.add('d-none'); 
+         }
+     });
+ });
 
-            // Update Progress Value
-            updateProgress(14);
-        });
-    </script>
-     <script>
-        // Get all the buttons
-        const buttons = document.querySelectorAll('.myButton');
-        const secondTexts = document.querySelectorAll('.SecondText');
-        const firstTexts = document.querySelectorAll('.FirstText');
+ completeButtons.forEach((button, index) => {
+     button.addEventListener('click', () => {
+         const card = button.closest('.myCard');
+         const firstText = card.querySelector('.FirstText');
+         const secondText = card.querySelector('.SecondText');
+         const thirdtext = card.querySelector('.lastText');
 
-        // Add event listeners to each button
-        buttons.forEach((button, index) => {
-            button.addEventListener('click', () => {
-                // Find the closest card (parent of the button)
-                const card = button.closest('.myCard');
+         card.classList.add('rotated2'); 
 
-                // Rotate the card
-                card.classList.toggle('rotate');
+         
+         firstText.classList.add('d-none');
+         secondText.classList.add('d-none');
+         thirdtext.classList.remove('d-none');
+     });
+ });
+});
 
-                // Check if the card is rotated and update the text visibility accordingly
-                if (card.classList.contains('rotate')) {
-                    secondTexts[index].classList.remove('d-none');
-                    firstTexts[index].classList.add('d-none');
-                } else {
-                    secondTexts[index].classList.add('d-none');
-                    firstTexts[index].classList.remove('d-none');
-                }
-            });
-        });
-    </script>
+ </script>
+ <script>
+     document.addEventListener("DOMContentLoaded", function () {
+         const flipButtons = document.querySelectorAll('.completeButton');
+         const myCards = document.querySelectorAll('.myCard');
+         const stepDisplay = document.querySelector('.step-display');
+         const totalSteps = flipButtons.length;
+         let currentStep = 0;
+
+         const steps = document.querySelectorAll('.step');
+         const progressLine = document.querySelector('.stepper-progress');
+
+         const progressElement = document.getElementById("circularProgress");
+         if (!progressElement) {
+             console.error("Progress bar container not found!");
+             return;
+         }
+
+         const bar = new ProgressBar.Circle(progressElement, {
+             color: '#41C887',
+             strokeWidth: 12,
+             trailColor: '#e6e6e6',
+             trailWidth: 12,
+             easing: 'easeInOut',
+             duration: 1400,
+             text: {
+                 value: '0%',
+                 className: 'progress-text',
+             },
+             svgStyle: {
+                 strokeLinecap: 'round',
+                 width: '100%',
+                 height: '100%',
+             },
+         });
+
+         function updateProgress() {
+             const progressValue = (currentStep / totalSteps) * 100;
+             bar.animate(progressValue / 100);
+             document.querySelector('.progress-text').textContent = `${Math.round(progressValue)}%`;
+
+             // Stepper Logic
+             let stepIndex = Math.min(Math.floor((currentStep / totalSteps) * 5), 4);
+             steps.forEach((step, index) => {
+                 if (index <= stepIndex) {
+                     step.classList.add("active");
+                 } else {
+                     step.classList.remove("active");
+                 }
+             });
+
+             progressLine.style.width = `${(stepIndex / 4) * 94}%`;
+         }
+
+         flipButtons.forEach((button, index) => {
+             let flipCount = 0; // Track flips per card
+
+             button.addEventListener('click', function () {
+                 if (!myCards[index].classList.contains('rotated')) {
+                     myCards[index].classList.add('rotated');
+                     button.classList.add('d-none');
+
+                     flipCount++;
+
+                   
+                     const firstText = myCards[index].querySelector('.firstText');
+                     const secondText = myCards[index].querySelector('.secondTexts');
+                     const thirdText = myCards[index].querySelector('.thirdText');
+
+                     if (flipCount === 3) {
+                        
+                         if (firstText) firstText.classList.add('d-none');
+                         if (secondText) secondText.classList.add('d-none');
+
+                         // Show thirdText
+                         if (thirdText) thirdText.classList.remove('d-none');
+                     }
+
+                     currentStep++;
+                     stepDisplay.textContent = `Step: ${currentStep} / ${totalSteps}`;
+                     updateProgress();
+                 }
+             });
+         });
+     });
+ </script>
+ <script>
+    document.addEventListener("DOMContentLoaded", function () {
+ const completeButtons = document.querySelectorAll('.completeButton'); // Fix selector
+ const myCards = document.querySelectorAll('.myCard'); // Fix selector
+
+ completeButtons.forEach((button, index) => {
+     button.addEventListener('click', function () {
+         const card = myCards[index]; // Get the corresponding card
+
+         const firstText = card.querySelector('.FirstText'); 
+         const secondText = card.querySelector('.SecondText'); 
+         const thirdText = card.querySelector('.ThirdText'); 
+         // Add class to the card
+         card.classList.add('rotated2');
+         // Hide First and Second Text, Show Third Text
+         if (firstText) firstText.classList.add('d-none');
+         if (secondText) secondText.classList.add('d-none');
+         if (thirdText) thirdText.classList.remove('d-none');
+     });
+ });
+});
+
+ </script>
 </body>
 
 </html>

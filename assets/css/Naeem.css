@@ -2395,8 +2395,8 @@ li {
 
 .communityCard {
     box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
-    
-border:1px solid #EDEEF2;
+
+    border: 1px solid #EDEEF2;
 }
 
 
@@ -2486,3 +2486,77 @@ border:1px solid #EDEEF2;
         max-width: 100% !important;
     }
 }
+
+.rotated {
+    transform: rotateY(180deg);
+}
+
+.Round-No {
+    width: 88px;
+    height: 88px;
+    border: 1px solid #98A2B3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.stepper-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+    margin: 20px auto;
+    position: relative;
+}
+
+.stepper-line {
+    position: absolute;
+    top: 50%;
+    left:3%;
+    width: 94%;
+    height: 2px;
+    right: 3%;
+    background: #e0e0e0;
+    z-index: 0;
+    transform: translateY(-50%);
+}
+
+.stepper-progress {
+    position: absolute;
+    top: 48%;
+    left: 3%;
+    right: 3%;
+    width: 0%;
+    height: 2px;
+    background: #344054;
+    z-index: 1;
+    transition: width 0.5s ease-in-out;
+}
+
+.step {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    background-color:white;
+    opacity: 1; 
+    pointer-events: none;
+}
+
+.step.active {
+    color: white;
+    opacity: 1;
+    pointer-events: auto;
+}
+.lastText{
+    transform:rotateY(180deg)
+}
+
