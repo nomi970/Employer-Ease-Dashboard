@@ -231,6 +231,9 @@ ul {
 .tertiary-gray {
     color: #475467 !important;
 }
+.secondary-gray{
+    color:#535862;
+}
 
 .light_gray {
     color: #858585;
@@ -350,6 +353,7 @@ ul {
     font-family: Arial, sans-serif;
     padding: 12px !important;
     right: 0 !important;
+    z-index: 99;
 }
 
 .introjs-arrow {

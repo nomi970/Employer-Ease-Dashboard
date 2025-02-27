@@ -42,7 +42,25 @@
     </style>
 </head>
 
-<body>
+<body class="overflow-hidden Body">
+    <div class="position-absolute w-100 d-flex align-items-center justify-content-center modelWrapper"
+        style="height: 100%; z-index: 9999999999; background-color:rgba(0, 0, 0, 0.3)">
+        <div class="position-relative d-flex align-items-center justify-content-center p-4 border-r-12 bg-white"
+            style="max-width: 600px;">
+            <div class="d-flex flex-column align-items-center gap-2">
+                <div class="d-flex justify-content-center align-items-start position-relative w-100">
+                    <img src="./assets/images/employer-ease-pics/animatedCirclewRocket.svg" alt="">
+                    <button class="bg-transparent closeModal border-0">
+                    <img class="position-absolute end-0" src="./assets/images/employer-ease-pics/cross.svg" alt="">
+                </button>
+                </div>
+                <h2 class="fs_24 fw_600 j_family lh_32">Welcome to EmployerEase</h2>
+                
+                    <p class="fs_20 fw_400 j_family lh_30 secondary-gray text-center">We're glad to have you onboard. Here
+                        are some quick tips to get you up and running</p>
+            </div>
+        </div>
+    </div>
     <section class="hero-section">
         <div class="main-dashbord">
             <aside class="dashbord-1" style="overflow:auto!important;">
@@ -55,7 +73,7 @@
                         </a>
                     </div>
                     <div class="dashbord-menu">
-                         <div class="border border-top-0 border-end-0 pb-2 border-start-0">
+                        <div class="border border-top-0 border-end-0 pb-2 border-start-0">
                             <p class="ps-3  j_family fs_16 fw_600"><a class="text-decoration-none primary-green"
                                     href="groundcontrol.html">
 
@@ -119,7 +137,8 @@
                                                     class="dropdown-item text-decoration-none text-start side-bar-drop-down pt-3 p-2">Logo
                                                     + Branding Kits</a>
                                                 <a href="LandingPage.html"
-                                                    class="dropdown-item text-decoration-none text-start side-bar-drop-down pt-3  p-2">Design & Development</a>
+                                                    class="dropdown-item text-decoration-none text-start side-bar-drop-down pt-3  p-2">Design
+                                                    & Development</a>
                                                 <a href="PrintShop.html"
                                                     class="dropdown-item text-decoration-none text-start side-bar-drop-down pt-3 p-2">Print
                                                     Shop</a>
@@ -674,7 +693,8 @@
                         <!-- -------------------------------cards---------------------------- -->
                         <!-- <div class="position-absolute popup-wrapper">
                             <div class="overlay d-none"></div>
-                        </div>                         -->
+                        </div>-->
+
                         <div class="row justify-content-center g-3">
                             <div class="col-md-6 col-lg-3"
                                 data-intro="<h2>Change Language</h2><p>Here you can change language.</p>" data-step="1">
@@ -1122,7 +1142,7 @@
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
     <!--------------------------------- Popper Js Ends----------------------------->
-    <script src="assets/js/script.js"></script>
+    <!-- <script src="assets/js/script.js"></script> -->
     <script src="assets/js/popup.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
     <!--------------------------------- Flate Picker----------------------------->
@@ -1213,7 +1233,7 @@
         });
     </script>
     <!-- --------------------------check all checkbox of table----------------------------- -->
-    <script>
+    <!-- <script>
         document.querySelectorAll('table').forEach((table) => {
             const headerCheckbox = table.querySelector('thead input[type="checkbox"]');
             if (headerCheckbox) {
@@ -1225,9 +1245,17 @@
                 });
             }
         });
-    </script>
-
-
+    </script> -->
+    <script>
+        const ModelwrapperDiv = document.querySelector('.modelWrapper')
+        const Body = document.querySelector('.Body')
+        const CloseButton = document.querySelector('.closeModal')
+        CloseButton.addEventListener ('click' , function(){
+            ModelwrapperDiv.classList.add('d-none')
+            Body.classList.remove('overflow-hidden')
+            console.log('clicked')
+        })
+</script>
 </body>
 
 </html>
