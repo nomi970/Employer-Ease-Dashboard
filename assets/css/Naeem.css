@@ -231,8 +231,9 @@ ul {
 .tertiary-gray {
     color: #475467 !important;
 }
-.secondary-gray{
-    color:#535862;
+
+.secondary-gray {
+    color: #535862;
 }
 
 .light_gray {
@@ -352,8 +353,13 @@ ul {
     border-radius: 8px;
     font-family: Arial, sans-serif;
     padding: 12px !important;
-    right: 0 !important;
+    /* right: 0 !important; */
     z-index: 99;
+    position: fixed !important;
+    left: 50% !important;
+    right: 50% !important;
+    top: 0% !important;
+    height: fit-content;
 }
 
 .introjs-arrow {
@@ -2489,6 +2495,16 @@ li {
         width: 100% !important;
         max-width: 100% !important;
     }
+    .introjs-tooltip{
+        left: 10% !important;
+        right: 0%!important;
+        top: 20%!important;
+        display: none;
+    }
+    .active-tour-step::before,.active-tour-step::after {
+      display: none;
+    }
+    
 }
 
 .rotated {
@@ -2519,7 +2535,7 @@ li {
 .stepper-line {
     position: absolute;
     top: 50%;
-    left:3%;
+    left: 3%;
     width: 94%;
     height: 2px;
     right: 3%;
@@ -2550,8 +2566,8 @@ li {
     font-weight: bold;
     position: relative;
     z-index: 2;
-    background-color:white;
-    opacity: 1; 
+    background-color: white;
+    opacity: 1;
     pointer-events: none;
 }
 
@@ -2560,7 +2576,109 @@ li {
     opacity: 1;
     pointer-events: auto;
 }
-.lastText{
-    transform:rotateY(180deg)
+
+.lastText {
+    transform: rotateY(180deg)
+}
+.active-tour-step {
+    position: relative; /* Required for absolute positioning */
 }
 
+/* Static Solid Circle */
+.active-tour-step::before {
+    content: "";
+    height: 12px;
+    width: 12px;
+    background-color: #3684A4; /* Solid color */
+    z-index: 10000;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+/* Pulsating Circle */
+.active-tour-step::after {
+    content: "";
+    border:2px solid  rgba(54, 132, 164, 0.5);
+    height: 40px;
+    width: 40px;
+    background-color: rgba(54, 132, 164, 0.3); /* Semi-transparent */
+    z-index: 9999;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation: pulsate 0.9s infinite ease-out;
+    opacity: 0;
+}
+
+/* Pulsating Animation */
+@keyframes pulsate {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0;
+    }
+}
+
+
+/* .active-tour-step::after {
+    content: "";
+    height: 40px;
+    width: 40px;
+    background-color: #3684A4;
+    z-index: 9999;
+    position: absolute;
+    top: 0;
+    right: 50%;
+    left: 0%;
+    -webkit-animation: pulsate 1s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    opacity: 0.0;
+    border-radius: 100%;
+
+}
+
+@-webkit-keyframes pulsate {
+    0% {
+        -webkit-transform: scale(0.1, 0.1);
+        opacity: 0.0;
+    }
+
+    50% {
+        opacity: 1.0;
+    }
+
+    100% {
+        -webkit-transform: scale(1.2, 1.2);
+        opacity: 0.0;
+    }
+} */
+
+.active-tour-step {
+    position: relative;
+    /* border:1px solid red; */
+}
+
+/* .active-tour-step{
+    border:2px solid #3684A4;
+    border-radius:12px;
+    -webkit-animation: pulsate 5s ease-out;
+    -webkit-animation-iteration-count: infinite; 
+    opacity: 0.0;
+   
+}
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+} */
