@@ -279,6 +279,9 @@ ul {
 .bg-light-danger {
     background-color: #F9FAFB !important;
 }
+.light_main_bg{
+    background-color:#3684A414!important;
+}
 
 /* ----------------------------Main Padding---------------------------- */
 .p_80 {
@@ -2333,6 +2336,121 @@ li {
 
 .borderside {
     border: 2px solid #3d97fe1a;
+}
+/* ------------===============================Get Started Module======================================--------------- */
+.step-item .step-description,
+.stepNumber {
+    color: rgb(255, 255, 255, 0.5);
+}
+
+.step-item {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.step-item .step-number {
+    min-width: 48px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 1px solid #EAECF0;
+    position: relative;
+}
+
+.step-item:not(:last-child) .step-number::after {
+    content: "";
+    height: 26px;
+    width: 2px;
+    background-color: rgba(234, 236, 240, 0.7);
+    border-radius: 10px;
+    position: absolute;
+    top: 108%;
+}
+
+.step-completed .step-description,
+.stepNumber {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.step-completed .stepNumber {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.step-completed.step-item .step-number {
+    color: white;
+    background-image: url('./assets/images/employer-ease-pics/completedStep.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: transparent;
+}
+
+.step-item.active .step-number::after {
+    background-color: rgba(234, 236, 240, 1);
+}
+
+.step-item.active .step-number {
+    color: transparent;
+    background-image: url('./assets/images/employer-ease-pics/stepperbizzy.svg');
+    background-repeat: no-repeat;
+    border: 0px;
+    background-position: center center;
+    /* background-size: cover; */
+
+}
+
+.step-item.active .step-description,
+.step-item.active .stepNumber {
+    color: white;
+
+
+}
+
+.step-item.active .step-number {
+    height: 48px;
+    width: 48px;
+    background-position: center;
+    border: none !important;
+    color: transparent;
+}
+
+.step-completed .step-number {
+    border: none;
+    color: transparent;
+}
+
+.left__Wrapper {
+    background-color: #3684A4;
+    border-top-right-radius: 64px;
+    border-bottom-right-radius: 64px;
+    height: 100vh;
+}
+
+.list-unstyled {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.step-content {
+    display: none;
+}
+
+.step-content.active {
+    display: block;
+}
+
+.left__Progress__wrapper {
+    /* padding: 88px 0; */
+    height: calc(100vh - 88px);
+    overflow: auto;
 }
 
 

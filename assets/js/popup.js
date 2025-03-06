@@ -49,28 +49,24 @@ document.addEventListener("DOMContentLoaded", () => {
           disableInteraction: true
       })
       .onbeforechange(function (targetElement) {
-          removeTourEffects(); // Remove the previous step highlight
-          addTourEffects(targetElement); // Highlight the new step
+          removeTourEffects(); 
+          addTourEffects(targetElement);
       })
-      .oncomplete(removeTourEffects) // Remove highlight when tour is completed
-      .onexit(removeTourEffects) // Remove highlight if user exits tour
+      .oncomplete(removeTourEffects) 
+      .onexit(removeTourEffects)
       .start();
 });
 
-/**
-* Adds pulsating effect and dots to the active step.
-*/
+
 function addTourEffects(element) {
   element.classList.add("active-tour-step");
 
-  // Create center dot
   if (!element.querySelector(".center-dot")) {
       let centerDot = document.createElement("div");
       centerDot.classList.add("center-dot");
       element.appendChild(centerDot);
   }
 
-  // Create right-side dot
   if (!element.querySelector(".right-dot")) {
       let rightDot = document.createElement("div");
       rightDot.classList.add("right-dot");
@@ -78,14 +74,9 @@ function addTourEffects(element) {
   }
 }
 
-/**
-* Removes tour effects from all steps.
-*/
 function removeTourEffects() {
   document.querySelectorAll(".active-tour-step").forEach((el) => {
       el.classList.remove("active-tour-step");
-
-      // Remove added dots
       const centerDot = el.querySelector(".center-dot");
       const rightDot = el.querySelector(".right-dot");
       if (centerDot) centerDot.remove();
