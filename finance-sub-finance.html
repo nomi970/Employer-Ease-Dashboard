@@ -36,6 +36,34 @@
                 left: 0px;
             }
         }
+
+        .custom-checkbox {
+            display: inline-block;
+            padding: 10px;
+            border: 1px solid #D0D5DD;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: border-color 0.3s;
+        }
+
+        .inputCheck {
+            border: 1px solid #3684A4 !important;
+        }
+
+        .MultiInput {
+            padding: 5em;
+
+            label>span {
+                display: inline-block;
+                padding-top: 0.5em;
+                vertical-align: top;
+
+                &:after {
+                    content: ':';
+                    padding-right: 0.5em;
+                }
+            }
+        }
     </style>
 </head>
 
@@ -667,151 +695,992 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- -------------------------------------================Off convas for mobile small screen===============------------------------------------ -->
+                        <!-- -------------------------------------================Off convas for mobile small screen Ended===============------------------------------------ -->
                     </div>
                 </div>
                 <!-- Content Section -->
                 <div class="dashboard-content">
                     <div class="position-relative">
                         <!-- -------------------------------Business Protection section---------------------------- -->
-                        <section class="formation-center">
-                            <div class="p-3 bg-white formation-header">
-                                <div class="d-flex justify-content-between gap-2 flex-wrap flex-md-nowrap">
-                                    <h3 class="fs_18 fw_600 lh_28 j_family">Accounting Services Integration</h3>
-                                    <a href="financeCourseCard.html"
-                                        class="whole_button border1 bg-transparent border-r-8 tertiary-black">
-                                        <!-- <img src="assets/images/employer-ease-pics/cloud-download.svg" alt="download"> -->
-                                        Finance
-                                        <img height="20px" width="20px"
-                                            src="assets/images/employer-ease-pics/popup_avatar.svg" alt="pdf">
-                                    </a>
-                                </div>
-                                <p class="fs_16 fw_400 lh_26 j_family tertiary-black pt-2">Explore No Fee, No minimum
-                                    balance business checking accounts.
-                                </p>
-                            </div>
-                            <div class="p-3 bg-white formation-header mt-4">
-                                <div
-                                    class="compliance-card1 border-r-12 p-3 border h-100 d-flex flex-column justify-content-between">
-                                    <div>
+                        <ul class="nav nav-tabs d-flex gap-4 crm-tabs px-4 bg-white border-r-8 rounded-bottom-0"
+                            id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link px-0 active border-0" id="pills-home-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                                    aria-selected="true">
+                                    Business Loans
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link px-0 border-0" id="pills-profile-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-profile" type="button" role="tab"
+                                    aria-controls="pills-profile" aria-selected="false">
+                                   Acces$
+                                </button>
+                            </li>
+
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                aria-labelledby="pills-home-tab" tabindex="0">
+                                <section class="formation-center">
+                                    <div class="p-3 bg-white formation-header rounded-top-0">
+                                        <div class="d-flex justify-content-between gap-2 flex-wrap flex-md-nowrap ">
+                                            <h3 class="fs_18 fw_600 lh_28 j_family">Business Loans, Lines of Credit &
+                                                Equity
+                                                Management
+                                            </h3>
+                                            <a href="financeCourseCard.html"
+                                                class="whole_button border1 bg-transparent border-r-8 tertiary-black">
+                                                <!-- <img src="assets/images/employer-ease-pics/cloud-download.svg" alt="download"> -->
+                                                Finance
+                                                <img height="20px" width="20px"
+                                                    src="assets/images/employer-ease-pics/popup_avatar.svg" alt="pdf">
+                                            </a>
+                                        </div>
+                                        <p class="fs_16 fw_400 lh_26 j_family tertiary-black pt-2">Explore the financing
+                                            solutions trusted by millions of businesses like yours to fuel growth,
+                                            manage cash
+                                            flow, and seize new opportunities.
+                                        </p>
+                                    </div>
+                                    <div class="p-3 bg-white formation-header mt-4">
                                         <div
-                                            class="d-flex align-items-center justify-content-between flex-wrap flex-md-nowrap gap-3">
-                                            <img src="assets/images/employer-ease-pics/smartbiz.svg"
-                                                alt="northwest-card">
-                                            <div class="d-flex gap-3 align-items-center flex-wrap flex-md-nowrap">
+                                            class="compliance-card1 border-r-12 p-3 border h-100 d-flex flex-column justify-content-between">
+                                            <div>
+                                                <div
+                                                    class="d-flex align-items-center justify-content-between flex-wrap flex-md-nowrap gap-3">
+                                                    <img src="assets/images/employer-ease-pics/smartbiz.svg"
+                                                        alt="northwest-card">
+                                                    <div
+                                                        class="d-flex gap-3 align-items-center flex-wrap flex-md-nowrap">
+                                                        <button
+                                                            class="whole_button border1 bg-transparent tertiary-black px-3">See
+                                                            More at SmartBiz</button>
+                                                        <button
+                                                            class="whole_button light-main-bg main_color px-3">Connect
+                                                            Account</button>
+                                                    </div>
+                                                </div>
+                                                <h3 class="fs_20 fw_600 lh_28 j_family pt-3">SmartBiz</h3>
+                                                <p class="fs_16 fw_400 lh_26 j_family tertiary-black pt-2">
+                                                    SmartBiz Loans is a leading online lending platform specializing in
+                                                    facilitating SBA (Small Business Administration) loans, as well as
+                                                    offering
+                                                    alternative lending options like bank term loans. Their mission is
+                                                    to
+                                                    simplify and streamline the traditionally complex loan application
+                                                    process,
+                                                    making it more accessible for small businesses to obtain the funding
+                                                    they
+                                                    need to grow. With a strong focus on competitive rates, long-term
+                                                    repayment
+                                                    options, and a user-friendly online interface, SmartBiz caters to
+                                                    businesses
+                                                    that value stability and predictable repayment structures.
+                                                </p>
+                                                <div class="hidden_txt d-none">
+                                                    <h3 class="fs_18 fw_600 lh_28 j_family pt-3 pb-2">Ideal For</h3>
+                                                    <ul class="ps-4">
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
+                                                            style="list-style: disc;">Lorem ipsum dolor sit amet
+                                                            consectetur.
+                                                            Tortor sed aliquam sed id enim donec pharetra. </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
+                                                            style="list-style: disc;">Sit a quam sed ante nisl eget
+                                                            mauris
+                                                            amet.Lorem ipsum dolor sit amet consectetur.</li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
+                                                            style="list-style: disc;"> Tortor sed aliquam sed id enim
+                                                            donec
+                                                            pharetra. </li>
+                                                    </ul>
+                                                    <h3 class="fs_18 fw_600 lh_28 j_family pt-2 pb-2">Key Features</h3>
+                                                    <ul class="ps-4">
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
+                                                            style="list-style: disc;">Lorem ipsum dolor sit amet
+                                                            consectetur.
+                                                            Tortor sed aliquam sed id enim donec pharetra. </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
+                                                            style="list-style: disc;">Sit a quam sed ante nisl eget
+                                                            mauris
+                                                            amet.Lorem ipsum dolor sit amet consectetur.</li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
+                                                            style="list-style: disc;"> Tortor sed aliquam sed id enim
+                                                            donec
+                                                            pharetra. </li>
+                                                    </ul>
+                                                </div>
+
+
                                                 <button
-                                                    class="whole_button border1 bg-transparent tertiary-black px-3">See
-                                                    More at SmartBiz</button>
-                                                <button class="whole_button light-main-bg main_color px-3">Connect
-                                                    Account</button>
+                                                    class="whole_button border bg-transparent fw_600 mt_12 view-more-btn">View
+                                                    More</button>
                                             </div>
                                         </div>
-                                        <h3 class="fs_20 fw_600 lh_28 j_family pt-3">SmartBiz</h3>
-                                        <p class="fs_16 fw_400 lh_26 j_family tertiary-black pt-2">
-                                            SmartBiz Loans is a leading online lending platform specializing in
-                                            facilitating SBA (Small Business Administration) loans, as well as offering
-                                            alternative lending options like bank term loans. Their mission is to
-                                            simplify and streamline the traditionally complex loan application process,
-                                            making it more accessible for small businesses to obtain the funding they
-                                            need to grow. With a strong focus on competitive rates, long-term repayment
-                                            options, and a user-friendly online interface, SmartBiz caters to businesses
-                                            that value stability and predictable repayment structures.
-                                        </p>
-                                        <div class="hidden_txt d-none">
-                                            <h3 class="fs_18 fw_600 lh_28 j_family pt-3 pb-2">Ideal For</h3>
-                                            <ul class="ps-4">
-                                                <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
-                                                    style="list-style: disc;">Lorem ipsum dolor sit amet consectetur.
-                                                    Tortor sed aliquam sed id enim donec pharetra. </li>
-                                                <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
-                                                    style="list-style: disc;">Sit a quam sed ante nisl eget mauris
-                                                    amet.Lorem ipsum dolor sit amet consectetur.</li>
-                                                <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
-                                                    style="list-style: disc;"> Tortor sed aliquam sed id enim donec
-                                                    pharetra. </li>
-                                            </ul>
-                                            <h3 class="fs_18 fw_600 lh_28 j_family pt-2 pb-2">Key Features</h3>
-                                            <ul class="ps-4">
-                                                <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
-                                                    style="list-style: disc;">Lorem ipsum dolor sit amet consectetur.
-                                                    Tortor sed aliquam sed id enim donec pharetra. </li>
-                                                <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
-                                                    style="list-style: disc;">Sit a quam sed ante nisl eget mauris
-                                                    amet.Lorem ipsum dolor sit amet consectetur.</li>
-                                                <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
-                                                    style="list-style: disc;"> Tortor sed aliquam sed id enim donec
-                                                    pharetra. </li>
-                                            </ul>
+                                    </div>
+
+                                    <div class="p-3 bg-white formation-header mt-4">
+                                        <div
+                                            class="compliance-card1 border-r-12 p-3 border  h-100 d-flex flex-column justify-content-between">
+                                            <div>
+                                                <div
+                                                    class="d-flex align-items-center justify-content-between flex-wrap flex-md-nowrap gap-3">
+                                                    <img src="assets/images/employer-ease-pics/oneDeck.svg"
+                                                        alt="found-icon">
+                                                    <div
+                                                        class="d-flex gap-3 align-items-center flex-wrap flex-md-nowrap">
+                                                        <button
+                                                            class="whole_button border1 bg-transparent tertiary-black px-3">See
+                                                            More at OnDeck</button>
+                                                        <button
+                                                            class="whole_button light-main-bg main_color px-3">Connect
+                                                            Account</button>
+                                                    </div>
+                                                </div>
+                                                <h3 class="fs_20 fw_600 lh_28 j_family pt-3">OnDeck</h3>
+                                                <p class="fs_16 fw_400 lh_26 j_family tertiary-black pt-2">OnDeck is a
+                                                    prominent
+                                                    online lender offering fast and flexible financing solutions for
+                                                    small
+                                                    businesses. Known for their innovative technology and focus on quick
+                                                    approvals, OnDeck has provided billions of dollars in funding to
+                                                    businesses
+                                                    worldwide. OnDeck is designed to meet the needs of businesses
+                                                    requiring
+                                                    immediate access to working capital or short-term loans, with a
+                                                    simplified
+                                                    application process and minimal paperwork.
+                                                </p>
+                                                <div class="hidden_txt d-none">
+                                                    <h3 class="fs_18 fw_600 lh_28 j_family pt-3 pb-2">Ideal For</h3>
+                                                    <ul class="ps-4">
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
+                                                            style="list-style: disc;">Lorem ipsum dolor sit amet
+                                                            consectetur.
+                                                            Tortor sed aliquam sed id enim donec pharetra. </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
+                                                            style="list-style: disc;">Sit a quam sed ante nisl eget
+                                                            mauris
+                                                            amet.Lorem ipsum dolor sit amet consectetur.</li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
+                                                            style="list-style: disc;"> Tortor sed aliquam sed id enim
+                                                            donec
+                                                            pharetra. </li>
+                                                    </ul>
+                                                    <h3 class="fs_18 fw_600 lh_28 j_family pt-2 pb-2">Key Features</h3>
+                                                    <ul class="ps-4">
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
+                                                            style="list-style: disc;">Lorem ipsum dolor sit amet
+                                                            consectetur.
+                                                            Tortor sed aliquam sed id enim donec pharetra. </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
+                                                            style="list-style: disc;">Sit a quam sed ante nisl eget
+                                                            mauris
+                                                            amet.Lorem ipsum dolor sit amet consectetur.</li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
+                                                            style="list-style: disc;"> Tortor sed aliquam sed id enim
+                                                            donec
+                                                            pharetra. </li>
+                                                    </ul>
+                                                </div>
+                                                <button
+                                                    class="whole_button border bg-transparent fw_600 mt_12 view-more-btn">View
+                                                    More</button>
+                                            </div>
                                         </div>
+                                    </div>
+
+                                    <div class="p-3 bg-white formation-header mt-4">
+                                        <div
+                                            class="compliance-card1 border-r-12 p-3 border  h-100 d-flex flex-column justify-content-between">
+                                            <div>
+                                                <div
+                                                    class="d-flex align-items-center justify-content-between flex-wrap flex-md-nowrap gap-3">
+                                                    <img src="assets/images/employer-ease-pics/carta.svg"
+                                                        alt="found-icon">
+                                                    <div
+                                                        class="d-flex gap-3 align-items-center flex-wrap flex-md-nowrap">
+                                                        <button
+                                                            class="whole_button border1 bg-transparent tertiary-black px-3">See
+                                                            More at OnDeck</button>
+                                                        <button
+                                                            class="whole_button light-main-bg main_color px-3">Connect
+                                                            Account</button>
+                                                    </div>
+                                                </div>
+                                                <h3 class="fs_20 fw_600 lh_28 j_family pt-3">Carta</h3>
+                                                <p class="fs_16 fw_400 lh_26 j_family tertiary-black pt-2">Carta is an
+                                                    equity
+                                                    management platform that helps businesses, investors, and employees
+                                                    track
+                                                    company ownership, manage cap tables, conduct valuations, and stay
+                                                    compliant
+                                                    with regulatory requirements.
+                                                </p>
+                                                <div class="hidden_txt d-none">
+                                                    <h3 class="fs_18 fw_600 lh_28 j_family pt-3 pb-2">Targeted Customer
+                                                    </h3>
+                                                    <ul class="ps-4">
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
+                                                            style="list-style: disc;">Startups and founders seeking
+                                                            efficient
+                                                            cap table and valuation management.
+                                                        </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
+                                                            style="list-style: disc;">Venture capital firms and
+                                                            investors
+                                                            needing portfolio tracking and deal flow management.
+                                                        </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
+                                                            style="list-style: disc;"> Private and public companies
+                                                            managing
+                                                            employee stock and equity plans.
+                                                        </li>
+
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
+                                                            style="list-style: disc;">Law firms and CFOs requiring
+                                                            accurate
+                                                            equity distribution and compliance tools.
+                                                        </li>
+                                                    </ul>
+                                                    <h3 class="fs_18 fw_600 lh_28 j_family pt-2 pb-2">Features</h3>
+                                                    <ul class="ps-4">
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
+                                                            style="list-style: disc;">
+                                                            Cap Table Management – Real-time tracking of ownership
+                                                            structures.
+                                                        </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
+                                                            style="list-style: disc;">
+                                                            409A Valuations – IRS-compliant valuations for startups and
+                                                            private
+                                                            companies.
+                                                        </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
+                                                            style="list-style: disc;">
+                                                            Equity Plan Administration – Manage stock options, RSUs, and
+                                                            equity
+                                                            grants.
+                                                        </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
+                                                            style="list-style: disc;">
+                                                            Investor & Fund Management – Streamline portfolio tracking
+                                                            and
+                                                            fundraising.
+                                                        </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
+                                                            style="list-style: disc;">
+                                                            Scenario Modeling – Forecast dilution and exit scenarios.
+                                                        </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
+                                                            style="list-style: disc;">
+                                                            Automated Compliance & Reporting – Ensure regulatory and tax
+                                                            compliance.
+                                                        </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
+                                                            style="list-style: disc;">
+                                                            Integrations – Connect with accounting, HR, and legal
+                                                            platforms.
+                                                        </li>
+                                                    </ul>
+
+                                                    <h3 class="fs_18 fw_600 lh_28 j_family pt-2 pb-2">Features</h3>
+                                                    <ul class="ps-4">
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
+                                                            style="list-style: disc;">
+                                                            Trusted by over 35,000 companies, including top startups and
+                                                            VC
+                                                            firms.
+                                                        </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
+                                                            style="list-style: disc;">
+                                                            Secure and automated solutions designed for businesses at
+                                                            any stage.
+                                                        </li>
+                                                        <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
+                                                            style="list-style: disc;">
+                                                            Provides the necessary tools to scale and manage ownership
+                                                            effectively.
+                                                        </li>
+
+                                                    </ul>
+
+                                                </div>
+                                                <button
+                                                    class="whole_button border bg-transparent fw_600 mt_12 view-more-btn">View
+                                                    More</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                aria-labelledby="pills-profile-tab" tabindex="0">
+                                <div class="p-3 bg-white formation-header rounded-top-0">
+                                    <div class="d-flex justify-content-between gap-2 flex-wrap flex-md-nowrap ">
+                                        <h3 class="fs_18 fw_600 lh_28 j_family">SBA Wizard by EmployerEase – Smart
+                                            Questionnaire Interface Logic</h3>
+                                        <a href="financeCourseCard.html"
+                                            class="whole_button border1 bg-transparent border-r-8 tertiary-black">
+                                            Finance
+                                            <img height="20px" width="20px"
+                                                src="assets/images/employer-ease-pics/popup_avatar.svg" alt="pdf">
+                                        </a>
+                                    </div>
+                                    <p class="fs_16 fw_400 lh_26 j_family tertiary-black pt-2">TurboTax-style
+                                        Eligibility & Filing Made Simple for SBA Loans, Grants & Microloans
+                                    </p>
+                                </div>
+
+                                <div class="p-3 bg-white formation-header mt-4">
+                                    <div class="border p-3 border-r-8">
+                                        <h4 class="fs_18 fw_600 lh_28 j_family">Business Basics</h4>
+                                        <div class="row mt-1 g-4">
+                                            <div class="col-md-6">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <label class="fs_14 fw_400 lh_26 j_family tertiary-black"
+                                                        for="input1">Legal Business Name</label>
+                                                    <input id="input1" class="globalInput ps-2" type="text"
+                                                        placeholder="Tech">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <label class="fs_14 fw_400 lh_26 j_family tertiary-black"
+                                                        for="input2">Business Entity Type</label>
+                                                    <div class="position-relative">
+                                                        <select id="input2" class="globalInput ps-2 w-100">
+                                                            <option disabled selected value="">USA</option>
+                                                            <option value="">Canada</option>
+                                                            <option value="">UK</option>
+                                                            <option value="">Africa</option>
+                                                        </select>
+                                                        <div class="position-absolute" style="right: 5px; top:10px">
+                                                            <img class=""
+                                                                src="./assets/images/employer-ease-pics/chevron-down.svg"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <label class="fs_14 fw_400 lh_26 j_family tertiary-black"
+                                                        for="input3">Date of Formation</label>
+                                                    <div class="position-relative">
+                                                        <input id="input3" class="globalInput ps-2 w-100" type="text"
+                                                            placeholder="28 February, 1998">
+                                                        <div class="position-absolute" style="right: 5px; top:10px">
+                                                            <img src="./assets/images/employer-ease-pics/calendar-gray.svg"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
 
 
-                                        <button
-                                            class="whole_button border bg-transparent fw_600 mt_12 view-more-btn">View
-                                            More</button>
+                                            <div class="col-md-6">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <label class="fs_14 fw_400 lh_26 j_family tertiary-black"
+                                                        for="input2">Primary Industry</label>
+                                                    <div class="position-relative">
+                                                        <select id="input2" class="globalInput ps-2 w-100">
+                                                            <option disabled selected value="">USA</option>
+                                                            <option value="">Canada</option>
+                                                            <option value="">UK</option>
+                                                            <option value="">Africa</option>
+                                                        </select>
+                                                        <div class="position-absolute" style="right: 5px; top:10px">
+                                                            <img class=""
+                                                                src="./assets/images/employer-ease-pics/chevron-down.svg"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <label class="fs_14 fw_400 lh_26 j_family tertiary-black"
+                                                        for="input9">Number of Employees</label>
+                                                    <div class="position-relative">
+                                                        <input id="input9" class="globalInput ps-2 w-100" type="number"
+                                                            placeholder="">
+                                                        <div class="position-absolute" style="right: 5px; top:10px">
+                                                            <img src="./assets/images/employer-ease-pics/numberIcon.svg"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <h5 class="fs_18 fw_600 lh_28 j_family">Ownership & Certification</h5>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <label class="fs_14 fw_400 lh_26 j_family tertiary-black"
+                                                        for="input4">Full Name of Owner(s)</label>
+                                                    <div class="position-relative">
+                                                        <input id="input4" class="globalInput ps-2 w-100" type="text"
+                                                            placeholder="Tech">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <label class="fs_14 fw_400 lh_26 j_family tertiary-black"
+                                                        for="input5">Ownership Percentage</label>
+                                                    <div class="position-relative">
+                                                        <input id="input5" class="globalInput ps-2 w-100" type="number"
+                                                            placeholder="">
+                                                        <div class="position-absolute" style="right: 5px; top:10px">
+                                                            <img src="./assets/images/employer-ease-pics/numberIcon.svg"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <label class="fs_14 fw_400 lh_26 j_family tertiary-black"
+                                                        for="input6">Woman/Minority/Veteran Owned?</label>
+                                                    <div class="position-relative">
+                                                        <select id="input2" class="globalInput ps-2 w-100">
+                                                            <option disabled selected value="">Yes</option>
+                                                            <option value="">No</option>
+                                                        </select>
+                                                        <div class="position-absolute" style="right: 5px; top:10px">
+                                                            <img class=""
+                                                                src="./assets/images/employer-ease-pics/chevron-down.svg"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <label class="fs_14 fw_400 lh_26 j_family tertiary-black"
+                                                        for="input7">Filed Bankruptcy in Last 7 Years?</label>
+                                                    <div class="position-relative">
+                                                        <select id="input2" class="globalInput ps-2 w-100">
+                                                            <option disabled selected value="">Yes</option>
+                                                            <option value="">No</option>
+                                                        </select>
+                                                        <div class="position-absolute" style="right: 5px; top:10px">
+                                                            <img class=""
+                                                                src="./assets/images/employer-ease-pics/chevron-down.svg"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <label class="fs_14 fw_400 lh_26 j_family tertiary-black"
+                                                        for="input2">Current on Federal Taxes?</label>
+                                                    <div class="position-relative">
+                                                        <select id="input2" class="globalInput ps-2 w-100">
+                                                            <option disabled selected value="">Yes</option>
+                                                            <option value="">No</option>
+                                                        </select>
+                                                        <div class="position-absolute" style="right: 5px; top:10px">
+                                                            <img class=""
+                                                                src="./assets/images/employer-ease-pics/chevron-down.svg"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <h5 class="fs_18 fw_600 lh_28 j_family">Financial Snapshot</h5>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <label class="fs_14 fw_400 lh_26 j_family tertiary-black"
+                                                        for="input10">Gross Revenue (Last Year)</label>
+                                                    <div class="position-relative">
+                                                        <input id="input10" class="globalInput ps-2 w-100" type="number"
+                                                            placeholder="">
+                                                        <div class="position-absolute" style="right: 5px; top:10px">
+                                                            <img src="./assets/images/employer-ease-pics/numberIcon.svg"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <label class="fs_14 fw_400 lh_26 j_family tertiary-black"
+                                                        for="input11">Net Profit</label>
+                                                    <div class="position-relative">
+                                                        <input id="input11" class="globalInput ps-2 w-100" type="number"
+                                                            placeholder="">
+                                                        <div class="position-absolute" style="right: 5px; top:10px">
+                                                            <img src="./assets/images/employer-ease-pics/numberIcon.svg"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <label class="fs_14 fw_400 lh_26 j_family tertiary-black"
+                                                        for="input12">Monthly Expenses</label>
+                                                    <div class="position-relative">
+                                                        <input id="input12" class="globalInput ps-2 w-100" type="number"
+                                                            placeholder="">
+                                                        <div class="position-absolute" style="right: 5px; top:10px">
+                                                            <img src="./assets/images/employer-ease-pics/numberIcon.svg"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <label class="fs_14 fw_400 lh_26 j_family tertiary-black"
+                                                        for="input13">Business Bank Name</label>
+                                                    <input id="input13" class="globalInput ps-2" type="text"
+                                                        placeholder="">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <label class="fs_14 fw_400 lh_26 j_family tertiary-black"
+                                                        for="input15">Use Accounting Software?</label>
+                                                    <div class="position-relative">
+                                                        <select id="input15" class="globalInput ps-2 w-100">
+                                                            <option disabled selected value="">Yes</option>
+                                                            <option value="">No</option>
+                                                        </select>
+                                                        <div class="position-absolute" style="right: 5px; top:10px">
+                                                            <img class=""
+                                                                src="./assets/images/employer-ease-pics/chevron-down.svg"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <h5 class="fs_18 fw_600 lh_28 j_family">Use of Funds</h5>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <label class="fs_14 fw_400 lh_26 j_family tertiary-black"
+                                                        for="input16">capital Requested</label>
+                                                    <div class="position-relative">
+                                                        <input id="input16" class="globalInput ps-2 w-100" type="number"
+                                                            placeholder="">
+                                                        <div class="position-absolute" style="right: 5px; top:10px">
+                                                            <img src="./assets/images/employer-ease-pics/numberIcon.svg"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <label class="fs_14 fw_400 lh_26 j_family tertiary-black"
+                                                        for="input17">Funds Usage</label>
+                                                    <div class="position-relative">
+                                                        <input id="input17" class="globalInput ps-2 w-100" type="number"
+                                                            placeholder="">
+                                                        <div class="position-absolute" style="right: 5px; top:10px">
+                                                            <img src="./assets/images/employer-ease-pics/chevron-down.svg"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <label class="fs_14 fw_400 lh_26 j_family tertiary-black"
+                                                        for="input15">Use Accounting Software?</label>
+                                                    <div class="position-relative">
+                                                        <select id="input15" class="globalInput ps-2 w-100">
+                                                            <option disabled selected value="">Yes</option>
+                                                            <option value="">No</option>
+                                                        </select>
+                                                        <div class="position-absolute" style="right: 5px; top:10px">
+                                                            <img class=""
+                                                                src="./assets/images/employer-ease-pics/chevron-down.svg"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div
+                                                    class="position-relative px-4 py-3 cursor-pointer d-flex flex-column justify-content-center align-items-center border1 border-r-12 ">
+                                                    <img src="assets/images/employer-ease-pics/black-cloud-up.svg"
+                                                        alt="">
+                                                    <div
+                                                        class="d-flex justify-content-center align-items-center flex-column pt-2">
+                                                        <div>
+                                                            <span
+                                                                class="fs_14 fw_600 j_family main_color text-center">Click
+                                                                to
+                                                                upload</span>
+                                                            <span
+                                                                class="fs_14 fw_400 j_family tertiary-gray text-center">or
+                                                                drag
+                                                                and drop</span>
+                                                        </div>
+                                                        <p class="fs_14 fw_400 j_family tertiary-gray text-center">
+                                                            SVG,
+                                                            PNG, JPG
+                                                            or GIF (max. 800x400px)</p>
+                                                    </div>
+                                                    <div
+                                                        class="position-absolute w-100 top-0 left-0 right-0 bottom-0 inset-0 ">
+                                                        <input class="h-100 opacity-0 w-100" type="file">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6  position-relative">
+                                                <span
+                                                    class="fs_14 fw_400 lh_26 j_family tertiary-black position-absolute"
+                                                    style="top:-10px">Accept Grants or Loans?</span>
+                                                <label
+                                                    class="custom-checkbox globalInput ps-3 w-100 d-flex justify-content-between align-items-center mt-3">
+                                                    <span class="fs_14 fw_400 lh_26 j_family tertiary-black">Accept
+                                                        Terms</span>
+                                                    <input class="global-check" type="checkbox"
+                                                        onchange="this.parentElement.classList.toggle('checked')" />
+                                                </label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label
+                                                    class="custom-checkbox mt-3 globalInput ps-3 w-100 d-flex justify-content-between align-items-center">
+                                                    <span
+                                                        class="fs_14 fw_400 lh_26 j_family tertiary-black">Loans</span>
+                                                    <input class="global-check" type="checkbox"
+                                                        onchange="this.parentElement.classList.toggle('checked')" />
+                                                </label>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <h5 class="fs_18 fw_600 lh_28 j_family">Use of Funds</h5>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <label class="fs_14 fw_400 lh_26 j_family tertiary-black"
+                                                        for="input2">Located in HUBZ or Opportunity Zone?</label>
+                                                    <div class="position-relative">
+                                                        <select id="input2" class="globalInput ps-2 w-100">
+                                                            <option disabled selected value="">Select</option>
+                                                            <option value="">Yes</option>
+                                                            <option value="">No</option>
+                                                        </select>
+                                                        <div class="position-absolute" style="right: 5px; top:10px">
+                                                            <img class=""
+                                                                src="./assets/images/employer-ease-pics/chevron-down.svg"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <label class="fs_14 fw_400 lh_26 j_family tertiary-black"
+                                                        for="input18">Developing a Product or Innovation?</label>
+                                                    <div class="position-relative">
+                                                        <select id="input18" class="globalInput ps-2 w-100">
+                                                            <option disabled selected value="">Select</option>
+                                                            <option value="">Yes</option>
+                                                            <option value="">No</option>
+                                                        </select>
+                                                        <div class="position-absolute" style="right: 5px; top:10px">
+                                                            <img class=""
+                                                                src="./assets/images/employer-ease-pics/chevron-down.svg"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <label class="fs_14 fw_400 lh_26 j_family tertiary-black"
+                                                        for="input19">Plan to Hire next 12 Months?</label>
+                                                    <div class="position-relative">
+                                                        <select id="input19" class="globalInput ps-2 w-100">
+                                                            <option disabled selected value="">Select</option>
+                                                            <option value="">Yes</option>
+                                                            <option value="">No</option>
+                                                        </select>
+                                                        <div class="position-absolute" style="right: 5px; top:10px">
+                                                            <img class=""
+                                                                src="./assets/images/employer-ease-pics/chevron-down.svg"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <label class="fs_14 fw_400 lh_26 j_family tertiary-black"
+                                                        for="input19">Sell to Government?</label>
+                                                    <div class="position-relative">
+                                                        <select id="input19" class="globalInput ps-2 w-100">
+                                                            <option disabled selected value="">Select</option>
+                                                            <option value="">Yes</option>
+                                                            <option value="">No</option>
+                                                        </select>
+                                                        <div class="position-absolute" style="right: 5px; top:10px">
+                                                            <img class=""
+                                                                src="./assets/images/employer-ease-pics/chevron-down.svg"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <h5 class="fs_18 fw_600 lh_28 j_family">Documentation</h5>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <label class="fs_14 fw_400 lh_26 j_family tertiary-black"
+                                                        for="input20">Upload Business Licence</label>
+                                                    <div
+                                                        class="position-relative px-4 py-3 cursor-pointer d-flex flex-column justify-content-center align-items-center border1 border-r-12 ">
+                                                        <img src="assets/images/employer-ease-pics/black-cloud-up.svg"
+                                                            alt="">
+                                                        <div
+                                                            class="d-flex justify-content-center align-items-center flex-column pt-2">
+                                                            <div>
+                                                                <span
+                                                                    class="fs_14 fw_600 j_family main_color text-center">Click
+                                                                    to
+                                                                    upload</span>
+                                                                <span
+                                                                    class="fs_14 fw_400 j_family tertiary-gray text-center">or
+                                                                    drag
+                                                                    and drop</span>
+                                                            </div>
+                                                            <p class="fs_14 fw_400 j_family tertiary-gray text-center">
+                                                                SVG,
+                                                                PNG, JPG
+                                                                or GIF (max. 800x400px)</p>
+                                                        </div>
+                                                        <div
+                                                            class="position-absolute w-100 top-0 left-0 right-0 bottom-0 inset-0 ">
+                                                            <input id="input20" class="h-100 opacity-0 w-100"
+                                                                type="file">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <label class="fs_14 fw_400 lh_26 j_family tertiary-black"
+                                                        for="input21">Upload Tax Return</label>
+                                                    <div
+                                                        class="position-relative px-4 py-3 cursor-pointer d-flex flex-column justify-content-center align-items-center border1 border-r-12 ">
+                                                        <img src="assets/images/employer-ease-pics/black-cloud-up.svg"
+                                                            alt="">
+                                                        <div
+                                                            class="d-flex justify-content-center align-items-center flex-column pt-2">
+                                                            <div>
+                                                                <span
+                                                                    class="fs_14 fw_600 j_family main_color text-center">Click
+                                                                    to
+                                                                    upload</span>
+                                                                <span
+                                                                    class="fs_14 fw_400 j_family tertiary-gray text-center">or
+                                                                    drag
+                                                                    and drop</span>
+                                                            </div>
+                                                            <p class="fs_14 fw_400 j_family tertiary-gray text-center">
+                                                                SVG,
+                                                                PNG, JPG
+                                                                or GIF (max. 800x400px)</p>
+                                                        </div>
+                                                        <div
+                                                            class="position-absolute w-100 top-0 left-0 right-0 bottom-0 inset-0 ">
+                                                            <input id="input21" class="h-100 opacity-0 w-100"
+                                                                type="file">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <label class="fs_14 fw_400 lh_26 j_family tertiary-black"
+                                                        for="input22">Upload Bank Statement</label>
+                                                    <div
+                                                        class="position-relative px-4 py-3 cursor-pointer d-flex flex-column justify-content-center align-items-center border1 border-r-12 ">
+                                                        <img src="assets/images/employer-ease-pics/black-cloud-up.svg"
+                                                            alt="">
+                                                        <div
+                                                            class="d-flex justify-content-center align-items-center flex-column pt-2">
+                                                            <div>
+                                                                <span
+                                                                    class="fs_14 fw_600 j_family main_color text-center">Click
+                                                                    to
+                                                                    upload</span>
+                                                                <span
+                                                                    class="fs_14 fw_400 j_family tertiary-gray text-center">or
+                                                                    drag
+                                                                    and drop</span>
+                                                            </div>
+                                                            <p class="fs_14 fw_400 j_family tertiary-gray text-center">
+                                                                SVG,
+                                                                PNG, JPG
+                                                                or GIF (max. 800x400px)</p>
+                                                        </div>
+                                                        <div
+                                                            class="position-absolute w-100 top-0 left-0 right-0 bottom-0 inset-0 ">
+                                                            <input id="input22" class="h-100 opacity-0 w-100"
+                                                                type="file">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <label class="fs_14 fw_400 lh_26 j_family tertiary-black"
+                                                        for="input23">Upload Ownership Document</label>
+                                                    <div
+                                                        class="position-relative px-4 py-3 cursor-pointer d-flex flex-column justify-content-center align-items-center border1 border-r-12 ">
+                                                        <img src="assets/images/employer-ease-pics/black-cloud-up.svg"
+                                                            alt="">
+                                                        <div
+                                                            class="d-flex justify-content-center align-items-center flex-column pt-2">
+                                                            <div>
+                                                                <span
+                                                                    class="fs_14 fw_600 j_family main_color text-center">Click
+                                                                    to
+                                                                    upload</span>
+                                                                <span
+                                                                    class="fs_14 fw_400 j_family tertiary-gray text-center">or
+                                                                    drag
+                                                                    and drop</span>
+                                                            </div>
+                                                            <p class="fs_14 fw_400 j_family tertiary-gray text-center">
+                                                                SVG,
+                                                                PNG, JPG
+                                                                or GIF (max. 800x400px)</p>
+                                                        </div>
+                                                        <div
+                                                            class="position-absolute w-100 top-0 left-0 right-0 bottom-0 inset-0 ">
+                                                            <input id="input23" class="h-100 opacity-0 w-100"
+                                                                type="file">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <h5 class="fs_18 fw_600 lh_28 j_family">Submission Preference</h5>
+                                            </div>
+
+
+                                            <div class="col-md-6">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <label class="fs_14 fw_400 lh_26 j_family tertiary-black"
+                                                        for="input2">Prepare Submission?</label>
+                                                    <div class="position-relative">
+                                                        <select id="input2" class="globalInput ps-2 w-100">
+                                                            <option disabled selected value="">Select</option>
+                                                            <option value="">Yes</option>
+                                                            <option value="">No</option>
+                                                        </select>
+                                                        <div class="position-absolute" style="right: 5px; top:10px">
+                                                            <img class=""
+                                                                src="./assets/images/employer-ease-pics/chevron-down.svg"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <label class="fs_14 fw_400 lh_26 j_family tertiary-black"
+                                                        for="input2">Downloadable PDF Report?</label>
+                                                    <div class="position-relative">
+                                                        <select id="input2" class="globalInput ps-2 w-100">
+                                                            <option disabled selected value="">Select</option>
+                                                            <option value="">Yes</option>
+                                                            <option value="">No</option>
+                                                        </select>
+                                                        <div class="position-absolute" style="right: 5px; top:10px">
+                                                            <img class=""
+                                                                src="./assets/images/employer-ease-pics/chevron-down.svg"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <label class="fs_14 fw_400 lh_26 j_family tertiary-black"
+                                                        for="input2">Automated Reminders?</label>
+                                                    <div class="position-relative">
+                                                        <select id="input2" class="globalInput ps-2 w-100">
+                                                            <option disabled selected value="">Select</option>
+                                                            <option value="">Yes</option>
+                                                            <option value="">No</option>
+                                                        </select>
+                                                        <div class="position-absolute" style="right: 5px; top:10px">
+                                                            <img class=""
+                                                                src="./assets/images/employer-ease-pics/chevron-down.svg"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <label class="fs_14 fw_400 lh_26 j_family tertiary-black"
+                                                        for="input2">Need Legal Law Review?</label>
+                                                    <div class="position-relative">
+                                                        <select id="input2" class="globalInput ps-2 w-100">
+                                                            <option disabled selected value="">Select</option>
+                                                            <option value="">Yes</option>
+                                                            <option value="">No</option>
+                                                        </select>
+                                                        <div class="position-absolute" style="right: 5px; top:10px">
+                                                            <img class=""
+                                                                src="./assets/images/employer-ease-pics/chevron-down.svg"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="p-3 bg-white formation-header mt-4">
-                                <div
-                                    class="compliance-card1 border-r-12 p-3 border  h-100 d-flex flex-column justify-content-between">
-                                    <div>
-                                        <div
-                                            class="d-flex align-items-center justify-content-between flex-wrap flex-md-nowrap gap-3">
-                                            <img src="assets/images/employer-ease-pics/oneDeck.svg" alt="found-icon">
-                                            <div class="d-flex gap-3 align-items-center flex-wrap flex-md-nowrap">
-                                                <button
-                                                    class="whole_button border1 bg-transparent tertiary-black px-3">See
-                                                    More at OnDeck</button>
-                                                <button class="whole_button light-main-bg main_color px-3">Connect
-                                                    Account</button>
-                                            </div>
-                                        </div>
-                                        <h3 class="fs_20 fw_600 lh_28 j_family pt-3">OnDeck</h3>
-                                        <p class="fs_16 fw_400 lh_26 j_family tertiary-black pt-2">OnDeck is a prominent
-                                            online lender offering fast and flexible financing solutions for small
-                                            businesses. Known for their innovative technology and focus on quick
-                                            approvals, OnDeck has provided billions of dollars in funding to businesses
-                                            worldwide. OnDeck is designed to meet the needs of businesses requiring
-                                            immediate access to working capital or short-term loans, with a simplified
-                                            application process and minimal paperwork.
-                                        </p>
-                                        <div class="hidden_txt d-none">
-                                            <h3 class="fs_18 fw_600 lh_28 j_family pt-3 pb-2">Ideal For</h3>
-                                            <ul class="ps-4">
-                                                <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
-                                                    style="list-style: disc;">Lorem ipsum dolor sit amet consectetur.
-                                                    Tortor sed aliquam sed id enim donec pharetra. </li>
-                                                <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
-                                                    style="list-style: disc;">Sit a quam sed ante nisl eget mauris
-                                                    amet.Lorem ipsum dolor sit amet consectetur.</li>
-                                                <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
-                                                    style="list-style: disc;"> Tortor sed aliquam sed id enim donec
-                                                    pharetra. </li>
-                                            </ul>
-                                            <h3 class="fs_18 fw_600 lh_28 j_family pt-2 pb-2">Key Features</h3>
-                                            <ul class="ps-4">
-                                                <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
-                                                    style="list-style: disc;">Lorem ipsum dolor sit amet consectetur.
-                                                    Tortor sed aliquam sed id enim donec pharetra. </li>
-                                                <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
-                                                    style="list-style: disc;">Sit a quam sed ante nisl eget mauris
-                                                    amet.Lorem ipsum dolor sit amet consectetur.</li>
-                                                <li class="fs_16 fw_400 lh_26 j_family tertiary-black"
-                                                    style="list-style: disc;"> Tortor sed aliquam sed id enim donec
-                                                    pharetra. </li>
-                                            </ul>
-                                        </div>
-                                        <button
-                                            class="whole_button border bg-transparent fw_600 mt_12 view-more-btn">View
-                                            More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
+                        </div>
     </section>
-    <!-------------------------- ********** Section 1 ********** ------------------------->
     <!-- ************************Scripts Start Here*********************************-->
     <!--------------------------------- Jquery --------------------------->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
@@ -826,9 +1695,7 @@
     <!--------------------------------- Popper Js Ends----------------------------->
     <script src="assets/js/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
-    <!--------------------------------- Flate Picker----------------------------->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
     <script>
         // Reusable function to handle toggle
         function setupViewMoreToggle(buttonSelector, hiddenTextSelector) {
@@ -854,6 +1721,22 @@
             setupViewMoreToggle(".view-more-btn", ".hidden_txt");
         });
     </script>
+    <!-- ==============custom check input============= -->
+    <script>
+        const checkboxes = document.querySelectorAll('.global-check');
+
+        checkboxes.forEach((checkbox) => {
+            checkbox.addEventListener('change', () => {
+                const label = checkbox.closest('.custom-checkbox');
+                if (checkbox.checked) {
+                    label.classList.add('inputCheck');
+                } else {
+                    label.classList.remove('inputCheck');
+                }
+            });
+        });
+    </script>
+
 </body>
 
 </html>

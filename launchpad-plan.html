@@ -27,16 +27,129 @@
     <link rel="stylesheet" href="assets/css/numan.css" />
     <title>Launchpad Plan | Employer Ease</title>
     <style>
-        .location-card {
-            padding: 5px 10px 11px 8px;
-            top: 18px;
-            left: 20%;
+        .introjs-tooltip {
+            background-color: blue;
+            color: #212529;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+            padding: 12px !important;
+            /* right: 0 !important; */
+            z-index: 99;
+            /* position: fixed !important; */
+            /* left: 50% !important;
+    right: 50% !important;
+    top: 0% !important; */
+            height: fit-content;
+            width: 320px !important;
         }
 
-        @media (max-width: 520px) {
-            .location-card {
-                left: 0px;
-            }
+        .introjs-arrow {
+            border: none;
+        }
+
+        /* Style to highlight the elements with a border */
+        .introjs-helperLayer {
+            display: none;
+        }
+
+        .highlighted {
+            border: none;
+            /* Gold color to highlight */
+        }
+
+        .introjs-skipbutton {
+            background-image: url('./assets/images/employer-ease-pics/cross.svg');
+            background-repeat: no-repeat;
+            width: 16px;
+            height: 16px;
+            margin-left: auto;
+            right: -30px !important;
+            position: absolute;
+        }
+
+        .introjs-arrow.bottom {
+            display: none !important;
+        }
+
+        .introjs-stepNumber {
+            position: absolute;
+            top: 0 !important;
+        }
+
+        .introjs-prevbutton {
+            display: none !important;
+        }
+
+        .introjs-tooltiptext {
+            padding: 0px !important;
+        }
+
+        .introjs-nextbutton {
+            padding: 10px 16px !important;
+            font-family: Plus Jakarta Sans !important;
+            font-size: 14px !important;
+            font-weight: 400 !important;
+            line-height: 22px !important;
+            text-align: left !important;
+
+            background-color: #3684A4 !important;
+            border-radius: 8px !important;
+            border: 1px solid #3684A4 !important;
+            width: fit-content !important;
+            color: white !important;
+            box-shadow: none !important;
+            margin-top: 12px;
+        }
+
+        .introjs-helperNumberLayer {
+            position: absolute;
+            top: 0;
+            font-family: Plus Jakarta Sans;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 18px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+
+        }
+
+        .introjs-tooltip h2 {
+            font-family: Plus Jakarta Sans;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 18px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            margin-top: 4px !important;
+        }
+
+        .introjs-tooltip-header {
+            min-height: fit-content !important;
+            padding-bottom: 0px !important;
+            margin-bottom: 10px !important;
+        }
+
+        .introjs-tooltip-title {
+            display: none;
+        }
+
+        .introjs-tooltip p {
+            font-family: Plus Jakarta Sans;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 18px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            color: #667085 !important;
+            margin-top: 4px !important;
+        }
+
+        .introjs-tooltip .introjs-tooltipbuttons {
+            border-top: none;
+            padding-top: 0;
         }
     </style>
 </head>
@@ -437,7 +550,7 @@
                                     <form action="">
                                         <div class="position-relative">
                                             <input class="header-input border1 form-control bg-transparent pe-5"
-                                                type="text"/>
+                                                type="text" />
                                             <div class="position-absolute" style="top: 9px; left: 16px;">
                                                 <img class="h-100 w-100"
                                                     src="assets/images/employer-ease-pics/magnifying-glass.svg"
@@ -656,22 +769,23 @@
                 <!-- Content Section -->
                 <div class="dashboard-content">
                     <div class="position-relative">
-                        <!-- ------------------------ground control tabs----------------------- -->
+                        <!-- ------------------------Launchpad tabs----------------------- -->
                         <div class="">
-                            <ul class="nav nav-tabs crm-tabs border-r-8 bg-white pt-3 rounded-bottom-0" id="myTab"
+                            <ul class="nav nav-tabs d-flex gap-4 crm-tabs border-r-8 bg-white pt-3 rounded-bottom-0" id="myTab"
                                 role="tablist">
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link active border-0 bg-transparent" id="home-tab"
+                                    <button class="nav-link px-0 active border-0 bg-transparent" id="home-tab"
                                         data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab"
                                         aria-controls="home-tab-pane" aria-selected="true">Progress Tracker</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link border-0 bg-transparent" id="profile-tab"
+                                    <button class="nav-link px-0 border-0 bg-transparent" id="profile-tab"
                                         data-bs-toggle="tab" data-bs-target="#2ND-tab-pane" type="button" role="tab"
-                                        aria-controls="profile-tab-pane" aria-selected="false">Marketing Strategy</button>
+                                        aria-controls="profile-tab-pane" aria-selected="false">Marketing
+                                        Strategy</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link border-0 bg-transparent" id="profile-tab"
+                                    <button class="nav-link px-0 border-0 bg-transparent" id="profile-tab"
                                         data-bs-toggle="tab" data-bs-target="#3RD-tab-pane" type="button" role="tab"
                                         aria-controls="profile-tab-pane" aria-selected="true">Marketing Plan</button>
                                 </li>
@@ -701,28 +815,131 @@
                                                 <div id="circularProgress"></div>
                                                 <div class="position-absolute bg-white rounded-circle" style="top:30%">
                                                     <img class="rounded-circle" height="46px" width="46px"
-                                                        src="./assets/images/employer-ease-pics/greenrocker.svg" alt="">
+                                                        src="./assets/images/employer-ease-pics/bluichRocket.svg" alt="">
                                                 </div>
                                             </div>
-                                            <div class="stepper-container">
-                                                <div class="stepper-line"></div>
-                                                <div class="stepper-progress"></div>
-                                                <div class="step active"><img class="bg-white"
-                                                        src="./assets/images/employer-ease-pics/progress1.svg" alt="">
+
+                                            <div>
+                                                <div
+                                                    class="stepper-container d-flex flex-wrap flex-md-nowrap justify-content-between">
+                                                    <div class="stepper-line"></div>
+                                                    <div class="stepper-progress"></div>
+
+                                                    <button class="border-0 bg-transparent" data-bs-toggle="tooltip"
+                                                        data-bs-title="Onboarding and Walkthrough">
+                                                        <div class="step active">
+                                                            <img class="bg-white"
+                                                                src="./assets/images/employer-ease-pics/progress1.svg"
+                                                                alt="">
+                                                        </div>
+                                                    </button>
+
+                                                    <button class="border-0 bg-transparent" data-bs-toggle="tooltip"
+                                                        data-bs-title="Complete on 12/03/2025">
+                                                        <div class="step">
+                                                            <img class="bg-white"
+                                                                src="./assets/images/employer-ease-pics/progress1.svg"
+                                                                alt="">
+                                                        </div>
+                                                    </button>
+
+                                                    <button class="border-0 bg-transparent" data-bs-toggle="tooltip"
+                                                        data-bs-title="Bussiness Plan created on 02/02/2025">
+                                                        <div class="step ">
+                                                            <img class="bg-white"
+                                                                src="./assets/images/employer-ease-pics/progress1.svg"
+                                                                alt="">
+                                                        </div>
+                                                    </button>
+
+                                                    <button class="border-0 bg-transparent" data-bs-toggle="tooltip"
+                                                        data-bs-title="LLC Formation on 12/02/2025">
+                                                        <div class="step">
+                                                            <img src="./assets/images/employer-ease-pics/featured2.svg"
+                                                                alt="">
+                                                        </div>
+                                                    </button>
+
+                                                    <button class="border-0 bg-transparent" data-bs-toggle="tooltip"
+                                                        data-bs-title="Bank Account opened on 12/02/2025">
+                                                        <div class="step">
+                                                            <img src="./assets/images/employer-ease-pics/featured3.svg"
+                                                                alt="">
+                                                        </div>
+                                                    </button>
                                                 </div>
-                                                <div class="step"><img class=""
-                                                        src="./assets/images/employer-ease-pics/featured2.svg" alt="">
+
+                                                <div
+                                                    class="stepper-container d-flex flex-wrap flex-md-nowrap justify-content-between">
+                                                    <div class="stepper-line"></div>
+                                                    <div class="stepper-progress"></div>
+                                                    <button class="border-0 bg-transparent" data-bs-toggle="tooltip"
+                                                        data-bs-title="Merchant Services ID created on 23/03/2025">
+                                                        <div class="step">
+                                                            <img src="./assets/images/employer-ease-pics/progress1.svg"
+                                                                alt="">
+                                                        </div>
+                                                    </button>
+
+                                                    <button class="border-0 bg-transparent" data-bs-toggle="tooltip"
+                                                        data-bs-title="Applied for Business Credit on 12/03/2025">
+                                                        <div class="step">
+                                                            <img src="./assets/images/employer-ease-pics/progress1.svg"
+                                                                alt="">
+                                                        </div>
+                                                    </button>
+
+                                                    <button class="border-0 bg-transparent" data-bs-toggle="tooltip"
+                                                        data-bs-title=" Insurance coverage in place on 12/03/2025">
+                                                        <div class="step">
+                                                            <img src="./assets/images/employer-ease-pics/progress1.svg"
+                                                                alt="">
+                                                        </div>
+                                                    </button>
+
+                                                    <button class="border-0 bg-transparent" data-bs-toggle="tooltip"
+                                                        data-bs-title="Hired First Employee">
+                                                        <div class="step">
+                                                            <img src="./assets/images/employer-ease-pics/progress1.svg"
+                                                                alt="">
+                                                        </div>
+                                                    </button>
+
+                                                    <button class="border-0 bg-transparent" data-bs-toggle="tooltip"
+                                                        data-bs-title="Marketing Strategy completed on 02/02/2025">
+                                                        <div class="step">
+                                                            <img src="./assets/images/employer-ease-pics/progress1.svg"
+                                                                alt="">
+                                                        </div>
+                                                    </button>
                                                 </div>
-                                                <div class="step"><img class="bg-"
-                                                        src="./assets/images/employer-ease-pics/featured3.svg" alt="">
-                                                </div>
-                                                <div class="step"><img
-                                                        src="./assets/images/employer-ease-pics/progress1.svg" alt="">
-                                                </div>
-                                                <div class="step"><img
-                                                        src="./assets/images/employer-ease-pics/progress1.svg" alt="">
+
+                                                <div class="stepper-container d-flex flex-wrap flex-md-nowrap justify-content-center"
+                                                    style="gap:30%">
+                                                    <div
+                                                        class="stepper-line d-flex justify-content-center mx-auto" style="max-width: 30%;">
+                                                    </div>
+                                                    <div class="stepper-progress mx-auto" style="max-width: 30%;">
+                                                    </div>
+                                                    <button class="border-0 bg-transparent" data-bs-toggle="tooltip"
+                                                        data-bs-title="(Name of) Project created on">
+                                                        <div class="step">
+                                                            <img src="./assets/images/employer-ease-pics/progress1.svg"
+                                                                alt="">
+                                                        </div>
+                                                    </button>
+
+                                                    <button class="border-0 bg-transparent" data-bs-toggle="tooltip"
+                                                        data-bs-title="Received first revenue on">
+                                                        <div class="step">
+                                                            <img src="./assets/images/employer-ease-pics/progress1.svg"
+                                                                alt="">
+                                                        </div>
+                                                    </button>
                                                 </div>
                                             </div>
+
+
                                         </div>
                                     </div>
 
@@ -731,7 +948,7 @@
                                     <div class="bg-white border-r-8 border1 p-3 mt-4">
                                         <div class="row g-4">
                                             <div class="col-12 col-md-6 col-lg-4">
-                                                <div class="p-4 border1 border-r-8 h-100 myCard">
+                                                <div class="p-4 border1 border-r-8 h-100 myCard" data-step="1">
                                                     <div
                                                         class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
                                                         <div
@@ -747,9 +964,10 @@
                                                                 class="d-flex justify-content-center align-items-center flex-column gap-2">
                                                                 <li style="list-style: disc;"
                                                                     class="fs_16 j_family tertiary-black lh_26">
-                                                                    Complete & Develop your Marketing Strategy and identify your business goals.
+                                                                    Complete & Develop your Marketing Strategy and
+                                                                    identify your business goals.
                                                                 </li>
-                                                                
+
                                                             </ul>
 
                                                         </div>
@@ -768,13 +986,16 @@
                                                                     alt="">
                                                                 <h3
                                                                     class="fs_18 fw_600 j_family lh_28 tertiary-black text-center">
-                                                                   Step1: Define your Growth </h3>
+                                                                    Step1: Define your Growth </h3>
                                                                 <div class="d-flex align-items-centr gap-2">
                                                                     <div>
-                                                                        <input class="global-check mt-1" type="checkbox">
+                                                                        <input class="global-check mt-1"
+                                                                            type="checkbox">
                                                                     </div>
                                                                     <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                        for="">Complete & Develop your Marketing Strategy and identify your business goals.</label>
+                                                                        for="">Complete & Develop your Marketing
+                                                                        Strategy and identify your business
+                                                                        goals.</label>
                                                                 </div>
                                                                 <!-- <div class="d-flex align-items-center gap-2">
                                                                     <input class="global-check" type="checkbox">
@@ -788,22 +1009,23 @@
                                                             </button>
                                                         </div>
                                                     </div>
-                                                    <div class="d-flex gap-3 flex-column align-items-center lastText d-none">
+                                                    <div
+                                                        class="d-flex gap-3 flex-column align-items-center lastText d-none">
                                                         <img class="mx-auto" height="88px" width="88px"
                                                             src="./assets/images/employer-ease-pics/circleRocket.svg"
                                                             alt="">
-                                                        <h3
-                                                            class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                        <h3 class="fs_18 fw_600 j_family lh_28 main_color text-center">
                                                             Define your Growth</h3>
                                                         <div class="d-flex align-items-center gap-2">
-                                                           <p class="main_color fs_16 lh_22 j_family text-center">Completed</p>
+                                                            <p class="main_color fs_16 lh_22 j_family text-center">
+                                                                Completed</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <div class="col-12 col-md-6 col-lg-4">
-                                                <div class="p-4 border1 border-r-8 h-100 myCard">
+                                                <div class="p-4 border1 border-r-8 h-100 myCard" data-step="2">
                                                     <div
                                                         class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
                                                         <div
@@ -860,21 +1082,22 @@
                                                             </button>
                                                         </div>
                                                     </div>
-                                                    <div class="d-flex gap-3 flex-column align-items-center lastText d-none">
+                                                    <div
+                                                        class="d-flex gap-3 flex-column align-items-center lastText d-none">
                                                         <img class="mx-auto" height="88px" width="88px"
                                                             src="./assets/images/employer-ease-pics/circleRocket.svg"
                                                             alt="">
-                                                        <h3
-                                                            class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                        <h3 class="fs_18 fw_600 j_family lh_28 main_color text-center">
                                                             CRM</h3>
                                                         <div class="d-flex align-items-center gap-2">
-                                                           <p class="main_color fs_16 lh_22 j_family text-center">Completed</p>
+                                                            <p class="main_color fs_16 lh_22 j_family text-center">
+                                                                Completed</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-12 col-md-6 col-lg-4">
-                                                <div class="p-4 border1 border-r-8 h-100 myCard">
+                                                <div class="p-4 border1 border-r-8 h-100 myCard" data-step="3">
                                                     <div
                                                         class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
                                                         <div
@@ -939,21 +1162,22 @@
                                                             </button>
                                                         </div>
                                                     </div>
-                                                    <div class="d-flex gap-3 flex-column align-items-center lastText d-none">
+                                                    <div
+                                                        class="d-flex gap-3 flex-column align-items-center lastText d-none">
                                                         <img class="mx-auto" height="88px" width="88px"
                                                             src="./assets/images/employer-ease-pics/circleRocket.svg"
                                                             alt="">
-                                                        <h3
-                                                            class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                        <h3 class="fs_18 fw_600 j_family lh_28 main_color text-center">
                                                             Automation</h3>
                                                         <div class="d-flex align-items-center gap-2">
-                                                           <p class="main_color fs_16 lh_22 j_family text-center">Completed</p>
+                                                            <p class="main_color fs_16 lh_22 j_family text-center">
+                                                                Completed</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-12 col-md-6 col-lg-4">
-                                                <div class="p-4 border1 border-r-8 h-100 myCard">
+                                                <div class="p-4 border1 border-r-8 h-100 myCard" data-step="4">
                                                     <div
                                                         class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
                                                         <div
@@ -1003,7 +1227,8 @@
                                                                 <div class="d-flex align-items-center gap-2">
                                                                     <input class="global-check" type="checkbox">
                                                                     <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                        for="">Select your Project Management Tools</label>
+                                                                        for="">Select your Project Management
+                                                                        Tools</label>
                                                                 </div>
                                                                 <div class="d-flex align-items-center gap-2">
                                                                     <input class="global-check" type="checkbox">
@@ -1013,7 +1238,8 @@
                                                                 <div class="d-flex align-items-center gap-2">
                                                                     <input class="global-check" type="checkbox">
                                                                     <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                        for="">Assign Tasks, Deadlines and workflows</label>
+                                                                        for="">Assign Tasks, Deadlines and
+                                                                        workflows</label>
                                                                 </div>
                                                                 <div class="d-flex align-items-center gap-2">
                                                                     <input class="global-check" type="checkbox">
@@ -1027,21 +1253,22 @@
                                                             </button>
                                                         </div>
                                                     </div>
-                                                    <div class="d-flex gap-3 flex-column align-items-center lastText d-none">
+                                                    <div
+                                                        class="d-flex gap-3 flex-column align-items-center lastText d-none">
                                                         <img class="mx-auto" height="88px" width="88px"
                                                             src="./assets/images/employer-ease-pics/circleRocket.svg"
                                                             alt="">
-                                                        <h3
-                                                            class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                        <h3 class="fs_18 fw_600 j_family lh_28 main_color text-center">
                                                             Project Management</h3>
                                                         <div class="d-flex align-items-center gap-2">
-                                                           <p class="main_color fs_16 lh_22 j_family text-center">Completed</p>
+                                                            <p class="main_color fs_16 lh_22 j_family text-center">
+                                                                Completed</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-12 col-md-6 col-lg-4">
-                                                <div class="p-4 border1 border-r-8 h-100 myCard">
+                                                <div class="p-4 border1 border-r-8 h-100 myCard" data-step="5">
                                                     <div
                                                         class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
                                                         <div
@@ -1051,13 +1278,14 @@
                                                                 <p class="fs_12 fw_500 j_family tertiary-black">step</p>
                                                             </div>
                                                             <h3 class="fs_20 fw_600 j_family lh_30 tertiary-black">
-                                                               
-Email Campaigns</h3>
+
+                                                                Email Campaigns</h3>
                                                             <ul
                                                                 class="d-flex justify-content-center align-items-center flex-column gap-2">
                                                                 <li style="list-style: disc;"
                                                                     class="fs_16 j_family tertiary-black lh_26">
-                                                                    Define email marketing goals (newsletters, promotions, drip campaigns)
+                                                                    Define email marketing goals (newsletters,
+                                                                    promotions, drip campaigns)
                                                                 </li>
                                                                 <li style="list-style: disc;"
                                                                     class="fs_16 j_family tertiary-black lh_26">
@@ -1086,17 +1314,20 @@ Email Campaigns</h3>
                                                                     alt="">
                                                                 <h3
                                                                     class="fs_18 fw_600 j_family lh_28 tertiary-black text-center">
-                                                                    
-Email Campaigns</h3>
+
+                                                                    Email Campaigns</h3>
                                                                 <div class="d-flex align-items-center gap-2">
                                                                     <input class="global-check" type="checkbox">
                                                                     <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                        for="">Define email marketing goals (newsletters, promotions, drip campaigns)</label>
+                                                                        for="">Define email marketing goals
+                                                                        (newsletters, promotions, drip
+                                                                        campaigns)</label>
                                                                 </div>
                                                                 <div class="d-flex align-items-center gap-2">
                                                                     <input class="global-check" type="checkbox">
                                                                     <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                        for="">Design and schedule email campaigns</label>
+                                                                        for="">Design and schedule email
+                                                                        campaigns</label>
                                                                 </div>
                                                                 <div class="d-flex align-items-center gap-2">
                                                                     <input class="global-check" type="checkbox">
@@ -1110,21 +1341,22 @@ Email Campaigns</h3>
                                                             </button>
                                                         </div>
                                                     </div>
-                                                    <div class="d-flex gap-3 flex-column align-items-center lastText d-none">
+                                                    <div
+                                                        class="d-flex gap-3 flex-column align-items-center lastText d-none">
                                                         <img class="mx-auto" height="88px" width="88px"
                                                             src="./assets/images/employer-ease-pics/circleRocket.svg"
                                                             alt="">
-                                                        <h3
-                                                            class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                        <h3 class="fs_18 fw_600 j_family lh_28 main_color text-center">
                                                             Email Campaigns</h3>
                                                         <div class="d-flex align-items-center gap-2">
-                                                           <p class="main_color fs_16 lh_22 j_family text-center">Completed</p>
+                                                            <p class="main_color fs_16 lh_22 j_family text-center">
+                                                                Completed</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-12 col-md-6 col-lg-4">
-                                                <div class="p-4 border1 border-r-8 h-100 myCard">
+                                                <div class="p-4 border1 border-r-8 h-100 myCard" data-step="6">
                                                     <div
                                                         class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
                                                         <div
@@ -1133,7 +1365,8 @@ Email Campaigns</h3>
                                                                 <p class="fs_32 fw_600 lh_38 j_family">6</p>
                                                                 <p class="fs_12 fw_500 j_family tertiary-black">step</p>
                                                             </div>
-                                                            <h3 class="fs_20 fw_600 j_family lh_30 tertiary-black">Digital Marketing Campaigns</h3>
+                                                            <h3 class="fs_20 fw_600 j_family lh_30 tertiary-black">
+                                                                Digital Marketing Campaigns</h3>
                                                             <ul
                                                                 class="d-flex justify-content-center align-items-center flex-column gap-2">
                                                                 <li style="list-style: disc;"
@@ -1165,7 +1398,8 @@ Email Campaigns</h3>
                                                                         <input class="global-check" type="checkbox">
                                                                     </div>
                                                                     <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                        for="">Complete & Develop your Marketing Campaign profile</label>
+                                                                        for="">Complete & Develop your Marketing
+                                                                        Campaign profile</label>
                                                                 </div>
                                                                 <!-- <div class="d-flex align-items-center gap-2">
                                                                     <input class="global-check" type="checkbox">
@@ -1179,21 +1413,22 @@ Email Campaigns</h3>
                                                             </button>
                                                         </div>
                                                     </div>
-                                                    <div class="d-flex gap-3 flex-column align-items-center lastText d-none">
+                                                    <div
+                                                        class="d-flex gap-3 flex-column align-items-center lastText d-none">
                                                         <img class="mx-auto" height="88px" width="88px"
                                                             src="./assets/images/employer-ease-pics/circleRocket.svg"
                                                             alt="">
-                                                        <h3
-                                                            class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                        <h3 class="fs_18 fw_600 j_family lh_28 main_color text-center">
                                                             Digital Marketing Campaigns </h3>
                                                         <div class="d-flex align-items-center gap-2">
-                                                           <p class="main_color fs_16 lh_22 j_family text-center">Completed</p>
+                                                            <p class="main_color fs_16 lh_22 j_family text-center">
+                                                                Completed</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-12 col-md-6 col-lg-4">
-                                                <div class="p-4 border1 border-r-8 h-100 myCard">
+                                                <div class="p-4 border1 border-r-8 h-100 myCard" data-step="7">
                                                     <div
                                                         class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
                                                         <div
@@ -1203,8 +1438,8 @@ Email Campaigns</h3>
                                                                 <p class="fs_12 fw_500 j_family tertiary-black">step</p>
                                                             </div>
                                                             <h3 class="fs_20 fw_600 j_family lh_30 tertiary-black">
-                                                                
-SEO & Social Media Management</h3>
+
+                                                                SEO & Social Media Management</h3>
                                                             <ul
                                                                 class="d-flex justify-content-center  flex-column gap-2">
                                                                 <li style="list-style: disc;"
@@ -1250,16 +1485,18 @@ SEO & Social Media Management</h3>
                                                                     alt="">
                                                                 <h3
                                                                     class="fs_18 fw_600 j_family lh_28 tertiary-black text-center">
-Step 7: SEO & Social Media Management </h3>
+                                                                    Step 7: SEO & Social Media Management </h3>
                                                                 <div class="d-flex align-items-center gap-2">
                                                                     <input class="global-check" type="checkbox">
                                                                     <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                        for="">SEO Strategy, Keywords, phrases, setup blogs</label>
+                                                                        for="">SEO Strategy, Keywords, phrases, setup
+                                                                        blogs</label>
                                                                 </div>
                                                                 <div class="d-flex align-items-center gap-2">
                                                                     <input class="global-check" type="checkbox">
                                                                     <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                        for="">Social Media Plan: Content & Scheduling</label>
+                                                                        for="">Social Media Plan: Content &
+                                                                        Scheduling</label>
                                                                 </div>
                                                                 <!-- <div class="d-flex align-items-center gap-2">
                                                                     <input class="global-check" type="checkbox">
@@ -1291,22 +1528,23 @@ Step 7: SEO & Social Media Management </h3>
                                                             </button>
                                                         </div>
                                                     </div>
-                                                    <div class="d-flex gap-3 flex-column align-items-center lastText d-none">
+                                                    <div
+                                                        class="d-flex gap-3 flex-column align-items-center lastText d-none">
                                                         <img class="mx-auto" height="88px" width="88px"
                                                             src="./assets/images/employer-ease-pics/circleRocket.svg"
                                                             alt="">
-                                                        <h3
-                                                            class="fs_18 fw_600 j_family lh_28 main_color text-center">
-                                                            
-SEO & Social Media Management </h3>
+                                                        <h3 class="fs_18 fw_600 j_family lh_28 main_color text-center">
+
+                                                            SEO & Social Media Management </h3>
                                                         <div class="d-flex align-items-center gap-2">
-                                                           <p class="main_color fs_16 lh_22 j_family text-center">Completed</p>
+                                                            <p class="main_color fs_16 lh_22 j_family text-center">
+                                                                Completed</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-12 col-md-6 col-lg-4">
-                                                <div class="p-4 border1 border-r-8 h-100 myCard">
+                                                <div class="p-4 border1 border-r-8 h-100 myCard" data-step="8">
                                                     <div
                                                         class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
                                                         <div
@@ -1350,7 +1588,8 @@ SEO & Social Media Management </h3>
                                                                 <div class="d-flex align-items-center gap-2">
                                                                     <input class="global-check" type="checkbox">
                                                                     <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                        for="">Identify the KPIs you want to track</label>
+                                                                        for="">Identify the KPIs you want to
+                                                                        track</label>
                                                                 </div>
                                                                 <div class="d-flex align-items-center gap-2">
                                                                     <input class="global-check" type="checkbox">
@@ -1364,21 +1603,22 @@ SEO & Social Media Management </h3>
                                                             </button>
                                                         </div>
                                                     </div>
-                                                    <div class="d-flex gap-3 flex-column align-items-center lastText d-none">
+                                                    <div
+                                                        class="d-flex gap-3 flex-column align-items-center lastText d-none">
                                                         <img class="mx-auto" height="88px" width="88px"
                                                             src="./assets/images/employer-ease-pics/circleRocket.svg"
                                                             alt="">
-                                                        <h3
-                                                            class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                        <h3 class="fs_18 fw_600 j_family lh_28 main_color text-center">
                                                             KPIs Key Performance Indicators</h3>
                                                         <div class="d-flex align-items-center gap-2">
-                                                           <p class="main_color fs_16 lh_22 j_family text-center">Completed</p>
+                                                            <p class="main_color fs_16 lh_22 j_family text-center">
+                                                                Completed</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-12 col-md-6 col-lg-4">
-                                                <div class="p-4 border1 border-r-8 h-100 myCard">
+                                                <div class="p-4 border1 border-r-8 h-100 myCard" data-step="9">
                                                     <div
                                                         class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
                                                         <div
@@ -1387,7 +1627,8 @@ SEO & Social Media Management </h3>
                                                                 <p class="fs_32 fw_600 lh_38 j_family">9</p>
                                                                 <p class="fs_12 fw_500 j_family tertiary-black">step</p>
                                                             </div>
-                                                            <h3 class="fs_20 fw_600 j_family lh_30 tertiary-black">Launch</h3>
+                                                            <h3 class="fs_20 fw_600 j_family lh_30 tertiary-black">
+                                                                Launch</h3>
                                                             <ul
                                                                 class="d-flex justify-content-center align-items-center flex-column gap-2">
                                                                 <li style="list-style: disc;"
@@ -1402,7 +1643,7 @@ SEO & Social Media Management </h3>
                                                                     class="fs_16 j_family tertiary-black lh_26">
                                                                     Launch your Digital Marketing Campaigns
                                                                 </li>
-                                                                
+
                                                             </ul>
 
                                                         </div>
@@ -1435,7 +1676,8 @@ SEO & Social Media Management </h3>
                                                                 <div class="d-flex align-items-center gap-2">
                                                                     <input class="global-check" type="checkbox">
                                                                     <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                        for="">Launch your Digital Marketing Campaigns</label>
+                                                                        for="">Launch your Digital Marketing
+                                                                        Campaigns</label>
                                                                 </div>
                                                             </div>
                                                             <button
@@ -1444,15 +1686,16 @@ SEO & Social Media Management </h3>
                                                             </button>
                                                         </div>
                                                     </div>
-                                                    <div class="d-flex gap-3 flex-column align-items-center lastText d-none">
+                                                    <div
+                                                        class="d-flex gap-3 flex-column align-items-center lastText d-none">
                                                         <img class="mx-auto" height="88px" width="88px"
                                                             src="./assets/images/employer-ease-pics/circleRocket.svg"
                                                             alt="">
-                                                        <h3
-                                                            class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                        <h3 class="fs_18 fw_600 j_family lh_28 main_color text-center">
                                                             Launch </h3>
                                                         <div class="d-flex align-items-center gap-2">
-                                                           <p class="main_color fs_16 lh_22 j_family text-center">Completed</p>
+                                                            <p class="main_color fs_16 lh_22 j_family text-center">
+                                                                Completed</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2372,7 +2615,7 @@ SEO & Social Media Management </h3>
                                             class="d-flex flex-wrap flex-md-nowrap align-items-center w-100 justify-content-between">
                                             <h2 class="fs_18 fw_600 lh_28 j_family text-black">Marketing Strategy
                                                 Questionnaire</h2>
-                                                <button
+                                            <button
                                                 class="whole_button bg-transparent border1 tertiary-black d-flex align-items-center gap-1">
                                                 <!-- <img src="assets/images/employer-ease-pics/cloud-download.svg" alt=""> -->
                                                 Ask Bizzy
@@ -2538,7 +2781,7 @@ SEO & Social Media Management </h3>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
-                                                      
+
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="d-flex flex-column gap-2 h-100 ">
@@ -2574,7 +2817,7 @@ SEO & Social Media Management </h3>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
-                                                      
+
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="d-flex flex-column gap-2 h-100 ">
@@ -2610,7 +2853,7 @@ SEO & Social Media Management </h3>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
-                                                      
+
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="d-flex flex-column gap-2 h-100 ">
@@ -2647,12 +2890,13 @@ SEO & Social Media Management </h3>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
-                                                      
+
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="d-flex flex-column gap-2 h-100 ">
                                                             <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                for="initial">Where do you want audience to encounter your product/service?</label>
+                                                                for="initial">Where do you want audience to encounter
+                                                                your product/service?</label>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
@@ -2683,7 +2927,7 @@ SEO & Social Media Management </h3>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
-                                                      
+
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="d-flex flex-column gap-2 h-100 ">
@@ -2721,7 +2965,7 @@ SEO & Social Media Management </h3>
                                                                 placeholder="(Example:Lorem Ipsium...)"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
-                                                      
+
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="d-flex flex-column gap-2 h-100 ">
@@ -2758,7 +3002,7 @@ SEO & Social Media Management </h3>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
-                                                      
+
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="d-flex flex-column gap-2 h-100 ">
@@ -2795,7 +3039,7 @@ SEO & Social Media Management </h3>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
-                                                      
+
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="d-flex flex-column gap-2 h-100 ">
@@ -2867,7 +3111,7 @@ SEO & Social Media Management </h3>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
-                                                      
+
                                                     </div>
 
 
@@ -2884,7 +3128,7 @@ SEO & Social Media Management </h3>
                                         </div>
                                     </div>
                                 </div>
-                                    <!-- <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel"
+                                <!-- <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel"
                                         aria-labelledby="profile-tab" tabindex="0">
                                         <div class="p-3 bg-white border-r-8 rounded-top-0">
                                             <div
@@ -3303,7 +3547,7 @@ SEO & Social Media Management </h3>
                                             </div>
                                         </div>
                                     </div> -->
-                               
+
                                 <div class="tab-pane fade" id="3RD-tab-pane" role="tabpanel"
                                     aria-labelledby="profile-tab" tabindex="0">
                                     <div class="p-3 bg-white border-r-8 rounded-top-0">
@@ -3330,7 +3574,7 @@ SEO & Social Media Management </h3>
                                             class="d-flex flex-wrap flex-md-nowrap align-items-center w-100 justify-content-between">
                                             <h2 class="fs_18 fw_600 lh_28 j_family text-black">Marketing Plan
                                                 Questionnaire</h2>
-                                                <button
+                                            <button
                                                 class="whole_button bg-transparent border1 tertiary-black d-flex align-items-center gap-1">
                                                 <!-- <img src="assets/images/employer-ease-pics/cloud-download.svg" alt=""> -->
                                                 Ask Bizzy
@@ -3532,7 +3776,7 @@ SEO & Social Media Management </h3>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
-                                                      
+
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="d-flex flex-column gap-2 h-100 ">
@@ -3568,7 +3812,7 @@ SEO & Social Media Management </h3>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
-                                                      
+
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="d-flex flex-column gap-2 h-100 ">
@@ -3581,7 +3825,8 @@ SEO & Social Media Management </h3>
                                                         <hr>
                                                     </div>
                                                     <div class="col-12">
-                                                        <h2 class="j_family fw_600 fs_18 j_family">4. Marketing Mix (4Ps or 7Ps)
+                                                        <h2 class="j_family fw_600 fs_18 j_family">4. Marketing Mix (4Ps
+                                                            or 7Ps)
                                                         </h2>
                                                     </div>
 
@@ -3590,7 +3835,8 @@ SEO & Social Media Management </h3>
                                                         <div
                                                             class="d-flex flex-column gap-2 h-100 justify-content-between">
                                                             <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                for="initial">What do you want audience to know about your product or service?</label>
+                                                                for="initial">What do you want audience to know about
+                                                                your product or service?</label>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
@@ -3599,56 +3845,62 @@ SEO & Social Media Management </h3>
                                                         <div
                                                             class="d-flex flex-column gap-2 h-100 justify-content-between">
                                                             <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                for="initial">What do you want your pricing to convey about your product’s value?</label>
+                                                                for="initial">What do you want your pricing to convey
+                                                                about your product’s value?</label>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
-                                                      
+
                                                     </div>
                                                     <div class="col-12 col-lg-6">
                                                         <div
                                                             class="d-flex flex-column gap-2 h-100 justify-content-between">
                                                             <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                for="initial">Where do you want audience to encounter your product/service?</label>
+                                                                for="initial">Where do you want audience to encounter
+                                                                your product/service?</label>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
-                                                       
+
                                                     </div>
                                                     <div class="col-12 col-lg-6">
                                                         <div
                                                             class="d-flex flex-column gap-2 h-100 justify-content-between">
                                                             <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                for="initial">What do you want your promotional activities to focus on?</label>
+                                                                for="initial">What do you want your promotional
+                                                                activities to focus on?</label>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
-                                                      
+
                                                     </div>
                                                     <div class="col-12 col-lg-6">
                                                         <div
                                                             class="d-flex flex-column gap-2 h-100 justify-content-between">
                                                             <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                for="initial">Who do you want to involve in ensuring this campaign is a success?</label>
+                                                                for="initial">Who do you want to involve in ensuring
+                                                                this campaign is a success?</label>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
-                                                      
+
                                                     </div>
                                                     <div class="col-12 col-lg-6">
                                                         <div
                                                             class="d-flex flex-column gap-2 h-100 justify-content-between">
                                                             <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                for="initial">What do you want to showcase to build trust and credibility</label>
+                                                                for="initial">What do you want to showcase to build
+                                                                trust and credibility</label>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
-                                                      
+
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="d-flex flex-column gap-2 h-100 ">
                                                             <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                for="initial">How do you want customers to interact with your product/service from start to finish?</label>
+                                                                for="initial">How do you want customers to interact with
+                                                                your product/service from start to finish?</label>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
@@ -3664,7 +3916,8 @@ SEO & Social Media Management </h3>
                                                         <div
                                                             class="d-flex flex-column gap-2 h-100 justify-content-between">
                                                             <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                for="initial">What do you want to prioritize when planning marketing activities?</label>
+                                                                for="initial">What do you want to prioritize when
+                                                                planning marketing activities?</label>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
@@ -3673,18 +3926,20 @@ SEO & Social Media Management </h3>
                                                         <div
                                                             class="d-flex flex-column gap-2 h-100 justify-content-between">
                                                             <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                for="initial">What types of campaigns do you want to experiment with ?</label>
+                                                                for="initial">What types of campaigns do you want to
+                                                                experiment with ?</label>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
-                                                      
+
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="d-flex flex-column gap-2 h-100 ">
                                                             <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                for="initial">How do you want to coordinate these activities for maximum impact?</label>
+                                                                for="initial">How do you want to coordinate these
+                                                                activities for maximum impact?</label>
                                                             <textarea rows="4" id="date"
-                                                            placeholder="(Example: Lorem Ipsum...)"
+                                                                placeholder="(Example: Lorem Ipsum...)"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
                                                         <hr>
@@ -3699,7 +3954,8 @@ SEO & Social Media Management </h3>
                                                         <div
                                                             class="d-flex flex-column gap-2 h-100 justify-content-between">
                                                             <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                for="initial">What do you want your content to focus on to engage audience?</label>
+                                                                for="initial">What do you want your content to focus on
+                                                                to engage audience?</label>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
@@ -3708,17 +3964,19 @@ SEO & Social Media Management </h3>
                                                         <div
                                                             class="d-flex flex-column gap-2 h-100 justify-content-between">
                                                             <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                for="initial">What kind of content you want to create that align with  campaign?</label>
+                                                                for="initial">What kind of content you want to create
+                                                                that align with campaign?</label>
                                                             <textarea rows="4" id="date"
                                                                 placeholder="(Example:Lorem Ipsium...)"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
-                                                      
+
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="d-flex flex-column gap-2 h-100 ">
                                                             <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                for="initial">How do you want to distribute your content for optimal reach and engagement?</label>
+                                                                for="initial">How do you want to distribute your content
+                                                                for optimal reach and engagement?</label>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
@@ -3734,7 +3992,8 @@ SEO & Social Media Management </h3>
                                                         <div
                                                             class="d-flex flex-column gap-2 h-100 justify-content-between">
                                                             <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                for="initial">What channels do you want to prioritize for this campaign ?</label>
+                                                                for="initial">What channels do you want to prioritize
+                                                                for this campaign ?</label>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
@@ -3743,16 +4002,18 @@ SEO & Social Media Management </h3>
                                                         <div
                                                             class="d-flex flex-column gap-2 h-100 justify-content-between">
                                                             <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                for="initial">What do you want your presence on each channel to look like?</label>
+                                                                for="initial">What do you want your presence on each
+                                                                channel to look like?</label>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
-                                                      
+
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="d-flex flex-column gap-2 h-100 ">
                                                             <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                for="initial">How do you want to adapt your messaging and approach for different channels?</label>
+                                                                for="initial">How do you want to adapt your messaging
+                                                                and approach for different channels?</label>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
@@ -3768,7 +4029,8 @@ SEO & Social Media Management </h3>
                                                         <div
                                                             class="d-flex flex-column gap-2 h-100 justify-content-between">
                                                             <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                for="initial">What do you want to allocate resources to within marketing budget?</label>
+                                                                for="initial">What do you want to allocate resources to
+                                                                within marketing budget?</label>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
@@ -3777,23 +4039,27 @@ SEO & Social Media Management </h3>
                                                         <div
                                                             class="d-flex flex-column gap-2 h-100 justify-content-between">
                                                             <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                for="initial">How do you want to handle expenses during the campaign?</label>
+                                                                for="initial">How do you want to handle expenses during
+                                                                the campaign?</label>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
-                                                      
+
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="d-flex flex-column gap-2 h-100 ">
                                                             <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                for="initial">What areas do you want to explore cost-saving opportunities without sacrificing quality?</label>
+                                                                for="initial">What areas do you want to explore
+                                                                cost-saving opportunities without sacrificing
+                                                                quality?</label>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
                                                         <hr>
                                                     </div>
                                                     <div class="col-12">
-                                                        <h2 class="j_family fw_600 fs_18 j_family">9. Execution Plan</h2>
+                                                        <h2 class="j_family fw_600 fs_18 j_family">9. Execution Plan
+                                                        </h2>
                                                     </div>
 
 
@@ -3801,7 +4067,8 @@ SEO & Social Media Management </h3>
                                                         <div
                                                             class="d-flex flex-column gap-2 h-100 justify-content-between">
                                                             <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                for="initial">What do you want the execution timeline to look like?</label>
+                                                                for="initial">What do you want the execution timeline to
+                                                                look like?</label>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
@@ -3810,7 +4077,8 @@ SEO & Social Media Management </h3>
                                                         <div
                                                             class="d-flex flex-column gap-2 h-100 justify-content-between">
                                                             <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                for="initial">How do you want to assign roles and responsibilities among team?</label>
+                                                                for="initial">How do you want to assign roles and
+                                                                responsibilities among team?</label>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
@@ -3819,20 +4087,23 @@ SEO & Social Media Management </h3>
                                                     <div class="col-12">
                                                         <div class="d-flex flex-column gap-2 h-100 ">
                                                             <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                for="initial">What do you want to ensure happens to keep your campaign running smoothly?</label>
+                                                                for="initial">What do you want to ensure happens to keep
+                                                                your campaign running smoothly?</label>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
-                                                        
+
                                                     </div>
                                                     <div class="col-12">
-                                                        <h2 class="j_family fw_600 fs_18 j_family">10. Performance Measurement</h2>
+                                                        <h2 class="j_family fw_600 fs_18 j_family">10. Performance
+                                                            Measurement</h2>
                                                     </div>
                                                     <div class="col-12 col-lg-6">
                                                         <div
                                                             class="d-flex flex-column gap-2 h-100 justify-content-between">
                                                             <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                for="initial">What metrics do you want to track to evaluate campaign’s success?</label>
+                                                                for="initial">What metrics do you want to track to
+                                                                evaluate campaign’s success?</label>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
@@ -3841,7 +4112,8 @@ SEO & Social Media Management </h3>
                                                         <div
                                                             class="d-flex flex-column gap-2 h-100 justify-content-between">
                                                             <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                for="initial">How do you want to analyze the results of your efforts?</label>
+                                                                for="initial">How do you want to analyze the results of
+                                                                your efforts?</label>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
@@ -3850,20 +4122,23 @@ SEO & Social Media Management </h3>
                                                     <div class="col-12">
                                                         <div class="d-flex flex-column gap-2 h-100 ">
                                                             <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                for="initial">What do you want to learn from this campaign that can be applied to future efforts?</label>
+                                                                for="initial">What do you want to learn from this
+                                                                campaign that can be applied to future efforts?</label>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
-                                                        
+
                                                     </div>
                                                     <div class="col-12">
-                                                        <h2 class="j_family fw_600 fs_18 j_family">11. Optimization & Learnings</h2>
+                                                        <h2 class="j_family fw_600 fs_18 j_family">11. Optimization &
+                                                            Learnings</h2>
                                                     </div>
                                                     <div class="col-12 col-lg-6">
                                                         <div
                                                             class="d-flex flex-column gap-2 h-100 justify-content-between">
                                                             <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                for="initial">What do you want to focus on improving during the campaign?</label>
+                                                                for="initial">What do you want to focus on improving
+                                                                during the campaign?</label>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
@@ -3872,7 +4147,8 @@ SEO & Social Media Management </h3>
                                                         <div
                                                             class="d-flex flex-column gap-2 h-100 justify-content-between">
                                                             <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                for="initial">What you want to know about audience’s response to your efforts?</label>
+                                                                for="initial">What you want to know about audience’s
+                                                                response to your efforts?</label>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
@@ -3881,26 +4157,27 @@ SEO & Social Media Management </h3>
                                                     <div class="col-12">
                                                         <div class="d-flex flex-column gap-2 h-100 ">
                                                             <label class="fs_16 fw_400 j_family tertiary-black"
-                                                                for="initial">How do you want to document and apply learnings for better results in the future</label>
+                                                                for="initial">How do you want to document and apply
+                                                                learnings for better results in the future</label>
                                                             <textarea rows="4" id="date"
                                                                 class="bigInput ps-2"></textarea>
                                                         </div>
-                                                        
-                                                    </div>
-                                                   </div>
 
-
-                                                    <div class="d-flex justify-content-end align-items-center gap-3 mt-4">
-                                                        <button onclick="clearForm()"
-                                                            class="whole_button button_bg main_color border-0">Cancel</button>
-                                                        <button type="submit"
-                                                            class="whole_button text-white">Submit</button>
                                                     </div>
                                                 </div>
-                                            </form>
+
+
+                                                <div class="d-flex justify-content-end align-items-center gap-3 mt-4">
+                                                    <button onclick="clearForm()"
+                                                        class="whole_button button_bg main_color border-0">Cancel</button>
+                                                    <button type="submit"
+                                                        class="whole_button text-white">Submit</button>
+                                                </div>
                                         </div>
+                                        </form>
                                     </div>
-                                   
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -3910,7 +4187,7 @@ SEO & Social Media Management </h3>
 
     </section>
 
-    <!-------------------------- ********** Section 1 ********** ------------------------->
+
     <!-- ************************Scripts Start Here*********************************-->
     <!--------------------------------- Jquery --------------------------->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
@@ -3925,9 +4202,10 @@ SEO & Social Media Management </h3>
     <!--------------------------------- Popper Js Ends----------------------------->
     <script src="assets/js/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
-    <!--------------------------------- Flate Picker----------------------------->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!--------------------------------- Tour Guide----------------------------->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intro.js/minified/introjs.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/intro.js/minified/intro.min.js"></script>
+    <script src="./assets/js/launchpadpopup.js"></script>
     <script>
         flatpickr("#datePicker", {
             inline: true, // Makes the date picker always visible
@@ -4026,160 +4304,165 @@ SEO & Social Media Management </h3>
             }
         });
     </script>
-   
-   <script>
-    document.addEventListener("DOMContentLoaded", function () {
- const buttons = document.querySelectorAll('.myButton'); 
- const completeButtons = document.querySelectorAll('.completeButton');
- const myCards = document.querySelectorAll('.myCard'); 
 
- buttons.forEach((button, index) => {
-     button.addEventListener('click', () => {
-         const card = button.closest('.myCard');
-         const firstText = card.querySelector('.FirstText');
-         const secondText = card.querySelector('.SecondText');
-         const thirdText = card.querySelector('.ThirdText');
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const buttons = document.querySelectorAll('.myButton');
+            const completeButtons = document.querySelectorAll('.completeButton');
+            const myCards = document.querySelectorAll('.myCard');
 
-         card.classList.toggle('rotate');
+            buttons.forEach((button, index) => {
+                button.addEventListener('click', () => {
+                    const card = button.closest('.myCard');
+                    const firstText = card.querySelector('.FirstText');
+                    const secondText = card.querySelector('.SecondText');
+                    const thirdText = card.querySelector('.ThirdText');
 
-         if (card.classList.contains('rotate')) {
-             secondText.classList.remove('d-none');
-             firstText.classList.add('d-none');
-             thirdText.classList.add('d-none'); 
-         } else {
-             secondText.classList.add('d-none');
-             firstText.classList.remove('d-none');
-             thirdText.classList.add('d-none'); 
-         }
-     });
- });
+                    card.classList.toggle('rotate');
 
- completeButtons.forEach((button, index) => {
-     button.addEventListener('click', () => {
-         const card = button.closest('.myCard');
-         const firstText = card.querySelector('.FirstText');
-         const secondText = card.querySelector('.SecondText');
-         const thirdtext = card.querySelector('.lastText');
+                    if (card.classList.contains('rotate')) {
+                        secondText.classList.remove('d-none');
+                        firstText.classList.add('d-none');
+                        thirdText.classList.add('d-none');
+                    } else {
+                        secondText.classList.add('d-none');
+                        firstText.classList.remove('d-none');
+                        thirdText.classList.add('d-none');
+                    }
+                });
+            });
 
-         card.classList.add('rotated2'); 
+            completeButtons.forEach((button, index) => {
+                button.addEventListener('click', () => {
+                    const card = button.closest('.myCard');
+                    const firstText = card.querySelector('.FirstText');
+                    const secondText = card.querySelector('.SecondText');
+                    const thirdtext = card.querySelector('.lastText');
 
-         
-         firstText.classList.add('d-none');
-         secondText.classList.add('d-none');
-         thirdtext.classList.remove('d-none');
-     });
- });
-});
+                    card.classList.add('rotated2');
 
- </script>
- <script>
-     document.addEventListener("DOMContentLoaded", function () {
-         const flipButtons = document.querySelectorAll('.completeButton');
-         const myCards = document.querySelectorAll('.myCard');
-         const stepDisplay = document.querySelector('.step-display');
-         const totalSteps = flipButtons.length;
-         let currentStep = 0;
 
-         const steps = document.querySelectorAll('.step');
-         const progressLine = document.querySelector('.stepper-progress');
+                    firstText.classList.add('d-none');
+                    secondText.classList.add('d-none');
+                    thirdtext.classList.remove('d-none');
+                });
+            });
+        });
 
-         const progressElement = document.getElementById("circularProgress");
-         if (!progressElement) {
-             console.error("Progress bar container not found!");
-             return;
-         }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const flipButtons = document.querySelectorAll('.completeButton');
+            const myCards = document.querySelectorAll('.myCard');
+            const stepDisplay = document.querySelector('.step-display');
+            const totalSteps = flipButtons.length;
+            let currentStep = 0;
 
-         const bar = new ProgressBar.Circle(progressElement, {
-             color: '#41C887',
-             strokeWidth: 12,
-             trailColor: '#e6e6e6',
-             trailWidth: 12,
-             easing: 'easeInOut',
-             duration: 1400,
-             text: {
-                 value: '0%',
-                 className: 'progress-text',
-             },
-             svgStyle: {
-                 strokeLinecap: 'round',
-                 width: '100%',
-                 height: '100%',
-             },
-         });
+            const steppers = document.querySelectorAll('.stepper-container');
+            const steps = document.querySelectorAll('.step');
+            const progressElements = document.querySelectorAll('.stepper-progress');
 
-         function updateProgress() {
-             const progressValue = (currentStep / totalSteps) * 100;
-             bar.animate(progressValue / 100);
-             document.querySelector('.progress-text').textContent = `${Math.round(progressValue)}%`;
+            const progressElement = document.getElementById("circularProgress");
+            if (!progressElement) {
+                console.error("Progress bar container not found!");
+                return;
+            }
 
-             // Stepper Logic
-             let stepIndex = Math.min(Math.floor((currentStep / totalSteps) * 5), 4);
-             steps.forEach((step, index) => {
-                 if (index <= stepIndex) {
-                     step.classList.add("active");
-                 } else {
-                     step.classList.remove("active");
-                 }
-             });
+            const bar = new ProgressBar.Circle(progressElement, {
+                color: '#3D96FE',
+                strokeWidth: 12,
+                trailColor: '#e6e6e6',
+                trailWidth: 12,
+                easing: 'easeInOut',
+                duration: 1400,
+                text: {
+                    value: '0%',
+                    className: 'progress-text',
+                },
+                svgStyle: {
+                    strokeLinecap: 'round',
+                    width: '100%',
+                    height: '100%',
+                },
+            });
 
-             progressLine.style.width = `${(stepIndex / 4) * 94}%`;
-         }
+            function updateProgress() {
+                const progressValue = (currentStep / totalSteps) * 100;
+                bar.animate(progressValue / 100);
+                document.querySelector('.progress-text').textContent = `${Math.round(progressValue)}%`;
 
-         flipButtons.forEach((button, index) => {
-             let flipCount = 0; // Track flips per card
+                let stepIndex = Math.min(Math.floor((currentStep / totalSteps) * steps.length), steps.length - 1);
 
-             button.addEventListener('click', function () {
-                 if (!myCards[index].classList.contains('rotated')) {
-                     myCards[index].classList.add('rotated');
-                     button.classList.add('d-none');
+                steps.forEach((step, index) => {
+                    step.classList.toggle("active", index <= stepIndex);
+                });
 
-                     flipCount++;
+                let stepperIndex = Math.floor(stepIndex / 4);
+                progressElements.forEach((progressLine, index) => {
+                    if (index === stepperIndex) {
+                        progressLine.style.width = `${((stepIndex % 4) / 3) * 93}%`;
+                    } else {
+                        progressLine.style.width = stepIndex >= (index + 1) * 4 ? "93%" : "0%";
+                    }
+                });
+            }
 
-                   
-                     const firstText = myCards[index].querySelector('.firstText');
-                     const secondText = myCards[index].querySelector('.secondTexts');
-                     const thirdText = myCards[index].querySelector('.thirdText');
+            flipButtons.forEach((button, index) => {
+                let flipCount = 0;
 
-                     if (flipCount === 3) {
-                        
-                         if (firstText) firstText.classList.add('d-none');
-                         if (secondText) secondText.classList.add('d-none');
+                button.addEventListener('click', function () {
+                    if (!myCards[index].classList.contains('rotated')) {
+                        myCards[index].classList.add('rotated');
+                        button.classList.add('d-none');
 
-                         // Show thirdText
-                         if (thirdText) thirdText.classList.remove('d-none');
-                     }
+                        flipCount++;
+                        const firstText = myCards[index].querySelector('.firstText');
+                        const secondText = myCards[index].querySelector('.secondTexts');
+                        const thirdText = myCards[index].querySelector('.thirdText');
 
-                     currentStep++;
-                     stepDisplay.textContent = `Step: ${currentStep} / ${totalSteps}`;
-                     updateProgress();
-                 }
-             });
-         });
-     });
- </script>
- <script>
-    document.addEventListener("DOMContentLoaded", function () {
- const completeButtons = document.querySelectorAll('.completeButton'); // Fix selector
- const myCards = document.querySelectorAll('.myCard'); // Fix selector
+                        if (flipCount === 3) {
+                            if (firstText) firstText.classList.add('d-none');
+                            if (secondText) secondText.classList.add('d-none');
+                            if (thirdText) thirdText.classList.remove('d-none');
+                        }
 
- completeButtons.forEach((button, index) => {
-     button.addEventListener('click', function () {
-         const card = myCards[index]; // Get the corresponding card
+                        currentStep++;
+                        stepDisplay.textContent = `Step: ${currentStep} / ${totalSteps}`;
+                        updateProgress();
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const completeButtons = document.querySelectorAll('.completeButton'); // Fix selector
+            const myCards = document.querySelectorAll('.myCard'); // Fix selector
 
-         const firstText = card.querySelector('.FirstText'); 
-         const secondText = card.querySelector('.SecondText'); 
-         const thirdText = card.querySelector('.ThirdText'); 
-         // Add class to the card
-         card.classList.add('rotated2');
-         // Hide First and Second Text, Show Third Text
-         if (firstText) firstText.classList.add('d-none');
-         if (secondText) secondText.classList.add('d-none');
-         if (thirdText) thirdText.classList.remove('d-none');
-     });
- });
-});
+            completeButtons.forEach((button, index) => {
+                button.addEventListener('click', function () {
+                    const card = myCards[index]; // Get the corresponding card
 
- </script>
+                    const firstText = card.querySelector('.FirstText');
+                    const secondText = card.querySelector('.SecondText');
+                    const thirdText = card.querySelector('.ThirdText');
+                    // Add class to the card
+                    card.classList.add('rotated2');
+                    // Hide First and Second Text, Show Third Text
+                    if (firstText) firstText.classList.add('d-none');
+                    if (secondText) secondText.classList.add('d-none');
+                    if (thirdText) thirdText.classList.remove('d-none');
+                });
+            });
+        });
+    </script>
+    <!-- ----------==================tooltip=================------------- -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+            tooltipTriggerList.forEach(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+        });
+    </script>
 </body>
 
 </html>
