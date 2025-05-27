@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onboarding Progress</title>
+    <link rel="stylesheet" href="./assets/css/Naeem.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel=" stylesheet" href="./assets/css/common.css">
+    <style>
+        .step-item .step-description,
+        .stepNumber {
+            color: rgb(255, 255, 255, 0.5);
+        }
+
+        .step-item {
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        .step-item .step-number {
+            min-width: 48px;
+            min-height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            color: white;
+            font-weight: bold;
+            border-radius: 10px;
+            border: 1px solid #EAECF0;
+            position: relative;
+        }
+
+        .step-item:not(:last-child) .step-number::after {
+            content: "";
+            height: 26px;
+            width: 2px;
+            background-color: rgba(234, 236, 240, 0.7);
+            border-radius: 10px;
+            position: absolute;
+            top: 108%;
+        }
+
+        .step-completed .step-description,
+        .stepNumber {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .step-completed .stepNumber {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .step-completed.step-item .step-number {
+            color: white;
+            background-image: url('./assets/images/employer-ease-pics/completedStep.svg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            color: transparent;
+        }
+
+        .step-item.active .step-number::after {
+            background-color: rgba(234, 236, 240, 1);
+        }
+
+        .step-item.active .step-number {
+            color: transparent;
+            background-image: url('./assets/images/employer-ease-pics/stepperbizzy.svg');
+            background-repeat: no-repeat;
+            border: 0px;
+            background-position: center center;
+            /* background-size: cover; */
+
+        }
+
+        .step-item.active .step-description,
+        .step-item.active .stepNumber {
+            color: white;
+
+
+        }
+
+        .step-item.active .step-number {
+            height: 48px;
+            width: 48px;
+            background-position: center;
+            border: none !important;
+            color: transparent;
+        }
+
+        .step-completed .step-number {
+            border: none;
+            color: transparent;
+        }
+
+        .left__Wrapper {
+            background-color: #3684A4;
+            border-top-right-radius: 64px;
+            border-bottom-right-radius: 64px;
+            height: 100vh;
+        }
+
+        .list-unstyled {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .step-content {
+            display: none;
+        }
+
+        .step-content.active {
+            display: block;
+        }
+
+        .left__Progress__wrapper {
+            /* padding: 88px 0; */
+            height: calc(100vh - 88px);
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="containerOnboarding container-fluid position-relative">
+        <div class="row align-items-center g-3">
+            <div class="col-md-6">
+                <div class="left__Wrapper">
+                    <div class="p-4">
+                        <img src="./assets/images/employer-ease-pics/whiteMainLogo.svg" alt="">
+                    </div>
+                    <div class=" text-white d-flex flex-column  align-items-center w-100 left__Progress__wrapper">
+                        <ul class="list-unstyled mt-3 d-flex justify-content-center">
+                            <li class="step-item active d-flex align-items-center gap-3" data-step="1">
+                                <span class="step-number ">1</span>
+                                <div>
+                                    <p class="fs_16 j_family fw_600 lh_22 stepNumber">Welcome to EmployerEase</p>
+                                    <p class=" fs_16 j_family lh_22 step-description">Complete Onboarding</p>
+                                </div>
+                            </li>
+                            <li class="step-item d-flex align-items-center gap-3" data-step="2">
+                                <span class="step-number">2</span>
+                                <div>
+                                    <p class="fs_16 j_family fw_600 lh_22 stepNumber">User Profile</p>
+                                    <p class=" fs_16 j_family lh_22 step-description">A few details about your
+                                        company
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="step-item d-flex align-items-center gap-3" data-step="3">
+                                <span class="step-number">3</span>
+                                <div>
+                                    <p class="fs_16 j_family fw_600 lh_22 stepNumber">Business Profile 1 of 5</p>
+                                    <p class=" fs_16 j_family lh_22 step-description">A few details about your
+                                        company.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="step-item d-flex align-items-center gap-3" data-step="3">
+                                <span class="step-number">4</span>
+                                <div>
+                                    <p class="fs_16 j_family fw_600 lh_22 stepNumber">Business Profile 2 of 5</p>
+                                    <p class=" fs_16 j_family lh_22 step-description">A few details about your
+                                        company.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="step-item d-flex align-items-center gap-3" data-step="3">
+                                <span class="step-number">5</span>
+                                <div>
+                                    <p class="fs_16 j_family fw_600 lh_22 stepNumber">Business Profile 3 of 5</p>
+                                    <p class=" fs_16 j_family lh_22 step-description">A few details about your
+                                        company.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="step-item d-flex align-items-center gap-3" data-step="3">
+                                <span class="step-number">6</span>
+                                <div>
+                                    <p class="fs_16 j_family fw_600 lh_22 stepNumber">Business Profile 4 of 5</p>
+                                    <p class=" fs_16 j_family lh_22 step-description">A few details about your
+                                        company.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="step-item d-flex align-items-center gap-3" data-step="3">
+                                <span class="step-number">7</span>
+                                <div>
+                                    <p class="fs_16 j_family fw_600 lh_22 stepNumber">Business Profile 5 of 5</p>
+                                    <p class=" fs_16 j_family lh_22 step-description">A few details about your
+                                        company..
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="step-item d-flex align-items-center gap-3" data-step="3">
+                                <span class="step-number">8</span>
+                                <div>
+                                    <p class="fs_16 j_family fw_600 lh_22 stepNumber">Rate Us</p>
+                                    <p class=" fs_16 j_family lh_22 step-description">Please rate us.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="d-flex flex-column right__Wrapper justify-content-center align-items-center w-100 mx-auto"
+                    style="max-width: 424px;">
+
+                    <!-- Step Content Forms -->
+                    <form id="#companyForm" action="">
+                        <div>
+                            <!-- ======================----step 1----====================== -->
+                            <div class="step-content active" data-step="1">
+                                <div class=" active">
+                                    <div class="over__flow">
+                                        <div class="d-flex align-items-center gap-2 flex-wrap justify-content-between">
+                                            <h2 class="font_36 fw_600 global-black">Welcome!</h2>
+                                            <img width="44" height="44"
+                                                src="./assets/images/employer-ease-pics/popup_avatar.svg"
+                                                alt="popup_avatar">
+                                        </div>
+                                        <div>
+                                            <p class="font_16 fw_400 global-gray mt_12">Welcome to EmployerEase, Your
+                                                Business Success
+                                                Partner!. We’re excited to guide you on your entrepreneurial journey. To
+                                                get started, there are
+                                                just three simple steps:</p>
+                                            <div class="d-flex align-items-start gap-2 mt_32">
+                                                <span><svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.5 12.5L10.5 15.5L16.5 9.5M22 12.5C22 18.0228 17.5228 22.5 12 22.5C6.47715 22.5 2 18.0228 2 12.5C2 6.97715 6.47715 2.5 12 2.5C17.5228 2.5 22 6.97715 22 12.5Z"
+                                                            stroke="#3684A4" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg></span>
+                                                <p class="font_16 fw_400 global-dark-gray"><span
+                                                        class="font_16 fw_500 global-dark-gray">Set Up
+                                                        Your User Profile –</span>Provide a few key details to
+                                                    personalize your experience.</p>
+                                            </div>
+                                            <div class="d-flex align-items-start gap-2 mt_20">
+                                                <span><svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.5 12.5L10.5 15.5L16.5 9.5M22 12.5C22 18.0228 17.5228 22.5 12 22.5C6.47715 22.5 2 18.0228 2 12.5C2 6.97715 6.47715 2.5 12 2.5C17.5228 2.5 22 6.97715 22 12.5Z"
+                                                            stroke="#3684A4" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg></span>
+                                                <p class="font_16 fw_400 global-dark-gray"><span
+                                                        class="font_16 fw_500 global-dark-gray">Complete Your Business
+                                                        Profile –</span> Add
+                                                    information about your business so we can tailor tools and services
+                                                    to your needs.</p>
+                                            </div>
+                                            <div class="d-flex align-items-start gap-2 mt_20">
+                                                <span><svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.5 12.5L10.5 15.5L16.5 9.5M22 12.5C22 18.0228 17.5228 22.5 12 22.5C6.47715 22.5 2 18.0228 2 12.5C2 6.97715 6.47715 2.5 12 2.5C17.5228 2.5 22 6.97715 22 12.5Z"
+                                                            stroke="#3684A4" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg></span>
+                                                <p class="font_16 fw_400 global-dark-gray"><span
+                                                        class="font_16 fw_500 global-dark-gray">Tutorial Walkthrough
+                                                        –</span> Take a quick tour of
+                                                    the platform to see how your Digital Business Headquarters works and
+                                                    what it can do for you.
+                                                    Each step is designed to set you up for success. Click Next to
+                                                    begin! </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" id="" class="form_next_btn mt_24 w-100 next-btn">Next</button>
+                                    <!-- <button type="button" class="form_next_btn mt_24" id="next0">Next</button> -->
+                                </div>
+                            </div>
+                            <!-- ======================----step 2----====================== -->
+                            <div class="step-content" data-step="2">
+                                <div class="">
+                                    <h2 class="font_36 fw_600 global-black">User Profile</h2>
+                                    <p class="font_16 fw_400 global-gray mt_12">Welcome now! Please fill onboarding
+                                        form.</p>
+                                    <div class="over__flow">
+                                        <div class="row g-3 mt_32">
+                                            <div class="col-lg-6 col-md-6 global_input mt-0">
+                                                <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                                    for="f-name">First Name <span class="required_span">*</span></label>
+                                                <input class="mt-2" type="text" name="name" id="name"
+                                                    placeholder="Enter first name" required data-error="Please enter your name">
+                                                <div class="error-message"
+                                                    style="color: red !important; display: none;">
+                                                    Please enter your
+                                                    first
+                                                    name</div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 global_input mt-0">
+                                                <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                                    for="last-name">Last Name <span
+                                                        class="required_span">*</span></label>
+                                                <input class="mt-2" type="text" name="last_name" id="last-name"
+                                                    placeholder="Enter last name" required>
+                                                <div class="error-message" style="color: red; display: none;">Please
+                                                    enter your last name</div>
+                                            </div>
+                                        </div>
+                                        <div class="global_input mt_20">
+                                            <label class="font_14 fw_500 ln_20 w-100 global-dark-gray" for="email">Email
+                                            </label>
+                                            <input class="mt-2" type="email" name="email" id="email"
+                                                placeholder="Enter your email">
+                                        </div>
+                                        <div class="global_input mt_20">
+                                            <label class="font_14 fw_500 ln_20 w-100 global-dark-gray" for="phone">Phone
+                                                Number </label>
+                                            <input class="mt-2" type="phone" name="phone" id="phone"
+                                                placeholder="Enter your phone number">
+                                        </div>
+                                        <div class="global_input mt_20">
+                                            <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                                for="mailing-address">Mailing Address
+                                            </label>
+                                            <input class="mt-2" type="text" name="company_address" id="mailing-address"
+                                                placeholder="Enter mailing address">
+                                        </div>
+                                        <div class="global_input mt_20">
+                                            <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                                for="street-address">Street Address
+                                            </label>
+                                            <input class="mt-2" type="name" name="company_name" id="street-address"
+                                                placeholder="Enter street address">
+                                        </div>
+                                        <div class="global_input mt_20">
+                                            <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                                for="zip-code">State/City Zip</label>
+                                            <input class="mt-2" type="name" name="company_position" id="zip-code"
+                                                placeholder="Enter zip code">
+                                        </div>
+                                    </div>
+                                    <button type="button" id="" class="form_next_btn mt_24 w-100 next-btn">Next</button>
+                                    <!-- <button type="button" class="form_next_btn mt_24" id="next1">Next</button> -->
+                                </div>
+                            </div>
+                            <!-- ======================----step 3----====================== -->
+                            <div class="step-content" data-step="3" style="max-width: 425px;">
+                                <div class="">
+                                    <h2 class="font_36 fw_600 global-black">Business Profile</h2>
+                                    <p class="font_16 fw_400 global-gray mt_12">Welcome now! Please fill onboarding
+                                        form.
+                                    </p>
+                                    <div class="over__flow">
+                                        <div class="global_input mt_20">
+                                            <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                                for="business_name">Business Name <span class="required_span">*</span>
+                                            </label>
+                                            <input class="mt-2" type="text" name="business_name" id="business_name"
+                                                placeholder="Enter business name" required>
+                                            <div class="error-message" style="color: red; display: none;">Please enter
+                                                your
+                                                last
+                                                name</div>
+                                        </div>
+                                        <div class="global_input mt_20">
+                                            <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                                for="business_add">Business Address
+                                            </label>
+                                            <input class="mt-2" type="text" name="business_add" id="business_add"
+                                                placeholder="Enter business address">
+                                        </div>
+                                        <div class="global_input mt_20">
+                                            <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                                for="street_add">Street
+                                                Address</label>
+                                            <input class="mt-2" type="text" name="street_add" id="street_add"
+                                                placeholder="Enter street address">
+                                        </div>
+                                        <div class="global_input mt_20">
+                                            <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                                for="state_zip_city">State/City Zip
+                                            </label>
+                                            <input class="mt-2" type="text" name="state_zip_city" id="state_zip_city"
+                                                placeholder="Enter your email">
+                                        </div>
+                                        <div class="global_input mt_20">
+                                            <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                                for="business_phone">Business Phone
+                                                Number </label>
+                                            <input class="mt-2" type="text" name="business_phone" id="business_phone"
+                                                placeholder="Enter your phone number">
+                                        </div>
+
+                                        <div class="global_input mt_20">
+                                            <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                                for="business_industry">Industry</label>
+                                            <select class="custom-select mt-2" name="business_industry"
+                                                id="business_industry">
+                                                <option value="" selected disabled>Please Select</option>
+                                                <option value="early-stage-startup">Early-Stage Startup</option>
+                                                <option value="growing-startup">Growing Startup</option>
+                                                <option value="established-business">Established Business</option>
+                                                <option value="enterprise">Large Enterprise</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <button type="button" id="" class="form_next_btn mt_24 w-100 next-btn">Next</button>
+                                    <!-- <button type="button" class="form_next_btn mt_24" id="next4">Next</button> -->
+                                </div>
+                            </div>
+                            <!-- ======================----step 4----====================== -->
+                            <div class="step-content" data-step="4">
+                                <div class="">
+                                    <h2 class="font_36 fw_600 global-black">Business Profile</h2>
+                                    <p class="font_16 fw_400 global-gray mt_12">Welcome now! Please fill onboarding
+                                        form.</p>
+                                    <div class="over__flow">
+                                        <div class="global_input mt_20">
+                                            <label class="font_14 fw_500 ln_20 w-100 global-dark-gray" for="website">Do
+                                                you have a
+                                                Website?</label>
+                                            <select class="custom-select mt-2" name="website" id="website">
+                                                <option value="" selected disabled>Please Select</option>
+                                                <option value="early-stage-startup">Early-Stage Startup</option>
+                                                <option value="growing-startup">Growing Startup</option>
+                                                <option value="established-business">Established Business</option>
+                                                <option value="enterprise">Large Enterprise</option>
+                                            </select>
+                                        </div>
+                                        <div class="global_input mt_20">
+                                            <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                                for="website_url">Website URL </label>
+                                            <input class="mt-2" type="text" name="website_url" id="website_url"
+                                                placeholder="Enter website URL ">
+                                        </div>
+                                        <div class="global_input mt_20">
+                                            <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                                for="media_accounts">Do you have any
+                                                Social Media Accounts? </label>
+                                            <select class="custom-select mt-2" name="media_accounts"
+                                                id="media_accounts">
+                                                <option value="" selected disabled>Please Select</option>
+                                                <option value="1-10">1-10 employees</option>
+                                                <option value="11-50">11-50 employees</option>
+                                                <option value="51-100">51-100 employees</option>
+                                                <option value="101-500">101-500 employees</option>
+                                                <option value="501-1000">501-1000 employees</option>
+                                                <option value="1000+">1000+ employees</option>
+                                            </select>
+                                        </div>
+                                        <div class="global_input mt_20">
+                                            <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                                for="company-operate">Select Social
+                                                Media Accounts you have</label>
+                                            <div class="d-flex align-items-center gap-2 mt-2">
+                                                <div class="d-flex flex-column gap-2">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <input class="global-check" type="checkbox" name="facebook"
+                                                            id="linkedin">
+                                                        <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                                            for="linkedin">LinkedIn</label>
+                                                    </div>
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <input class="global-check" type="checkbox" name="facebook"
+                                                            id="facebook">
+                                                        <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                                            for="facebook">Facebook</label>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex flex-column gap-2">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <input class="global-check" type="checkbox" name="instagram"
+                                                            id="Youtube">
+                                                        <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                                            for="Youtube">Youtube</label>
+                                                    </div>
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <input class="global-check" type="checkbox" name="instagram"
+                                                            id="instagram">
+                                                        <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                                            for="instagram">Instagram</label>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex flex-column gap-2">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <input class="global-check" type="checkbox" name="twitter"
+                                                            id="Tiktok">
+                                                        <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                                            for="Tiktok">Tiktok</label>
+                                                    </div>
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <input class="global-check" type="checkbox" name="twitter"
+                                                            id="twitter">
+                                                        <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                                            for="twitter">X</label>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="global_input mt_20">
+                                            <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                                for="facebook_url">Facebook URL
+                                            </label>
+                                            <input class="mt-2" type="text" name="facebook_url" id="facebook_url"
+                                                placeholder="Enter facebook URL ">
+                                        </div>
+                                    </div>
+                                    <button type="button" id="" class="form_next_btn mt_24 w-100 next-btn">Next</button>
+                                    <!-- <button type="button" class="form_next_btn mt_24" id="next5">Next</button> -->
+                                </div>
+                            </div>
+                            <!-- ======================----step 5----====================== -->
+                            <div class="step-content" data-step="5">
+                                <div class="">
+                                    <h2 class="font_36 fw_600 global-black">Business Profile</h2>
+                                    <p class="font_16 fw_400 global-gray mt_12">Welcome now! Please fill onboarding
+                                        form.</p>
+                                    <div class="over__flow">
+
+
+                                        <div class="global_input mt_20">
+                                            <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                                for="business_checking">Does the
+                                                business have a Business Checking Account?</label>
+                                            <select class="custom-select mt-2" name="business_checking"
+                                                id="business_checking">
+                                                <option value="" selected disabled>Please Select</option>
+                                                <option value="early-stage-startup">Early-Stage Startup</option>
+                                                <option value="growing-startup">Growing Startup</option>
+                                                <option value="established-business">Established Business</option>
+                                                <option value="enterprise">Large Enterprise</option>
+                                            </select>
+                                        </div>
+                                        <div class="global_input mt_20">
+                                            <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                                for="connect_PLAID">Does the business have insurance coverages in place?
+                                            </label>
+                                            <select class="custom-select mt-2" name="connect_PLAID" id="connect_PLAID">
+                                                <option value="" selected disabled>Please Select</option>
+                                                <option value="1-10">1-10 employees</option>
+                                                <option value="11-50">11-50 employees</option>
+                                                <option value="51-100">51-100 employees</option>
+                                                <option value="101-500">101-500 employees</option>
+                                                <option value="501-1000">501-1000 employees</option>
+                                                <option value="1000+">1000+ employees</option>
+                                            </select>
+                                        </div>
+                                        <div class="global_input mt_20">
+                                            <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                                for="legal_protection">Does the business have accounting software?
+                                            </label>
+                                            <select class="custom-select mt-2" name="legal_protection"
+                                                id="legal_protection">
+                                                <option value="" selected disabled>Please Select</option>
+                                                <option value="1-10">1-10 employees</option>
+                                                <option value="11-50">11-50 employees</option>
+                                                <option value="51-100">51-100 employees</option>
+                                                <option value="101-500">101-500 employees</option>
+                                                <option value="501-1000">501-1000 employees</option>
+                                                <option value="1000+">1000+ employees</option>
+                                            </select>
+                                        </div>
+                                        <div class="global_input mt_20">
+                                            <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                                for="accounting_soft">Does the business have an accountant</label>
+                                            <select class="custom-select mt-2" name="accounting_soft"
+                                                id="accounting_soft">
+                                                <option value="" selected disabled>Please Select</option>
+                                                <option value="1-10">1-10 employees</option>
+                                                <option value="11-50">11-50 employees</option>
+                                                <option value="51-100">51-100 employees</option>
+                                                <option value="101-500">101-500 employees</option>
+                                                <option value="501-1000">501-1000 employees</option>
+                                                <option value="1000+">1000+ employees</option>
+                                            </select>
+                                        </div>
+                                        <!-- <div class="global_input mt_20">
+                                        <label class="font_14 fw_500 ln_20 w-100 global-dark-gray" for="accountant">Does
+                                            the business have
+                                            an accountant </label>
+                                        <select class="custom-select mt-2" name="accountant" id="accountant">
+                                            <option value="" selected disabled>Please Select</option>
+                                            <option value="1-10">1-10 employees</option>
+                                            <option value="11-50">11-50 employees</option>
+                                            <option value="51-100">51-100 employees</option>
+                                            <option value="101-500">101-500 employees</option>
+                                            <option value="501-1000">501-1000 employees</option>
+                                            <option value="1000+">1000+ employees</option>
+                                        </select>
+                                    </div>
+                                    <div class="global_input mt_20">
+                                        <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                            for="3rd_party">Business books managed
+                                            by owner, employee or 3rd party </label>
+                                        <select class="custom-select mt-2" name="3rd_party" id="3rd_party">
+                                            <option value="" selected disabled>Please Select</option>
+                                            <option value="1-10">1-10 employees</option>
+                                            <option value="11-50">11-50 employees</option>
+                                            <option value="51-100">51-100 employees</option>
+                                            <option value="101-500">101-500 employees</option>
+                                            <option value="501-1000">501-1000 employees</option>
+                                            <option value="1000+">1000+ employees</option>
+                                        </select>
+                                    </div> -->
+                                    </div>
+                                    <button type="button" id="" class="form_next_btn mt_24 w-100 next-btn">Next</button>
+                                    <!-- <button type="button" class="form_next_btn mt_24" id="next6">Next</button> -->
+                                </div>
+                            </div>
+                            <!-- ======================----step 6----====================== -->
+                            <div class="step-content" data-step="6">
+                                <div class="">
+                                    <h2 class="font_36 fw_600 global-black">Business Profile</h2>
+                                    <p class="font_16 fw_400 global-gray mt_12">Welcome now! Please fill onboarding
+                                        form.</p>
+                                    <div class="over__flow">
+                                        <div class="global_input mt_32">
+                                            <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                                for="physical-locations">Does the business have a Business Checking
+                                                Account?
+                                                <span class="required_span">*</span></label>
+                                            <select class="custom-select mt-2" name="company_type" id="company-type"
+                                                required>
+                                                <option value="" selected disabled>Please Select</option>
+                                                <option value="early-stage-startup">Early-Stage Startup</option>
+                                                <option value="growing-startup">Growing Startup</option>
+                                                <option value="established-business">Established Business</option>
+                                                <option value="enterprise">Large Enterprise</option>
+                                            </select>
+                                            <!-- <div class="error-message" style="color: red; display: none;">Please enter
+                                            the number of physical
+                                            locations</div> -->
+                                        </div>
+                                        <div class="global_input mt_20">
+                                            <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                                for="company-type">Is
+                                                Does the business have insurance and legal protection?<span
+                                                    class="required_span">*</span></label>
+                                            <select class="custom-select mt-2" name="company_type" id="company-type"
+                                                required>
+                                                <option value="" selected disabled>Please Select</option>
+                                                <option value="early-stage-startup">Early-Stage Startup</option>
+                                                <option value="growing-startup">Growing Startup</option>
+                                                <option value="established-business">Established Business</option>
+                                                <option value="enterprise">Large Enterprise</option>
+                                            </select>
+                                            <!-- <div class="error-message" style="color: red; display: none;">Please select
+                                            your company type
+                                        </div> -->
+                                        </div>
+                                        <div class="global_input mt_20">
+                                            <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                                for="company-size">Does the business have accounting software setup up?
+                                            </label>
+                                            <select class="custom-select mt-2" name="company_size" id="company-size">
+                                                <option value="" selected disabled>Please Select</option>
+                                                <option value="1-10">1-10 employees</option>
+                                                <option value="11-50">11-50 employees</option>
+                                                <option value="51-100">51-100 employees</option>
+                                                <option value="101-500">101-500 employees</option>
+                                                <option value="501-1000">501-1000 employees</option>
+                                                <option value="1000+">1000+ employees</option>
+                                            </select>
+                                        </div>
+                                        <div class="global_input mt_20">
+                                            <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                                for="company-operate">Does the business have an accountant <span
+                                                    class="required_span">*</span></label>
+                                            <select class="custom-select mt-2" name="company_size" id="company-operate">
+                                                <option value="" selected disabled>Please Select</option>
+                                                <option value="1-10">1-10 employees</option>
+                                                <option value="11-50">11-50 employees</option>
+                                                <option value="51-100">51-100 employees</option>
+                                                <option value="101-500">101-500 employees</option>
+                                                <option value="501-1000">501-1000 employees</option>
+                                                <option value="1000+">1000+ employees</option>
+                                            </select>
+                                            <!-- <div class="error-message" style="color: red; display: none;">Please enter
+                                            number of states</div> -->
+                                        </div>
+                                        <!-- <div class="global_input mt_20">
+                                        <label class="font_14 fw_500 ln_20 w-100 global-dark-gray" for="you-employee">Do
+                                            you have
+                                            Employees </label>
+                                        <select class="custom-select mt-2" name="you_employee" id="you-employee">
+                                            <option value="" selected disabled>Please Select</option>
+                                            <option value="1">No</option>
+                                            <option value="2">Yes</option>
+                                        </select>
+                                    </div>
+                                    <div class="global_input mt_20">
+                                        <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                            for="employee-count">Employee
+                                            Count</label>
+                                        <input class="mt-2" type="name" name="employee_count" id="employee-count"
+                                            placeholder="e.g.  23">
+                                        <p class="font_14 fw_400 ln_20 global-gray mt-2">** Enter 0 if there are no
+                                            Employees</p>
+                                    </div> -->
+                                    </div>
+                                    <button type="button" id="" class="form_next_btn mt_24 w-100 next-btn">Next</button>
+                                    <!-- <button type="button" class="form_next_btn mt_24" id="next7">Next</button> -->
+                                </div>
+                            </div>
+                            <!-- ======================----step 7----====================== -->
+                            <div class="step-content" data-step="7">
+                                <div class="">
+                                    <h2 class="font_36 fw_600 global-black">Business Profile</h2>
+                                    <p class="font_16 fw_400 global-gray mt_12">Welcome now! Please fill onboarding
+                                        form.</p>
+                                    <div class="over__flow">
+                                        <div class="global_input mt_32">
+                                            <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                                for="annual-payroll">Deos the Business have Employees? <span
+                                                    class="required_span">*</span></label>
+                                            <select class="custom-select mt-2" name="work_schedule" id="annual-payroll">
+                                                <option value="" selected disabled>Please Select</option>
+                                                <option value="yes">Yes</option>
+                                                <option value="no">No</option>
+                                            </select>
+                                            <div class="error-message" style="color: red; display: none;">Please enter
+                                                your company's annual
+                                                payroll</div>
+                                            <p class="font_14 fw_400 ln_20 global-gray mt-2">Include Owners and Officers
+                                                payroll. If none,
+                                                enter next 12 Months Anticipated Gross Payroll.</p>
+                                        </div>
+                                        <div class="global_input mt_20">
+                                            <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                                for="work-schedule">How Many</label>
+                                            <select class="custom-select mt-2" name="work_schedule" id="work-schedule">
+                                                <option value="" selected disabled>Please Select</option>
+                                                <option value="yes">Yes</option>
+                                                <option value="no">No</option>
+                                            </select>
+                                        </div>
+                                        <div class="global_input mt_20">
+                                            <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                                for="global_outsourced">What is your company’s annual payroll?*</label>
+                                            <input class="mt-2" type="name" name="employee_count"
+                                                id="global_outsourcedt" placeholder="e.g.  23">
+                                            <p class="font_14 fw_400 ln_20 global-gray mt-2">Include Owners and Officers
+                                                payroll. If none Enter next 12 Months Anticipated Gross Payroll.</p>
+                                        </div>
+                                        <div class="global_input mt_20">
+                                            <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                                for="online_payment">Does your business currently utilized Global
+                                                Outsourced
+                                                Professionals?</label>
+                                            <select class="custom-select mt-2" name="online_payment"
+                                                id="online_payment">
+                                                <option value="" selected disabled>Please Select</option>
+                                                <option value="both">Yes, both CRM and Email Marketing Software</option>
+                                                <option value="crm-only">Yes, CRM only</option>
+                                                <option value="email-only">Yes, Email Marketing Software only</option>
+                                                <option value="neither">No, neither</option>
+                                            </select>
+                                        </div>
+                                        <div class="global_input mt_20">
+                                            <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                                for="online_payment">Is the business already accepting Online
+                                                Payments?</label>
+                                            <select class="custom-select mt-2" name="online_payment"
+                                                id="online_payment">
+                                                <option value="" selected disabled>Please Select</option>
+                                                <option value="both">Yes, both CRM and Email Marketing Software</option>
+                                                <option value="crm-only">Yes, CRM only</option>
+                                                <option value="email-only">Yes, Email Marketing Software only</option>
+                                                <option value="neither">No, neither</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="global_input mt_20">
+                                            <label class="font_14 fw_500 ln_20 w-100 global-dark-gray"
+                                                for="global_outsourced1">What is your Anticipated Sales within the next
+                                                12
+                                                months</label>
+                                            <input class="mt-2" type="name" name="employee_count"
+                                                id="global_outsourced1" placeholder="$ Please Enter">
+                                        </div>
+                                    </div>
+                                    <button type="button" id="" class="form_next_btn mt_24 w-100 next-btn">Next</button>
+                                    <!-- <button type="button" class="form_next_btn mt_24" id="next8">Next</button> -->
+                                </div>
+                            </div>
+                            <!-- ======================----step 8----====================== -->
+                            <div class="step-content" data-step="8">
+                                <div class="">
+                                    <div class="">
+                                        <h2 class="font_36 fw_600 global-black">Rate Us</h2>
+                                        <p class="font_16 fw_400 global-gray mt_12">Please rate us!</p>
+                                        <p class="font_16 fw_400 global-gray mt_32">Please Rate How Easy this form was!
+                                        </p>
+                                      
+                                        <div>
+                                            <div class="d-flex align-items-baseline gap-2 mt-2">
+                                              <div class="rating-box">
+                                                <div class="rating-container static-ratings">
+                                                  <input type="radio" name="rating" value="5" id="star-5">
+                                                  <label for="star-5">
+                                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path
+                                                        d="M12 0.5L16.079 7.86365L24 9.66718L18.6 16.0217L19.4164 24.5L12 21.0637L4.58359 24.5L5.39999 16.0217L-5.72205e-06 9.66718L7.92097 7.86365L12 0.5Z"
+                                                        fill="#D9DEE2" />
+                                                    </svg>
+                                                  </label>
+                                                  <input type="radio" name="rating" value="4" id="star-4">
+                                                  <label for="star-4">
+                                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path
+                                                        d="M12 0.5L16.079 7.86365L24 9.66718L18.6 16.0217L19.4164 24.5L12 21.0637L4.58359 24.5L5.39999 16.0217L-5.72205e-06 9.66718L7.92097 7.86365L12 0.5Z"
+                                                        fill="#D9DEE2" />
+                                                    </svg>
+                                                  </label>
+                                                  <input type="radio" name="rating" value="3" id="star-3">
+                                                  <label for="star-3">
+                                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path
+                                                        d="M12 0.5L16.079 7.86365L24 9.66718L18.6 16.0217L19.4164 24.5L12 21.0637L4.58359 24.5L5.39999 16.0217L-5.72205e-06 9.66718L7.92097 7.86365L12 0.5Z"
+                                                        fill="#D9DEE2" />
+                                                    </svg>
+                                                  </label>
+                                                  <input type="radio" name="rating" value="2" id="star-2">
+                                                  <label for="star-2">
+                                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path
+                                                        d="M12 0.5L16.079 7.86365L24 9.66718L18.6 16.0217L19.4164 24.5L12 21.0637L4.58359 24.5L5.39999 16.0217L-5.72205e-06 9.66718L7.92097 7.86365L12 0.5Z"
+                                                        fill="#D9DEE2" />
+                                                    </svg>
+                                                  </label>
+                                                  <input type="radio" name="rating" value="1" id="star-1">
+                                                  <label for="star-1">
+                                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path
+                                                        d="M12 0.5L16.079 7.86365L24 9.66718L18.6 16.0217L19.4164 24.5L12 21.0637L4.58359 24.5L5.39999 16.0217L-5.72205e-06 9.66718L7.92097 7.86365L12 0.5Z"
+                                                        fill="#D9DEE2" />
+                                                    </svg>
+                                                  </label>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        <p class="font_16 fw_400 global-gray mt_32">Please Rate How Easy this Form was
+                                            to
+                                            Complete? </p>
+                                        <div class="d-flex gap-3 mt-1">
+                                            <div class="d-flex gap-2 align-items-center">
+                                                <input id="check1" class="" name="check4" type="radio">
+                                                <label class="fs_16 fw_400 j_family tertiary-gray"
+                                                    for="check1">Yes</label>
+                                            </div>
+                                            <div class="d-flex gap-2 align-items-center">
+                                                <input id="check2" class="" name="check4" type="radio">
+                                                <label class="fs_16 fw_400 j_family tertiary-gray"
+                                                    for="check2">No</label>
+                                            </div>
+                                        </div>
+                                        <p class="font_16 fw_400 global-gray mt_20">Would you recommend EmployerEase to
+                                            other
+                                            businesses?</p>
+                                        <div class="d-flex gap-3 mt-1">
+                                            <div class="d-flex gap-2 align-items-center">
+                                                <input id="check3" class="" name="check2" type="radio">
+                                                <label class="fs_16 fw_400 j_family tertiary-gray" for="check3"
+                                                    name="check1">Yes</label>
+                                            </div>
+                                            <div class="d-flex gap-2 align-items-center">
+                                                <input id="check4" class="" name="check2" type="radio">
+                                                <label class="fs_16 fw_400 j_family tertiary-gray"
+                                                    for="check4">No</label>
+                                            </div>
+                                        </div>
+                                        <p class="fs_14 fw_400 j_family tertiary-gray mt_20 border-r-8">Comments</p>
+                                        <div class="border1 border-r-8 p_16 mt-1"
+                                            style="max-width: 360px;max-height: 149px;">
+                                            <p class="fs_16 fw_400 j_family tertiary-black">
+                                                Please provide comments about your on boarding experience. This helps us
+                                                understand if we are providing a seamless experience for users.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <button type="button" id="" class="form_next_btn mt_24 w-100 next-btn">Next</button>
+                                    <!-- <button type="button" class="form_next_btn mt_24" id="next8">Next</button> -->
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                    <div style="max-width: 424px;" class="mt-4 w-100 px-4">
+                        <!-- <button type="button" id="" class="form_next_btn mt_24 w-100 next-btn">Next</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------==============Confirmation Modal==============---------- -->
+    <div id="modal"
+        class="position-absolute w-100 d-flex align-items-center justify-content-center modelWrapper top-0 d-none"
+        style="height: 100%; z-index: 9999999999; background-color:rgba(0, 0, 0, 0.3)">
+        <div class="position-relative d-flex mx-2 align-items-center justify-content-center p-4 border-r-12 bg-white"
+            style="max-width: 600px;">
+            <div class="d-flex flex-column align-items-center gap-2 px-5">
+                <div class="d-flex justify-content-center align-items-start position-relative w-100">
+                    <img src="./assets/images/employer-ease-pics/animatedCirclewRocket.svg" alt="">
+                </div>
+                <h2 class="fs_24 fw_600 j_family lh_32 text-center">Onboarding EmployerEase</h2>
+
+                <p class="fs_20 fw_400 j_family lh_30 secondary-gray text-center">Confirm onboarding EmployerEase?</p>
+                <a href="getstartedModule.html" class="whole_button closeModal border-0 text-white mt-3 px-4">
+                    Confirm
+                </a>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const stepItems = document.querySelectorAll(".step-item");
+    const stepContents = document.querySelectorAll(".step-content");
+    const stepDescription = document.getElementById("step-description");
+    const prevBtn = document.getElementById("prev-btn");
+    const nextBtns = document.querySelectorAll(".next-btn");
+    const modelWrapper = document.getElementById("modal");
+    let currentStep = 0;
+
+    function updateSteps() {
+        stepItems.forEach((item, index) => {
+            item.classList.toggle("active", index === currentStep);
+            item.classList.toggle("step-completed", index < currentStep);
+        });
+
+        stepContents.forEach((content, index) => {
+            content.classList.toggle("active", index === currentStep);
+        });
+
+        stepDescription.innerText = stepItems[currentStep].querySelector(".step-description").innerText;
+        prevBtn.disabled = currentStep === 0;
+
+        nextBtns.forEach(btn => {
+            btn.textContent = currentStep === stepItems.length - 1 ? "Submit" : "Next";
+        });
+    }
+
+    function validateStep() {
+        let isValid = true;
+        const currentTabInputs = stepContents[currentStep].querySelectorAll("input[required], select[required], textarea[required]");
+
+        currentTabInputs.forEach(input => {
+            let errorMessage = input.getAttribute("data-error") || "This field is required";
+            let errorElement = input.parentNode.querySelector(".error-text");
+
+            if (!input.value.trim()) {
+                isValid = false;
+                input.classList.add("is-invalid");
+
+                if (!errorElement) {
+                    errorElement = document.createElement("div");
+                    errorElement.classList.add("error-text");
+                    errorElement.style.color = "red";
+                    errorElement.style.fontSize = "14px";
+                    errorElement.innerText = errorMessage;
+                    input.parentNode.appendChild(errorElement);
+                }
+            } else {
+                input.classList.remove("is-invalid");
+                if (errorElement) {
+                    errorElement.remove(); // **Remove the error message when valid input is entered**
+                }
+            }
+        });
+
+        return isValid;
+    }
+
+    function handleInputValidation(event) {
+        let input = event.target;
+        let errorElement = input.parentNode.querySelector(".error-text");
+
+        if (input.value.trim()) {
+            input.classList.remove("is-invalid");
+            if (errorElement) {
+                errorElement.remove(); // **Remove error instantly when valid input is entered**
+            }
+        }
+    }
+
+    nextBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            if (validateStep()) {
+                if (currentStep < stepItems.length - 1) {
+                    currentStep++;
+                    updateSteps();
+                } else {
+                    modelWrapper.classList.remove("d-none");
+
+                    const ModelwrapperDiv = document.querySelector(".modelWrapper");
+                    const Body = document.querySelector(".Body");
+                    const CloseButton = document.querySelector(".closeModal");
+
+                    CloseButton.addEventListener("click", function () {
+                        ModelwrapperDiv.classList.add("d-none");
+                        Body.classList.remove("overflow-hidden");
+
+                        setTimeout(() => {
+                            location.reload();
+                        }, 500);
+                    });
+                }
+            }
+        });
+    });
+
+    prevBtn.addEventListener("click", () => {
+        if (currentStep > 0) {
+            currentStep--;
+            updateSteps();
+        }
+    });
+
+    // **Attach real-time validation to all required inputs**
+    document.querySelectorAll("input[required], select[required], textarea[required]").forEach(input => {
+        input.addEventListener("input", handleInputValidation);
+    });
+
+    updateSteps();
+});
+
+
+
+</script>
+<script>
+    let imagesArray = [];
+
+    document.getElementById('fileInput').addEventListener('change', function (event) {
+        const files = Array.from(event.target.files);
+        files.forEach(file => {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                imagesArray.push(e.target.result);
+                displayImages();
+            };
+            reader.readAsDataURL(file);
+        });
+        event.target.value = '';
+    });
+
+    function displayImages() {
+        const previewContainer = document.getElementById('preview-container');
+        previewContainer.innerHTML = '';
+        imagesArray.forEach((src, index) => {
+            const previewItem = document.createElement('div');
+            previewItem.classList.add('preview-item');
+            const img = document.createElement('img');
+            img.src = src;
+            previewItem.appendChild(img);
+            const removeButton = document.createElement('button');
+            removeButton.innerText = 'x';
+            removeButton.classList.add('remove-button');
+            removeButton.onclick = () => removeImage(index);
+            previewItem.appendChild(removeButton);
+            previewContainer.appendChild(previewItem);
+        });
+    }
+
+    function removeImage(index) {
+        imagesArray.splice(index, 1);
+        displayImages();
+    }
+</script>
+<script>
+    $(document).ready(function () {
+
+        $("#companyForm").validate({
+            rules: {
+                name: {
+                    required: true
+                },
+                last_name: {
+                    required: true
+                },
+                physical_locations: {
+                    required: true,
+                    number: true
+                },
+                company_type: {
+                    required: true
+                },
+                company_operate: {
+                    required: true,
+                    number: true
+                },
+                annual_payroll: {
+                    required: true,
+                    number: true
+                },
+                crm_email_software: {
+                    required: true
+                },
+                gross_revenue: {
+                    required: true,
+                    number: true
+                },
+                business_name: {
+                    required: true,
+                }
+            },
+            messages: {
+                name: {
+                    required: "Please enter your first name"
+                },
+                last_name: {
+                    required: "Please enter your last name"
+                },
+                physical_locations: {
+                    required: "Please enter the number of physical locations",
+                    number: "Please enter a valid number"
+                },
+                company_type: {
+                    required: "Please select your company type"
+                },
+                company_operate: {
+                    required: "Please enter number of states",
+                    number: "Please enter a valid number"
+                },
+                annual_payroll: {
+                    required: "Please enter your company's annual payroll",
+                    number: "Please enter a valid number"
+                },
+                crm_email_software: {
+                    required: "Please select an option"
+                },
+                gross_revenue: {
+                    required: "Please enter your company's gross revenue",
+                    number: "Please enter a valid number"
+                },
+                business_name: {
+                    required: "Please enter your business name",
+                },
+            },
+            errorPlacement: function (error, element) {
+                error.insertAfter(element); // Show error message under the input field
+            },
+            submitHandler: function (form) {
+                event.preventDefault(); // Prevent default form submission
+                // Show SweetAlert success message after successful form validation
+                Swal.fire({
+                    title: 'Form Submitted Successfully!',
+                    text: 'Your form has been successfully submitted.',
+                    icon: 'success',
+                    confirmButtonText: 'Great!'
+                });
+                // Optionally, you can handle the form submission with AJAX or just submit
+                // form.submit();  // Uncomment this line if you need to submit the form to the server
+            }
+        });
+        // Navigate through carousel steps
+        $('step-content').on('click', function () {
+            if ($("#companyForm").valid()) {
+                $('#carouselExampleCaptions').carousel('next');
+            }
+        });
+        $('step-content').on('click', function () {
+            if ($("#companyForm").valid()) {
+                $('#carouselExampleCaptions').carousel('next');
+            }
+        });
+        $('step-content').on('click', function () {
+            if ($("#companyForm").valid()) {
+                $('#carouselExampleCaptions').carousel('next');
+            }
+        });
+        $('step-content').on('click', function () {
+            if ($("#companyForm").valid()) {
+                $('#carouselExampleCaptions').carousel('next');
+            }
+        });
+        $('step-content').on('click', function () {
+            if ($("#companyForm").valid()) {
+                $('#carouselExampleCaptions').carousel('next');
+            }
+        });
+        $('step-content').on('click', function () {
+            if ($("#companyForm").valid()) {
+                $('#carouselExampleCaptions').carousel('next');
+            }
+        });
+        $('step-content').on('click', function () {
+            if ($("#companyForm").valid()) {
+                $('#carouselExampleCaptions').carousel('next');
+            }
+        });
+        $('step-content').on('click', function () {
+            if ($("#companyForm").valid()) {
+                $('#carouselExampleCaptions').carousel('next');
+            }
+        });
+        $('step-content').on('click', function () {
+            if ($("#companyForm").valid()) {
+                $('#carouselExampleCaptions').carousel('next');
+            }
+        });
+        $('step-content').on('click', function () {
+            if ($("#companyForm").valid()) {
+                $('#carouselExampleCaptions').carousel('next');
+            }
+        });
+    });
+</script>
+<script>
+    document.getElementById("card_number").addEventListener("input", function (e) {
+        this.value = this.value.replace(/\D/g, ""); // Remove non-numeric characters
+    });
+</script>
+<script>
+    // Restrict input to numbers and auto-format MM/YY for expiry date
+    document.getElementById("card_expiry").addEventListener("input", function (e) {
+        let value = e.target.value.replace(/\D/g, ""); // Remove non-numeric characters
+        if (value.length > 4) value = value.slice(0, 4);
+        if (value.length >= 3) value = value.replace(/(\d{2})(\d{0,2})/, "$1/$2"); // Format MM/YY
+        e.target.value = value;
+    });
+
+    // Restrict CVV input to numbers only
+    document.getElementById("cvv").addEventListener("input", function (e) {
+        this.value = this.value.replace(/\D/g, "").slice(0, 4); // Allow only numbers, max 4 digits
+    });
+</script>
+
+</body>
+
+</html>

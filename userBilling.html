@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.19/dist/sweetalert2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <title>Get Started</title>
+    <style>
+        .d__grid {
+            display: grid;
+        }
+
+        .global_input {
+            position: relative;
+        }
+
+        #name-error,
+        #email-error,
+        #password-error {
+            position: absolute;
+            bottom: -22px;
+            left: 0;
+            color: red !important;
+            font-size: 14px;
+        }
+       .get_started_info{
+            height: 100vh;
+            overflow: auto;
+        }
+
+        @media screen and (max-width: 992px) {
+
+            /* .get_started_im{
+                display: none;
+            } */
+            .n_none_500 {
+                display: none;
+            }
+
+            .d__grid {
+                display: unset;
+                border-radius: 0;
+            }
+
+            .get_info_main_content {
+                margin-top: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="" style="height: 100%;">
+        <div class="main_get_started global-light-gray-bg">
+            <div class="get_started_info global-bg-white d__grid">
+                <div class="main_logo" style="height: 0;"><img src="./assets/images/main-logo.png" alt="main-logo">
+                </div>
+                <form id="loginForm">
+                    <div class="get_info_main_content">
+                        <div class="text-center text-md-start">
+                            <h2 class="font_36 fw_600 global-black">User Billing</h2>
+                            <p class="font_16 fw_400 global-gray mt_12">Credit Card on file to use when purchasing
+                                products & services on the EmployerEase platform. (We will not share your Credit Card
+                                information with anyone)</p>
+                        </div>
+                        <div>
+                            <div class="global_input mt_32">
+                                <label class="font_14 fw_500 ln_20 w-100 global-dark-gray" for="email">Name on Card
+                                </label>
+                                <input class="mt-2" type="text" name="nameoncard" id="email" placeholder="Enter name"
+                                    required>
+                            </div>
+                            <div class="global_input position-relative w-100 mt_20">
+                                <label for="password" class="font_14 fw_500 ln_20 w-100 global-dark-gray">Card
+                                    Number</label>
+                                <input id="password" class="mt-2" type="password" name="cardNumber"
+                                    placeholder="Enter Card Number" required />
+
+                            </div>
+                            <div class="d-flex gap-4">
+                                <div class="global_input position-relative w-100 mt_20">
+                                    <label for="Expiry" class="font_14 fw_500 ln_20 w-100 global-dark-gray">Card Expiry
+                                        Date</label>
+                                    <input id="Expiry" class="mt-2" type="" name="expiry"
+                                        placeholder="Enter card expiry" />
+
+                                </div>
+                                <div class="global_input position-relative w-100 mt_20">
+                                    <label for="cvv" class="font_14 fw_500 ln_20 w-100 global-dark-gray">CVV</label>
+                                    <input maxlength="3" oninput="this.value=this.value.slice(0,3)" id="cvv" class="mt-2" type="number" name="CVV" placeholder="Enter cvv"
+                                         />
+                                </div>
+                            </div>
+                            <div class="global_input position-relative w-100 mt_20">
+                                <label for="sameAddress" class="font_14 fw_500 ln_20 w-100 global-dark-gray">Is the
+                                    billing
+                                    address same as mailing address?</label>
+                                <select class="custom-select mt-2" name="online_payment" id="sameAddress">
+                                    <option value="" selected disabled>Please Select</option>
+                                    <option value="">Yes</option>
+                                    <option value="both">No</option>
+                                </select>
+                            </div>
+
+                            <div class="global_input position-relative w-100 mt_20">
+                                <label for="BillingAddress" class="font_14 fw_500 ln_20 w-100 global-dark-gray">Billing
+                                    Address</label>
+                                <input id="BillingAddress" class="mt-2" type="text" name=""
+                                    placeholder="Enter your address" />
+                            </div>
+                            <div class="global_input position-relative w-100 mt_20">
+                                <label for="StreetAddress" class="font_14 fw_500 ln_20 w-100 global-dark-gray">Street
+                                    Address</label>
+                                <input id="StreetAddress" class="mt-2" type="text" name=""
+                                    placeholder="Enter your address" />
+                            </div>
+                            <div class="global_input position-relative w-100 mt_20">
+                                <label for="zipp" class="font_14 fw_500 ln_20 w-100 global-dark-gray">State/City
+                                    Zip</label>
+                                <input id="zipp" class="mt-2" type="text" name="" placeholder="Enter position" />
+                            </div>
+                        </div>
+
+                        <button type="submit" class="form_next_btn mt_24 mb-4" id="next1">Pay Now</button>
+                    </div>
+                </form>
+            </div>
+            <div class="n_none_500"><img class="get_started_im h_50vh_sm" width="100%"
+                    src="./assets/images/employer-ease-pics/billingmockup.png" alt="">
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- Include jQuery and jQuery Validation Plugin -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.toggle-password')?.forEach(item => {
+                item.addEventListener('click', function () {
+                    let input = document.querySelector(this.getAttribute('toggle'));
+                    let icon = this.querySelector('.eye-icon');
+                    if (input?.getAttribute('type') === 'password') {
+                        input?.setAttribute('type', 'text'); // Show password
+                        icon?.setAttribute('src',
+                            'assets/images/icons/open-eye.svg'
+                        ); // Show open eye image
+                    } else {
+                        input?.setAttribute('type', 'password'); // Hide password
+                        icon?.setAttribute('src',
+                            'assets/images/icons/close-eye.svg'
+                        ); // Show closed eye image
+                    }
+                });
+            });
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#loginForm").validate({
+                rules: {
+                    nameoncard: {
+                        required: true,
+                        email: true
+                    },
+                    cardNumber: {
+                        required: true,
+                    },
+                    // expiry: {
+                    //     required: true,
+                    // },
+                    // CVV: {
+                    //     required: true,
+                    // }
+                },
+                messages: {
+                    nameoncard: {
+                        required: "Please enter your name on the card",
+                        email: "Please enter your name on the card"
+                    },
+                    cardNumber: {
+                        required: "Please enter your card number",
+                    },
+                    // expiry: {
+                    //     required: "Please enter your card expiry",
+                    // },
+                    // CVV: {
+                    //     required: "Please enter your CVV",
+                    // }
+                },
+                errorElement: "div",
+                errorPlacement: function (error, element) {
+                    error.addClass("text-danger mt-1"); // Customize error styling
+                    error.insertAfter(element); // Place error after each field
+                },
+                submitHandler: function (form) {
+                    form.submit(); // Submit the form if validation passes
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
