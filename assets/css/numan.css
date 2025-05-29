@@ -394,13 +394,29 @@ table thead{
   width: fit-content;
   color: #027A48;
 }
-    .network_crd_wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        gap: 20px;
-    }
+.network_crd_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+.Leaderboard__data_wrapper{
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+.Leaderboard__data_wrapper:hover{
+  background-color: #EBF3F6;
+}
+.Leaderboard__data_wrapper img{
+  border-radius: 50px;
+}
 @media screen and (max-width: 992px) {
   .main__over_scroe_info {
     grid-template-columns: 1fr;
