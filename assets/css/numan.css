@@ -417,6 +417,161 @@ table thead{
 .Leaderboard__data_wrapper img{
   border-radius: 50px;
 }
+.banking_interface__cards .cardz{
+  border: 0 !important;
+  border-radius: 12px !important;
+  background-color: white;
+  padding: 20px;
+  color: #24282E;
+}
+.banking_interface__cards .cardz:hover{
+  color: white;
+  background-color: #3684A4;
+}
+.banking_interface__cards .cardz p{
+  color: #24282E !important;
+}
+/* .banking_interface__cards .cardz:hover .cardz
+h2,p,span{
+    color: white !important;
+} */
+.banking_interface__cards canvas{
+  width: 88px !important;
+  height: 70px !important;
+}
+.banking_interface__cards .cardz span{
+  color: #727A90 !important;
+}
+
+    /* ... (Your general cardz, font_16, etc. CSS) ... */
+
+    /* --- Card Theme: PROFIT (Green/Teal) --- */
+    .cardz.profit {
+       
+        color: black; /* Default text color for the entire card */
+      
+        transition: all 0.3s ease; /* Smooth transition for hover effects */
+    }
+    /* Default colors for elements INSIDE profit card */
+    .cardz.profit h5,
+    .cardz.profit h2,
+    .cardz.profit p {
+        color: black; /* Main text is white */
+    }
+ 
+    .cardz.profit .card-arrow path {
+        fill: #2B7E1B; /* Arrow fill color is white on profit cards */
+    }
+
+
+    /* --- Card Theme: LOSS (Red) --- */
+    .cardz.loss {
+        
+        color: bla; /* Default text color for the entire card */
+
+        transition: all 0.3s ease;
+    }
+    /* Default colors for elements INSIDE loss card */
+    .cardz.loss h5,
+    .cardz.loss h2,
+    .cardz.loss p {
+        color: black; /* Main text is white */
+    }
+
+    .cardz.loss .card-arrow path {
+        fill: #fff; /* Arrow fill color is white on loss cards */
+    }
+
+
+    /* --- Default (Non-Themed) Card Text Colors (if you had any white cards) --- */
+    /* This section defines default colors for text if the card DOES NOT have .profit or .loss */
+    .cardz:not(.profit):not(.loss) h5,
+    .cardz:not(.profit):not(.loss) h2,
+    .cardz:not(.profit):not(.loss) p {
+        color: #333; /* Dark grey for normal text on white cards */
+    }
+     .value-text {
+        color: #727A90 !important; /* Your desired grey for the span on white cards */
+    }
+
+
+
+    /* --- HOVER EFFECTS (Applies to ALL card types) --- */
+    /* When ANY .cardz is hovered, make ALL its main text and specific span white */
+    .cardz:hover h5,
+    .cardz:hover h2,
+    .cardz:hover p,
+    .cardz:hover .value-text { /* Target the specific span class if you used it */
+        color: #fff !important;
+    }
+
+    /* When ANY .cardz is hovered, make its SVG arrow path fill white */
+    /* .cardz:hover .card-arrow path {
+        fill: #fff !important;
+    } */
+
+    /* Optional: Hover effects for the card background themselves */
+
+    /* ... (Rest of your CSS, e.g., for .chart-container, .d-flex, etc.) ... */
+ .invoice__graph {
+            width: 300px; /* Adjust width as needed */
+            height: 200px; /* Adjust height as needed */
+            position: relative;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .invoice__graph .total-owed {
+            position: absolute;
+            top: 50%; /* Adjust as needed */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2.5em; /* Adjust size */
+            font-weight: bold;
+            color: #333;
+        }
+        .invoice__graph .total-owed-label {
+            position: absolute;
+            top: calc(50% + 40px); /* Adjust as needed */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 0.9em;
+            color: #777;
+        }
+        .legend {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 0 10px;
+        }
+        .legend-color {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+        .legend-color.overdue { background-color: #3e8acc; /* Example blue */ }
+        .legend-color.deposited { background-color: #55a2d8; /* Example lighter blue */ }
+        .legend-color.not-deposited { background-color: #d3d3d3; /* Example light gray */ }
+    .wrapper1 {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 20px; /* Optional: spacing between divs */
+}
+
+.first__wrap {
+  background-color: lightblue;
+}
+
+.wrapper2{
+ display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px; /* Optional: spacing between divs */
+}
+
 @media screen and (max-width: 992px) {
   .main__over_scroe_info {
     grid-template-columns: 1fr;
@@ -438,6 +593,15 @@ table thead{
   .network_crd_wrapper{
     grid-template-columns: 1fr 1fr;
   }
+  .wrapper1 {
+    grid-template-columns: 1fr;
+  }
+  .wrapper2{
+    grid-template-columns: 1fr;
+  }
+  .invoice__graph{
+    height: 250px;
+  }
 }
 @media screen and (max-width: 900px) {
   .main__listing_video_wrapper {
@@ -447,6 +611,9 @@ table thead{
   .video-container {
     width: 100% !important;
     max-width: unset;
+  }
+  .wrapper1{
+    display: block;
   }
 }
 @media screen and (max-width: 500px) {
