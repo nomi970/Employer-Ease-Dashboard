@@ -12,7 +12,7 @@
 }
 
 body {
-    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-family: Plus Jakarta Sans !important;
     font-style: normal;
 }
 
@@ -111,7 +111,9 @@ p {
 .font_24 {
     font-size: 24px;
 }
-
+.font_24 {
+    font-size: 28px;
+}
 .font_36 {
     font-size: 36px;
 }
@@ -180,7 +182,9 @@ p {
 .main_logo {
     padding: 32px;
 }
-
+.radius_32{
+    border-radius: 32px;
+}
 .get_started_info {
     border-radius: 0px 64px 64px 0px;
 }

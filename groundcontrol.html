@@ -264,6 +264,22 @@
         *::-webkit-scrollbar-thumb:hover {
             background-color: #555;
         }
+
+        .modal-backdrop.show {
+            z-index: 2147483646 !important;
+        }
+
+        .modal.show {
+            z-index: 2147483647 !important;
+        }
+
+        .modal-dialog {
+            max-width: 672px !important;
+        }
+
+        .modal-body {
+            padding: 24px !important;
+        }
     </style>
 </head>
 
@@ -4026,7 +4042,185 @@
     </section>
 
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <div class="modal fade" id="modal1" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="d-flex flex-column align-items-center gap-2" bis_skin_checked="1">
+                        dd <div class="d-flex justify-content-center align-items-start position-relative w-100"
+                            bis_skin_checked="1">
+                            <img src="./assets/images/employer-ease-pics/animatedCirclewRocket.svg" alt="">
+                        </div>
+                        <h2 class="fs_24 fw_600 j_family lh_32 mt-2">Welcome to EmployerEase</h2>
+                        <div>
+                            <p class="fs_18 fw_400 j_family lh_30 secondary-gray text-center">We’re thrilled to have you
+                                aboard.</p>
+                            <p class="fs_18 fw_400 j_family lh_30 secondary-gray text-center">You’ve just taken a bold
+                                step by joining EmployerEase, the home of the EaaS | OS – Entrepreneurship as a Service
+                                Operating System. This isn’t just software; it’s a purpose-built system designed from
+                                the ground up to guide entrepreneurs like you from idea to operating - with confidence,
+                                clarity, and ease.</p>
+                            <p class="fs_18 fw_400 j_family lh_30 secondary-gray text-center">Whether you're starting
+                                from scratch or scaling something you’ve already built, the EaaS | OS will walk you
+                                through each essential stage of your journey. From formation and legal filings to
+                                growth, automation, and beyond, every step has been carefully mapped out to help you
+                                build the foundation and infrastructure needed to thrive in today’s fast-paced business
+                                world.</p>
+                            <p class="fs_18 fw_400 j_family lh_30 secondary-gray text-center">You don’t have to figure
+                                it all out alone we’ll guide you one mission at a time.</p>
+                            <p class="fs_18 fw_400 j_family lh_30 secondary-gray text-center">Welcome to the launchpad.
+                                Let’s build your future, together.</p>
+                            <p class="fs_18 fw_600 j_family lh_30 secondary-gray text-center mt-3">— The EmployerEase
+                                Team</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal fade" id="modal2" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img width="65" src="./assets/images/employer-ease-pics/popup_avatar.svg" alt="">
+                    <h2 class="fs_24 fw_600 j_family lh_32 mt-3">Say Hello to Bizzy Ai - Your Personal AI Business
+                        CoPilot!</h2>
+                    <div>
+                        <p class="fs_18 fw_400 j_family lh_30 secondary-gray text-center mt-3">We’d like to introduce
+                            you to
+                            Bizzy, your always-ready, always-reliable AI assistant built right into the EmployerEase
+                            platform.
+                            Bizzy is here to guide you, answer questions, and keep you on track—every step of the way.
+                            Whether you're launching your business, managing day-to-day tasks, or growing into new
+                            territory, Bizzy is powered by the full EaaS | OS and trained to help you navigate the
+                            entrepreneurial journey with ease.
+                            Confused about your next move? Need help with a form? Want to explore new growth tools? Just
+                            ask Bizzy.
+                            This isn’t just a chatbot. It’s your personal business brain - working for you 24/7.
+                            Let’s make entrepreneurship easier. Bizzy’s ready when you are.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="modal fade" id="modal3" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img width="65" src="./assets/images/employer-ease-pics/popup_avatar.svg" alt="">
+                    <h2 class="fs_24 fw_600 j_family lh_32 mt-3">Introducing ABPS - The Engine Behind Your
+                        Entrepreneurial Journey</h2>
+                    <div>
+                        <p class="fs_18 fw_400 j_family lh_30 secondary-gray text-center mt-3">At the heart of
+                            EmployerEase lies the ABPS | Adaptive Business Progression System the powerful engine that
+                            drives your entire experience inside the EaaS | OS.
+                            This isn’t your average checklist. The ABPS is an intelligent, responsive system that adapts
+                            to your pace, tracks your progress, and evolves with you -guiding you from idea to growth
+                            with clarity and precision.
+                            You’ll see it in action through the ABPS Tracker and Calendar, your interactive command
+                            center for all things progress. Every step you take updates your visual roadmap in real
+                            time. You’ll get smart recommendations based on your current stage, suggested next steps,
+                            and reminders that keep you aligned without overwhelming you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div class="modal fade" id="modal4" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img width="65" src="./assets/images/employer-ease-pics/popup_avatar.svg" alt="">
+                    <h2 class="fs_24 fw_600 j_family lh_32 mt-3">Welcome to progress, powered by ABPS. </h2>
+                    <div>
+                        <p class="fs_18 fw_400 j_family lh_30 secondary-gray text-center mt-3">Just imagine if your
+                            business checklist became an AI Agent - one that doesn’t just tell you what to do, but
+                            learns with you, adapts to your needs, and shows you the path forward like never before.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5 -->
+    <div class="modal fade" id="modal5" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img width="65" src="./assets/images/employer-ease-pics/popup_avatar.svg" alt="">
+                    <h2 class="fs_24 fw_600 j_family lh_32 mt-3">Kickstart Your Ground Control Journey</h2>
+                    <div>
+                        <p class="fs_18 fw_400 j_family lh_30 secondary-gray text-center mt-3 mb-3">You are now ready to
+                            begin the Ground Control Journey and create your verified profile and create your business
+                            plan.</p>
+                    </div>
+                    <div class="p-4 border1 border-r-8 h-100 relative" style="max-width: 335px; margin: 0 auto;">
+                        <div class="d-flex flex-column justify-content-between h-100 gap-3 FirstText"
+                            bis_skin_checked="1">
+                            <div class="d-flex justify-content-center align-items-center flex-column gap-3"
+                                bis_skin_checked="1">
+                                <div class="Round-No" style="background-color: #F9FAFB !important;">
+                                    <p class="fs_32 fw_600 lh_38 j_family">1</p>
+                                    <p class="fs_12 fw_500 j_family tertiary-black">step</p>
+                                </div>
+                                <h3 class="fs_20 fw_600 j_family lh_30 tertiary-black text-nowrap">
+                                    Welcome to EmployerEase</h3>
+
+                                <div id="labelContainer" class="d-flex gap-3 flex-column w-100" bis_skin_checked="1">
+                                    <label id="OpenBusine" for="checkbox-0-0" class="custom-label w-100"
+                                        style="min-width: 240px; width:100%;">
+                                        <div class="d-flex gap-3 justify-content-between w-100 align-items-center"
+                                            bis_skin_checked="1">
+                                            <p class="fs_14 tertiary-black fw_400 whitespace-nowrap w-100 text-start">
+                                                New User Onboarding</p>
+                                        </div>
+                                    </label>
+                                    <label for="checkbox-0-1" class="custom-label w-100"
+                                        style="min-width: 240px; width:100%;">
+                                        <div class="d-flex gap-3 justify-content-between w-100 align-items-center"
+                                            bis_skin_checked="1">
+                                            <p class="fs_14 tertiary-black fw_400 whitespace-nowrap w-100 text-start">
+                                                EaaS Walkthrough</p>
+                                        </div>
+                                    </label>
+                                    <label for="checkbox-0-1" class="custom-label w-100"
+                                        style="min-width: 240px; width:100%;">
+                                        <div class="d-flex gap-3 justify-content-between w-100 align-items-center"
+                                            bis_skin_checked="1">
+                                            <p class="fs_14 tertiary-black fw_400 whitespace-nowrap w-100 text-start">
+                                                Activate ABPS Milestone Tracker and Calendar</p>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
     <!--------------------------------- Jquery --------------------------->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
@@ -4440,8 +4634,38 @@
         })
     </script>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const modals = [
+                new bootstrap.Modal(document.getElementById('modal1')),
+                new bootstrap.Modal(document.getElementById('modal2')),
+                new bootstrap.Modal(document.getElementById('modal3')),
+                new bootstrap.Modal(document.getElementById('modal4')),
+                new bootstrap.Modal(document.getElementById('modal5'))
+            ];
 
+            let currentModal = 0;
 
+            function showNextModal() {
+                if (currentModal < modals.length) {
+                    modals[currentModal].show();
+                }
+            }
+
+            function setupModalEvents() {
+                modals.forEach((modalInstance, index) => {
+                    const modalElement = modalInstance._element;
+                    modalElement.addEventListener('hidden.bs.modal', () => {
+                        currentModal++;
+                        showNextModal();
+                    });
+                });
+            }
+
+            setupModalEvents();
+            showNextModal();
+        });
+    </script>
 </body>
 
 </html>

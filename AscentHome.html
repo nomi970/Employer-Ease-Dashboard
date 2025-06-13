@@ -33,7 +33,33 @@
             top: 18px;
             left: 20%;
         }
+        .custom-label {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            display: block;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
 
+        /* Styling when checkbox is checked */
+        .custom-label.checked_lable {
+            background-color: #41C887;
+            color: white !important;
+            border-color: #41C887;
+        }
+        .custom-label.checked_lable div p{
+            color: white !important;
+        }
+        .custom-label.checked:focus {
+            background-color: transparent;
+        }
+        #labelContainer{
+            width: 100% !important;
+        }
+        .label-text{
+            max-width: unset;
+        }
         @media (max-width: 520px) {
             .location-card {
                 left: 0px;
@@ -956,7 +982,7 @@
                                                 </button>
                                             </div>
 
-                                            <div class="stepper-container d-flex flex-wrap flex-md-nowrap justify-content-start"
+                                            <!-- <div class="stepper-container d-flex flex-wrap flex-md-nowrap justify-content-start"
                                                 style="gap:30%">
                                                 <div class="stepper-line d-flex justify-content-center ms-4"
                                                     style="max-width: 30%;">
@@ -978,11 +1004,11 @@
                                                             alt="">
                                                     </div>
                                                 </button>
-                                            </div>
+                                            </div> -->
                                         </div>
                                         <div class="position-relative">
                                             <div id="circularProgress"></div>
-                                            <div style="position: absolute; right:24%;top:30%">
+                                            <div style="position: absolute; right:28%;top:38%">
                                                 <img src="./assets/images/employer-ease-pics/circle animator.svg"
                                                     alt="">
                                             </div>
@@ -1109,6 +1135,926 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="step-display d-none">Step: 0 / 9</div>
+                                    <div class="bg-white border-r-8  p-3 mt-4">
+                                        <div class="row g-4">
+                                            <div class="col-12 col-md-6 col-lg-4">
+                                                <div class="p-4 border1 border-r-8 h-100 myCard relative" data-step="1">
+                                                    <div
+                                                        class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
+                                                        <div
+                                                            class="d-flex justify-content-center align-items-center flex-column gap-3">
+                                                            <div class="Round-No">
+                                                                <p class="fs_32 fw_600 lh_38 j_family">1</p>
+                                                                <p class="fs_12 fw_500 j_family tertiary-black">step</p>
+                                                            </div>
+                                                            <h3
+                                                                class="fs_20 fw_600 j_family lh_30 tertiary-black text-nowrap">
+                                                                Website</h3>
+                                                            <ul
+                                                                class="d-flex justify-content-center  flex-column gap-2">
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    Complete Onboarding
+                                                                </li>
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    Complete WalkThrough
+                                                                </li>
+                                                            </ul>
+
+                                                        </div>
+                                                        <button
+                                                            class="whole_button main_color bg_light_main border_light w-100 d-flex justify-content-center myButton">Begin</button>
+                                                    </div>
+                                                    <div class="SecondText d-none h-100">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between h-100 flex-column gap-2">
+                                                            <!-- <img width="88px" height="88px"
+                                                                src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                                alt=""> -->
+                                                            <div id="labelContainer" class="d-flex gap-3 flex-column">
+                                                                <!-- <img class="mx-auto" height="88px" width="88px"
+                                                                    src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                                    alt=""> -->
+                                                                <h3
+                                                                    class="fs_18 fw_600 j_family lh_28 tertiary-black text-center">
+                                                                    Step 1: Website </h3>
+                                                                <label id="OpenBusine" for="checkbox1"
+                                                                    class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Google Analytics</p>
+                                                                        <input id="checkbox1"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                                <label for="checkbox2" class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Website Traffic Monitoring</p>
+                                                                        <input id="checkbox2"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                                <label for="checkbox3" class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            SEO Audit Tool</p>
+                                                                        <input id="checkbox3"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                                 <label for="checkbox4" class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Setup Conversion Tracking</p>
+                                                                        <input id="checkbox4"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                                <label for="checkbox5" class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Page Speed & Mobile Optimization</p>
+                                                                        <input id="checkbox5"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                            </div>
+                                                            <button id="submitBtn"
+                                                                class="mt-2 whole_button w-100 d-flex justify-content-center bg_light_main border1 main_color progress_Button">
+                                                                Complete
+                                                            </button>
+
+                                                            <!-- =============Modal============ -->
+                                                            <div id="myModal"
+                                                                class="p-3 d-none bg-white border-r-8 d-flex flex-column justify-content-between align-items-center gap-3 border appearedModal">
+                                                                <img class="img-fluid" height='44px' width='44px'
+                                                                    src="./assets/images/employer-ease-pics/animatedCirclewRocket.svg"
+                                                                    alt="">
+                                                                <div>
+                                                                    <h3 class="fs_14 fw_600 j_family lh_22 text-center">
+                                                                        Skip Steps?</h3>
+                                                                    <p
+                                                                        class="fs_12 fw_400 j_family tertiary-black lh_22 text-center">
+                                                                        Are you sure you want to proceed without
+                                                                        completing the previous
+                                                                        step?</p>
+                                                                </div>
+                                                                <div class="d-flex gap-3 w-100">
+                                                                    <button
+                                                                        class="d-flex justify-content-center py-2 w-100 whole_button border1 bg-transparent cancelButton">No</button>
+                                                                    <button
+                                                                        class="py-2 d-flex justify-content-center w-100 whole_button text-white completeButton">Yes</button>
+                                                                </div>
+                                                            </div>
+                                                            <!-- ============Modal End========== -->
+
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="d-flex gap-3 flex-column align-items-center lastText d-none">
+                                                        <img class="mx-auto" height="88px" width="88px"
+                                                            src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                            alt="">
+                                                        <h3 class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                            Business Planning</h3>
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <p class="main_color fs_16 lh_22 j_family text-center">
+                                                                Completed</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6 col-lg-4">
+                                                <div class="p-4 border1 border-r-8 h-100 myCard relative" data-step="2">
+                                                    <div
+                                                        class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
+                                                        <div
+                                                            class="d-flex justify-content-center align-items-center flex-column gap-3">
+                                                            <div class="Round-No">
+                                                                <p class="fs_32 fw_600 lh_38 j_family">2</p>
+                                                                <p class="fs_12 fw_500 j_family tertiary-black">step</p>
+                                                            </div>
+                                                            <h3 class="fs_20 fw_600 j_family lh_30 tertiary-black">
+                                                                Social Media Analytics</h3>
+                                                            <ul
+                                                                class="d-flex justify-content-center  flex-column gap-2">
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    Business Planning
+                                                                </li>
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    Business Name Research
+                                                                </li>
+                                                            </ul>
+
+                                                        </div>
+                                                        <button
+                                                            class="whole_button main_color bg_light_main border_light w-100 d-flex justify-content-center myButton">Begin</button>
+                                                    </div>
+                                                    <div class="SecondText d-none h-100">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between h-100 flex-column gap-2">
+                                                            <!-- <img width="88px" height="88px"
+                                                                src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                                alt=""> -->
+                                                            <div id="labelContainer" class="d-flex gap-3 flex-column">
+                                                                <!-- <img class="mx-auto" height="88px" width="88px"
+                                                                    src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                                    alt=""> -->
+                                                                <h3
+                                                                    class="fs_18 fw_600 j_family lh_28 tertiary-black text-center">
+                                                                    Step 2: Social Media Analytics </h3>
+                                                                                                                                <label id="OpenBusines" for="checkbox6"
+                                                                    class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Business Planning</p>
+                                                                        <input id="checkbox6"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                                <label for="checkbox7" class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Business Name Research</p>
+                                                                        <input id="checkbox7"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                                  <label for="checkbox8" class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Best Time to Post % Hashtag Heatmap</p>
+                                                                        <input id="checkbox8"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                                 <label for="checkbox9" class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Competitor Benchmarking Setup</p>
+                                                                        <input id="checkbox9"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                                <label for="checkbox10" class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Influencer or Content ROI Tracking</p>
+                                                                        <input id="checkbox10"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                            </div>
+                                                            <button id="submitBtn"
+                                                                class="mt-2 whole_button w-100 d-flex justify-content-center bg_light_main border1 main_color progress_Button">
+                                                                Complete
+                                                            </button>
+
+                                                            <!-- =============Modal============ -->
+                                                            <div id="myModal"
+                                                                class="p-3 d-none bg-white border-r-8 d-flex flex-column justify-content-between align-items-center gap-3 border appearedModal">
+                                                                <img class="img-fluid" height='44px' width='44px'
+                                                                    src="./assets/images/employer-ease-pics/animatedCirclewRocket.svg"
+                                                                    alt="">
+                                                                <div>
+                                                                    <h3 class="fs_14 fw_600 j_family lh_22 text-center">
+                                                                        Skip Steps?</h3>
+                                                                    <p
+                                                                        class="fs_12 fw_400 j_family tertiary-black lh_22 text-center">
+                                                                        Are you sure you want to proceed without
+                                                                        completing the previous
+                                                                        step?</p>
+                                                                </div>
+                                                                <div class="d-flex gap-3 w-100">
+                                                                    <button
+                                                                        class="d-flex justify-content-center py-2 w-100 whole_button border1 bg-transparent cancelButton">No</button>
+                                                                    <button
+                                                                        class="py-2 d-flex justify-content-center w-100 whole_button text-white completeButton">Yes</button>
+                                                                </div>
+                                                            </div>
+                                                            <!-- ============Modal End========== -->
+
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="d-flex gap-3 flex-column align-items-center lastText d-none">
+                                                        <img class="mx-auto" height="88px" width="88px"
+                                                            src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                            alt="">
+                                                        <h3 class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                            Business Planning</h3>
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <p class="main_color fs_16 lh_22 j_family text-center">
+                                                                Completed</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6 col-lg-4">
+                                                <div class="p-4 border1 border-r-8 h-100 myCard relative" data-step="3">
+                                                    <div
+                                                        class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
+                                                        <div
+                                                            class="d-flex justify-content-center align-items-center flex-column gap-3">
+                                                            <div class="Round-No">
+                                                                <p class="fs_32 fw_600 lh_38 j_family">3</p>
+                                                                <p class="fs_12 fw_500 j_family tertiary-black">step</p>
+                                                            </div>
+                                                            <h3 class="fs_20 fw_600 j_family lh_30 tertiary-black">
+                                                                LinkedIn Analytics</h3>
+                                                            <ul
+                                                                class="d-flex justify-content-center  flex-column gap-2">
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    LLC Filling
+                                                                </li>
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    Registered Agents
+                                                                </li>
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    EIN
+                                                                </li>
+                                                            </ul>
+
+                                                        </div>
+                                                        <button
+                                                            class="whole_button main_color bg_light_main border_light w-100 d-flex justify-content-center myButton">Begin</button>
+                                                    </div>
+                                                    <div class="SecondText d-none h-100">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between h-100 flex-column gap-2">
+                                                            <!-- <img width="88px" height="88px"
+                                                                src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                                alt=""> -->
+                                                            <div id="labelContainer" class="d-flex gap-3 flex-column">
+                                                                <!-- <img class="mx-auto" height="88px" width="88px"
+                                                                    src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                                    alt=""> -->
+                                                                <h3
+                                                                    class="fs_18 fw_600 j_family lh_28 tertiary-black text-center">
+                                                                   Step 3: LinkedIn Analytics</h3>
+                                                                <label id="OpenBusines" for="checkbox11"
+                                                                    class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                           Connect LinkedIn Profile/Page</p>
+                                                                        <input id="checkbox11"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                                <label for="checkbox12" class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Analyze Reach, Impressions, and Engagement
+                                                                        </p>
+                                                                        <input id="checkbox12"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                                <label for="checkbox13" class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Track Profile Visits and Inbound Leads</p>
+                                                                        <input id="checkbox13"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                                 <label for="checkbox14" class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Content Performance Tracking</p>
+                                                                        <input id="checkbox14"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                                 <label for="checkbox15" class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Suggested Content Calendar or Automation Link</p>
+                                                                        <input id="checkbox15"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                            </div>
+                                                            <button id="submitBtn"
+                                                                class="mt-2 whole_button w-100 d-flex justify-content-center bg_light_main border1 main_color progress_Button">
+                                                                Complete
+                                                            </button>
+
+                                                            <!-- =============Modal============ -->
+                                                            <div id="myModal"
+                                                                class="p-3 d-none bg-white border-r-8 d-flex flex-column justify-content-between align-items-center gap-3 border appearedModal">
+                                                                <img class="img-fluid" height='44px' width='44px'
+                                                                    src="./assets/images/employer-ease-pics/animatedCirclewRocket.svg"
+                                                                    alt="">
+                                                                <div>
+                                                                    <h3 class="fs_14 fw_600 j_family lh_22 text-center">
+                                                                        Skip Steps?</h3>
+                                                                    <p
+                                                                        class="fs_12 fw_400 j_family tertiary-black lh_22 text-center">
+                                                                        Are you sure you want to proceed without
+                                                                        completing the previous
+                                                                        step?</p>
+                                                                </div>
+                                                                <div class="d-flex gap-3 w-100">
+                                                                    <button
+                                                                        class="d-flex justify-content-center py-2 w-100 whole_button border1 bg-transparent cancelButton">No</button>
+                                                                    <button
+                                                                        class="py-2 d-flex justify-content-center w-100 whole_button text-white completeButton">Yes</button>
+                                                                </div>
+                                                            </div>
+                                                            <!-- ============Modal End========== -->
+
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="d-flex gap-3 flex-column align-items-center lastText d-none">
+                                                        <img class="mx-auto" height="88px" width="88px"
+                                                            src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                            alt="">
+                                                        <h3 class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                            Formation</h3>
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <p class="main_color fs_16 lh_22 j_family text-center">
+                                                                Completed</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6 col-lg-4">
+                                                <div class="p-4 border1 border-r-8 h-100 myCard relative" data-step="4">
+                                                    <div
+                                                        class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
+                                                        <div
+                                                            class="d-flex justify-content-center align-items-center flex-column gap-3">
+                                                            <div class="Round-No">
+                                                                <p class="fs_32 fw_600 lh_38 j_family">4</p>
+                                                                <p class="fs_12 fw_500 j_family tertiary-black">step</p>
+                                                            </div>
+                                                            <h3 class="fs_20 fw_600 j_family lh_30 tertiary-black">
+                                                                Financial Performance</h3>
+                                                            <ul
+                                                                class="d-flex justify-content-center  flex-column gap-2">
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    Domain
+                                                                </li>
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    Logo & Branding Kits
+                                                                </li>
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    Website
+                                                                </li>
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    Print Shop
+                                                                </li>
+                                                            </ul>
+
+                                                        </div>
+                                                        <button
+                                                            class="whole_button main_color bg_light_main border_light w-100 d-flex justify-content-center myButton">Begin</button>
+                                                    </div>
+                                                    <div class="SecondText d-none h-100">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between h-100 flex-column gap-2">
+                                                            <!-- <img width="88px" height="88px"
+                                                                src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                                alt=""> -->
+                                                            <div id="labelContainer" class="d-flex gap-3 flex-column">
+                                                                <!-- <img class="mx-auto" height="88px" width="88px"
+                                                                    src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                                    alt=""> -->
+                                                                <h3
+                                                                    class="fs_18 fw_600 j_family lh_28 tertiary-black text-center">
+                                                                    Step 4: Financial Performance </h3>
+                                                                <label id="OpenBusines" for="checkbox16"
+                                                                    class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Connect Accounting System</p>
+                                                                        <input id="checkbox16"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                                <label for="checkbox17" class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                           Set up Profit & Loss and Cash Flow Dashboards</p>
+                                                                        <input id="checkbox17"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                                <label for="checkbox18" class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                           Burn Rate & Runway Calculation</p>
+                                                                        <input id="checkbox18"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                                <label for="checkbox19" class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Monthly Recurring Revenue (MRR) & Churn Tracking</p>
+                                                                        <input id="checkbox19"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                                <label for="checkbox20" class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Auto-flag Budget Deviations or Risks</p>
+                                                                        <input id="checkbox20"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                            </div>
+                                                            <button id="submitBtn"
+                                                                class="mt-2 whole_button w-100 d-flex justify-content-center bg_light_main border1 main_color progress_Button">
+                                                                Complete
+                                                            </button>
+
+                                                            <!-- =============Modal============ -->
+                                                            <div id="myModal"
+                                                                class="p-3 d-none bg-white border-r-8 d-flex flex-column justify-content-between align-items-center gap-3 border appearedModal">
+                                                                <img class="img-fluid" height='44px' width='44px'
+                                                                    src="./assets/images/employer-ease-pics/animatedCirclewRocket.svg"
+                                                                    alt="">
+                                                                <div>
+                                                                    <h3 class="fs_14 fw_600 j_family lh_22 text-center">
+                                                                        Skip Steps?</h3>
+                                                                    <p
+                                                                        class="fs_12 fw_400 j_family tertiary-black lh_22 text-center">
+                                                                        Are you sure you want to proceed without
+                                                                        completing the previous
+                                                                        step?</p>
+                                                                </div>
+                                                                <div class="d-flex gap-3 w-100">
+                                                                    <button
+                                                                        class="d-flex justify-content-center py-2 w-100 whole_button border1 bg-transparent cancelButton">No</button>
+                                                                    <button
+                                                                        class="py-2 d-flex justify-content-center w-100 whole_button text-white completeButton">Yes</button>
+                                                                </div>
+                                                            </div>
+                                                            <!-- ============Modal End========== -->
+
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="d-flex gap-3 flex-column align-items-center lastText d-none">
+                                                        <img class="mx-auto" height="88px" width="88px"
+                                                            src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                            alt="">
+                                                        <h3 class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                            Digital Presence</h3>
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <p class="main_color fs_16 lh_22 j_family text-center">
+                                                                Completed</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6 col-lg-4">
+                                                <div class="p-4 border1 border-r-8 h-100 myCard relative" data-step="5">
+                                                    <div
+                                                        class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
+                                                        <div
+                                                            class="d-flex justify-content-center align-items-center flex-column gap-3">
+                                                            <div class="Round-No">
+                                                                <p class="fs_32 fw_600 lh_38 j_family">5</p>
+                                                                <p class="fs_12 fw_500 j_family tertiary-black">step</p>
+                                                            </div>
+                                                            <h3 class="fs_20 fw_600 j_family lh_30 tertiary-black">
+                                                                Accounting Analytics</h3>
+                                                            <ul
+                                                                class="d-flex justify-content-center  flex-column gap-2">
+
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    Setup and Connect your Business Communication
+                                                                    Channels to the platform
+                                                                </li>
+                                                            </ul>
+
+                                                        </div>
+                                                        <button
+                                                            class="whole_button main_color bg_light_main border_light w-100 d-flex justify-content-center myButton">Begin</button>
+                                                    </div>
+                                                    <div class="SecondText d-none h-100">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between h-100 flex-column gap-2">
+                                                            <!-- <img width="88px" height="88px"
+                                                                src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                                alt=""> -->
+                                                            <div id="labelContainer" class="d-flex gap-3 flex-column">
+                                                                <!-- <img class="mx-auto" height="88px" width="88px"
+                                                                    src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                                    alt=""> -->
+                                                                <h3
+                                                                    class="fs_18 fw_600 j_family lh_28 tertiary-black text-center">
+                                                                    Step 5: Accounting Analytics </h3>
+                                                                <label id="OpenBusines" for="checkbox21"
+                                                                    class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Reconcile Accounts & Categorize Expenses</p>
+                                                                        <input id="checkbox21"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                                <label id="OpenBusines" for="checkbox22"
+                                                                    class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Identify Top Expense Categories & Trends</p>
+                                                                        <input id="checkbox22"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                                <label id="OpenBusines" for="checkbox23"
+                                                                    class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Set up Smart Alerts - Overbudget, Duplicate Charges</p>
+                                                                        <input id="checkbox23"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                                 <label id="OpenBusines" for="checkbox24"
+                                                                    class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Create Monthly Financial Review Checklist</p>
+                                                                        <input id="checkbox24"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                                <label id="OpenBusines" for="checkbox25"
+                                                                    class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Year-End Tax Planning Snapshopt</p>
+                                                                        <input id="checkbox25"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+
+                                                            </div>
+                                                            <button id="submitBtn"
+                                                                class="mt-2 whole_button w-100 d-flex justify-content-center bg_light_main border1 main_color progress_Button">
+                                                                Complete
+                                                            </button>
+
+                                                            <!-- =============Modal============ -->
+                                                            <div id="myModal"
+                                                                class="p-3 d-none bg-white border-r-8 d-flex flex-column justify-content-between align-items-center gap-3 border appearedModal">
+                                                                <img class="img-fluid" height='44px' width='44px'
+                                                                    src="./assets/images/employer-ease-pics/animatedCirclewRocket.svg"
+                                                                    alt="">
+                                                                <div>
+                                                                    <h3 class="fs_14 fw_600 j_family lh_22 text-center">
+                                                                        Skip Steps?</h3>
+                                                                    <p
+                                                                        class="fs_12 fw_400 j_family tertiary-black lh_22 text-center">
+                                                                        Are you sure you want to proceed without
+                                                                        completing the previous
+                                                                        step?</p>
+                                                                </div>
+                                                                <div class="d-flex gap-3 w-100">
+                                                                    <button
+                                                                        class="d-flex justify-content-center py-2 w-100 whole_button border1 bg-transparent cancelButton">No</button>
+                                                                    <button
+                                                                        class="py-2 d-flex justify-content-center w-100 whole_button text-white completeButton">Yes</button>
+                                                                </div>
+                                                            </div>
+                                                            <!-- ============Modal End========== -->
+
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="d-flex gap-3 flex-column align-items-center lastText d-none">
+                                                        <img class="mx-auto" height="88px" width="88px"
+                                                            src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                            alt="">
+                                                        <h3 class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                            Communication</h3>
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <p class="main_color fs_16 lh_22 j_family text-center">
+                                                                Completed</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6 col-lg-4">
+                                                <div class="p-4 border1 border-r-8 h-100 myCard relative" data-step="6">
+                                                    <div
+                                                        class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
+                                                        <div
+                                                            class="d-flex justify-content-center align-items-center flex-column gap-3">
+                                                            <div class="Round-No">
+                                                                <p class="fs_32 fw_600 lh_38 j_family">6</p>
+                                                                <p class="fs_12 fw_500 j_family tertiary-black">step</p>
+                                                            </div>
+                                                            <h3 class="fs_20 fw_600 j_family lh_30 tertiary-black">
+                                                                HR Analytics</h3>
+                                                            <ul
+                                                                class="d-flex justify-content-center  flex-column gap-2">
+                                                                <li style="list-style: disc;"
+                                                                    class="fs_16 j_family tertiary-black lh_26">
+                                                                    Setup and connect the your business clouds for
+                                                                    storage and to organize and manage your documents,
+                                                                    images, and files
+                                                                </li>
+
+                                                            </ul>
+
+                                                        </div>
+                                                        <button
+                                                            class="whole_button main_color bg_light_main border_light w-100 d-flex justify-content-center myButton">Begin</button>
+                                                    </div>
+                                                    <div class="SecondText d-none h-100">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between h-100 flex-column gap-2">
+                                                            <!-- <img width="88px" height="88px"
+                                                                src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                                alt=""> -->
+                                                            <div id="labelContainer" class="d-flex gap-3 flex-column">
+                                                                <!-- <img class="mx-auto" height="88px" width="88px"
+                                                                    src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                                    alt=""> -->
+                                                                <h3
+                                                                    class="fs_18 fw_600 j_family lh_28 tertiary-black text-center">
+                                                                   Step 6: HR Analytics </h3>
+                                                                <label id="OpenBusines" for="checkbox26"
+                                                                    class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                           Connect HR/Payroll Tools
+                                                                        </p>
+                                                                        <input id="checkbox26"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                                 <label id="OpenBusines" for="checkbox27"
+                                                                    class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                           Monitor Employee Productivity & Timesheets
+                                                                        </p>
+                                                                        <input id="checkbox27"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                                <label id="OpenBusines" for="checkbox28"
+                                                                    class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                           Track Hiring Pipeline & Onboarding Metrics
+                                                                        </p>
+                                                                        <input id="checkbox28"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                                 <label id="OpenBusines" for="checkbox29"
+                                                                    class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                           Run HR Compliance Health check
+                                                                        </p>
+                                                                        <input id="checkbox29"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                                <label id="OpenBusines" for="checkbox30"
+                                                                    class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                           Monitor Retention Rates and Engagement Scores
+                                                                        </p>
+                                                                        <input id="checkbox30"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                            </div>
+                                                            <button id="submitBtn"
+                                                                class="mt-2 whole_button w-100 d-flex justify-content-center bg_light_main border1 main_color progress_Button">
+                                                                Complete
+                                                            </button>
+
+                                                            <!-- =============Modal============ -->
+                                                            <div id="myModal"
+                                                                class="p-3 d-none bg-white border-r-8 d-flex flex-column justify-content-between align-items-center gap-3 border appearedModal">
+                                                                <img class="img-fluid" height='44px' width='44px'
+                                                                    src="./assets/images/employer-ease-pics/animatedCirclewRocket.svg"
+                                                                    alt="">
+                                                                <div>
+                                                                    <h3 class="fs_14 fw_600 j_family lh_22 text-center">
+                                                                        Skip Steps?</h3>
+                                                                    <p
+                                                                        class="fs_12 fw_400 j_family tertiary-black lh_22 text-center">
+                                                                        Are you sure you want to proceed without
+                                                                        completing the previous
+                                                                        step?</p>
+                                                                </div>
+                                                                <div class="d-flex gap-3 w-100">
+                                                                    <button
+                                                                        class="d-flex justify-content-center py-2 w-100 whole_button border1 bg-transparent cancelButton">No</button>
+                                                                    <button
+                                                                        class="py-2 d-flex justify-content-center w-100 whole_button text-white completeButton">Yes</button>
+                                                                </div>
+                                                            </div>
+                                                            <!-- ============Modal End========== -->
+
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="d-flex gap-3 flex-column align-items-center lastText d-none">
+                                                        <img class="mx-auto" height="88px" width="88px"
+                                                            src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                            alt="">
+                                                        <h3 class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                            Document Center</h3>
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <p class="main_color fs_16 lh_22 j_family text-center">
+                                                                Completed</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
                     </div>
                 </div>
 
@@ -1173,8 +2119,273 @@
     <!--------------------------------- Flate Picker----------------------------->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cards = document.querySelectorAll('.myCard');
+            const stepperLines = document.querySelectorAll('.stepper-line');
+            const stepperProgress = document.querySelectorAll('.stepper-progress');
+            let completedCards = 0;
+            const totalCards = cards.length; // Should be 9 cards
 
-    <script>
+            // Create the circular progress bar
+            const bar = new ProgressBar.Circle('#circularProgress', {
+                color: '#8280FF',
+                strokeWidth: 12,
+                trailColor: '#e6e6e6',
+                trailWidth: 12,
+                easing: 'easeInOut',
+                duration: 1400,
+                text: {
+                    value: '',
+                    className: 'progress-text',
+                },
+                svgStyle: {
+                    width: '100%',
+                    height: '100%',
+                    strokeLinecap: 'round',
+                },
+            });
+
+            // Function to update the circular progress
+            function updateCircularProgress() {
+                const progressValue = Math.round((completedCards / totalCards) * 100);
+                const progressDecimal = progressValue / 100;
+                bar.animate(progressDecimal);
+                document.querySelector('.progress-text').textContent = `${progressValue}%`;
+            }
+
+            // Make sure the container is properly sized for the SVG
+            const circularProgressContainer = document.getElementById('circularProgress');
+            if (circularProgressContainer) {
+                circularProgressContainer.style.position = 'relative';
+                circularProgressContainer.style.width = '200px';
+                circularProgressContainer.style.height = '200px';
+            }
+
+            // Add styles to ensure the center image is properly positioned
+            const centerImage = document.querySelector('#circularProgress + .position-absolute');
+            if (centerImage) {
+                centerImage.style.zIndex = '10';
+                centerImage.style.left = '50%';
+                centerImage.style.transform = 'translate(-50%, -50%)';
+            }
+
+            // Initialize progress with 0% (or any starting value)
+            updateCircularProgress();
+
+            // Function to update stepper lines based on completed cards
+            function updateStepperLines() {
+                // Reset all stepper progress elements
+                stepperProgress.forEach(progress => {
+                    progress.style.width = '0%';
+                });
+
+                // Calculate which line we're on and how much progress for each line
+                if (completedCards > 0) {
+                    // First line (cards 1–3)
+                    if (completedCards <= 3) {
+                        const progressPercentage = (completedCards / 3) * 97;
+                        stepperProgress[0].style.width = `${progressPercentage}%`;
+                    } else {
+                        stepperProgress[0].style.width = '100%';
+                    }
+
+                    // Second line (cards 4–6)
+                    if (completedCards > 3) {
+                        const secondLineCards = Math.min(completedCards - 3, 3);
+                        const progressPercentage = (secondLineCards / 3) * 97;
+                        stepperProgress[1].style.width = `${progressPercentage}%`;
+                    }
+
+                    // Third line (cards 7–9)
+                    if (completedCards > 6) {
+                        const thirdLineCards = Math.min(completedCards - 6, 3);
+                        const progressPercentage = (thirdLineCards / 3) * 100;
+                        stepperProgress[2].style.width = `${progressPercentage}%`;
+                    }
+                }
+            }
+
+            // Active step buttons as cards are completed
+            function updateStepButtons() {
+                const stepButtons = document.querySelectorAll('.step');
+
+                // Reset all steps
+                stepButtons.forEach(step => {
+                    step.classList.remove('active');
+                });
+
+                // Activate completed steps
+                for (let i = 0; i < completedCards && i < stepButtons.length; i++) {
+                    stepButtons[i].classList.add('active');
+                }
+            }
+
+            // New function to manage card sequence availability
+            function updateCardAvailability() {
+                // Disable/enable cards based on completion status
+                cards.forEach((card, index) => {
+                    const flipButton = card.querySelector('.myButton');
+
+                    if (index === 0 || index <= completedCards) {
+                        // First card or any card up to the next one after last completed is enabled
+                        card.classList.remove('disabled-card');
+                        if (flipButton) {
+                            flipButton.disabled = false;
+                            flipButton.classList.remove('disabled-button');
+                        }
+                    } else {
+                        // Cards that should be locked
+                        card.classList.add('disabled-card');
+                        if (flipButton) {
+                            flipButton.disabled = true;
+                            flipButton.classList.add('disabled-button');
+                        }
+                    }
+                });
+            }
+
+            // Initialize card availability
+            updateCardAvailability();
+
+            cards.forEach((card, cardIndex) => {
+                const firstText = card.querySelector('.FirstText');
+                const secondText = card.querySelector('.SecondText');
+                const lastText = card.querySelector('.lastText');
+                const submitBtn = card.querySelector('#submitBtn');
+                const modal = card.querySelector('#myModal');
+                const yesBtn = card.querySelector('.completeButton');
+                const noBtn = card.querySelector('.cancelButton');
+                const checkboxes = card.querySelectorAll('input[type="checkbox"]');
+                const progressBar = card.querySelector('.progress-bar');
+                const flipButton = card.querySelector('.myButton');
+
+                // Flip between first and second state
+                if (flipButton) {
+                    flipButton.addEventListener('click', () => {
+                        // Only allow if card is not disabled
+                        if (!card.classList.contains('disabled-card')) {
+                            card.classList.toggle('rotate');
+
+                            if (card.classList.contains('rotate')) {
+                                secondText.classList.remove('d-none');
+                                firstText.classList.add('d-none');
+                                lastText.classList.add('d-none');
+                            } else {
+                                secondText.classList.add('d-none');
+                                firstText.classList.remove('d-none');
+                                lastText.classList.add('d-none');
+                            }
+                        }
+                    });
+                }
+
+                // Checkbox change events
+                checkboxes.forEach(checkbox => {
+                    checkbox.addEventListener('change', function () {
+                        const parentLabel = this.closest('.custom-label');
+                        if (this.checked) {
+                            parentLabel.classList.add('checked_lable');
+                        } else {
+                            parentLabel.classList.remove('checked_lable');
+                        }
+                        updateProgress();
+                    });
+                });
+
+                // Submit button
+                if (submitBtn) {
+                    submitBtn.addEventListener('click', function () {
+                        const allLabels = card.querySelectorAll('.custom-label');
+                        const allChecked = Array.from(allLabels).every(label =>
+                            label.classList.contains('checked_lable')
+                        );
+
+                        if (allChecked) {
+                            secondText.classList.add('d-none');
+                            lastText.classList.remove('d-none');
+                            card.classList.add('rotated2');
+
+                            // Update all progress indicators
+                            completedCards++;
+                            updateStepperLines();
+                            updateStepButtons();
+                            updateCircularProgress();
+                            updateCardAvailability(); // Update which cards are available
+                        } else {
+                            modal.classList.remove('d-none');
+                        }
+                    });
+                }
+
+                // Yes (complete) button in modal
+                if (yesBtn) {
+                    yesBtn.addEventListener('click', function () {
+                        modal.classList.add('d-none');
+                        secondText.classList.add('d-none');
+                        lastText.classList.remove('d-none');
+                        card.classList.add('rotated2');
+
+                        // Update all progress indicators
+                        completedCards++;
+                        updateStepperLines();
+                        updateStepButtons();
+                        updateCircularProgress();
+                        updateCardAvailability(); // Update which cards are available
+                    });
+                }
+
+                if (noBtn) {
+                    noBtn.addEventListener('click', function () {
+                        modal.classList.add('d-none');
+                    });
+                }
+
+                function updateProgress() {
+                    const totalCheckboxes = checkboxes.length;
+                    const checkedCheckboxes = Array.from(checkboxes).filter(checkbox => checkbox.checked).length;
+                    const progressPercentage = (checkedCheckboxes / totalCheckboxes) * 96;
+
+                    if (progressBar) {
+                        progressBar.style.width = `${progressPercentage}%`;
+                        progressBar.setAttribute('aria-valuenow', progressPercentage);
+                    }
+                }
+
+                function fixDuplicateIds() {
+                    const checkboxes = card.querySelectorAll('input[type="checkbox"]');
+                    checkboxes.forEach((checkbox, checkboxIndex) => {
+                        const newId = `checkbox-${cardIndex}-${checkboxIndex}`;
+                        checkbox.id = newId;
+
+                        const label = checkbox.closest('label');
+                        if (label) {
+                            label.setAttribute('for', newId);
+                        }
+                    });
+                }
+
+                fixDuplicateIds();
+            });
+
+            const style = document.createElement('style');
+            style.textContent = `
+        .stepper-progress {
+            transition: width 0.8s ease-in-out;
+        }
+        .disabled-card {
+            opacity: 0.6;
+            cursor:not-allowed !important;
+        }
+        .disabled-button {
+            opacity: 0.5;
+            cursor: not-allowed !important;
+        }
+    `;
+            document.head.appendChild(style);
+        });
+    </script>
+    <!-- <script>
         const ctx = document.getElementById('salesChart').getContext('2d');
         new Chart(ctx, {
             type: 'line',
@@ -1248,7 +2459,7 @@
                 }
             }
         });
-    </script>
+    </script> -->
     <!-- --------------------------check all checkbox of table----------------------------- -->
     <script>
         document.querySelectorAll('table').forEach((table) => {
@@ -1402,9 +2613,12 @@
             disableButton()
         })
     </script>
+<script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        const tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
+    </script>
 
-
-    <script>
+    <!-- <script>
         // Create the circular progress bar
         const bar = new ProgressBar.Circle('#circularProgress', {
             color: '#8280FF',
@@ -1431,7 +2645,7 @@
             document.querySelector('.progress-text').classList.add('d-none')
         }
         updateProgress(24);
-    </script>
+    </script> -->
 </body>
 
 </html>
