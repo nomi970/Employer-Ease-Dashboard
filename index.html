@@ -27,6 +27,12 @@
     <link rel="stylesheet" href="assets/css/Naeem.css" />
     <link rel="stylesheet" href="assets/css/common.css" />
     <title>KPI Dashboard | Employer Ease</title>
+    <style>
+        .dropdown-menu.my-2.show {
+            /* inset: auto !important;
+                transform: unset !important; */
+        }
+    </style>
 </head>
 
 <body class="overflow-hidden Body">
@@ -38,13 +44,13 @@
                 <div class="d-flex justify-content-center align-items-start position-relative w-100">
                     <img src="./assets/images/employer-ease-pics/animatedCirclewRocket.svg" alt="">
                     <button class="bg-transparent closeModal border-0">
-                    <img class="position-absolute end-0" src="./assets/images/employer-ease-pics/cross.svg" alt="">
-                </button>
+                        <img class="position-absolute end-0" src="./assets/images/employer-ease-pics/cross.svg" alt="">
+                    </button>
                 </div>
                 <h2 class="fs_24 fw_600 j_family lh_32">Welcome to EmployerEase</h2>
-                
-                    <p class="fs_20 fw_400 j_family lh_30 secondary-gray text-center">We're glad to have you onboard. Here
-                        are some quick tips to get you up and running</p>
+
+                <p class="fs_20 fw_400 j_family lh_30 secondary-gray text-center">We're glad to have you onboard. Here
+                    are some quick tips to get you up and running</p>
             </div>
         </div>
     </div>
@@ -685,7 +691,66 @@
                         <div class="row justify-content-center g-4">
                             <div class="col-md-6 col-lg-3"
                                 data-intro="<h2>Change Language</h2><p>Here you can change language.</p>" data-step="1">
-                                <div class="dashboard-card h-100 d-flex flex-column justify-content-between">
+                                <div class="dashboard-card h-100 d-flex flex-column">
+                                    <div class="d-flex gap-3 justify-content-between mb-3">
+                                        <h3 class="fs_18 fw_600 lh_30   j_family"></h3>
+                                        <div class="dropdown table-dropdown"
+                                            data-intro="<h2>Calendar</h2><p>Here you can see Calendar for meetings.</p>"
+                                            data-step="7">
+                                            <button type="menu" class="border-0 bg-transparent action__btn"
+                                                type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <img class="object-fit-cover"
+                                                    src="assets/images/employer-ease-pics/3-dot-line.svg" alt="menu"
+                                                    loading="lazy">
+                                            </button>
+                                            <ul class="dropdown-menu my-2">
+                                                <li class="border-r-8"><button type="button"
+                                                        class="border-r-8  dropdown-item font_18 ln_32 d-flex align-items-center gap-2 app-high-gray table-drop-down"
+                                                        data-bs-toggle="modal" data-bs-target="#Withdraw__amount">
+
+                                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M12 8.92969V16.9297M8 12.9297H16M22 12.9297C22 18.4525 17.5228 22.9297 12 22.9297C6.47715 22.9297 2 18.4525 2 12.9297C2 7.40684 6.47715 2.92969 12 2.92969C17.5228 2.92969 22 7.40684 22 12.9297Z"
+                                                                stroke="#6F7784" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
+
+                                                        Add</button></li>
+                                                <li class="border-r-8  line-height"><a
+                                                        class="border-r-8  dropdown-item font_18 ln_32 d-flex align-items-center gap-2 app-high-gray table-drop-down"
+                                                        href="#" data-bs-toggle="modal">
+
+                                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M16 12.9297L12 8.92969M12 8.92969L8 12.9297M12 8.92969V16.9297M22 12.9297C22 18.4525 17.5228 22.9297 12 22.9297C6.47715 22.9297 2 18.4525 2 12.9297C2 7.40684 6.47715 2.92969 12 2.92969C17.5228 2.92969 22 7.40684 22 12.9297Z"
+                                                                stroke="#6F7784" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
+
+
+                                                        Update</a></li>
+                                                <li class="border-r-8  line-height"><a
+                                                        class="border-r-8 dropdown-item font_18 ln_32 d-flex align-items-center gap-2 app-high-gray table-drop-down"
+                                                        href="#" data-bs-toggle="modal">
+
+
+                                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M16 6.92969V6.12969C16 5.00958 16 4.44953 15.782 4.02171C15.5903 3.64538 15.2843 3.33942 14.908 3.14767C14.4802 2.92969 13.9201 2.92969 12.8 2.92969H11.2C10.0799 2.92969 9.51984 2.92969 9.09202 3.14767C8.71569 3.33942 8.40973 3.64538 8.21799 4.02171C8 4.44953 8 5.00958 8 6.12969V6.92969M10 12.4297V17.4297M14 12.4297V17.4297M3 6.92969H21M19 6.92969V18.1297C19 19.8098 19 20.6499 18.673 21.2917C18.3854 21.8561 17.9265 22.3151 17.362 22.6027C16.7202 22.9297 15.8802 22.9297 14.2 22.9297H9.8C8.11984 22.9297 7.27976 22.9297 6.63803 22.6027C6.07354 22.3151 5.6146 21.8561 5.32698 21.2917C5 20.6499 5 19.8098 5 18.1297V6.92969"
+                                                                stroke="#6F7784" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
+
+
+
+                                                        Delete</a></li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
                                     <div class="d-flex gap-3 justify-content-between">
                                         <p class="fs_16 fw_500 lh_26 tertiary-black j_family">
                                             New Customers
@@ -709,6 +774,65 @@
                             <div class="col-md-6 col-lg-3"
                                 data-intro="<h2>Change Language</h2><p>Here you can change language.</p>" data-step="2">
                                 <div class="dashboard-card h-100">
+                                     <div class="d-flex gap-3 justify-content-between mb-3">
+                                        <h3 class="fs_18 fw_600 lh_30   j_family"></h3>
+                                        <div class="dropdown table-dropdown"
+                                            data-intro="<h2>Calendar</h2><p>Here you can see Calendar for meetings.</p>"
+                                            data-step="7">
+                                            <button type="menu" class="border-0 bg-transparent action__btn"
+                                                type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <img class="object-fit-cover"
+                                                    src="assets/images/employer-ease-pics/3-dot-line.svg" alt="menu"
+                                                    loading="lazy">
+                                            </button>
+                                            <ul class="dropdown-menu my-2">
+                                                <li class="border-r-8"><button type="button"
+                                                        class="border-r-8  dropdown-item font_18 ln_32 d-flex align-items-center gap-2 app-high-gray table-drop-down"
+                                                        data-bs-toggle="modal" data-bs-target="#Withdraw__amount">
+
+                                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M12 8.92969V16.9297M8 12.9297H16M22 12.9297C22 18.4525 17.5228 22.9297 12 22.9297C6.47715 22.9297 2 18.4525 2 12.9297C2 7.40684 6.47715 2.92969 12 2.92969C17.5228 2.92969 22 7.40684 22 12.9297Z"
+                                                                stroke="#6F7784" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
+
+                                                        Add</button></li>
+                                                <li class="border-r-8  line-height"><a
+                                                        class="border-r-8  dropdown-item font_18 ln_32 d-flex align-items-center gap-2 app-high-gray table-drop-down"
+                                                        href="#" data-bs-toggle="modal">
+
+                                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M16 12.9297L12 8.92969M12 8.92969L8 12.9297M12 8.92969V16.9297M22 12.9297C22 18.4525 17.5228 22.9297 12 22.9297C6.47715 22.9297 2 18.4525 2 12.9297C2 7.40684 6.47715 2.92969 12 2.92969C17.5228 2.92969 22 7.40684 22 12.9297Z"
+                                                                stroke="#6F7784" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
+
+
+                                                        Update</a></li>
+                                                <li class="border-r-8  line-height"><a
+                                                        class="border-r-8 dropdown-item font_18 ln_32 d-flex align-items-center gap-2 app-high-gray table-drop-down"
+                                                        href="#" data-bs-toggle="modal">
+
+
+                                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M16 6.92969V6.12969C16 5.00958 16 4.44953 15.782 4.02171C15.5903 3.64538 15.2843 3.33942 14.908 3.14767C14.4802 2.92969 13.9201 2.92969 12.8 2.92969H11.2C10.0799 2.92969 9.51984 2.92969 9.09202 3.14767C8.71569 3.33942 8.40973 3.64538 8.21799 4.02171C8 4.44953 8 5.00958 8 6.12969V6.92969M10 12.4297V17.4297M14 12.4297V17.4297M3 6.92969H21M19 6.92969V18.1297C19 19.8098 19 20.6499 18.673 21.2917C18.3854 21.8561 17.9265 22.3151 17.362 22.6027C16.7202 22.9297 15.8802 22.9297 14.2 22.9297H9.8C8.11984 22.9297 7.27976 22.9297 6.63803 22.6027C6.07354 22.3151 5.6146 21.8561 5.32698 21.2917C5 20.6499 5 19.8098 5 18.1297V6.92969"
+                                                                stroke="#6F7784" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
+
+
+
+                                                        Delete</a></li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
                                     <div class="d-flex gap-3 justify-content-between">
                                         <p class="fs_16 fw_500 lh_26 tertiary-black j_family">
                                             New Leads
@@ -732,6 +856,65 @@
                             <div class="col-md-6 col-lg-3"
                                 data-intro="<h2>Change Language</h2><p>Here you can change language.</p>" data-step="3">
                                 <div class="dashboard-card h-100">
+                                     <div class="d-flex gap-3 justify-content-between mb-3">
+                                        <h3 class="fs_18 fw_600 lh_30   j_family"></h3>
+                                        <div class="dropdown table-dropdown"
+                                            data-intro="<h2>Calendar</h2><p>Here you can see Calendar for meetings.</p>"
+                                            data-step="7">
+                                            <button type="menu" class="border-0 bg-transparent action__btn"
+                                                type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <img class="object-fit-cover"
+                                                    src="assets/images/employer-ease-pics/3-dot-line.svg" alt="menu"
+                                                    loading="lazy">
+                                            </button>
+                                            <ul class="dropdown-menu my-2">
+                                                <li class="border-r-8"><button type="button"
+                                                        class="border-r-8  dropdown-item font_18 ln_32 d-flex align-items-center gap-2 app-high-gray table-drop-down"
+                                                        data-bs-toggle="modal" data-bs-target="#Withdraw__amount">
+
+                                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M12 8.92969V16.9297M8 12.9297H16M22 12.9297C22 18.4525 17.5228 22.9297 12 22.9297C6.47715 22.9297 2 18.4525 2 12.9297C2 7.40684 6.47715 2.92969 12 2.92969C17.5228 2.92969 22 7.40684 22 12.9297Z"
+                                                                stroke="#6F7784" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
+
+                                                        Add</button></li>
+                                                <li class="border-r-8  line-height"><a
+                                                        class="border-r-8  dropdown-item font_18 ln_32 d-flex align-items-center gap-2 app-high-gray table-drop-down"
+                                                        href="#" data-bs-toggle="modal">
+
+                                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M16 12.9297L12 8.92969M12 8.92969L8 12.9297M12 8.92969V16.9297M22 12.9297C22 18.4525 17.5228 22.9297 12 22.9297C6.47715 22.9297 2 18.4525 2 12.9297C2 7.40684 6.47715 2.92969 12 2.92969C17.5228 2.92969 22 7.40684 22 12.9297Z"
+                                                                stroke="#6F7784" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
+
+
+                                                        Update</a></li>
+                                                <li class="border-r-8  line-height"><a
+                                                        class="border-r-8 dropdown-item font_18 ln_32 d-flex align-items-center gap-2 app-high-gray table-drop-down"
+                                                        href="#" data-bs-toggle="modal">
+
+
+                                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M16 6.92969V6.12969C16 5.00958 16 4.44953 15.782 4.02171C15.5903 3.64538 15.2843 3.33942 14.908 3.14767C14.4802 2.92969 13.9201 2.92969 12.8 2.92969H11.2C10.0799 2.92969 9.51984 2.92969 9.09202 3.14767C8.71569 3.33942 8.40973 3.64538 8.21799 4.02171C8 4.44953 8 5.00958 8 6.12969V6.92969M10 12.4297V17.4297M14 12.4297V17.4297M3 6.92969H21M19 6.92969V18.1297C19 19.8098 19 20.6499 18.673 21.2917C18.3854 21.8561 17.9265 22.3151 17.362 22.6027C16.7202 22.9297 15.8802 22.9297 14.2 22.9297H9.8C8.11984 22.9297 7.27976 22.9297 6.63803 22.6027C6.07354 22.3151 5.6146 21.8561 5.32698 21.2917C5 20.6499 5 19.8098 5 18.1297V6.92969"
+                                                                stroke="#6F7784" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
+
+
+
+                                                        Delete</a></li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
                                     <div class="d-flex gap-3 justify-content-between">
                                         <div>
                                             <p class="fs_16 fw_500 lh_26 tertiary-black j_family">
@@ -756,6 +939,65 @@
                             <div class="col-md-6 col-lg-3"
                                 data-intro="<h2>Change Language</h2><p>Here you can change language.</p>" data-step="4">
                                 <div class="dashboard-card h-100 d-flex flex-column justify-content-between">
+                                     <div class="d-flex gap-3 justify-content-between mb-3">
+                                        <h3 class="fs_18 fw_600 lh_30   j_family"></h3>
+                                        <div class="dropdown table-dropdown"
+                                            data-intro="<h2>Calendar</h2><p>Here you can see Calendar for meetings.</p>"
+                                            data-step="7">
+                                            <button type="menu" class="border-0 bg-transparent action__btn"
+                                                type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <img class="object-fit-cover"
+                                                    src="assets/images/employer-ease-pics/3-dot-line.svg" alt="menu"
+                                                    loading="lazy">
+                                            </button>
+                                            <ul class="dropdown-menu my-2">
+                                                <li class="border-r-8"><button type="button"
+                                                        class="border-r-8  dropdown-item font_18 ln_32 d-flex align-items-center gap-2 app-high-gray table-drop-down"
+                                                        data-bs-toggle="modal" data-bs-target="#Withdraw__amount">
+
+                                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M12 8.92969V16.9297M8 12.9297H16M22 12.9297C22 18.4525 17.5228 22.9297 12 22.9297C6.47715 22.9297 2 18.4525 2 12.9297C2 7.40684 6.47715 2.92969 12 2.92969C17.5228 2.92969 22 7.40684 22 12.9297Z"
+                                                                stroke="#6F7784" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
+
+                                                        Add</button></li>
+                                                <li class="border-r-8  line-height"><a
+                                                        class="border-r-8  dropdown-item font_18 ln_32 d-flex align-items-center gap-2 app-high-gray table-drop-down"
+                                                        href="#" data-bs-toggle="modal">
+
+                                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M16 12.9297L12 8.92969M12 8.92969L8 12.9297M12 8.92969V16.9297M22 12.9297C22 18.4525 17.5228 22.9297 12 22.9297C6.47715 22.9297 2 18.4525 2 12.9297C2 7.40684 6.47715 2.92969 12 2.92969C17.5228 2.92969 22 7.40684 22 12.9297Z"
+                                                                stroke="#6F7784" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
+
+
+                                                        Update</a></li>
+                                                <li class="border-r-8  line-height"><a
+                                                        class="border-r-8 dropdown-item font_18 ln_32 d-flex align-items-center gap-2 app-high-gray table-drop-down"
+                                                        href="#" data-bs-toggle="modal">
+
+
+                                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M16 6.92969V6.12969C16 5.00958 16 4.44953 15.782 4.02171C15.5903 3.64538 15.2843 3.33942 14.908 3.14767C14.4802 2.92969 13.9201 2.92969 12.8 2.92969H11.2C10.0799 2.92969 9.51984 2.92969 9.09202 3.14767C8.71569 3.33942 8.40973 3.64538 8.21799 4.02171C8 4.44953 8 5.00958 8 6.12969V6.92969M10 12.4297V17.4297M14 12.4297V17.4297M3 6.92969H21M19 6.92969V18.1297C19 19.8098 19 20.6499 18.673 21.2917C18.3854 21.8561 17.9265 22.3151 17.362 22.6027C16.7202 22.9297 15.8802 22.9297 14.2 22.9297H9.8C8.11984 22.9297 7.27976 22.9297 6.63803 22.6027C6.07354 22.3151 5.6146 21.8561 5.32698 21.2917C5 20.6499 5 19.8098 5 18.1297V6.92969"
+                                                                stroke="#6F7784" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
+
+
+
+                                                        Delete</a></li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
                                     <div class="d-flex gap-3 justify-content-between">
                                         <div>
                                             <p class="fs_16 fw_500 lh_26 tertiary-black j_family">
@@ -781,6 +1023,65 @@
                         <div class="row justify-content-center mt-1 g-4">
                             <div class="col-md-6 col-lg-3 ">
                                 <div class="dashboard-card h-100 d-flex flex-column justify-content-between">
+                                     <div class="d-flex gap-3 justify-content-between mb-3">
+                                        <h3 class="fs_18 fw_600 lh_30   j_family"></h3>
+                                        <div class="dropdown table-dropdown"
+                                            data-intro="<h2>Calendar</h2><p>Here you can see Calendar for meetings.</p>"
+                                            data-step="7">
+                                            <button type="menu" class="border-0 bg-transparent action__btn"
+                                                type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <img class="object-fit-cover"
+                                                    src="assets/images/employer-ease-pics/3-dot-line.svg" alt="menu"
+                                                    loading="lazy">
+                                            </button>
+                                            <ul class="dropdown-menu my-2">
+                                                <li class="border-r-8"><button type="button"
+                                                        class="border-r-8  dropdown-item font_18 ln_32 d-flex align-items-center gap-2 app-high-gray table-drop-down"
+                                                        data-bs-toggle="modal" data-bs-target="#Withdraw__amount">
+
+                                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M12 8.92969V16.9297M8 12.9297H16M22 12.9297C22 18.4525 17.5228 22.9297 12 22.9297C6.47715 22.9297 2 18.4525 2 12.9297C2 7.40684 6.47715 2.92969 12 2.92969C17.5228 2.92969 22 7.40684 22 12.9297Z"
+                                                                stroke="#6F7784" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
+
+                                                        Add</button></li>
+                                                <li class="border-r-8  line-height"><a
+                                                        class="border-r-8  dropdown-item font_18 ln_32 d-flex align-items-center gap-2 app-high-gray table-drop-down"
+                                                        href="#" data-bs-toggle="modal">
+
+                                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M16 12.9297L12 8.92969M12 8.92969L8 12.9297M12 8.92969V16.9297M22 12.9297C22 18.4525 17.5228 22.9297 12 22.9297C6.47715 22.9297 2 18.4525 2 12.9297C2 7.40684 6.47715 2.92969 12 2.92969C17.5228 2.92969 22 7.40684 22 12.9297Z"
+                                                                stroke="#6F7784" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
+
+
+                                                        Update</a></li>
+                                                <li class="border-r-8  line-height"><a
+                                                        class="border-r-8 dropdown-item font_18 ln_32 d-flex align-items-center gap-2 app-high-gray table-drop-down"
+                                                        href="#" data-bs-toggle="modal">
+
+
+                                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M16 6.92969V6.12969C16 5.00958 16 4.44953 15.782 4.02171C15.5903 3.64538 15.2843 3.33942 14.908 3.14767C14.4802 2.92969 13.9201 2.92969 12.8 2.92969H11.2C10.0799 2.92969 9.51984 2.92969 9.09202 3.14767C8.71569 3.33942 8.40973 3.64538 8.21799 4.02171C8 4.44953 8 5.00958 8 6.12969V6.92969M10 12.4297V17.4297M14 12.4297V17.4297M3 6.92969H21M19 6.92969V18.1297C19 19.8098 19 20.6499 18.673 21.2917C18.3854 21.8561 17.9265 22.3151 17.362 22.6027C16.7202 22.9297 15.8802 22.9297 14.2 22.9297H9.8C8.11984 22.9297 7.27976 22.9297 6.63803 22.6027C6.07354 22.3151 5.6146 21.8561 5.32698 21.2917C5 20.6499 5 19.8098 5 18.1297V6.92969"
+                                                                stroke="#6F7784" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
+
+
+
+                                                        Delete</a></li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
                                     <div class="d-flex gap-3 justify-content-between">
                                         <p class="fs_16 fw_500 lh_26 tertiary-black j_family">
                                             Customer Engagement Rate
@@ -803,6 +1104,65 @@
                             </div>
                             <div class="col-md-6 col-lg-3">
                                 <div class="dashboard-card h-100">
+                                     <div class="d-flex gap-3 justify-content-between mb-3">
+                                        <h3 class="fs_18 fw_600 lh_30   j_family"></h3>
+                                        <div class="dropdown table-dropdown"
+                                            data-intro="<h2>Calendar</h2><p>Here you can see Calendar for meetings.</p>"
+                                            data-step="7">
+                                            <button type="menu" class="border-0 bg-transparent action__btn"
+                                                type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <img class="object-fit-cover"
+                                                    src="assets/images/employer-ease-pics/3-dot-line.svg" alt="menu"
+                                                    loading="lazy">
+                                            </button>
+                                            <ul class="dropdown-menu my-2">
+                                                <li class="border-r-8"><button type="button"
+                                                        class="border-r-8  dropdown-item font_18 ln_32 d-flex align-items-center gap-2 app-high-gray table-drop-down"
+                                                        data-bs-toggle="modal" data-bs-target="#Withdraw__amount">
+
+                                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M12 8.92969V16.9297M8 12.9297H16M22 12.9297C22 18.4525 17.5228 22.9297 12 22.9297C6.47715 22.9297 2 18.4525 2 12.9297C2 7.40684 6.47715 2.92969 12 2.92969C17.5228 2.92969 22 7.40684 22 12.9297Z"
+                                                                stroke="#6F7784" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
+
+                                                        Add</button></li>
+                                                <li class="border-r-8  line-height"><a
+                                                        class="border-r-8  dropdown-item font_18 ln_32 d-flex align-items-center gap-2 app-high-gray table-drop-down"
+                                                        href="#" data-bs-toggle="modal">
+
+                                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M16 12.9297L12 8.92969M12 8.92969L8 12.9297M12 8.92969V16.9297M22 12.9297C22 18.4525 17.5228 22.9297 12 22.9297C6.47715 22.9297 2 18.4525 2 12.9297C2 7.40684 6.47715 2.92969 12 2.92969C17.5228 2.92969 22 7.40684 22 12.9297Z"
+                                                                stroke="#6F7784" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
+
+
+                                                        Update</a></li>
+                                                <li class="border-r-8  line-height"><a
+                                                        class="border-r-8 dropdown-item font_18 ln_32 d-flex align-items-center gap-2 app-high-gray table-drop-down"
+                                                        href="#" data-bs-toggle="modal">
+
+
+                                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M16 6.92969V6.12969C16 5.00958 16 4.44953 15.782 4.02171C15.5903 3.64538 15.2843 3.33942 14.908 3.14767C14.4802 2.92969 13.9201 2.92969 12.8 2.92969H11.2C10.0799 2.92969 9.51984 2.92969 9.09202 3.14767C8.71569 3.33942 8.40973 3.64538 8.21799 4.02171C8 4.44953 8 5.00958 8 6.12969V6.92969M10 12.4297V17.4297M14 12.4297V17.4297M3 6.92969H21M19 6.92969V18.1297C19 19.8098 19 20.6499 18.673 21.2917C18.3854 21.8561 17.9265 22.3151 17.362 22.6027C16.7202 22.9297 15.8802 22.9297 14.2 22.9297H9.8C8.11984 22.9297 7.27976 22.9297 6.63803 22.6027C6.07354 22.3151 5.6146 21.8561 5.32698 21.2917C5 20.6499 5 19.8098 5 18.1297V6.92969"
+                                                                stroke="#6F7784" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
+
+
+
+                                                        Delete</a></li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
                                     <div class="d-flex gap-3 justify-content-between">
                                         <p class="fs_16 fw_500 lh_26 tertiary-black j_family">
                                             Conversion Rate
@@ -825,6 +1185,65 @@
                             </div>
                             <div class="col-md-6 col-lg-3">
                                 <div class="dashboard-card h-100">
+                                     <div class="d-flex gap-3 justify-content-between mb-3">
+                                        <h3 class="fs_18 fw_600 lh_30   j_family"></h3>
+                                        <div class="dropdown table-dropdown"
+                                            data-intro="<h2>Calendar</h2><p>Here you can see Calendar for meetings.</p>"
+                                            data-step="7">
+                                            <button type="menu" class="border-0 bg-transparent action__btn"
+                                                type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <img class="object-fit-cover"
+                                                    src="assets/images/employer-ease-pics/3-dot-line.svg" alt="menu"
+                                                    loading="lazy">
+                                            </button>
+                                            <ul class="dropdown-menu my-2">
+                                                <li class="border-r-8"><button type="button"
+                                                        class="border-r-8  dropdown-item font_18 ln_32 d-flex align-items-center gap-2 app-high-gray table-drop-down"
+                                                        data-bs-toggle="modal" data-bs-target="#Withdraw__amount">
+
+                                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M12 8.92969V16.9297M8 12.9297H16M22 12.9297C22 18.4525 17.5228 22.9297 12 22.9297C6.47715 22.9297 2 18.4525 2 12.9297C2 7.40684 6.47715 2.92969 12 2.92969C17.5228 2.92969 22 7.40684 22 12.9297Z"
+                                                                stroke="#6F7784" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
+
+                                                        Add</button></li>
+                                                <li class="border-r-8  line-height"><a
+                                                        class="border-r-8  dropdown-item font_18 ln_32 d-flex align-items-center gap-2 app-high-gray table-drop-down"
+                                                        href="#" data-bs-toggle="modal">
+
+                                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M16 12.9297L12 8.92969M12 8.92969L8 12.9297M12 8.92969V16.9297M22 12.9297C22 18.4525 17.5228 22.9297 12 22.9297C6.47715 22.9297 2 18.4525 2 12.9297C2 7.40684 6.47715 2.92969 12 2.92969C17.5228 2.92969 22 7.40684 22 12.9297Z"
+                                                                stroke="#6F7784" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
+
+
+                                                        Update</a></li>
+                                                <li class="border-r-8  line-height"><a
+                                                        class="border-r-8 dropdown-item font_18 ln_32 d-flex align-items-center gap-2 app-high-gray table-drop-down"
+                                                        href="#" data-bs-toggle="modal">
+
+
+                                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M16 6.92969V6.12969C16 5.00958 16 4.44953 15.782 4.02171C15.5903 3.64538 15.2843 3.33942 14.908 3.14767C14.4802 2.92969 13.9201 2.92969 12.8 2.92969H11.2C10.0799 2.92969 9.51984 2.92969 9.09202 3.14767C8.71569 3.33942 8.40973 3.64538 8.21799 4.02171C8 4.44953 8 5.00958 8 6.12969V6.92969M10 12.4297V17.4297M14 12.4297V17.4297M3 6.92969H21M19 6.92969V18.1297C19 19.8098 19 20.6499 18.673 21.2917C18.3854 21.8561 17.9265 22.3151 17.362 22.6027C16.7202 22.9297 15.8802 22.9297 14.2 22.9297H9.8C8.11984 22.9297 7.27976 22.9297 6.63803 22.6027C6.07354 22.3151 5.6146 21.8561 5.32698 21.2917C5 20.6499 5 19.8098 5 18.1297V6.92969"
+                                                                stroke="#6F7784" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
+
+
+
+                                                        Delete</a></li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
                                     <div class="d-flex gap-3 justify-content-between">
                                         <div>
                                             <p class="fs_16 fw_500 lh_26 tertiary-black j_family">
@@ -847,6 +1266,65 @@
                             </div>
                             <div class="col-md-6 col-lg-3">
                                 <div class="dashboard-card h-100 d-flex flex-column justify-content-between">
+                                     <div class="d-flex gap-3 justify-content-between mb-3">
+                                        <h3 class="fs_18 fw_600 lh_30   j_family"></h3>
+                                        <div class="dropdown table-dropdown"
+                                            data-intro="<h2>Calendar</h2><p>Here you can see Calendar for meetings.</p>"
+                                            data-step="7">
+                                            <button type="menu" class="border-0 bg-transparent action__btn"
+                                                type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <img class="object-fit-cover"
+                                                    src="assets/images/employer-ease-pics/3-dot-line.svg" alt="menu"
+                                                    loading="lazy">
+                                            </button>
+                                            <ul class="dropdown-menu my-2">
+                                                <li class="border-r-8"><button type="button"
+                                                        class="border-r-8  dropdown-item font_18 ln_32 d-flex align-items-center gap-2 app-high-gray table-drop-down"
+                                                        data-bs-toggle="modal" data-bs-target="#Withdraw__amount">
+
+                                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M12 8.92969V16.9297M8 12.9297H16M22 12.9297C22 18.4525 17.5228 22.9297 12 22.9297C6.47715 22.9297 2 18.4525 2 12.9297C2 7.40684 6.47715 2.92969 12 2.92969C17.5228 2.92969 22 7.40684 22 12.9297Z"
+                                                                stroke="#6F7784" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
+
+                                                        Add</button></li>
+                                                <li class="border-r-8  line-height"><a
+                                                        class="border-r-8  dropdown-item font_18 ln_32 d-flex align-items-center gap-2 app-high-gray table-drop-down"
+                                                        href="#" data-bs-toggle="modal">
+
+                                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M16 12.9297L12 8.92969M12 8.92969L8 12.9297M12 8.92969V16.9297M22 12.9297C22 18.4525 17.5228 22.9297 12 22.9297C6.47715 22.9297 2 18.4525 2 12.9297C2 7.40684 6.47715 2.92969 12 2.92969C17.5228 2.92969 22 7.40684 22 12.9297Z"
+                                                                stroke="#6F7784" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
+
+
+                                                        Update</a></li>
+                                                <li class="border-r-8  line-height"><a
+                                                        class="border-r-8 dropdown-item font_18 ln_32 d-flex align-items-center gap-2 app-high-gray table-drop-down"
+                                                        href="#" data-bs-toggle="modal">
+
+
+                                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M16 6.92969V6.12969C16 5.00958 16 4.44953 15.782 4.02171C15.5903 3.64538 15.2843 3.33942 14.908 3.14767C14.4802 2.92969 13.9201 2.92969 12.8 2.92969H11.2C10.0799 2.92969 9.51984 2.92969 9.09202 3.14767C8.71569 3.33942 8.40973 3.64538 8.21799 4.02171C8 4.44953 8 5.00958 8 6.12969V6.92969M10 12.4297V17.4297M14 12.4297V17.4297M3 6.92969H21M19 6.92969V18.1297C19 19.8098 19 20.6499 18.673 21.2917C18.3854 21.8561 17.9265 22.3151 17.362 22.6027C16.7202 22.9297 15.8802 22.9297 14.2 22.9297H9.8C8.11984 22.9297 7.27976 22.9297 6.63803 22.6027C6.07354 22.3151 5.6146 21.8561 5.32698 21.2917C5 20.6499 5 19.8098 5 18.1297V6.92969"
+                                                                stroke="#6F7784" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
+
+
+
+                                                        Delete</a></li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
                                     <div class="d-flex gap-3 justify-content-between">
                                         <div>
                                             <p class="fs_16 fw_500 lh_26 tertiary-black j_family">
@@ -1237,12 +1715,12 @@
         const ModelwrapperDiv = document.querySelector('.modelWrapper')
         const Body = document.querySelector('.Body')
         const CloseButton = document.querySelector('.closeModal')
-        CloseButton.addEventListener ('click' , function(){
+        CloseButton.addEventListener('click', function () {
             ModelwrapperDiv.classList.add('d-none')
             Body.classList.remove('overflow-hidden')
             console.log('clicked')
         })
-</script>
+    </script>
 </body>
 
 </html>
