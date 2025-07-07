@@ -573,9 +573,21 @@ h2,p,span{
 .wrapper2{
  display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px; /* Optional: spacing between divs */
+  gap: 20px; 
 }
-
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 20px; 
+  margin-top: 20px;
+}
+.grid-item {
+  border: 1px solid #D0D5DD;
+  padding: 70px 24px;
+  border-radius: 8px;
+  justify-content: center;
+  text-align: center;
+}
 @media screen and (max-width: 992px) {
   .main__over_scroe_info {
     grid-template-columns: 1fr;
