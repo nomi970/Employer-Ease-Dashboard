@@ -44,6 +44,28 @@
                 left: 0px;
             }
         }
+
+        .custom-select-wrapper {
+            position: relative;
+            width: fit-content;
+        }
+
+        .custom-select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background: white url('./assets/images/icons/down_arrow.png') no-repeat right 10px center;
+            background-size: 16px;
+            padding-right: 40px;
+            padding-left: 30px;
+            height: 42px;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid #D0D5DD;
+            border-radius: 8px;
+            cursor: pointer;
+            width: fit-content;
+        }
     </style>
 </head>
 
@@ -442,7 +464,7 @@
                                     <!-- <a href="#" class="text-decoration-none">
                                             <img width="30" height="30" src="assets/images/icons/back-btn.png" alt="back">
                                         </a> -->
-                                    <h2 class="header-title text-dark Inter_family">Digital Communication</h2>
+                                    <h2 class="header-title text-dark Inter_family">Digital Communications</h2>
                                     <form action="">
                                         <div class="position-relative">
                                             <input class="header-input form-control bg-transparent pe-5" type="text"
@@ -699,12 +721,22 @@
                                                 <h3 class="fs_18 fw_600 j_family">Calendar</h3>
                                             </div>
                                             <div class="d-flex gap-3 flex-wrap flex-md-nowrap">
-                                                <a href="communicationcard.html" class="whole_button tertiary-black bg-transparent fw_600 border1 button_bg"> Digital Comms
-                                                    <img height="20px" width="20px" src="./assets/images/employer-ease-pics/popup_avatar.svg" alt="avatar">
+                                                <a href="communicationcard.html"
+                                                    class="whole_button tertiary-black bg-transparent fw_600 border1 button_bg">
+                                                    Digital Comms
+                                                    <img height="20px" width="20px"
+                                                        src="./assets/images/employer-ease-pics/popup_avatar.svg"
+                                                        alt="avatar">
                                                 </a>
-                                                <button class="whole_button main_color fw_600 border-0 button_bg"><img height="20px" width="20px" src="./assets/images/employer-ease-pics/roundedZoom.svg" alt=""> Join with  Zoom</button>
+                                                <button class="whole_button main_color fw_600 border-0 button_bg"><img
+                                                        height="20px" width="20px"
+                                                        src="./assets/images/employer-ease-pics/roundedZoom.svg" alt="">
+                                                    Join with Zoom</button>
                                                 <button
-                                                    class="whole_button bg-transparent fw_600 border1 d-flex align-items-center"><img class="me-2" src="./assets/images/employer-ease-pics/googleMeet.svg" alt="icon"> Join with Google Meet</button>
+                                                    class="whole_button bg-transparent fw_600 border1 d-flex align-items-center"><img
+                                                        class="me-2"
+                                                        src="./assets/images/employer-ease-pics/googleMeet.svg"
+                                                        alt="icon"> Join with Google Meet</button>
                                                 <button class="whole_button text-white fw_600"><i
                                                         class="fa fa-plus text-white"></i> New Meeting</button>
                                             </div>
@@ -728,7 +760,7 @@
                                                     </div>
 
                                                 </div>
-                                                <div class="position-relative">
+                                                <!-- <div class="position-relative">
                                                     <Select style="padding-left:30px ;height: 42px;"
                                                         class="fs_14 fw_600 j_family">
                                                         <option class="fs_14 fw_600 j_family" value="">Agenda</option>
@@ -739,6 +771,18 @@
                                                     </Select>
                                                     <div style="left: 10px; top: 7px;" class="position-absolute"><img
                                                             src="assets/images/employer-ease-pics/agenda.svg" alt="">
+                                                    </div>
+                                                </div> -->
+                                                <div class="custom-select-wrapper">
+                                                    <select class="custom-select">
+                                                        <option value="">Agenda</option>
+                                                        <option value="">Invent</option>
+                                                        <option value="">Invest</option>
+                                                        <option value="">Aug 03</option>
+                                                        <option value="">Aug 04</option>
+                                                    </select>
+                                                    <div style="left: 10px; top: 7px;" class="position-absolute">
+                                                        <img src="assets/images/employer-ease-pics/agenda.svg" alt="">
                                                     </div>
                                                 </div>
                                             </div>
@@ -856,7 +900,15 @@
                                         <div class="row mt-4 g-4">
                                             <div class="col-12 col-md-6 col-lg-4">
                                                 <div class="border1 p-4 border-r-8">
-                                                    <img src="assets/images/employer-ease-pics/clock.svg" alt="">
+                                                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="48" height="48" rx="12" fill="#EAECF0" />
+                                                        <path
+                                                            d="M15 14H14C8.47715 14 4 18.4772 4 24C4 29.5228 8.47715 34 14 34H18C23.5228 34 28 29.5228 28 24M33 34H34C39.5228 34 44 29.5228 44 24C44 18.4772 39.5228 14 34 14H30C24.4772 14 20 18.4772 20 24"
+                                                            stroke="black" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+
                                                     <h3 class="fw_500 fs_20 j_family pt-3">General Events Links</h3>
                                                     <p class="fs_16 fw_400 j_family tertiary-black lh_28 pt-2">This link
                                                         will
@@ -2074,9 +2126,12 @@
                                                 <h2 class="fs_18 fw_600 lh_28 j_family">
                                                     Setup
                                                 </h2>
-                                                <a class="whole_button bg-transparent border1 tertiary-black" href="communicationsetupCard.html">
+                                                <a class="whole_button bg-transparent border1 tertiary-black"
+                                                    href="communicationsetupCard.html">
                                                     Setup
-                                                    <img width="20px" height="20px" src="./assets/images/employer-ease-pics/popup_avatar.svg" alt="avatar">
+                                                    <img width="20px" height="20px"
+                                                        src="./assets/images/employer-ease-pics/popup_avatar.svg"
+                                                        alt="avatar">
                                                 </a>
                                             </div>
                                             <div class="row g-3">
@@ -2091,7 +2146,8 @@
                                                                 <div
                                                                     class="d-flex align-items-center  gap-3 flex-wrap flex-md-nowrap">
                                                                     <button
-                                                                        class="whole_button border1 bg-transparent px-3">Setup Account</button>
+                                                                        class="whole_button border1 bg-transparent px-3">Setup
+                                                                        Account</button>
                                                                     <button
                                                                         class="whole_button light-main-bg main_color px-3">Connect
                                                                         Account</button>
@@ -2163,7 +2219,8 @@
                                                                 <div
                                                                     class="d-flex align-items-center  gap-3 flex-wrap flex-md-nowrap">
                                                                     <button
-                                                                        class="whole_button border1 bg-transparent px-3">Setup Account</button>
+                                                                        class="whole_button border1 bg-transparent px-3">Setup
+                                                                        Account</button>
                                                                     <button
                                                                         class="whole_button light-main-bg main_color px-3">Connect
                                                                         Account</button>
@@ -2230,7 +2287,8 @@
                                                                 <div
                                                                     class="d-flex align-items-center  gap-3 flex-wrap flex-md-nowrap">
                                                                     <button
-                                                                        class="whole_button border1 bg-transparent px-3">Setup Account</button>
+                                                                        class="whole_button border1 bg-transparent px-3">Setup
+                                                                        Account</button>
                                                                     <button
                                                                         class="whole_button light-main-bg main_color px-3">Connect
                                                                         Account</button>
@@ -2298,7 +2356,8 @@
                                                                 <div
                                                                     class="d-flex align-items-center  gap-3 flex-wrap flex-md-nowrap">
                                                                     <button
-                                                                        class="whole_button border1 bg-transparent px-3">Setup Account</button>
+                                                                        class="whole_button border1 bg-transparent px-3">Setup
+                                                                        Account</button>
                                                                     <button
                                                                         class="whole_button light-main-bg main_color px-3">Connect
                                                                         Account</button>
@@ -2363,7 +2422,8 @@
                                                                 <div
                                                                     class="d-flex align-items-center  gap-3 flex-wrap flex-md-nowrap">
                                                                     <button
-                                                                        class="whole_button border1 bg-transparent px-3">Setup Account</button>
+                                                                        class="whole_button border1 bg-transparent px-3">Setup
+                                                                        Account</button>
                                                                     <button
                                                                         class="whole_button light-main-bg main_color px-3">Connect
                                                                         Account</button>
@@ -2430,7 +2490,8 @@
                                                                 <div
                                                                     class="d-flex align-items-center  gap-3 flex-wrap flex-md-nowrap">
                                                                     <button
-                                                                        class="whole_button border1 bg-transparent px-3">Setup Account</button>
+                                                                        class="whole_button border1 bg-transparent px-3">Setup
+                                                                        Account</button>
                                                                     <button
                                                                         class="whole_button light-main-bg main_color px-3">Connect
                                                                         Account</button>
@@ -2496,7 +2557,8 @@
                                                                 <div
                                                                     class="d-flex align-items-center  gap-3 flex-wrap flex-md-nowrap">
                                                                     <button
-                                                                        class="whole_button border1 bg-transparent px-3">Setup Account</button>
+                                                                        class="whole_button border1 bg-transparent px-3">Setup
+                                                                        Account</button>
                                                                     <button
                                                                         class="whole_button light-main-bg main_color px-3">Connect
                                                                         Account</button>
@@ -2562,7 +2624,8 @@
                                                                 <div
                                                                     class="d-flex align-items-center  gap-3 flex-wrap flex-md-nowrap">
                                                                     <button
-                                                                        class="whole_button border1 bg-transparent px-3">Setup Account</button>
+                                                                        class="whole_button border1 bg-transparent px-3">Setup
+                                                                        Account</button>
                                                                     <button
                                                                         class="whole_button light-main-bg main_color px-3">Connect
                                                                         Account</button>
@@ -2646,7 +2709,8 @@
                                                                 <div
                                                                     class="d-flex align-items-center  gap-3 flex-wrap flex-md-nowrap">
                                                                     <button
-                                                                        class="whole_button border1 bg-transparent px-3">Setup Account</button>
+                                                                        class="whole_button border1 bg-transparent px-3">Setup
+                                                                        Account</button>
                                                                     <button
                                                                         class="whole_button light-main-bg main_color px-3">Connect
                                                                         Account</button>
