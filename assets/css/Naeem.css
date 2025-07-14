@@ -2660,9 +2660,9 @@ button {
     transition: background-color 0.3s ease;
 }
 
-.SecondText {
+/* .SecondText {
     transform: rotateY(180deg);
-}
+} */
 
 .cutsomSelect {
     appearance: none;
@@ -2682,10 +2682,14 @@ button {
 
     border: 1px solid #EDEEF2;
 }
-
+.disabled-card {
+  opacity: 0.5; /* Optional: faded look */
+    pointer-events: none ; /* Disable all interactions */
+  cursor: not-allowed !important;
+}
 
 /* =========================---------------Chat box CSS End----------------======================= */
-d .header_avatar {
+.header_avatar {
     /* border:1px  solid #D0D5DD; */
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
@@ -3026,9 +3030,9 @@ d .header_avatar {
     max-width: 425px;
 }
 
-.FlipIt {
+/* .FlipIt {
     transform: rotateY(180deg);
-}
+} */
 
 .rotated2 {
     transform: rotateY(180deg);
