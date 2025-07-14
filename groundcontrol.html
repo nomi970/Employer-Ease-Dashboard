@@ -280,6 +280,10 @@
         .modal-body {
             padding: 24px !important;
         }
+
+        .label-text {
+            max-width: unset !important;
+        }
     </style>
 </head>
 
@@ -1315,7 +1319,8 @@
                                     <div class="step-display d-none">Step: 0 / 9</div>
                                     <div class="bg-white border-r-8  p-3 mt-4">
                                         <div class="row g-4">
-                                            <div class="col-12 col-md-6 col-lg-4">
+
+                                            <!-- <div class="col-12 col-md-6 col-lg-4">
                                                 <div class="p-4 border1 border-r-8 h-100 myCard relative" data-step="1">
                                                     <div
                                                         class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
@@ -1347,9 +1352,7 @@
                                                     <div class="SecondText d-none h-100">
                                                         <div
                                                             class="d-flex align-items-center justify-content-between h-100 flex-column gap-2">
-                                                            <!-- <img width="88px" height="88px"
-                                                                src="./assets/images/employer-ease-pics/circleRocket.svg"
-                                                                alt=""> -->
+                                                           
                                                             <div id="labelContainer" class="d-flex gap-3 flex-column">
                                                                 <img class="mx-auto" height="88px" width="88px"
                                                                     src="./assets/images/employer-ease-pics/circleRocket.svg"
@@ -1388,7 +1391,7 @@
                                                                 Complete
                                                             </button>
 
-                                                            <!-- =============Modal============ -->
+                                                            
                                                             <div id="myModal"
                                                                 class="p-3 d-none bg-white border-r-8 d-flex flex-column justify-content-between align-items-center gap-3 border appearedModal">
                                                                 <img class="img-fluid" height='44px' width='44px'
@@ -1410,7 +1413,7 @@
                                                                         class="py-2 d-flex justify-content-center w-100 whole_button text-white completeButton">Yes</button>
                                                                 </div>
                                                             </div>
-                                                            <!-- ============Modal End========== -->
+                               
 
                                                         </div>
                                                     </div>
@@ -1427,8 +1430,113 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                             <div class="col-12 col-md-6 col-lg-4">
+                                                <div class="p-4 border1 border-r-8 h-100 myCard relative" data-step="1"
+                                                    style="">
+                                                    <!-- SecondText (Now default visible) -->
+                                                    <div class="SecondText h-100">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between h-100 flex-column gap-2">
+                                                            <div id="labelContainer" class="d-flex gap-3 flex-column">
+                                                                <!-- <img class="mx-auto" height="88px" width="88px"
+                                                                    src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                                    alt=""> -->
+                                                                <div class="Round-No m-auto">
+                                                                    <p class="fs_32 fw_600 lh_38 j_family">1</p>
+                                                                    <p class="fs_12 fw_500 j_family tertiary-black">step
+                                                                    </p>
+                                                                </div>
+                                                                <h3
+                                                                    class="fs_18 fw_600 j_family lh_28 tertiary-black text-center">
+                                                                    Onboarding & Walkthrough
+                                                                </h3>
+
+                                                                <!-- Checkbox 1 -->
+                                                                <label id="OpenBusine" for="checkbox1"
+                                                                    class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Complete Onboarding
+                                                                        </p>
+                                                                        <input id="checkbox1"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+
+                                                                <!-- Checkbox 2 -->
+                                                                <label for="checkbox2" class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Complete WalkThrough
+                                                                        </p>
+                                                                        <input id="checkbox2"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                            </div>
+
+                                                            <!-- Complete Button -->
+                                                            <button id="submitBtn"
+                                                                class="mt-2 whole_button w-100 d-flex justify-content-center bg_light_main border1 main_color progress_Button">
+                                                                Complete
+                                                            </button>
+
+                                                            <!-- =============Modal============ -->
+                                                            <div id="myModal"
+                                                                class="p-3 d-none bg-white border-r-8 d-flex flex-column justify-content-between align-items-center gap-3 border appearedModal">
+                                                                <img class="img-fluid" height='44px' width='44px'
+                                                                    src="./assets/images/employer-ease-pics/animatedCirclewRocket.svg"
+                                                                    alt="">
+                                                                <div>
+                                                                    <h3 class="fs_14 fw_600 j_family lh_22 text-center">
+                                                                        Skip Steps?</h3>
+                                                                    <p
+                                                                        class="fs_12 fw_400 j_family tertiary-black lh_22 text-center">
+                                                                        Are you sure you want to proceed without
+                                                                        completing the previous step?
+                                                                    </p>
+                                                                </div>
+                                                                <div class="d-flex gap-3 w-100">
+                                                                    <button
+                                                                        class="d-flex justify-content-center py-2 w-100 whole_button border1 bg-transparent cancelButton">
+                                                                        No
+                                                                    </button>
+                                                                    <button
+                                                                        class="py-2 d-flex justify-content-center w-100 whole_button text-white completeButton">
+                                                                        Yes
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                            <!-- ============Modal End========== -->
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Final State (Still hidden initially) -->
+                                                    <div
+                                                        class="d-flex gap-3 flex-column align-items-center lastText d-none">
+                                                        <img class="mx-auto" height="88px" width="88px"
+                                                            src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                            alt="">
+                                                        <h3 class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                            Business Planning</h3>
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <p class="main_color fs_16 lh_22 j_family text-center">
+                                                                Completed</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- <div class="col-12 col-md-6 col-lg-4">
                                                 <div class="p-4 border1 border-r-8 h-100 myCard relative" data-step="2">
                                                     <div
                                                         class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
@@ -1459,9 +1567,7 @@
                                                     <div class="SecondText d-none h-100">
                                                         <div
                                                             class="d-flex align-items-center justify-content-between h-100 flex-column gap-2">
-                                                            <!-- <img width="88px" height="88px"
-                                                                src="./assets/images/employer-ease-pics/circleRocket.svg"
-                                                                alt=""> -->
+                                                           
                                                             <div id="labelContainer" class="d-flex gap-3 flex-column">
                                                                 <img class="mx-auto" height="88px" width="88px"
                                                                     src="./assets/images/employer-ease-pics/circleRocket.svg"
@@ -1500,7 +1606,7 @@
                                                                 Complete
                                                             </button>
 
-                                                            <!-- =============Modal============ -->
+                                                           
                                                             <div id="myModal"
                                                                 class="p-3 d-none bg-white border-r-8 d-flex flex-column justify-content-between align-items-center gap-3 border appearedModal">
                                                                 <img class="img-fluid" height='44px' width='44px'
@@ -1522,7 +1628,7 @@
                                                                         class="py-2 d-flex justify-content-center w-100 whole_button text-white completeButton">Yes</button>
                                                                 </div>
                                                             </div>
-                                                            <!-- ============Modal End========== -->
+                                                           
 
                                                         </div>
                                                     </div>
@@ -1539,8 +1645,109 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                             <div class="col-12 col-md-6 col-lg-4">
+                                                <div class="p-4 border1 border-r-8 h-100 myCard relative" data-step="2">
+
+                                                    <!-- ✅ Removed FirstText completely -->
+
+                                                    <!-- ✅ SecondText is now visible by default -->
+                                                    <div class="SecondText h-100">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between h-100 flex-column gap-2">
+                                                            <div id="labelContainer" class="d-flex gap-3 flex-column">
+                                                                <!-- <img class="mx-auto" height="88px" width="88px"
+                        src="./assets/images/employer-ease-pics/circleRocket.svg" alt=""> -->
+                                                                <div class="Round-No m-auto">
+                                                                    <p class="fs_32 fw_600 lh_38 j_family">2</p>
+                                                                    <p class="fs_12 fw_500 j_family tertiary-black">step
+                                                                    </p>
+                                                                </div>
+                                                                <h3
+                                                                    class="fs_18 fw_600 j_family lh_28 tertiary-black text-center">
+                                                                    Business Planning
+                                                                </h3>
+
+                                                                <label id="OpenBusiness" for="checkbox3"
+                                                                    class="custom-label w-100"
+                                                                    style="min-width: 240px;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Business Planning
+                                                                        </p>
+                                                                        <input id="checkbox3"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+
+                                                                <label for="checkbox4" class="custom-label w-100"
+                                                                    style="min-width: 240px;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Business Name Research
+                                                                        </p>
+                                                                        <input id="checkbox4"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                            </div>
+
+                                                            <button id="submitBtn"
+                                                                class="mt-2 whole_button w-100 d-flex justify-content-center bg_light_main border1 main_color progress_Button">
+                                                                Complete
+                                                            </button>
+
+                                                            <!-- ✅ Modal -->
+                                                            <div id="myModal"
+                                                                class="p-3 d-none bg-white border-r-8 d-flex flex-column justify-content-between align-items-center gap-3 border appearedModal">
+                                                                <img class="img-fluid" height='44px' width='44px'
+                                                                    src="./assets/images/employer-ease-pics/animatedCirclewRocket.svg"
+                                                                    alt="">
+                                                                <div>
+                                                                    <h3 class="fs_14 fw_600 j_family lh_22 text-center">
+                                                                        Skip Steps?</h3>
+                                                                    <p
+                                                                        class="fs_12 fw_400 j_family tertiary-black lh_22 text-center">
+                                                                        Are you sure you want to proceed without
+                                                                        completing the previous step?
+                                                                    </p>
+                                                                </div>
+                                                                <div class="d-flex gap-3 w-100">
+                                                                    <button
+                                                                        class="d-flex justify-content-center py-2 w-100 whole_button border1 bg-transparent cancelButton">No</button>
+                                                                    <button
+                                                                        class="py-2 d-flex justify-content-center w-100 whole_button text-white completeButton">Yes</button>
+                                                                </div>
+                                                            </div>
+                                                            <!-- End Modal -->
+
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- ✅ Final Completed View -->
+                                                    <div
+                                                        class="d-flex gap-3 flex-column align-items-center lastText d-none">
+                                                        <img class="mx-auto" height="88px" width="88px"
+                                                            src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                            alt="">
+                                                        <h3 class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                            Business Planning
+                                                        </h3>
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <p class="main_color fs_16 lh_22 j_family text-center">
+                                                                Completed</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- <div class="col-12 col-md-6 col-lg-4">
                                                 <div class="p-4 border1 border-r-8 h-100 myCard relative" data-step="3">
                                                     <div
                                                         class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
@@ -1575,9 +1782,7 @@
                                                     <div class="SecondText d-none h-100">
                                                         <div
                                                             class="d-flex align-items-center justify-content-between h-100 flex-column gap-2">
-                                                            <!-- <img width="88px" height="88px"
-                                                                src="./assets/images/employer-ease-pics/circleRocket.svg"
-                                                                alt=""> -->
+                                                           
                                                             <div id="labelContainer" class="d-flex gap-3 flex-column">
                                                                 <img class="mx-auto" height="88px" width="88px"
                                                                     src="./assets/images/employer-ease-pics/circleRocket.svg"
@@ -1629,7 +1834,7 @@
                                                                 Complete
                                                             </button>
 
-                                                            <!-- =============Modal============ -->
+                                                            
                                                             <div id="myModal"
                                                                 class="p-3 d-none bg-white border-r-8 d-flex flex-column justify-content-between align-items-center gap-3 border appearedModal">
                                                                 <img class="img-fluid" height='44px' width='44px'
@@ -1651,7 +1856,7 @@
                                                                         class="py-2 d-flex justify-content-center w-100 whole_button text-white completeButton">Yes</button>
                                                                 </div>
                                                             </div>
-                                                            <!-- ============Modal End========== -->
+                                                           
 
                                                         </div>
                                                     </div>
@@ -1668,8 +1873,123 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                             <div class="col-12 col-md-6 col-lg-4">
+                                                <div class="p-4 border1 border-r-8 h-100 myCard relative" data-step="3">
+
+                                                    <!-- ✅ Removed FirstText completely -->
+
+                                                    <!-- ✅ Show SecondText by default -->
+                                                    <div class="SecondText h-100">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between h-100 flex-column gap-2">
+                                                            <div id="labelContainer" class="d-flex gap-3 flex-column">
+                                                                <!-- <img class="mx-auto" height="88px" width="88px"
+                        src="./assets/images/employer-ease-pics/circleRocket.svg" alt=""> -->
+                                                                <div class="Round-No m-auto">
+                                                                    <p class="fs_32 fw_600 lh_38 j_family">3</p>
+                                                                    <p class="fs_12 fw_500 j_family tertiary-black">step
+                                                                    </p>
+                                                                </div>
+                                                                <h3
+                                                                    class="fs_18 fw_600 j_family lh_28 tertiary-black text-center">
+                                                                    Formation
+                                                                </h3>
+
+                                                                <label id="OpenBusines" for="checkbox5"
+                                                                    class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            LLC Filling
+                                                                        </p>
+                                                                        <input id="checkbox5"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+
+                                                                <label for="checkbox6" class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Registered Agents
+                                                                        </p>
+                                                                        <input id="checkbox6"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+
+                                                                <label for="checkbox7" class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            EIN
+                                                                        </p>
+                                                                        <input id="checkbox7"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                            </div>
+
+                                                            <button id="submitBtn"
+                                                                class="mt-2 whole_button w-100 d-flex justify-content-center bg_light_main border1 main_color progress_Button">
+                                                                Complete
+                                                            </button>
+
+                                                            <!-- Modal -->
+                                                            <div id="myModal"
+                                                                class="p-3 d-none bg-white border-r-8 d-flex flex-column justify-content-between align-items-center gap-3 border appearedModal">
+                                                                <img class="img-fluid" height='44px' width='44px'
+                                                                    src="./assets/images/employer-ease-pics/animatedCirclewRocket.svg"
+                                                                    alt="">
+                                                                <div>
+                                                                    <h3 class="fs_14 fw_600 j_family lh_22 text-center">
+                                                                        Skip Steps?</h3>
+                                                                    <p
+                                                                        class="fs_12 fw_400 j_family tertiary-black lh_22 text-center">
+                                                                        Are you sure you want to proceed without
+                                                                        completing the previous step?
+                                                                    </p>
+                                                                </div>
+                                                                <div class="d-flex gap-3 w-100">
+                                                                    <button
+                                                                        class="d-flex justify-content-center py-2 w-100 whole_button border1 bg-transparent cancelButton">No</button>
+                                                                    <button
+                                                                        class="py-2 d-flex justify-content-center w-100 whole_button text-white completeButton">Yes</button>
+                                                                </div>
+                                                            </div>
+                                                            <!-- End Modal -->
+
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Final Completed State -->
+                                                    <div
+                                                        class="d-flex gap-3 flex-column align-items-center lastText d-none">
+                                                        <img class="mx-auto" height="88px" width="88px"
+                                                            src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                            alt="">
+                                                        <h3 class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                            Formation
+                                                        </h3>
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <p class="main_color fs_16 lh_22 j_family text-center">
+                                                                Completed</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- <div class="col-12 col-md-6 col-lg-4">
                                                 <div class="p-4 border1 border-r-8 h-100 myCard relative" data-step="4">
                                                     <div
                                                         class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
@@ -1708,9 +2028,7 @@
                                                     <div class="SecondText d-none h-100">
                                                         <div
                                                             class="d-flex align-items-center justify-content-between h-100 flex-column gap-2">
-                                                            <!-- <img width="88px" height="88px"
-                                                                src="./assets/images/employer-ease-pics/circleRocket.svg"
-                                                                alt=""> -->
+                                                           
                                                             <div id="labelContainer" class="d-flex gap-3 flex-column">
                                                                 <img class="mx-auto" height="88px" width="88px"
                                                                     src="./assets/images/employer-ease-pics/circleRocket.svg"
@@ -1773,7 +2091,7 @@
                                                                 Complete
                                                             </button>
 
-                                                            <!-- =============Modal============ -->
+                                                            
                                                             <div id="myModal"
                                                                 class="p-3 d-none bg-white border-r-8 d-flex flex-column justify-content-between align-items-center gap-3 border appearedModal">
                                                                 <img class="img-fluid" height='44px' width='44px'
@@ -1795,7 +2113,7 @@
                                                                         class="py-2 d-flex justify-content-center w-100 whole_button text-white completeButton">Yes</button>
                                                                 </div>
                                                             </div>
-                                                            <!-- ============Modal End========== -->
+                                                           
 
                                                         </div>
                                                     </div>
@@ -1812,8 +2130,130 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                             <div class="col-12 col-md-6 col-lg-4">
+                                                <div class="p-4 border1 border-r-8 h-100 myCard relative" data-step="4">
+
+                                                    <!-- ✅ SecondText is now visible by default -->
+                                                    <div class="SecondText h-100">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between h-100 flex-column gap-2">
+                                                            <div id="labelContainer" class="d-flex gap-3 flex-column">
+                                                                <!-- <img class="mx-auto" height="88px" width="88px"
+                        src="./assets/images/employer-ease-pics/circleRocket.svg" alt=""> -->
+                                                                <div class="Round-No m-auto">
+                                                                    <p class="fs_32 fw_600 lh_38 j_family">4</p>
+                                                                    <p class="fs_12 fw_500 j_family tertiary-black">step
+                                                                    </p>
+                                                                </div>
+                                                                <h3
+                                                                    class="fs_18 fw_600 j_family lh_28 tertiary-black text-center">
+                                                                    Digital Presence
+                                                                </h3>
+
+                                                                <label id="OpenBusines" for="checkbox8"
+                                                                    class="custom-label w-100"
+                                                                    style="min-width: 240px;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Domain</p>
+                                                                        <input id="checkbox8"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+
+                                                                <label for="checkbox9" class="custom-label w-100"
+                                                                    style="min-width: 240px;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Logo & Branding Kit</p>
+                                                                        <input id="checkbox9"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+
+                                                                <label for="checkbox10" class="custom-label w-100"
+                                                                    style="min-width: 240px;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Website</p>
+                                                                        <input id="checkbox10"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+
+                                                                <label for="checkbox11" class="custom-label w-100"
+                                                                    style="min-width: 240px;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Print Shop</p>
+                                                                        <input id="checkbox11"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                            </div>
+
+                                                            <button id="submitBtn"
+                                                                class="mt-2 whole_button w-100 d-flex justify-content-center bg_light_main border1 main_color progress_Button">
+                                                                Complete
+                                                            </button>
+
+                                                            <!-- Modal -->
+                                                            <div id="myModal"
+                                                                class="p-3 d-none bg-white border-r-8 d-flex flex-column justify-content-between align-items-center gap-3 border appearedModal">
+                                                                <img class="img-fluid" height='44px' width='44px'
+                                                                    src="./assets/images/employer-ease-pics/animatedCirclewRocket.svg"
+                                                                    alt="">
+                                                                <div>
+                                                                    <h3 class="fs_14 fw_600 j_family lh_22 text-center">
+                                                                        Skip Steps?</h3>
+                                                                    <p
+                                                                        class="fs_12 fw_400 j_family tertiary-black lh_22 text-center">
+                                                                        Are you sure you want to proceed without
+                                                                        completing the previous step?
+                                                                    </p>
+                                                                </div>
+                                                                <div class="d-flex gap-3 w-100">
+                                                                    <button
+                                                                        class="d-flex justify-content-center py-2 w-100 whole_button border1 bg-transparent cancelButton">No</button>
+                                                                    <button
+                                                                        class="py-2 d-flex justify-content-center w-100 whole_button text-white completeButton">Yes</button>
+                                                                </div>
+                                                            </div>
+                                                            <!-- End Modal -->
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Final Completed State -->
+                                                    <div
+                                                        class="d-flex gap-3 flex-column align-items-center lastText d-none">
+                                                        <img class="mx-auto" height="88px" width="88px"
+                                                            src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                            alt="">
+                                                        <h3 class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                            Digital Presence
+                                                        </h3>
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <p class="main_color fs_16 lh_22 j_family text-center">
+                                                                Completed</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- <div class="col-12 col-md-6 col-lg-4">
                                                 <div class="p-4 border1 border-r-8 h-100 myCard relative" data-step="5">
                                                     <div
                                                         class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
@@ -1842,9 +2282,7 @@
                                                     <div class="SecondText d-none h-100">
                                                         <div
                                                             class="d-flex align-items-center justify-content-between h-100 flex-column gap-2">
-                                                            <!-- <img width="88px" height="88px"
-                                                                src="./assets/images/employer-ease-pics/circleRocket.svg"
-                                                                alt=""> -->
+                                                           
                                                             <div id="labelContainer" class="d-flex gap-3 flex-column">
                                                                 <img class="mx-auto" height="88px" width="88px"
                                                                     src="./assets/images/employer-ease-pics/circleRocket.svg"
@@ -1873,7 +2311,7 @@
                                                                 Complete
                                                             </button>
 
-                                                            <!-- =============Modal============ -->
+                                                            
                                                             <div id="myModal"
                                                                 class="p-3 d-none bg-white border-r-8 d-flex flex-column justify-content-between align-items-center gap-3 border appearedModal">
                                                                 <img class="img-fluid" height='44px' width='44px'
@@ -1895,7 +2333,7 @@
                                                                         class="py-2 d-flex justify-content-center w-100 whole_button text-white completeButton">Yes</button>
                                                                 </div>
                                                             </div>
-                                                            <!-- ============Modal End========== -->
+                                                            
 
                                                         </div>
                                                     </div>
@@ -1912,8 +2350,94 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                             <div class="col-12 col-md-6 col-lg-4">
+                                                <div class="p-4 border1 border-r-8 h-100 myCard relative" data-step="5">
+
+                                                    <!-- ✅ SecondText is now visible by default -->
+                                                    <div class="SecondText h-100">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between h-100 flex-column gap-2">
+
+                                                            <div id="labelContainer" class="d-flex gap-3 flex-column">
+                                                                <!-- <img class="mx-auto" height="88px" width="88px"
+                        src="./assets/images/employer-ease-pics/circleRocket.svg" alt=""> -->
+                                                                <div class="Round-No m-auto">
+                                                                    <p class="fs_32 fw_600 lh_38 j_family">5</p>
+                                                                    <p class="fs_12 fw_500 j_family tertiary-black">step
+                                                                    </p>
+                                                                </div>
+                                                                <h3
+                                                                    class="fs_18 fw_600 j_family lh_28 tertiary-black text-center">
+                                                                    Communication
+                                                                </h3>
+
+                                                                <label id="OpenBusines" for="checkbox12"
+                                                                    class="custom-label w-100"
+                                                                    style="min-width: 240px;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Setup and Connect your Business
+                                                                            Communication Channels to the platform
+                                                                        </p>
+                                                                        <input id="checkbox12"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                            </div>
+
+                                                            <button id="submitBtn"
+                                                                class="mt-2 whole_button w-100 d-flex justify-content-center bg_light_main border1 main_color progress_Button">
+                                                                Complete
+                                                            </button>
+
+                                                            <!-- ✅ Modal -->
+                                                            <div id="myModal"
+                                                                class="p-3 d-none bg-white border-r-8 d-flex flex-column justify-content-between align-items-center gap-3 border appearedModal">
+                                                                <img class="img-fluid" height='44px' width='44px'
+                                                                    src="./assets/images/employer-ease-pics/animatedCirclewRocket.svg"
+                                                                    alt="">
+                                                                <div>
+                                                                    <h3 class="fs_14 fw_600 j_family lh_22 text-center">
+                                                                        Skip Steps?</h3>
+                                                                    <p
+                                                                        class="fs_12 fw_400 j_family tertiary-black lh_22 text-center">
+                                                                        Are you sure you want to proceed without
+                                                                        completing the previous step?
+                                                                    </p>
+                                                                </div>
+                                                                <div class="d-flex gap-3 w-100">
+                                                                    <button
+                                                                        class="d-flex justify-content-center py-2 w-100 whole_button border1 bg-transparent cancelButton">No</button>
+                                                                    <button
+                                                                        class="py-2 d-flex justify-content-center w-100 whole_button text-white completeButton">Yes</button>
+                                                                </div>
+                                                            </div>
+                                                            <!-- ✅ Modal End -->
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- ✅ Final Completion Section -->
+                                                    <div
+                                                        class="d-flex gap-3 flex-column align-items-center lastText d-none">
+                                                        <img class="mx-auto" height="88px" width="88px"
+                                                            src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                            alt="">
+                                                        <h3 class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                            Communication
+                                                        </h3>
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <p class="main_color fs_16 lh_22 j_family text-center">
+                                                                Completed</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- <div class="col-12 col-md-6 col-lg-4">
                                                 <div class="p-4 border1 border-r-8 h-100 myCard relative" data-step="6">
                                                     <div
                                                         class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
@@ -1943,9 +2467,7 @@
                                                     <div class="SecondText d-none h-100">
                                                         <div
                                                             class="d-flex align-items-center justify-content-between h-100 flex-column gap-2">
-                                                            <!-- <img width="88px" height="88px"
-                                                                src="./assets/images/employer-ease-pics/circleRocket.svg"
-                                                                alt=""> -->
+                                                           
                                                             <div id="labelContainer" class="d-flex gap-3 flex-column">
                                                                 <img class="mx-auto" height="88px" width="88px"
                                                                     src="./assets/images/employer-ease-pics/circleRocket.svg"
@@ -1975,7 +2497,7 @@
                                                                 Complete
                                                             </button>
 
-                                                            <!-- =============Modal============ -->
+                                                            
                                                             <div id="myModal"
                                                                 class="p-3 d-none bg-white border-r-8 d-flex flex-column justify-content-between align-items-center gap-3 border appearedModal">
                                                                 <img class="img-fluid" height='44px' width='44px'
@@ -1997,7 +2519,7 @@
                                                                         class="py-2 d-flex justify-content-center w-100 whole_button text-white completeButton">Yes</button>
                                                                 </div>
                                                             </div>
-                                                            <!-- ============Modal End========== -->
+                                                            
 
                                                         </div>
                                                     </div>
@@ -2014,8 +2536,94 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                             <div class="col-12 col-md-6 col-lg-4">
+                                                <div class="p-4 border1 border-r-8 h-100 myCard relative" data-step="6">
+
+                                                    <!-- ✅ SecondText is visible by default -->
+                                                    <div class="SecondText h-100">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between h-100 flex-column gap-2">
+
+                                                            <div id="labelContainer" class="d-flex gap-3 flex-column">
+                                                                <!-- <img class="mx-auto" height="88px" width="88px"
+                        src="./assets/images/employer-ease-pics/circleRocket.svg" alt=""> -->
+                                                                <div class="Round-No m-auto">
+                                                                    <p class="fs_32 fw_600 lh_38 j_family">6</p>
+                                                                    <p class="fs_12 fw_500 j_family tertiary-black">step
+                                                                    </p>
+                                                                </div>
+                                                                <h3
+                                                                    class="fs_18 fw_600 j_family lh_28 tertiary-black text-center">
+                                                                    Document Center
+                                                                </h3>
+
+                                                                <label id="OpenBusines" for="checkbox13"
+                                                                    class="custom-label w-100"
+                                                                    style="min-width: 240px;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Setup and connect your business clouds for
+                                                                            storage and to organize and manage your
+                                                                            documents, images, and files
+                                                                        </p>
+                                                                        <input id="checkbox13"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                            </div>
+
+                                                            <button id="submitBtn"
+                                                                class="mt-2 whole_button w-100 d-flex justify-content-center bg_light_main border1 main_color progress_Button">
+                                                                Complete
+                                                            </button>
+
+                                                            <!-- ✅ Modal -->
+                                                            <div id="myModal"
+                                                                class="p-3 d-none bg-white border-r-8 d-flex flex-column justify-content-between align-items-center gap-3 border appearedModal">
+                                                                <img class="img-fluid" height='44px' width='44px'
+                                                                    src="./assets/images/employer-ease-pics/animatedCirclewRocket.svg"
+                                                                    alt="">
+                                                                <div>
+                                                                    <h3 class="fs_14 fw_600 j_family lh_22 text-center">
+                                                                        Skip Steps?</h3>
+                                                                    <p
+                                                                        class="fs_12 fw_400 j_family tertiary-black lh_22 text-center">
+                                                                        Are you sure you want to proceed without
+                                                                        completing the previous step?
+                                                                    </p>
+                                                                </div>
+                                                                <div class="d-flex gap-3 w-100">
+                                                                    <button
+                                                                        class="d-flex justify-content-center py-2 w-100 whole_button border1 bg-transparent cancelButton">No</button>
+                                                                    <button
+                                                                        class="py-2 d-flex justify-content-center w-100 whole_button text-white completeButton">Yes</button>
+                                                                </div>
+                                                            </div>
+                                                            <!-- ✅ Modal End -->
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- ✅ Final Completion Section -->
+                                                    <div
+                                                        class="d-flex gap-3 flex-column align-items-center lastText d-none">
+                                                        <img class="mx-auto" height="88px" width="88px"
+                                                            src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                            alt="">
+                                                        <h3 class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                            Document Center</h3>
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <p class="main_color fs_16 lh_22 j_family text-center">
+                                                                Completed</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- <div class="col-12 col-md-6 col-lg-4">
                                                 <div class="p-4 border1 border-r-8 h-100 myCard relative" data-step="7">
                                                     <div
                                                         class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
@@ -2064,9 +2672,7 @@
                                                     <div class="SecondText d-none h-100">
                                                         <div
                                                             class="d-flex align-items-center justify-content-between h-100 flex-column gap-2">
-                                                            <!-- <img width="88px" height="88px"
-                                                                src="./assets/images/employer-ease-pics/circleRocket.svg"
-                                                                alt=""> -->
+                                                           
                                                             <div id="labelContainer" class="d-flex gap-3 flex-column">
                                                                 <img class="mx-auto" height="88px" width="88px"
                                                                     src="./assets/images/employer-ease-pics/circleRocket.svg"
@@ -2160,7 +2766,7 @@
                                                                 Complete
                                                             </button>
 
-                                                            <!-- =============Modal============ -->
+                                                           
                                                             <div id="myModal"
                                                                 class="p-3 d-none bg-white border-r-8 d-flex flex-column justify-content-between align-items-center gap-3 border appearedModal">
                                                                 <img class="img-fluid" height='44px' width='44px'
@@ -2182,7 +2788,7 @@
                                                                         class="py-2 d-flex justify-content-center w-100 whole_button text-white completeButton">Yes</button>
                                                                 </div>
                                                             </div>
-                                                            <!-- ============Modal End========== -->
+                                                           
 
                                                         </div>
                                                     </div>
@@ -2199,8 +2805,163 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                             <div class="col-12 col-md-6 col-lg-4">
+                                                <div class="p-4 border1 border-r-8 h-100 myCard relative" data-step="7">
+
+                                                    <!-- ✅ SecondText is visible by default -->
+                                                    <div class="SecondText h-100">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between h-100 flex-column gap-2">
+
+                                                            <div id="labelContainer" class="d-flex gap-3 flex-column">
+                                                                <!-- <img class="mx-auto" height="88px" width="88px"
+                        src="./assets/images/employer-ease-pics/circleRocket.svg" alt=""> -->
+                                                                <div class="Round-No m-auto">
+                                                                    <p class="fs_32 fw_600 lh_38 j_family">7</p>
+                                                                    <p class="fs_12 fw_500 j_family tertiary-black">step
+                                                                    </p>
+                                                                </div>
+                                                                <h3
+                                                                    class="fs_18 fw_600 j_family lh_28 tertiary-black text-center">
+                                                                    Finance Hub</h3>
+
+                                                                <label id="OpenBusines" for="checkbox19"
+                                                                    class="custom-label w-100"
+                                                                    style="min-width: 240px;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Setup & Connect Bank Accounts
+                                                                        </p>
+                                                                        <input id="checkbox19"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+
+                                                                <label for="checkbox20" class="custom-label w-100"
+                                                                    style="min-width: 240px;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Review Business Funding
+                                                                        </p>
+                                                                        <input id="checkbox20"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+
+                                                                <label for="checkbox21" class="custom-label w-100"
+                                                                    style="min-width: 240px;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Setup Business Insurance Protection
+                                                                        </p>
+                                                                        <input id="checkbox21"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+
+                                                                <label for="checkbox22" class="custom-label w-100"
+                                                                    style="min-width: 240px;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Setup Digital Payments and Merchant Accounts
+                                                                        </p>
+                                                                        <input id="checkbox22"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+
+                                                                <label for="checkbox23" class="custom-label w-100"
+                                                                    style="min-width: 240px;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Setup Legal Protection
+                                                                        </p>
+                                                                        <input id="checkbox23"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+
+                                                                <label for="checkbox24" class="custom-label w-100"
+                                                                    style="min-width: 240px;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Review and Setup Health & Retirement
+                                                                            Benefits
+                                                                        </p>
+                                                                        <input id="checkbox24"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                            </div>
+
+                                                            <button id="submitBtn"
+                                                                class="mt-2 whole_button w-100 d-flex justify-content-center bg_light_main border1 main_color progress_Button">
+                                                                Complete
+                                                            </button>
+
+                                                            <!-- ✅ Modal -->
+                                                            <div id="myModal"
+                                                                class="p-3 d-none bg-white border-r-8 d-flex flex-column justify-content-between align-items-center gap-3 border appearedModal">
+                                                                <img class="img-fluid" height='44px' width='44px'
+                                                                    src="./assets/images/employer-ease-pics/animatedCirclewRocket.svg"
+                                                                    alt="">
+                                                                <div>
+                                                                    <h3 class="fs_14 fw_600 j_family lh_22 text-center">
+                                                                        Skip Steps?</h3>
+                                                                    <p
+                                                                        class="fs_12 fw_400 j_family tertiary-black lh_22 text-center">
+                                                                        Are you sure you want to proceed without
+                                                                        completing the previous step?
+                                                                    </p>
+                                                                </div>
+                                                                <div class="d-flex gap-3 w-100">
+                                                                    <button
+                                                                        class="d-flex justify-content-center py-2 w-100 whole_button border1 bg-transparent cancelButton">No</button>
+                                                                    <button
+                                                                        class="py-2 d-flex justify-content-center w-100 whole_button text-white completeButton">Yes</button>
+                                                                </div>
+                                                            </div>
+                                                            <!-- ✅ Modal End -->
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- ✅ Completed Section -->
+                                                    <div
+                                                        class="d-flex gap-3 flex-column align-items-center lastText d-none">
+                                                        <img class="mx-auto" height="88px" width="88px"
+                                                            src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                            alt="">
+                                                        <h3 class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                            Finance Hub</h3>
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <p class="main_color fs_16 lh_22 j_family text-center">
+                                                                Completed</p>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <!-- <div class="col-12 col-md-6 col-lg-4">
                                                 <div class="p-4 border1 border-r-8 h-100 myCard relative" data-step="8">
                                                     <div
                                                         class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
@@ -2219,10 +2980,7 @@
                                                                     Review and setup Accounting and Bookkeeping services
                                                                     for your business
                                                                 </li>
-                                                                <!-- <li style="list-style: disc;"
-                                                                    class="fs_16 j_family tertiary-black lh_26">
-                                                                    Business Name Research
-                                                                </li> -->
+                                                               
                                                             </ul>
 
                                                         </div>
@@ -2232,9 +2990,7 @@
                                                     <div class="SecondText d-none h-100">
                                                         <div
                                                             class="d-flex align-items-center justify-content-between h-100 flex-column gap-2">
-                                                            <!-- <img width="88px" height="88px"
-                                                                src="./assets/images/employer-ease-pics/circleRocket.svg"
-                                                                alt=""> -->
+                                                          
                                                             <div id="labelContainer" class="d-flex gap-3 flex-column">
                                                                 <img class="mx-auto" height="88px" width="88px"
                                                                     src="./assets/images/employer-ease-pics/circleRocket.svg"
@@ -2257,25 +3013,14 @@
                                                                             type="checkbox">
                                                                     </div>
                                                                 </label>
-                                                                <!-- <label for="checkbox4" class="custom-label w-100"
-                                                                    style="min-width: 240px; width:100%;">
-                                                                    <div
-                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
-                                                                        <p
-                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
-                                                                            Business Name Research</p>
-                                                                        <input id="checkbox4"
-                                                                            class="ground-check bg-transparent"
-                                                                            type="checkbox">
-                                                                    </div>
-                                                                </label> -->
+                                                               
                                                             </div>
                                                             <button id="submitBtn"
                                                                 class="mt-2 whole_button w-100 d-flex justify-content-center bg_light_main border1 main_color progress_Button">
                                                                 Complete
                                                             </button>
 
-                                                            <!-- =============Modal============ -->
+                                                           
                                                             <div id="myModal"
                                                                 class="p-3 d-none bg-white border-r-8 d-flex flex-column justify-content-between align-items-center gap-3 border appearedModal">
                                                                 <img class="img-fluid" height='44px' width='44px'
@@ -2297,7 +3042,7 @@
                                                                         class="py-2 d-flex justify-content-center w-100 whole_button text-white completeButton">Yes</button>
                                                                 </div>
                                                             </div>
-                                                            <!-- ============Modal End========== -->
+                                                           
 
                                                         </div>
                                                     </div>
@@ -2315,8 +3060,96 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                             <div class="col-12 col-md-6 col-lg-4">
+                                                <div class="p-4 border1 border-r-8 h-100 myCard relative" data-step="8">
+
+                                                    <!-- ✅ SecondText is now visible -->
+                                                    <div class="SecondText h-100">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between h-100 flex-column gap-2">
+
+                                                            <div id="labelContainer" class="d-flex gap-3 flex-column">
+                                                                <!-- <img class="mx-auto" height="88px" width="88px"
+                        src="./assets/images/employer-ease-pics/circleRocket.svg" alt=""> -->
+                                                                <div class="Round-No m-auto">
+                                                                    <p class="fs_32 fw_600 lh_38 j_family">8</p>
+                                                                    <p class="fs_12 fw_500 j_family tertiary-black">step
+                                                                    </p>
+                                                                </div>
+                                                                <h3
+                                                                    class="fs_18 fw_600 j_family lh_28 tertiary-black text-center">
+                                                                    Accounting Services</h3>
+
+                                                                <label id="OpenBusines" for="checkbox25"
+                                                                    class="custom-label w-100"
+                                                                    style="min-width: 240px;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Review and setup Accounting and Bookkeeping
+                                                                            services for your business
+                                                                        </p>
+                                                                        <input id="checkbox25"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                            </div>
+
+                                                            <button id="submitBtn"
+                                                                class="mt-2 whole_button w-100 d-flex justify-content-center bg_light_main border1 main_color progress_Button">
+                                                                Complete
+                                                            </button>
+
+                                                            <!-- ✅ Modal -->
+                                                            <div id="myModal"
+                                                                class="p-3 d-none bg-white border-r-8 d-flex flex-column justify-content-between align-items-center gap-3 border appearedModal">
+                                                                <img class="img-fluid" height='44px' width='44px'
+                                                                    src="./assets/images/employer-ease-pics/animatedCirclewRocket.svg"
+                                                                    alt="">
+                                                                <div>
+                                                                    <h3 class="fs_14 fw_600 j_family lh_22 text-center">
+                                                                        Skip Steps?</h3>
+                                                                    <p
+                                                                        class="fs_12 fw_400 j_family tertiary-black lh_22 text-center">
+                                                                        Are you sure you want to proceed without
+                                                                        completing the previous step?
+                                                                    </p>
+                                                                </div>
+                                                                <div class="d-flex gap-3 w-100">
+                                                                    <button
+                                                                        class="d-flex justify-content-center py-2 w-100 whole_button border1 bg-transparent cancelButton">No</button>
+                                                                    <button
+                                                                        class="py-2 d-flex justify-content-center w-100 whole_button text-white completeButton">Yes</button>
+                                                                </div>
+                                                            </div>
+                                                            <!-- ✅ Modal End -->
+
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- ✅ Completion Section -->
+                                                    <div
+                                                        class="d-flex gap-3 flex-column align-items-center lastText d-none">
+                                                        <img class="mx-auto" height="88px" width="88px"
+                                                            src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                            alt="">
+                                                        <h3 class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                            Accounting Services
+                                                        </h3>
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <p class="main_color fs_16 lh_22 j_family text-center">
+                                                                Completed
+                                                            </p>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <!-- <div class="col-12 col-md-6 col-lg-4">
                                                 <div class="p-4 border1 border-r-8 h-100 myCard relative" data-step="9">
                                                     <div
                                                         class="d-flex flex-column justify-content-between h-100 gap-3 FirstText">
@@ -2350,9 +3183,7 @@
                                                     <div class="SecondText d-none h-100">
                                                         <div
                                                             class="d-flex align-items-center justify-content-between h-100 flex-column gap-2">
-                                                            <!-- <img width="88px" height="88px"
-                                                                src="./assets/images/employer-ease-pics/circleRocket.svg"
-                                                                alt=""> -->
+                                                            
                                                             <div id="labelContainer" class="d-flex gap-3 flex-column">
                                                                 <img class="mx-auto" height="88px" width="88px"
                                                                     src="./assets/images/employer-ease-pics/circleRocket.svg"
@@ -2391,7 +3222,7 @@
                                                                 Complete
                                                             </button>
 
-                                                            <!-- =============Modal============ -->
+                                                            
                                                             <div id="myModal"
                                                                 class="p-3 d-none bg-white border-r-8 d-flex flex-column justify-content-between align-items-center gap-3 border appearedModal">
                                                                 <img class="img-fluid" height='44px' width='44px'
@@ -2413,7 +3244,7 @@
                                                                         class="py-2 d-flex justify-content-center w-100 whole_button text-white completeButton">Yes</button>
                                                                 </div>
                                                             </div>
-                                                            <!-- ============Modal End========== -->
+                                                           
 
                                                         </div>
                                                     </div>
@@ -2427,6 +3258,106 @@
                                                         <div class="d-flex align-items-center gap-2">
                                                             <p class="main_color fs_16 lh_22 j_family text-center">
                                                                 Completed</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+                                            <div class="col-12 col-md-6 col-lg-4">
+                                                <div class="p-4 border1 border-r-8 h-100 myCard relative" data-step="9">
+
+                                                    <!-- FirstText Removed Completely -->
+
+                                                    <!-- Show SecondText by default -->
+                                                    <div class="SecondText h-100">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between h-100 flex-column gap-2">
+                                                            <div id="labelContainer" class="d-flex gap-3 flex-column">
+                                                                <!-- <img class="mx-auto" height="88px" width="88px"
+            src="./assets/images/employer-ease-pics/circleRocket.svg" alt=""> -->
+                                                                <div class="Round-No m-auto">
+                                                                    <p class="fs_32 fw_600 lh_38 j_family">9</p>
+                                                                    <p class="fs_12 fw_500 j_family tertiary-black">step
+                                                                    </p>
+                                                                </div>
+                                                                <h3
+                                                                    class="fs_18 fw_600 j_family lh_28 tertiary-black text-center">
+                                                                    Workforce Solutions
+                                                                </h3>
+
+                                                                <label for="checkbox26" class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Review and setup Accounting and Bookkeeping
+                                                                            services for your business
+                                                                        </p>
+                                                                        <input id="checkbox26"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+
+                                                                <label for="checkbox27" class="custom-label w-100"
+                                                                    style="min-width: 240px; width:100%;">
+                                                                    <div
+                                                                        class="d-flex gap-3 justify-content-between w-100 align-items-center">
+                                                                        <p
+                                                                            class="label-text fs_14 tertiary-black fw_400 whitespace-nowrap w-100">
+                                                                            Review how to find and hire 3rd parties to
+                                                                            complete specific tasks.
+                                                                        </p>
+                                                                        <input id="checkbox27"
+                                                                            class="ground-check bg-transparent"
+                                                                            type="checkbox">
+                                                                    </div>
+                                                                </label>
+                                                            </div>
+
+                                                            <button id="submitBtn"
+                                                                class="mt-2 whole_button w-100 d-flex justify-content-center bg_light_main border1 main_color progress_Button">
+                                                                Complete
+                                                            </button>
+
+                                                            <!-- Modal -->
+                                                            <div id="myModal"
+                                                                class="p-3 d-none bg-white border-r-8 d-flex flex-column justify-content-between align-items-center gap-3 border appearedModal">
+                                                                <img class="img-fluid" height='44px' width='44px'
+                                                                    src="./assets/images/employer-ease-pics/animatedCirclewRocket.svg"
+                                                                    alt="">
+                                                                <div>
+                                                                    <h3 class="fs_14 fw_600 j_family lh_22 text-center">
+                                                                        Skip Steps?</h3>
+                                                                    <p
+                                                                        class="fs_12 fw_400 j_family tertiary-black lh_22 text-center">
+                                                                        Are you sure you want to proceed without
+                                                                        completing the previous step?
+                                                                    </p>
+                                                                </div>
+                                                                <div class="d-flex gap-3 w-100">
+                                                                    <button
+                                                                        class="d-flex justify-content-center py-2 w-100 whole_button border1 bg-transparent cancelButton">No</button>
+                                                                    <button
+                                                                        class="py-2 d-flex justify-content-center w-100 whole_button text-white completeButton">Yes</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- LastText -->
+                                                    <div
+                                                        class="d-flex gap-3 flex-column align-items-center lastText d-none">
+                                                        <img class="mx-auto" height="88px" width="88px"
+                                                            src="./assets/images/employer-ease-pics/circleRocket.svg"
+                                                            alt="">
+                                                        <h3 class="fs_18 fw_600 j_family lh_28 main_color text-center">
+                                                            Workforce Solution
+                                                        </h3>
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <p class="main_color fs_16 lh_22 j_family text-center">
+                                                                Completed
+                                                            </p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -4188,7 +5119,7 @@
                                     Welcome to EmployerEase</h3>
 
                                 <div id="labelContainer" class="d-flex gap-3 flex-column w-100" bis_skin_checked="1">
-                                    <label id="OpenBusine" for="checkbox-0-0" class="custom-label w-100"
+                                    <label id="OpenBusine" for="checkbox-0-01" class="custom-label w-100"
                                         style="min-width: 240px; width:100%;">
                                         <div class="d-flex gap-3 justify-content-between w-100 align-items-center"
                                             bis_skin_checked="1">
@@ -4196,7 +5127,7 @@
                                                 New User Onboarding</p>
                                         </div>
                                     </label>
-                                    <label for="checkbox-0-1" class="custom-label w-100"
+                                    <label for="checkbox-0-01" class="custom-label w-100"
                                         style="min-width: 240px; width:100%;">
                                         <div class="d-flex gap-3 justify-content-between w-100 align-items-center"
                                             bis_skin_checked="1">
@@ -4204,7 +5135,7 @@
                                                 EaaS Walkthrough</p>
                                         </div>
                                     </label>
-                                    <label for="checkbox-0-1" class="custom-label w-100"
+                                    <label for="checkbox-0-001" class="custom-label w-100"
                                         style="min-width: 240px; width:100%;">
                                         <div class="d-flex gap-3 justify-content-between w-100 align-items-center"
                                             bis_skin_checked="1">
@@ -4221,7 +5152,7 @@
             </div>
         </div>
     </div>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -4670,6 +5601,15 @@
             showNextModal();
         });
     </script>
+
+    <script>
+        $(document).ready(function () {
+            $('.myCard .disabled-card').each(function () {
+                $(this).find('input, select, textarea, button').attr('disabled', true);
+            });
+        });
+    </script>
+
 </body>
 
 </html>
