@@ -8,6 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Plaster&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -26,10 +27,12 @@ body {
 .family_Inter {
     font-family: Inter;
 }
-.pacifico_font{
+
+.pacifico_font {
     font-family: 'Pacifico', cursive;
 }
-.plaster_font{
+
+.plaster_font {
     font-family: 'Plaster', cursive;
 }
 
@@ -233,7 +236,8 @@ ul {
 .main_bg {
     background-color: #3684A4 !important;
 }
-.dark_main_bg{
+
+.dark_main_bg {
     background-color: #204F62 !important;
 }
 
@@ -273,18 +277,23 @@ ul {
 .tertiary-black {
     color: #344054 !important;
 }
-.gray_300{
-    color:#4B5563
+
+.gray_300 {
+    color: #4B5563
 }
-.gray_800{
-    color:#111827;
+
+.gray_800 {
+    color: #111827;
 }
-.green_800{
-    color:#425466;
+
+.green_800 {
+    color: #425466;
 }
-.gray_500{
-    color:#6B7280!important;
+
+.gray_500 {
+    color: #6B7280 !important;
 }
+
 .primary-black {
     color: #101828 !important;
 }
@@ -2619,7 +2628,7 @@ button {
 }
 
 .rotate {
-    transform: scaleX(-1);
+    transform: rotateY(180deg) scaleX(-1)
 }
 
 .cardText {
@@ -2682,10 +2691,13 @@ button {
 
     border: 1px solid #EDEEF2;
 }
+
 .disabled-card {
-  opacity: 0.5; /* Optional: faded look */
-    pointer-events: none ; /* Disable all interactions */
-  cursor: not-allowed !important;
+    opacity: 0.5;
+    /* Optional: faded look */
+    pointer-events: none;
+    /* Disable all interactions */
+    cursor: not-allowed !important;
 }
 
 /* =========================---------------Chat box CSS End----------------======================= */
@@ -3090,16 +3102,17 @@ input[type="number"] {
     height: 10px;
     width: 10px;
 }
+
 /* ===================Custom tabs================== */
 .date-range-container {
     display: flex;
     border-radius: 8px;
     overflow: hidden;
     width: 100%;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  }
-  
-  .date-range-button {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.date-range-button {
     flex: 1;
     padding: 8px 12px;
     background-color: white;
@@ -3108,46 +3121,48 @@ input[type="number"] {
     font-size: 14px;
     transition: all 0.2s ease-in-out;
     width: 100%;
-  }
-  
-  .date-range-button:first-child {
+}
+
+.date-range-button:first-child {
     border-radius: 8px 0 0 8px;
-  }
-  
-  .date-range-button:last-child {
+}
+
+.date-range-button:last-child {
     border-radius: 0 8px 8px 0;
-  }
-  
-  .date-range-button.active {
+}
+
+.date-range-button.active {
     background-color: #F9FAFB;
     color: #212529;
     font-weight: 500;
-    box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
-  }
-  
-  .date-range-button:hover:not(.active) {
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.date-range-button:hover:not(.active) {
     background-color: #f8f9fa;
-  }
-  .special_textarea::placeholder{
-    color:#B8B8B8;
-  }
-  .leaderboard_div{
+}
+
+.special_textarea::placeholder {
+    color: #B8B8B8;
+}
+
+.leaderboard_div {
     font-size: 8px;
-    height:28px;
-    width:28px;
+    height: 28px;
+    width: 28px;
     font-family: inter;
     font-weight: 600;
-    padding:7px 4px;
+    padding: 7px 4px;
     top: 53%;
-    left:22px;
-    border-radius:100%;
-    color:white;
-    border:2px solid white;
-    background-color:#9CA3AF;
-    position:absolute;
-  }
+    left: 22px;
+    border-radius: 100%;
+    color: white;
+    border: 2px solid white;
+    background-color: #9CA3AF;
+    position: absolute;
+}
 
-  .leaderBoard_joiners:hover{
-    background-color:#EBF3F6;
-    border-radius:9.46px;
-  }
+.leaderBoard_joiners:hover {
+    background-color: #EBF3F6;
+    border-radius: 9.46px;
+}
